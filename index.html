@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="臺南慈濟高中 115 學年度第 1 學期課表查詢" />
+    <title>115-1 課表查詢｜臺南慈濟高中</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <p class="eyebrow">臺南慈濟高中</p>
+      <h1>115 學年度第 1 學期課表</h1>
+      <p>實施期間：115.08.31 - 116.01.20</p>
+      <button class="theme-toggle" id="theme-toggle" type="button">夜間閱讀</button>
+    </header>
+
+    <main class="page-shell">
+      <section class="controls" aria-label="課表查詢">
+        <div class="control-group">
+          <label for="view-type">查詢類型</label>
+          <select id="view-type">
+            <option value="class">班級課表</option>
+            <option value="teacher">教師課表</option>
+          </select>
+        </div>
+        <div class="control-group grow">
+          <label for="schedule-select" id="schedule-select-label">選擇班級</label>
+          <select id="schedule-select"></select>
+        </div>
+      </section>
+
+      <section class="schedule-card" aria-live="polite">
+        <div class="schedule-heading">
+          <div>
+            <p class="eyebrow" id="schedule-kind">班級課表</p>
+            <h2 id="schedule-title"></h2>
+          </div>
+          <p id="schedule-meta"></p>
+        </div>
+        <div class="table-wrap">
+          <table id="schedule-table">
+            <thead>
+              <tr><th scope="col">節次／時間</th><th scope="col">一</th><th scope="col">二</th><th scope="col">三</th><th scope="col">四</th><th scope="col">五</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+    <footer>資料來源：臺南慈濟高中 115 學年度第 1 學期課程表</footer>
+    <script src="data/schedules.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

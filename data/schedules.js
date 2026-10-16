@@ -1,0 +1,36245 @@
+window.SCHEDULE_DATA = {
+  "meta": {
+    "school": "臺南慈濟高中",
+    "term": "115 學年度第 1 學期",
+    "effectiveDates": "115.08.31 - 116.01.20",
+    "days": [
+      "一",
+      "二",
+      "三",
+      "四",
+      "五"
+    ],
+    "classPdfPages": 43,
+    "teacherPdfPages": 98
+  },
+  "classes": [
+    {
+      "id": "class-01",
+      "code": "1",
+      "publicCode": "J101",
+      "name": "國一知足",
+      "homeroomTeacher": "陳怡婷",
+      "sourcePage": 1,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳怡婷",
+                  "sourcePage": 38
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳怡婷",
+                  "sourcePage": 38
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳怡婷",
+                  "sourcePage": 38
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳怡婷",
+                  "sourcePage": 38
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳怡婷",
+                  "sourcePage": 38
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林旻璇",
+                  "sourcePage": 12
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "本土語文",
+              "teachers": [
+                {
+                  "name": "蘇治維",
+                  "sourcePage": 14
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "許家銘",
+                  "sourcePage": 95
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "呂金玲",
+                  "sourcePage": 45
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳怡婷",
+                  "sourcePage": 38
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "黃荷雯",
+                  "sourcePage": 87
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行A",
+              "teachers": [
+                {
+                  "name": "傅克斯",
+                  "sourcePage": 15
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳怡婷",
+                  "sourcePage": 38
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "黃靜瑩",
+                  "sourcePage": 65
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "綜合活動B-童軍",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "黃靜瑩",
+                  "sourcePage": 65
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "黃逸寧",
+                  "sourcePage": 58
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "視覺藝術",
+              "teachers": [
+                {
+                  "name": "張簡景鈴",
+                  "sourcePage": 88
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "吳淑敏",
+                  "sourcePage": 60
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "表演藝術",
+              "teachers": [
+                {
+                  "name": "楊順宇",
+                  "sourcePage": 94
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "黃靜瑩",
+                  "sourcePage": 65
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動C-輔導",
+              "teachers": [
+                {
+                  "name": "洪嘉穗",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動A-家政",
+              "teachers": [
+                {
+                  "name": "周淑娟",
+                  "sourcePage": 92
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "慈濟學與全球公民",
+              "teachers": [
+                {
+                  "name": "陳怡婷",
+                  "sourcePage": 38
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳怡婷",
+                  "sourcePage": 38
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "陳怡婷",
+                  "sourcePage": 38
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "黃荷雯",
+                  "sourcePage": 87
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "陳柏伶",
+                  "sourcePage": 46
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "吳巧伶",
+                  "sourcePage": 79
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "陳怡婷",
+                  "sourcePage": 38
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行B",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林旻璇",
+                  "sourcePage": 12
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳怡婷",
+                  "sourcePage": 38
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林旻璇",
+                  "sourcePage": 12
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林旻璇",
+                  "sourcePage": 12
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林旻璇",
+                  "sourcePage": 12
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "健康教育",
+              "teachers": [
+                {
+                  "name": "黃荷雯",
+                  "sourcePage": 87
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "林旻璇",
+                  "sourcePage": 12
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "陳怡婷",
+                  "sourcePage": 38
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "全美語課程(輔)",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理(輔)",
+              "teachers": [
+                {
+                  "name": "陳柏伶",
+                  "sourcePage": 46
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-02",
+      "code": "1",
+      "publicCode": "J102",
+      "name": "國一感恩",
+      "homeroomTeacher": "林承勳",
+      "sourcePage": 2,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 78
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 78
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 78
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 78
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 78
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳怡婷",
+                  "sourcePage": 38
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳怡婷",
+                  "sourcePage": 38
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "黃靜瑩",
+                  "sourcePage": 65
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行A",
+              "teachers": [
+                {
+                  "name": "傅克斯",
+                  "sourcePage": 15
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行B",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "黃靜瑩",
+                  "sourcePage": 65
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "健康教育",
+              "teachers": [
+                {
+                  "name": "黃荷雯",
+                  "sourcePage": 87
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳怡婷",
+                  "sourcePage": 38
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "黃靜瑩",
+                  "sourcePage": 65
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "表演藝術",
+              "teachers": [
+                {
+                  "name": "楊順宇",
+                  "sourcePage": 94
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "許家銘",
+                  "sourcePage": 95
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動A-家政",
+              "teachers": [
+                {
+                  "name": "周淑娟",
+                  "sourcePage": 92
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "本土語文",
+              "teachers": [
+                {
+                  "name": "蘇治維",
+                  "sourcePage": 14
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳奕霖",
+                  "sourcePage": 96
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "黃逸寧",
+                  "sourcePage": 58
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "吳巧伶",
+                  "sourcePage": 79
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "吳淑敏",
+                  "sourcePage": 60
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "呂金玲",
+                  "sourcePage": 45
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 78
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "視覺藝術",
+              "teachers": [
+                {
+                  "name": "張簡景鈴",
+                  "sourcePage": 88
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "慈濟學與全球公民",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 78
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 78
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳奕霖",
+                  "sourcePage": 96
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動B-童軍",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "綜合活動C-輔導",
+              "teachers": [
+                {
+                  "name": "楊芳玲",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "陳柏伶",
+                  "sourcePage": 46
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳怡婷",
+                  "sourcePage": 38
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "陳怡婷",
+                  "sourcePage": 38
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理(輔)",
+              "teachers": [
+                {
+                  "name": "陳柏伶",
+                  "sourcePage": 46
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "全美語課程(輔)",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-03",
+      "code": "1",
+      "publicCode": "J103",
+      "name": "國一善解",
+      "homeroomTeacher": "蔡錦鳳",
+      "sourcePage": 3,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "洪婉晴",
+                  "sourcePage": 93
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林旻璇",
+                  "sourcePage": 12
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林旻璇",
+                  "sourcePage": 12
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "呂金玲",
+                  "sourcePage": 45
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "本土語文",
+              "teachers": [
+                {
+                  "name": "蘇治維",
+                  "sourcePage": 14
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "郭盈瑜",
+                  "sourcePage": 44
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "吳巧伶",
+                  "sourcePage": 79
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動C-輔導",
+              "teachers": [
+                {
+                  "name": "洪嘉穗",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林旻璇",
+                  "sourcePage": 12
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "郭盈瑜",
+                  "sourcePage": 44
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "黃靜瑩",
+                  "sourcePage": 65
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "慈濟學與全球公民",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林旻璇",
+                  "sourcePage": 12
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "許家銘",
+                  "sourcePage": 95
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "洪婉晴",
+                  "sourcePage": 93
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林旻璇",
+                  "sourcePage": 12
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "郭盈瑜",
+                  "sourcePage": 44
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "黃靜瑩",
+                  "sourcePage": 65
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "陳柏伶",
+                  "sourcePage": 46
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "視覺藝術",
+              "teachers": [
+                {
+                  "name": "張簡景鈴",
+                  "sourcePage": 88
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "綜合活動B-童軍",
+              "teachers": [
+                {
+                  "name": "賴昀締",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行B",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "吳淑敏",
+                  "sourcePage": 60
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行A",
+              "teachers": [
+                {
+                  "name": "傅克斯",
+                  "sourcePage": 15
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "黃靜瑩",
+                  "sourcePage": 65
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "健康教育",
+              "teachers": [
+                {
+                  "name": "黃荷雯",
+                  "sourcePage": 87
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "郭盈瑜",
+                  "sourcePage": 44
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動A-家政",
+              "teachers": [
+                {
+                  "name": "周淑娟",
+                  "sourcePage": 92
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "表演藝術",
+              "teachers": [
+                {
+                  "name": "楊順宇",
+                  "sourcePage": 94
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "地理(輔)",
+              "teachers": [
+                {
+                  "name": "陳柏伶",
+                  "sourcePage": 46
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "林旻璇",
+                  "sourcePage": 12
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "全美語課程(輔)",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "郭盈瑜",
+                  "sourcePage": 44
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-04",
+      "code": "1",
+      "publicCode": "J104",
+      "name": "國一包容",
+      "homeroomTeacher": "莊淑珺",
+      "sourcePage": 4,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "綜合活動B-童軍",
+              "teachers": [
+                {
+                  "name": "賴昀締",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王婉真",
+                  "sourcePage": 39
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王婉真",
+                  "sourcePage": 39
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "黃靜瑩",
+                  "sourcePage": 65
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳奕霖",
+                  "sourcePage": 96
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "許家銘",
+                  "sourcePage": 95
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "本土語文",
+              "teachers": [
+                {
+                  "name": "蘇治維",
+                  "sourcePage": 14
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "盧佩君",
+                  "sourcePage": 57
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "慈濟學與全球公民",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王婉真",
+                  "sourcePage": 39
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "健康教育",
+              "teachers": [
+                {
+                  "name": "黃荷雯",
+                  "sourcePage": 87
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行A",
+              "teachers": [
+                {
+                  "name": "傅克斯",
+                  "sourcePage": 15
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "黃靜瑩",
+                  "sourcePage": 65
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳奕霖",
+                  "sourcePage": 96
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "李榮洲",
+                  "sourcePage": 59
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王婉真",
+                  "sourcePage": 39
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "表演藝術",
+              "teachers": [
+                {
+                  "name": "楊順宇",
+                  "sourcePage": 94
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動C-輔導",
+              "teachers": [
+                {
+                  "name": "楊芳玲",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動A-家政",
+              "teachers": [
+                {
+                  "name": "周淑娟",
+                  "sourcePage": 92
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行B",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "吳巧伶",
+                  "sourcePage": 79
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "黃靜瑩",
+                  "sourcePage": 65
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "吳淑敏",
+                  "sourcePage": 60
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "視覺藝術",
+              "teachers": [
+                {
+                  "name": "張簡景鈴",
+                  "sourcePage": 88
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "全美語課程(輔)",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "王婉真",
+                  "sourcePage": 39
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理(輔)",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-05",
+      "code": "1",
+      "publicCode": "J105",
+      "name": "國一合心",
+      "homeroomTeacher": "寧凱婕",
+      "sourcePage": 5,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王婉真",
+                  "sourcePage": 39
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "視覺藝術",
+              "teachers": [
+                {
+                  "name": "張簡景鈴",
+                  "sourcePage": 88
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "許家銘",
+                  "sourcePage": 95
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動A-家政",
+              "teachers": [
+                {
+                  "name": "周淑娟",
+                  "sourcePage": 92
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王婉真",
+                  "sourcePage": 39
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "黃靜瑩",
+                  "sourcePage": 65
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王婉真",
+                  "sourcePage": 39
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "表演藝術",
+              "teachers": [
+                {
+                  "name": "楊順宇",
+                  "sourcePage": 94
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行A",
+              "teachers": [
+                {
+                  "name": "傅克斯",
+                  "sourcePage": 15
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王婉真",
+                  "sourcePage": 39
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "黃荷雯",
+                  "sourcePage": 87
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "本土語文",
+              "teachers": [
+                {
+                  "name": "蘇治維",
+                  "sourcePage": 14
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "盧佩君",
+                  "sourcePage": 57
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "健康教育",
+              "teachers": [
+                {
+                  "name": "黃荷雯",
+                  "sourcePage": 87
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行B",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "慈濟學與全球公民",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "黃靜瑩",
+                  "sourcePage": 65
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "黃荷雯",
+                  "sourcePage": 87
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "黃靜瑩",
+                  "sourcePage": 65
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "綜合活動B-童軍",
+              "teachers": [
+                {
+                  "name": "賴昀締",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "黃逸寧",
+                  "sourcePage": 58
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "吳巧伶",
+                  "sourcePage": 79
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動C-輔導",
+              "teachers": [
+                {
+                  "name": "楊芳玲",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "全美語課程(輔)",
+              "teachers": [
+                {
+                  "name": "陳立祺",
+                  "sourcePage": 20
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "王婉真",
+                  "sourcePage": 39
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理(輔)",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-06",
+      "code": "1",
+      "publicCode": "J106",
+      "name": "國一和氣",
+      "homeroomTeacher": "吳巧伶",
+      "sourcePage": 6,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "吳巧伶",
+                  "sourcePage": 79
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "吳巧伶",
+                  "sourcePage": 79
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "吳巧伶",
+                  "sourcePage": 79
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "吳巧伶",
+                  "sourcePage": 79
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "吳巧伶",
+                  "sourcePage": 79
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動A-家政",
+              "teachers": [
+                {
+                  "name": "周淑娟",
+                  "sourcePage": 92
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行A",
+              "teachers": [
+                {
+                  "name": "傅克斯",
+                  "sourcePage": 15
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "郭盈瑜",
+                  "sourcePage": 44
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "盧佩君",
+                  "sourcePage": 57
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "郭盈瑜",
+                  "sourcePage": 44
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "許家銘",
+                  "sourcePage": 95
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "郭盈瑜",
+                  "sourcePage": 44
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動B-童軍",
+              "teachers": [
+                {
+                  "name": "賴昀締",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "黃靜瑩",
+                  "sourcePage": 65
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "本土語文",
+              "teachers": [
+                {
+                  "name": "蘇治維",
+                  "sourcePage": 14
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "吳巧伶",
+                  "sourcePage": 79
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "慈濟學與全球公民",
+              "teachers": [
+                {
+                  "name": "吳巧伶",
+                  "sourcePage": 79
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行B",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動C-輔導",
+              "teachers": [
+                {
+                  "name": "楊芳玲",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "黃靜瑩",
+                  "sourcePage": 65
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "李榮洲",
+                  "sourcePage": 59
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "吳巧伶",
+                  "sourcePage": 79
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "表演藝術",
+              "teachers": [
+                {
+                  "name": "楊順宇",
+                  "sourcePage": 94
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "洪婉晴",
+                  "sourcePage": 93
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "吳巧伶",
+                  "sourcePage": 79
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "洪婉晴",
+                  "sourcePage": 93
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "健康教育",
+              "teachers": [
+                {
+                  "name": "黃荷雯",
+                  "sourcePage": 87
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "郭盈瑜",
+                  "sourcePage": 44
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "視覺藝術",
+              "teachers": [
+                {
+                  "name": "張簡景鈴",
+                  "sourcePage": 88
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "黃靜瑩",
+                  "sourcePage": 65
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "地理(輔)",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "郭盈瑜",
+                  "sourcePage": 44
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "全美語課程(輔)",
+              "teachers": [
+                {
+                  "name": "翟垣皓",
+                  "sourcePage": 25
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-07",
+      "code": "1",
+      "publicCode": "J107",
+      "name": "國一互愛",
+      "homeroomTeacher": "王聖賢",
+      "sourcePage": 7,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "王聖賢",
+                  "sourcePage": 40
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "王聖賢",
+                  "sourcePage": 40
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "王聖賢",
+                  "sourcePage": 40
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "王聖賢",
+                  "sourcePage": 40
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "王聖賢",
+                  "sourcePage": 40
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳奕霖",
+                  "sourcePage": 96
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王聖賢",
+                  "sourcePage": 40
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王聖賢",
+                  "sourcePage": 40
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "本土語文",
+              "teachers": [
+                {
+                  "name": "蘇治維",
+                  "sourcePage": 14
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動B-童軍",
+              "teachers": [
+                {
+                  "name": "賴昀締",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行B",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "吳巧伶",
+                  "sourcePage": 79
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "吳淑敏",
+                  "sourcePage": 60
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "鄭博仁",
+                  "sourcePage": 67
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "健康教育",
+              "teachers": [
+                {
+                  "name": "黃荷雯",
+                  "sourcePage": 87
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "許家銘",
+                  "sourcePage": 95
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王聖賢",
+                  "sourcePage": 40
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動A-家政",
+              "teachers": [
+                {
+                  "name": "周淑娟",
+                  "sourcePage": 92
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王聖賢",
+                  "sourcePage": 40
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "視覺藝術",
+              "teachers": [
+                {
+                  "name": "張簡景鈴",
+                  "sourcePage": 88
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "慈濟學與全球公民",
+              "teachers": [
+                {
+                  "name": "王聖賢",
+                  "sourcePage": 40
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "王聖賢",
+                  "sourcePage": 40
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳奕霖",
+                  "sourcePage": 96
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "鄭博仁",
+                  "sourcePage": 67
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "黃逸寧",
+                  "sourcePage": 58
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "王聖賢",
+                  "sourcePage": 40
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "表演藝術",
+              "teachers": [
+                {
+                  "name": "楊順宇",
+                  "sourcePage": 94
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動C-輔導",
+              "teachers": [
+                {
+                  "name": "楊芳玲",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行A",
+              "teachers": [
+                {
+                  "name": "傅克斯",
+                  "sourcePage": 15
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "呂金玲",
+                  "sourcePage": 45
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "鄭博仁",
+                  "sourcePage": 67
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理(輔)",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "王聖賢",
+                  "sourcePage": 40
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "全美語課程(輔)",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-08",
+      "code": "1",
+      "publicCode": "J108",
+      "name": "國一協力",
+      "homeroomTeacher": "鄭博仁",
+      "sourcePage": 8,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "鄭博仁",
+                  "sourcePage": 67
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "鄭博仁",
+                  "sourcePage": 67
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "鄭博仁",
+                  "sourcePage": 67
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "鄭博仁",
+                  "sourcePage": 67
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "鄭博仁",
+                  "sourcePage": 67
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "黃荷雯",
+                  "sourcePage": 87
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動B-童軍",
+              "teachers": [
+                {
+                  "name": "賴昀締",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡宜珊",
+                  "sourcePage": 23
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行A",
+              "teachers": [
+                {
+                  "name": "傅克斯",
+                  "sourcePage": 15
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "鄭博仁",
+                  "sourcePage": 67
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動C-輔導",
+              "teachers": [
+                {
+                  "name": "楊芳玲",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王聖賢",
+                  "sourcePage": 40
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "慈濟學與全球公民",
+              "teachers": [
+                {
+                  "name": "鄭博仁",
+                  "sourcePage": 67
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動A-家政",
+              "teachers": [
+                {
+                  "name": "周淑娟",
+                  "sourcePage": 92
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王聖賢",
+                  "sourcePage": 40
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡宜珊",
+                  "sourcePage": 23
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "本土語文",
+              "teachers": [
+                {
+                  "name": "蘇治維",
+                  "sourcePage": 14
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "吳淑敏",
+                  "sourcePage": 60
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行B",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王聖賢",
+                  "sourcePage": 40
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "許家銘",
+                  "sourcePage": 95
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡宜珊",
+                  "sourcePage": 23
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "健康教育",
+              "teachers": [
+                {
+                  "name": "黃荷雯",
+                  "sourcePage": 87
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "鄭博仁",
+                  "sourcePage": 67
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "呂金玲",
+                  "sourcePage": 45
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "鄭博仁",
+                  "sourcePage": 67
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "視覺藝術",
+              "teachers": [
+                {
+                  "name": "張簡景鈴",
+                  "sourcePage": 88
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "表演藝術",
+              "teachers": [
+                {
+                  "name": "楊順宇",
+                  "sourcePage": 94
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "鄭博仁",
+                  "sourcePage": 67
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王聖賢",
+                  "sourcePage": 40
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "鄭博仁",
+                  "sourcePage": 67
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "黃荷雯",
+                  "sourcePage": 87
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "吳巧伶",
+                  "sourcePage": 79
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "王聖賢",
+                  "sourcePage": 40
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "全美語課程(輔)",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "蔡宜珊",
+                  "sourcePage": 23
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理(輔)",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-09",
+      "code": "1",
+      "publicCode": "J109",
+      "name": "國一數理",
+      "homeroomTeacher": "科星",
+      "sourcePage": 9,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "蔡宜珊",
+                  "sourcePage": 23
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物(輔)",
+              "teachers": [
+                {
+                  "name": "鄭博仁",
+                  "sourcePage": 67
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "王美雅",
+                  "sourcePage": 41
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化(輔)",
+              "teachers": [
+                {
+                  "name": "陳冠廷",
+                  "sourcePage": 71
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "林旻璇",
+                  "sourcePage": 12
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-10",
+      "code": "2",
+      "publicCode": "J201",
+      "name": "國二知足",
+      "homeroomTeacher": "陳立祺",
+      "sourcePage": 10,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳立祺",
+                  "sourcePage": 20
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳立祺",
+                  "sourcePage": 20
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳立祺",
+                  "sourcePage": 20
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳立祺",
+                  "sourcePage": 20
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳立祺",
+                  "sourcePage": 20
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行A",
+              "teachers": [
+                {
+                  "name": "傅克斯",
+                  "sourcePage": 15
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "表演藝術",
+              "teachers": [
+                {
+                  "name": "黃逸欣",
+                  "sourcePage": 90
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "吳秋宏",
+                  "sourcePage": 84
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "陳立祺",
+                  "sourcePage": 20
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "綜合活動A-家政",
+              "teachers": [
+                {
+                  "name": "周淑娟",
+                  "sourcePage": 92
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "王湘屏",
+                  "sourcePage": 73
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "吳秋宏",
+                  "sourcePage": 84
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "陳立祺",
+                  "sourcePage": 20
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "賈旻曄",
+                  "sourcePage": 51
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "王湘屏",
+                  "sourcePage": 73
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "視覺藝術",
+              "teachers": [
+                {
+                  "name": "張育綺",
+                  "sourcePage": 80
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "黃逸欣",
+                  "sourcePage": 90
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "健康教育",
+              "teachers": [
+                {
+                  "name": "賴碩伶",
+                  "sourcePage": 74
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "林書淵",
+                  "sourcePage": 35
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "陳立祺",
+                  "sourcePage": 20
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "本土語文",
+              "teachers": [
+                {
+                  "name": "蘇治維",
+                  "sourcePage": 14
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "世界關懷行B",
+              "teachers": [
+                {
+                  "name": "翟垣皓",
+                  "sourcePage": 25
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民",
+              "teachers": [
+                {
+                  "name": "陳立祺",
+                  "sourcePage": 20
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "陳立祺",
+                  "sourcePage": 20
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "吳宗原",
+                  "sourcePage": 54
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "王湘屏",
+                  "sourcePage": 73
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "林書淵",
+                  "sourcePage": 35
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動B-童軍",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "陳立祺",
+                  "sourcePage": 20
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "林書淵",
+                  "sourcePage": 35
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "黃秀玲",
+                  "sourcePage": 76
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動C-輔導",
+              "teachers": [
+                {
+                  "name": "鄭莞柔",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "林書淵",
+                  "sourcePage": 35
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "歷史(輔)",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "陳立祺",
+                  "sourcePage": 20
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "林書淵",
+                  "sourcePage": 35
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "全美語課程(輔)",
+              "teachers": [
+                {
+                  "name": "傅克斯",
+                  "sourcePage": 15
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-11",
+      "code": "2",
+      "publicCode": "J202",
+      "name": "國二感恩",
+      "homeroomTeacher": "賈旻曄",
+      "sourcePage": 11,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "賈旻曄",
+                  "sourcePage": 51
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "賈旻曄",
+                  "sourcePage": 51
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "賈旻曄",
+                  "sourcePage": 51
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "賈旻曄",
+                  "sourcePage": 51
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "賈旻曄",
+                  "sourcePage": 51
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "視覺藝術",
+              "teachers": [
+                {
+                  "name": "張育綺",
+                  "sourcePage": 80
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "王湘屏",
+                  "sourcePage": 73
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "李曉蘭",
+                  "sourcePage": 10
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行B",
+              "teachers": [
+                {
+                  "name": "翟垣皓",
+                  "sourcePage": 25
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "翟垣皓",
+                  "sourcePage": 25
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "健康教育",
+              "teachers": [
+                {
+                  "name": "賴碩伶",
+                  "sourcePage": 74
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "表演藝術",
+              "teachers": [
+                {
+                  "name": "黃逸欣",
+                  "sourcePage": 90
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "張齡之",
+                  "sourcePage": 42
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "李曉蘭",
+                  "sourcePage": 10
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳奕霖",
+                  "sourcePage": 96
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "世界關懷行A",
+              "teachers": [
+                {
+                  "name": "傅克斯",
+                  "sourcePage": 15
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "翟垣皓",
+                  "sourcePage": 25
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳奕霖",
+                  "sourcePage": 96
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "王湘屏",
+                  "sourcePage": 73
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "張齡之",
+                  "sourcePage": 42
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "吳宗原",
+                  "sourcePage": 54
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民",
+              "teachers": [
+                {
+                  "name": "賈旻曄",
+                  "sourcePage": 51
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "張齡之",
+                  "sourcePage": 42
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "李曉蘭",
+                  "sourcePage": 10
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "王湘屏",
+                  "sourcePage": 73
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動B-童軍",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "賈旻曄",
+                  "sourcePage": 51
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "李曉蘭",
+                  "sourcePage": 10
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "吳淑敏",
+                  "sourcePage": 60
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "張齡之",
+                  "sourcePage": 42
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動C-輔導",
+              "teachers": [
+                {
+                  "name": "鄭莞柔",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "賈旻曄",
+                  "sourcePage": 51
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "黃逸欣",
+                  "sourcePage": 90
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動A-家政",
+              "teachers": [
+                {
+                  "name": "周淑娟",
+                  "sourcePage": 92
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "翟垣皓",
+                  "sourcePage": 25
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "賈旻曄",
+                  "sourcePage": 51
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "李曉蘭",
+                  "sourcePage": 10
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "黃秀玲",
+                  "sourcePage": 76
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "本土語文",
+              "teachers": [
+                {
+                  "name": "蘇治維",
+                  "sourcePage": 14
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "全美語課程(輔)",
+              "teachers": [
+                {
+                  "name": "傅克斯",
+                  "sourcePage": 15
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "張齡之",
+                  "sourcePage": 42
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "翟垣皓",
+                  "sourcePage": 25
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史(輔)",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "李曉蘭",
+                  "sourcePage": 10
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-12",
+      "code": "2",
+      "publicCode": "J203",
+      "name": "國二善解",
+      "homeroomTeacher": "莊仁傑",
+      "sourcePage": 12,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "世界關懷行A",
+              "teachers": [
+                {
+                  "name": "傅克斯",
+                  "sourcePage": 15
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "胡鳳玲",
+                  "sourcePage": 91
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "林宏鋕",
+                  "sourcePage": 72
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "黃喻苹",
+                  "sourcePage": 24
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "綜合活動B-童軍",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "黃逸欣",
+                  "sourcePage": 90
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動C-輔導",
+              "teachers": [
+                {
+                  "name": "洪嘉穗",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "胡鳳玲",
+                  "sourcePage": 91
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "張齡之",
+                  "sourcePage": 42
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "張齡之",
+                  "sourcePage": 42
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "黃秀玲",
+                  "sourcePage": 76
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "世界關懷行B",
+              "teachers": [
+                {
+                  "name": "翟垣皓",
+                  "sourcePage": 25
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "林宏鋕",
+                  "sourcePage": 72
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "林季英",
+                  "sourcePage": 48
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "張齡之",
+                  "sourcePage": 42
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "黃喻苹",
+                  "sourcePage": 24
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "黃喻苹",
+                  "sourcePage": 24
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "張齡之",
+                  "sourcePage": 42
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "吳淑敏",
+                  "sourcePage": 60
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "表演藝術",
+              "teachers": [
+                {
+                  "name": "黃逸欣",
+                  "sourcePage": 90
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "吳宗原",
+                  "sourcePage": 54
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "綜合活動A-家政",
+              "teachers": [
+                {
+                  "name": "周淑娟",
+                  "sourcePage": 92
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "健康教育",
+              "teachers": [
+                {
+                  "name": "賴碩伶",
+                  "sourcePage": 74
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "本土語文",
+              "teachers": [
+                {
+                  "name": "蘇治維",
+                  "sourcePage": 14
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "視覺藝術",
+              "teachers": [
+                {
+                  "name": "張育綺",
+                  "sourcePage": 80
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "林宏鋕",
+                  "sourcePage": 72
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "張齡之",
+                  "sourcePage": 42
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史(輔)",
+              "teachers": [
+                {
+                  "name": "林季英",
+                  "sourcePage": 48
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "黃喻苹",
+                  "sourcePage": 24
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "全美語課程(輔)",
+              "teachers": [
+                {
+                  "name": "傅克斯",
+                  "sourcePage": 15
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-13",
+      "code": "2",
+      "publicCode": "J204",
+      "name": "國二包容",
+      "homeroomTeacher": "劉姿伶",
+      "sourcePage": 13,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "黃逸欣",
+                  "sourcePage": 90
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "世界關懷行A",
+              "teachers": [
+                {
+                  "name": "曾愛達",
+                  "sourcePage": 27
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳文婷",
+                  "sourcePage": 32
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "健康教育",
+              "teachers": [
+                {
+                  "name": "賴碩伶",
+                  "sourcePage": 74
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動B-童軍",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "林宏鋕",
+                  "sourcePage": 72
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "胡鳳玲",
+                  "sourcePage": 91
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "本土語文",
+              "teachers": [
+                {
+                  "name": "蘇治維",
+                  "sourcePage": 14
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "黃秀玲",
+                  "sourcePage": 76
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳文婷",
+                  "sourcePage": 32
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行B",
+              "teachers": [
+                {
+                  "name": "翟垣皓",
+                  "sourcePage": 25
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "林宏鋕",
+                  "sourcePage": 72
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳文婷",
+                  "sourcePage": 32
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "林宏鋕",
+                  "sourcePage": 72
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳文婷",
+                  "sourcePage": 32
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動C-輔導",
+              "teachers": [
+                {
+                  "name": "鄭莞柔",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "綜合活動A-家政",
+              "teachers": [
+                {
+                  "name": "周淑娟",
+                  "sourcePage": 92
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "視覺藝術",
+              "teachers": [
+                {
+                  "name": "張育綺",
+                  "sourcePage": 80
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "吳淑敏",
+                  "sourcePage": 60
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "李榮洲",
+                  "sourcePage": 59
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "盧佩君",
+                  "sourcePage": 57
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "表演藝術",
+              "teachers": [
+                {
+                  "name": "楊順宇",
+                  "sourcePage": 94
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "胡鳳玲",
+                  "sourcePage": 91
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "歷史(輔)",
+              "teachers": [
+                {
+                  "name": "李榮洲",
+                  "sourcePage": 59
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "全美語課程(輔)",
+              "teachers": [
+                {
+                  "name": "曾愛達",
+                  "sourcePage": 27
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "陳文婷",
+                  "sourcePage": 32
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-14",
+      "code": "2",
+      "publicCode": "J205",
+      "name": "國二合心",
+      "homeroomTeacher": "許文婕",
+      "sourcePage": 14,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "綜合活動A-家政",
+              "teachers": [
+                {
+                  "name": "周淑娟",
+                  "sourcePage": 92
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王聖賢",
+                  "sourcePage": 40
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "周成蓉",
+                  "sourcePage": 11
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動B-童軍",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "林宏鋕",
+                  "sourcePage": 72
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "表演藝術",
+              "teachers": [
+                {
+                  "name": "楊順宇",
+                  "sourcePage": 94
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "黃秀玲",
+                  "sourcePage": 76
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "林宏鋕",
+                  "sourcePage": 72
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "林季英",
+                  "sourcePage": 48
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "林宏鋕",
+                  "sourcePage": 72
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "周成蓉",
+                  "sourcePage": 11
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳奕霖",
+                  "sourcePage": 96
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "周成蓉",
+                  "sourcePage": 11
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳奕霖",
+                  "sourcePage": 96
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "健康教育",
+              "teachers": [
+                {
+                  "name": "賴碩伶",
+                  "sourcePage": 74
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "世界關懷行A",
+              "teachers": [
+                {
+                  "name": "曾愛達",
+                  "sourcePage": 27
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動C-輔導",
+              "teachers": [
+                {
+                  "name": "鄭莞柔",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "周成蓉",
+                  "sourcePage": 11
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "周成蓉",
+                  "sourcePage": 11
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王聖賢",
+                  "sourcePage": 40
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "視覺藝術",
+              "teachers": [
+                {
+                  "name": "張育綺",
+                  "sourcePage": 80
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行B",
+              "teachers": [
+                {
+                  "name": "翟垣皓",
+                  "sourcePage": 25
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "黃逸欣",
+                  "sourcePage": 90
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "本土語文",
+              "teachers": [
+                {
+                  "name": "蘇治維",
+                  "sourcePage": 14
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "盧佩君",
+                  "sourcePage": 57
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王聖賢",
+                  "sourcePage": 40
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王聖賢",
+                  "sourcePage": 40
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "周成蓉",
+                  "sourcePage": 11
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "全美語課程(輔)",
+              "teachers": [
+                {
+                  "name": "曾愛達",
+                  "sourcePage": 27
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "王聖賢",
+                  "sourcePage": 40
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史(輔)",
+              "teachers": [
+                {
+                  "name": "林季英",
+                  "sourcePage": 48
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-15",
+      "code": "2",
+      "publicCode": "J206",
+      "name": "國二和氣",
+      "homeroomTeacher": "胡鳳玲",
+      "sourcePage": 15,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "胡鳳玲",
+                  "sourcePage": 91
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "胡鳳玲",
+                  "sourcePage": 91
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "胡鳳玲",
+                  "sourcePage": 91
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "胡鳳玲",
+                  "sourcePage": 91
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "胡鳳玲",
+                  "sourcePage": 91
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "健康教育",
+              "teachers": [
+                {
+                  "name": "賴碩伶",
+                  "sourcePage": 74
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動B-童軍",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "胡鳳玲",
+                  "sourcePage": 91
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "陳立祺",
+                  "sourcePage": 20
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "林宏鋕",
+                  "sourcePage": 72
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "黃秀玲",
+                  "sourcePage": 76
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "陳立祺",
+                  "sourcePage": 20
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民",
+              "teachers": [
+                {
+                  "name": "胡鳳玲",
+                  "sourcePage": 91
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "陳立祺",
+                  "sourcePage": 20
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "表演藝術",
+              "teachers": [
+                {
+                  "name": "楊順宇",
+                  "sourcePage": 94
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動C-輔導",
+              "teachers": [
+                {
+                  "name": "楊芳玲",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "綜合活動A-家政",
+              "teachers": [
+                {
+                  "name": "周淑娟",
+                  "sourcePage": 92
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "視覺藝術",
+              "teachers": [
+                {
+                  "name": "張育綺",
+                  "sourcePage": 80
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "本土語文",
+              "teachers": [
+                {
+                  "name": "蘇治維",
+                  "sourcePage": 14
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳文婷",
+                  "sourcePage": 32
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳文婷",
+                  "sourcePage": 32
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "林宏鋕",
+                  "sourcePage": 72
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "賈旻曄",
+                  "sourcePage": 51
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "胡鳳玲",
+                  "sourcePage": 91
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "黃逸欣",
+                  "sourcePage": 90
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳文婷",
+                  "sourcePage": 32
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "胡鳳玲",
+                  "sourcePage": 91
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "胡鳳玲",
+                  "sourcePage": 91
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行A",
+              "teachers": [
+                {
+                  "name": "曾愛達",
+                  "sourcePage": 27
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行B",
+              "teachers": [
+                {
+                  "name": "翟垣皓",
+                  "sourcePage": 25
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳文婷",
+                  "sourcePage": 32
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "林宏鋕",
+                  "sourcePage": 72
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "盧佩君",
+                  "sourcePage": 57
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "陳文婷",
+                  "sourcePage": 32
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史(輔)",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "潘宜潔",
+                  "sourcePage": 13
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "陳立祺",
+                  "sourcePage": 20
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "全美語課程(輔)",
+              "teachers": [
+                {
+                  "name": "曾愛達",
+                  "sourcePage": 27
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-16",
+      "code": "2",
+      "publicCode": "J207",
+      "name": "國二互愛",
+      "homeroomTeacher": "王斐亭",
+      "sourcePage": 16,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "王斐亭",
+                  "sourcePage": 34
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "王斐亭",
+                  "sourcePage": 34
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "王斐亭",
+                  "sourcePage": 34
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "王斐亭",
+                  "sourcePage": 34
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "王斐亭",
+                  "sourcePage": 34
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民",
+              "teachers": [
+                {
+                  "name": "王斐亭",
+                  "sourcePage": 34
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "視覺藝術",
+              "teachers": [
+                {
+                  "name": "張育綺",
+                  "sourcePage": 80
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "表演藝術",
+              "teachers": [
+                {
+                  "name": "楊順宇",
+                  "sourcePage": 94
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動B-童軍",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "綜合活動A-家政",
+              "teachers": [
+                {
+                  "name": "周淑娟",
+                  "sourcePage": 92
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳奕霖",
+                  "sourcePage": 96
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行B",
+              "teachers": [
+                {
+                  "name": "翟垣皓",
+                  "sourcePage": 25
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "林宏鋕",
+                  "sourcePage": 72
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動C-輔導",
+              "teachers": [
+                {
+                  "name": "楊芳玲",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王斐亭",
+                  "sourcePage": 34
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "林宏鋕",
+                  "sourcePage": 72
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王斐亭",
+                  "sourcePage": 34
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王斐亭",
+                  "sourcePage": 34
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "黃秀玲",
+                  "sourcePage": 76
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "王斐亭",
+                  "sourcePage": 34
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行A",
+              "teachers": [
+                {
+                  "name": "曾愛達",
+                  "sourcePage": 27
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "李榮洲",
+                  "sourcePage": 59
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王斐亭",
+                  "sourcePage": 34
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "王斐亭",
+                  "sourcePage": 34
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "本土語文",
+              "teachers": [
+                {
+                  "name": "蘇治維",
+                  "sourcePage": 14
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "盧佩君",
+                  "sourcePage": 57
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "林宏鋕",
+                  "sourcePage": 72
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "黃逸欣",
+                  "sourcePage": 90
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳奕霖",
+                  "sourcePage": 96
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "健康教育",
+              "teachers": [
+                {
+                  "name": "賴碩伶",
+                  "sourcePage": 74
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "全美語課程(輔)",
+              "teachers": [
+                {
+                  "name": "曾愛達",
+                  "sourcePage": 27
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史(輔)",
+              "teachers": [
+                {
+                  "name": "李榮洲",
+                  "sourcePage": 59
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "王斐亭",
+                  "sourcePage": 34
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-17",
+      "code": "2",
+      "publicCode": "J209",
+      "name": "國二數理",
+      "homeroomTeacher": "科星",
+      "sourcePage": 17,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "",
+              "teachers": [],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "簡丞楨",
+                  "sourcePage": 30
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物(輔)",
+              "teachers": [
+                {
+                  "name": "張宏州",
+                  "sourcePage": 64
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "張齡之",
+                  "sourcePage": 42
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "張齡之",
+                  "sourcePage": 42
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-18",
+      "code": "3",
+      "publicCode": "J301",
+      "name": "國三知足",
+      "homeroomTeacher": "李嘉祥",
+      "sourcePage": 18,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "表演藝術",
+              "teachers": [
+                {
+                  "name": "楊順宇",
+                  "sourcePage": 94
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生命教育活動",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王斐亭",
+                  "sourcePage": 34
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王斐亭",
+                  "sourcePage": 34
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "黃逸欣",
+                  "sourcePage": 90
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王斐亭",
+                  "sourcePage": 34
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "黃秀玲",
+                  "sourcePage": 76
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "吳宗原",
+                  "sourcePage": 54
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地球科學",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "健康教育",
+              "teachers": [
+                {
+                  "name": "賴碩伶",
+                  "sourcePage": 74
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動C-輔導",
+              "teachers": [
+                {
+                  "name": "洪嘉穗",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動A-家政",
+              "teachers": [
+                {
+                  "name": "周淑娟",
+                  "sourcePage": 92
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "視覺藝術",
+              "teachers": [
+                {
+                  "name": "張育綺",
+                  "sourcePage": 80
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "綜合活動B-童軍",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王斐亭",
+                  "sourcePage": 34
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "胡鳳玲",
+                  "sourcePage": 91
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "胡鳳玲",
+                  "sourcePage": 91
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行A",
+              "teachers": [
+                {
+                  "name": "傅克斯",
+                  "sourcePage": 15
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行B",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "理化(輔)",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物(輔)",
+              "teachers": [
+                {
+                  "name": "黃靜瑩",
+                  "sourcePage": 65
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "王斐亭",
+                  "sourcePage": 34
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-19",
+      "code": "3",
+      "publicCode": "J302",
+      "name": "國三感恩",
+      "homeroomTeacher": "黃秀玲",
+      "sourcePage": 19,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "黃秀玲",
+                  "sourcePage": 76
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "黃秀玲",
+                  "sourcePage": 76
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "黃秀玲",
+                  "sourcePage": 76
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "黃秀玲",
+                  "sourcePage": 76
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "黃秀玲",
+                  "sourcePage": 76
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "地球科學",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生命教育活動",
+              "teachers": [
+                {
+                  "name": "黃秀玲",
+                  "sourcePage": 76
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "顏雨詩",
+                  "sourcePage": 3
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "翟垣皓",
+                  "sourcePage": 25
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "林宏鋕",
+                  "sourcePage": 72
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行B",
+              "teachers": [
+                {
+                  "name": "翟垣皓",
+                  "sourcePage": 25
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "健康教育",
+              "teachers": [
+                {
+                  "name": "賴碩伶",
+                  "sourcePage": 74
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "翟垣皓",
+                  "sourcePage": 25
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動A-家政",
+              "teachers": [
+                {
+                  "name": "周淑娟",
+                  "sourcePage": 92
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動C-輔導",
+              "teachers": [
+                {
+                  "name": "鄭莞柔",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "黃秀玲",
+                  "sourcePage": 76
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳泰璋",
+                  "sourcePage": 81
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "吳宗原",
+                  "sourcePage": 54
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "表演藝術",
+              "teachers": [
+                {
+                  "name": "楊順宇",
+                  "sourcePage": 94
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "世界關懷行A",
+              "teachers": [
+                {
+                  "name": "傅克斯",
+                  "sourcePage": 15
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "黃逸欣",
+                  "sourcePage": 90
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "黃秀玲",
+                  "sourcePage": 76
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "翟垣皓",
+                  "sourcePage": 25
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "林宏鋕",
+                  "sourcePage": 72
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "顏雨詩",
+                  "sourcePage": 3
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "黃秀玲",
+                  "sourcePage": 76
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "顏雨詩",
+                  "sourcePage": 3
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳泰璋",
+                  "sourcePage": 81
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "顏雨詩",
+                  "sourcePage": 3
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "視覺藝術",
+              "teachers": [
+                {
+                  "name": "張育綺",
+                  "sourcePage": 80
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "顏雨詩",
+                  "sourcePage": 3
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動B-童軍",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "翟垣皓",
+                  "sourcePage": 25
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化(輔)",
+              "teachers": [
+                {
+                  "name": "林宏鋕",
+                  "sourcePage": 72
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "顏雨詩",
+                  "sourcePage": 3
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物(輔)",
+              "teachers": [
+                {
+                  "name": "黃靜瑩",
+                  "sourcePage": 65
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-20",
+      "code": "3",
+      "publicCode": "J303",
+      "name": "國三善解",
+      "homeroomTeacher": "李柏毅",
+      "sourcePage": 20,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "李柏毅",
+                  "sourcePage": 82
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "李柏毅",
+                  "sourcePage": 82
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "李柏毅",
+                  "sourcePage": 82
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "李柏毅",
+                  "sourcePage": 82
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "李柏毅",
+                  "sourcePage": 82
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "翟垣皓",
+                  "sourcePage": 25
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生命教育活動",
+              "teachers": [
+                {
+                  "name": "李柏毅",
+                  "sourcePage": 82
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王美雅",
+                  "sourcePage": 41
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "李柏毅",
+                  "sourcePage": 82
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "王湘屏",
+                  "sourcePage": 73
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動A-家政",
+              "teachers": [
+                {
+                  "name": "周淑娟",
+                  "sourcePage": 92
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "顏雨詩",
+                  "sourcePage": 3
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "黃逸欣",
+                  "sourcePage": 90
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "視覺藝術",
+              "teachers": [
+                {
+                  "name": "張育綺",
+                  "sourcePage": 80
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "顏雨詩",
+                  "sourcePage": 3
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "翟垣皓",
+                  "sourcePage": 25
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "王湘屏",
+                  "sourcePage": 73
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "顏雨詩",
+                  "sourcePage": 3
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "顏雨詩",
+                  "sourcePage": 3
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地球科學",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "健康教育",
+              "teachers": [
+                {
+                  "name": "賴碩伶",
+                  "sourcePage": 74
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "綜合活動C-輔導",
+              "teachers": [
+                {
+                  "name": "洪嘉穗",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行A",
+              "teachers": [
+                {
+                  "name": "傅克斯",
+                  "sourcePage": 15
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "李柏毅",
+                  "sourcePage": 82
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "顏雨詩",
+                  "sourcePage": 3
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "翟垣皓",
+                  "sourcePage": 25
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "表演藝術",
+              "teachers": [
+                {
+                  "name": "楊順宇",
+                  "sourcePage": 94
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王美雅",
+                  "sourcePage": 41
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "李柏毅",
+                  "sourcePage": 82
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王美雅",
+                  "sourcePage": 41
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王美雅",
+                  "sourcePage": 41
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "李柏毅",
+                  "sourcePage": 82
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "黃秀玲",
+                  "sourcePage": 76
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動B-童軍",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行B",
+              "teachers": [
+                {
+                  "name": "翟垣皓",
+                  "sourcePage": 25
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "吳宗原",
+                  "sourcePage": 54
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "生物(輔)",
+              "teachers": [
+                {
+                  "name": "黃靜瑩",
+                  "sourcePage": 65
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "翟垣皓",
+                  "sourcePage": 25
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化(輔)",
+              "teachers": [
+                {
+                  "name": "王湘屏",
+                  "sourcePage": 73
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "王美雅",
+                  "sourcePage": 41
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "顏雨詩",
+                  "sourcePage": 3
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-21",
+      "code": "3",
+      "publicCode": "J304",
+      "name": "國三包容",
+      "homeroomTeacher": "張育綺",
+      "sourcePage": 21,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "張育綺",
+                  "sourcePage": 80
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "張育綺",
+                  "sourcePage": 80
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "張育綺",
+                  "sourcePage": 80
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "張育綺",
+                  "sourcePage": 80
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "張育綺",
+                  "sourcePage": 80
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生命教育活動",
+              "teachers": [
+                {
+                  "name": "張育綺",
+                  "sourcePage": 80
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "郭盈瑜",
+                  "sourcePage": 44
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動A-家政",
+              "teachers": [
+                {
+                  "name": "周淑娟",
+                  "sourcePage": 92
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "吳宗原",
+                  "sourcePage": 54
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "表演藝術",
+              "teachers": [
+                {
+                  "name": "楊順宇",
+                  "sourcePage": 94
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "郭盈瑜",
+                  "sourcePage": 44
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "黃秀玲",
+                  "sourcePage": 76
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行B",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳泰璋",
+                  "sourcePage": 81
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動B-童軍",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "郭盈瑜",
+                  "sourcePage": 44
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳泰璋",
+                  "sourcePage": 81
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "張育綺",
+                  "sourcePage": 80
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行A",
+              "teachers": [
+                {
+                  "name": "傅克斯",
+                  "sourcePage": 15
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "健康教育",
+              "teachers": [
+                {
+                  "name": "賴碩伶",
+                  "sourcePage": 74
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "許文婕",
+                  "sourcePage": 49
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "張育綺",
+                  "sourcePage": 80
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "郭盈瑜",
+                  "sourcePage": 44
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動C-輔導",
+              "teachers": [
+                {
+                  "name": "洪嘉穗",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "黃逸欣",
+                  "sourcePage": 90
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "視覺藝術",
+              "teachers": [
+                {
+                  "name": "張育綺",
+                  "sourcePage": 80
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地球科學",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "蔡錦鳳",
+                  "sourcePage": 26
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物(輔)",
+              "teachers": [
+                {
+                  "name": "黃靜瑩",
+                  "sourcePage": 65
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化(輔)",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "郭盈瑜",
+                  "sourcePage": 44
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-22",
+      "code": "3",
+      "publicCode": "J305",
+      "name": "國三合心",
+      "homeroomTeacher": "林家琪",
+      "sourcePage": 22,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "呂金玲",
+                  "sourcePage": 45
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生命教育活動",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動B-童軍",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "黃逸欣",
+                  "sourcePage": 90
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "李曉蘭",
+                  "sourcePage": 10
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "盧鈺縈",
+                  "sourcePage": 29
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地球科學",
+              "teachers": [
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "郭盈瑜",
+                  "sourcePage": 44
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "盧鈺縈",
+                  "sourcePage": 29
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "林季英",
+                  "sourcePage": 48
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "李柏毅",
+                  "sourcePage": 82
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "李曉蘭",
+                  "sourcePage": 10
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民",
+              "teachers": [
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行A",
+              "teachers": [
+                {
+                  "name": "傅克斯",
+                  "sourcePage": 15
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "賈旻曄",
+                  "sourcePage": 51
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "世界關懷行B",
+              "teachers": [
+                {
+                  "name": "盧鈺縈",
+                  "sourcePage": 29
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "李曉蘭",
+                  "sourcePage": 10
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "視覺藝術",
+              "teachers": [
+                {
+                  "name": "張育綺",
+                  "sourcePage": 80
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動C-輔導",
+              "teachers": [
+                {
+                  "name": "洪嘉穗",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "表演藝術",
+              "teachers": [
+                {
+                  "name": "楊順宇",
+                  "sourcePage": 94
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "郭盈瑜",
+                  "sourcePage": 44
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "郭盈瑜",
+                  "sourcePage": 44
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "盧鈺縈",
+                  "sourcePage": 29
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "郭盈瑜",
+                  "sourcePage": 44
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "李曉蘭",
+                  "sourcePage": 10
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "黃秀玲",
+                  "sourcePage": 76
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動A-家政",
+              "teachers": [
+                {
+                  "name": "周淑娟",
+                  "sourcePage": 92
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "健康教育",
+              "teachers": [
+                {
+                  "name": "賴碩伶",
+                  "sourcePage": 74
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "李柏毅",
+                  "sourcePage": 82
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "李曉蘭",
+                  "sourcePage": 10
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "生物(輔)",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "郭盈瑜",
+                  "sourcePage": 44
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化(輔)",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "李曉蘭",
+                  "sourcePage": 10
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "盧鈺縈",
+                  "sourcePage": 29
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-23",
+      "code": "3",
+      "publicCode": "J306",
+      "name": "國三和氣",
+      "homeroomTeacher": "林詩怡",
+      "sourcePage": 23,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "盧鈺縈",
+                  "sourcePage": 29
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生命教育活動",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王斐亭",
+                  "sourcePage": 34
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "賈旻曄",
+                  "sourcePage": 51
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "洪婉晴",
+                  "sourcePage": 93
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動B-童軍",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民",
+              "teachers": [
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王斐亭",
+                  "sourcePage": 34
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王斐亭",
+                  "sourcePage": 34
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "視覺藝術",
+              "teachers": [
+                {
+                  "name": "張育綺",
+                  "sourcePage": 80
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "盧鈺縈",
+                  "sourcePage": 29
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "黃逸欣",
+                  "sourcePage": 90
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "黃秀玲",
+                  "sourcePage": 76
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "盧鈺縈",
+                  "sourcePage": 29
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "王湘屏",
+                  "sourcePage": 73
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "呂金玲",
+                  "sourcePage": 45
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "世界關懷行B",
+              "teachers": [
+                {
+                  "name": "盧鈺縈",
+                  "sourcePage": 29
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "王湘屏",
+                  "sourcePage": 73
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行A",
+              "teachers": [
+                {
+                  "name": "傅克斯",
+                  "sourcePage": 15
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "林季英",
+                  "sourcePage": 48
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王斐亭",
+                  "sourcePage": 34
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動A-家政",
+              "teachers": [
+                {
+                  "name": "周淑娟",
+                  "sourcePage": 92
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "健康教育",
+              "teachers": [
+                {
+                  "name": "賴碩伶",
+                  "sourcePage": 74
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "洪婉晴",
+                  "sourcePage": 93
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "地球科學",
+              "teachers": [
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "表演藝術",
+              "teachers": [
+                {
+                  "name": "楊順宇",
+                  "sourcePage": 94
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動C-輔導",
+              "teachers": [
+                {
+                  "name": "洪嘉穗",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "王斐亭",
+                  "sourcePage": 34
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "林詩怡",
+                  "sourcePage": 6
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "盧鈺縈",
+                  "sourcePage": 29
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化(輔)",
+              "teachers": [
+                {
+                  "name": "王湘屏",
+                  "sourcePage": 73
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物(輔)",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-24",
+      "code": "3",
+      "publicCode": "J307",
+      "name": "國三互愛",
+      "homeroomTeacher": "陳泰璋",
+      "sourcePage": 24,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳泰璋",
+                  "sourcePage": 81
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳泰璋",
+                  "sourcePage": 81
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳泰璋",
+                  "sourcePage": 81
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳泰璋",
+                  "sourcePage": 81
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳泰璋",
+                  "sourcePage": 81
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳泰璋",
+                  "sourcePage": 81
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生命教育活動",
+              "teachers": [
+                {
+                  "name": "陳泰璋",
+                  "sourcePage": 81
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳怡婷",
+                  "sourcePage": 38
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "李曉蘭",
+                  "sourcePage": 10
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "黃秀玲",
+                  "sourcePage": 76
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "黃喻苹",
+                  "sourcePage": 24
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "李曉蘭",
+                  "sourcePage": 10
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳泰璋",
+                  "sourcePage": 81
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行A",
+              "teachers": [
+                {
+                  "name": "傅克斯",
+                  "sourcePage": 15
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "李曉蘭",
+                  "sourcePage": 10
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "綜合活動C-輔導",
+              "teachers": [
+                {
+                  "name": "鄭莞柔",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "李曉蘭",
+                  "sourcePage": 10
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳怡婷",
+                  "sourcePage": 38
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "健康教育",
+              "teachers": [
+                {
+                  "name": "賴碩伶",
+                  "sourcePage": 74
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "賈旻曄",
+                  "sourcePage": 51
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動A-家政",
+              "teachers": [
+                {
+                  "name": "鄭博仁",
+                  "sourcePage": 67
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "李曉蘭",
+                  "sourcePage": 10
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "林季英",
+                  "sourcePage": 48
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "視覺藝術",
+              "teachers": [
+                {
+                  "name": "張育綺",
+                  "sourcePage": 80
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民",
+              "teachers": [
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "陳泰璋",
+                  "sourcePage": 81
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "黃逸欣",
+                  "sourcePage": 90
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行B",
+              "teachers": [
+                {
+                  "name": "黃喻苹",
+                  "sourcePage": 24
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "地球科學",
+              "teachers": [
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "表演藝術",
+              "teachers": [
+                {
+                  "name": "楊順宇",
+                  "sourcePage": 94
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "陳泰璋",
+                  "sourcePage": 81
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "黃喻苹",
+                  "sourcePage": 24
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳怡婷",
+                  "sourcePage": 38
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳怡婷",
+                  "sourcePage": 38
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "黃喻苹",
+                  "sourcePage": 24
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動B-童軍",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "呂金玲",
+                  "sourcePage": 45
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "黃喻苹",
+                  "sourcePage": 24
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化(輔)",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "李曉蘭",
+                  "sourcePage": 10
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物(輔)",
+              "teachers": [
+                {
+                  "name": "黃靜瑩",
+                  "sourcePage": 65
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "陳怡婷",
+                  "sourcePage": 38
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-25",
+      "code": "3",
+      "publicCode": "J308",
+      "name": "國三協力",
+      "homeroomTeacher": "余志誠",
+      "sourcePage": 25,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "黃喻苹",
+                  "sourcePage": 24
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生命教育活動",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "呂金玲",
+                  "sourcePage": 45
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "健康教育",
+              "teachers": [
+                {
+                  "name": "賴碩伶",
+                  "sourcePage": 74
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "表演藝術",
+              "teachers": [
+                {
+                  "name": "楊順宇",
+                  "sourcePage": 94
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動A-家政",
+              "teachers": [
+                {
+                  "name": "鄭博仁",
+                  "sourcePage": 67
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "林季英",
+                  "sourcePage": 48
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "黃喻苹",
+                  "sourcePage": 24
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "視覺藝術",
+              "teachers": [
+                {
+                  "name": "張育綺",
+                  "sourcePage": 80
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民",
+              "teachers": [
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動B-童軍",
+              "teachers": [
+                {
+                  "name": "林承勳",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "黃逸欣",
+                  "sourcePage": 90
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "吳秋宏",
+                  "sourcePage": 84
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "吳秋宏",
+                  "sourcePage": 84
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "黃秀玲",
+                  "sourcePage": 76
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "黃喻苹",
+                  "sourcePage": 24
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "綜合活動C-輔導",
+              "teachers": [
+                {
+                  "name": "鄭莞柔",
+                  "sourcePage": 0
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "世界關懷行B",
+              "teachers": [
+                {
+                  "name": "黃喻苹",
+                  "sourcePage": 24
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "世界關懷行A",
+              "teachers": [
+                {
+                  "name": "傅克斯",
+                  "sourcePage": 15
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "賈旻曄",
+                  "sourcePage": 51
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地球科學",
+              "teachers": [
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "黃育樺",
+                  "sourcePage": 8
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "黃喻苹",
+                  "sourcePage": 24
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物(輔)",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "理化(輔)",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-26",
+      "code": "1",
+      "publicCode": "S101",
+      "name": "高一知足",
+      "homeroomTeacher": "周怡君",
+      "sourcePage": 26,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王美雅",
+                  "sourcePage": 41
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生命教育活動",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "黃荷雯",
+                  "sourcePage": 87
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "物理",
+              "teachers": [
+                {
+                  "name": "王威程",
+                  "sourcePage": 66
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "黃荷雯",
+                  "sourcePage": 87
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民(一)",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王美雅",
+                  "sourcePage": 41
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "楊淑青",
+                  "sourcePage": 77
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王美雅",
+                  "sourcePage": 41
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "彈性學習A",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "物理",
+              "teachers": [
+                {
+                  "name": "王威程",
+                  "sourcePage": 66
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地球科學",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "閩南語文",
+              "teachers": [
+                {
+                  "name": "顏雨詩",
+                  "sourcePage": 3
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "王美雅",
+                  "sourcePage": 41
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "多元選修",
+              "teachers": [],
+              "runningClass": true
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "林昱汝",
+                  "sourcePage": 52
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "楊淑青",
+                  "sourcePage": 77
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "多元選修",
+              "teachers": [],
+              "runningClass": true
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "吳巧伶",
+                  "sourcePage": 79
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "謝岱霖",
+                  "sourcePage": 55
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地球科學",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "謝岱霖",
+                  "sourcePage": 55
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "林昱汝",
+                  "sourcePage": 52
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "全美語課程(輔)",
+              "teachers": [
+                {
+                  "name": "傅克斯",
+                  "sourcePage": 15
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會(輔)",
+              "teachers": [
+                {
+                  "name": "林昱汝",
+                  "sourcePage": 52
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "王美雅",
+                  "sourcePage": 41
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-27",
+      "code": "1",
+      "publicCode": "S102",
+      "name": "高一感恩",
+      "homeroomTeacher": "蔡維佳",
+      "sourcePage": 27,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "歐宗穎",
+                  "sourcePage": 43
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "黃荷雯",
+                  "sourcePage": 87
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林旻璇",
+                  "sourcePage": 12
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生命教育活動",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "閩南語文",
+              "teachers": [
+                {
+                  "name": "顏雨詩",
+                  "sourcePage": 3
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林旻璇",
+                  "sourcePage": 12
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "謝岱霖",
+                  "sourcePage": 55
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "歐宗穎",
+                  "sourcePage": 43
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "游棋竹",
+                  "sourcePage": 50
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "物理",
+              "teachers": [
+                {
+                  "name": "王威程",
+                  "sourcePage": 66
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "吳巧伶",
+                  "sourcePage": 79
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民(一)",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "黃荷雯",
+                  "sourcePage": 87
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "彈性學習A",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "歐宗穎",
+                  "sourcePage": 43
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "楊淑青",
+                  "sourcePage": 77
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "謝岱霖",
+                  "sourcePage": 55
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "楊淑青",
+                  "sourcePage": 77
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "歐宗穎",
+                  "sourcePage": 43
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林旻璇",
+                  "sourcePage": 12
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "多元選修",
+              "teachers": [],
+              "runningClass": true
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "地球科學",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "林昱汝",
+                  "sourcePage": 52
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "林昱汝",
+                  "sourcePage": 52
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "多元選修",
+              "teachers": [],
+              "runningClass": true
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地球科學",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "物理",
+              "teachers": [
+                {
+                  "name": "王威程",
+                  "sourcePage": 66
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "游棋竹",
+                  "sourcePage": 50
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林旻璇",
+                  "sourcePage": 12
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "歐宗穎",
+                  "sourcePage": 43
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理(輔)",
+              "teachers": [
+                {
+                  "name": "謝岱霖",
+                  "sourcePage": 55
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "林旻璇",
+                  "sourcePage": 12
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會(輔)",
+              "teachers": [
+                {
+                  "name": "林昱汝",
+                  "sourcePage": 52
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-28",
+      "code": "1",
+      "publicCode": "S103",
+      "name": "高一善解",
+      "homeroomTeacher": "張善治",
+      "sourcePage": 28,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "閩南語文",
+              "teachers": [
+                {
+                  "name": "蘇治維",
+                  "sourcePage": 14
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生命教育活動",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳泰璋",
+                  "sourcePage": 81
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "物理",
+              "teachers": [
+                {
+                  "name": "王威程",
+                  "sourcePage": 66
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "楊淑青",
+                  "sourcePage": 77
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "地球科學",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "吳巧伶",
+                  "sourcePage": 79
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "彈性學習A",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民(一)",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "林昱汝",
+                  "sourcePage": 52
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "林昱汝",
+                  "sourcePage": 52
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "多元選修",
+              "teachers": [],
+              "runningClass": true
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "物理",
+              "teachers": [
+                {
+                  "name": "王威程",
+                  "sourcePage": 66
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "多元選修",
+              "teachers": [],
+              "runningClass": true
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳泰璋",
+                  "sourcePage": 81
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "資訊科技",
+              "teachers": [
+                {
+                  "name": "楊淑青",
+                  "sourcePage": 77
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地球科學",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會(輔)",
+              "teachers": [
+                {
+                  "name": "林昱汝",
+                  "sourcePage": 52
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理(輔)",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-29",
+      "code": "1",
+      "publicCode": "S104",
+      "name": "高一包容",
+      "homeroomTeacher": "林怡君",
+      "sourcePage": 29,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "歐宗穎",
+                  "sourcePage": 43
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生命教育活動",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡宜珊",
+                  "sourcePage": 23
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "歐宗穎",
+                  "sourcePage": 43
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民(一)",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "黃荷雯",
+                  "sourcePage": 87
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "吳宗原",
+                  "sourcePage": 54
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡宜珊",
+                  "sourcePage": 23
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡宜珊",
+                  "sourcePage": 23
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "歐宗穎",
+                  "sourcePage": 43
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "彈性學習A",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "吳巧伶",
+                  "sourcePage": 79
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林旻璇",
+                  "sourcePage": 12
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林旻璇",
+                  "sourcePage": 12
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "化學",
+              "teachers": [
+                {
+                  "name": "韋尚賢",
+                  "sourcePage": 69
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "吳宗原",
+                  "sourcePage": 54
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林旻璇",
+                  "sourcePage": 12
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "閩南語文",
+              "teachers": [
+                {
+                  "name": "蘇治維",
+                  "sourcePage": 14
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "多元選修",
+              "teachers": [],
+              "runningClass": true
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "化學",
+              "teachers": [
+                {
+                  "name": "韋尚賢",
+                  "sourcePage": 69
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡宜珊",
+                  "sourcePage": 23
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "多元選修",
+              "teachers": [],
+              "runningClass": true
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "林旻璇",
+                  "sourcePage": 12
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "林季英",
+                  "sourcePage": 48
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "黃荷雯",
+                  "sourcePage": 87
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "林季英",
+                  "sourcePage": 48
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "歐宗穎",
+                  "sourcePage": 43
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "化學(輔)",
+              "teachers": [
+                {
+                  "name": "韋尚賢",
+                  "sourcePage": 69
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物(輔)",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "歐宗穎",
+                  "sourcePage": 43
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "林旻璇",
+                  "sourcePage": 12
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "蔡宜珊",
+                  "sourcePage": 23
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-30",
+      "code": "1",
+      "publicCode": "S105",
+      "name": "高一合心",
+      "homeroomTeacher": "郭修佑",
+      "sourcePage": 30,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生命教育活動",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "謝岱霖",
+                  "sourcePage": 55
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳泰璋",
+                  "sourcePage": 81
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "化學",
+              "teachers": [
+                {
+                  "name": "王湘屏",
+                  "sourcePage": 73
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳泰璋",
+                  "sourcePage": 81
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民(一)",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "吳宗原",
+                  "sourcePage": 54
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "彈性學習A",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "林季英",
+                  "sourcePage": 48
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "化學",
+              "teachers": [
+                {
+                  "name": "王湘屏",
+                  "sourcePage": 73
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "林季英",
+                  "sourcePage": 48
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "多元選修",
+              "teachers": [],
+              "runningClass": true
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "吳巧伶",
+                  "sourcePage": 79
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "閩南語文",
+              "teachers": [
+                {
+                  "name": "蘇治維",
+                  "sourcePage": 14
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "多元選修",
+              "teachers": [],
+              "runningClass": true
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "吳宗原",
+                  "sourcePage": 54
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "謝岱霖",
+                  "sourcePage": 55
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "郭修佑",
+                  "sourcePage": 19
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物(輔)",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "化學(輔)",
+              "teachers": [
+                {
+                  "name": "王湘屏",
+                  "sourcePage": 73
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-31",
+      "code": "1",
+      "publicCode": "S106",
+      "name": "高一和氣",
+      "homeroomTeacher": "吳念祖",
+      "sourcePage": 31,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學探究",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "化學",
+              "teachers": [
+                {
+                  "name": "王湘屏",
+                  "sourcePage": 73
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生命教育活動",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "化學",
+              "teachers": [
+                {
+                  "name": "王湘屏",
+                  "sourcePage": 73
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學探究",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "彈性學習A",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "張宏州",
+                  "sourcePage": 64
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民(一)",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生活科技",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "地理",
+              "teachers": [
+                {
+                  "name": "謝岱霖",
+                  "sourcePage": 55
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "閩南語文",
+              "teachers": [
+                {
+                  "name": "蘇治維",
+                  "sourcePage": 14
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "多元選修",
+              "teachers": [],
+              "runningClass": true
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "生物",
+              "teachers": [
+                {
+                  "name": "張宏州",
+                  "sourcePage": 64
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "吳宗原",
+                  "sourcePage": 54
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "多元選修",
+              "teachers": [],
+              "runningClass": true
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "吳秋宏",
+                  "sourcePage": 84
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "吳秋宏",
+                  "sourcePage": 84
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "音樂",
+              "teachers": [
+                {
+                  "name": "吳巧伶",
+                  "sourcePage": 79
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "科學閱讀",
+              "teachers": [
+                {
+                  "name": "張宏州",
+                  "sourcePage": 64
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "化學(輔)",
+              "teachers": [
+                {
+                  "name": "王湘屏",
+                  "sourcePage": 73
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "科學專題研究(輔)",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-32",
+      "code": "2",
+      "publicCode": "S201",
+      "name": "高二知足",
+      "homeroomTeacher": "陳平瑋",
+      "sourcePage": 32,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳平瑋",
+                  "sourcePage": 9
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳平瑋",
+                  "sourcePage": 9
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳平瑋",
+                  "sourcePage": 9
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳平瑋",
+                  "sourcePage": 9
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳平瑋",
+                  "sourcePage": 9
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "吳宗原",
+                  "sourcePage": 54
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "吳宗原",
+                  "sourcePage": 54
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "陳平瑋",
+                  "sourcePage": 9
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生命教育活動",
+              "teachers": [
+                {
+                  "name": "陳平瑋",
+                  "sourcePage": 9
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "物理-探究A",
+              "teachers": [
+                {
+                  "name": "吳淑敏",
+                  "sourcePage": 60
+                },
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "黃琮瑄",
+                  "sourcePage": 21
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "李柏毅",
+                  "sourcePage": 82
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學B",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "美術",
+              "teachers": [
+                {
+                  "name": "張簡景鈴",
+                  "sourcePage": 88
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "物理-探究A",
+              "teachers": [
+                {
+                  "name": "吳淑敏",
+                  "sourcePage": 60
+                },
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "全民國防教育",
+              "teachers": [
+                {
+                  "name": "賴昀締",
+                  "sourcePage": 89
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "黃琮瑄",
+                  "sourcePage": 21
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習B",
+              "teachers": [],
+              "runningClass": true
+            },
+            {
+              "subject": "藝術生活",
+              "teachers": [
+                {
+                  "name": "曾愛達",
+                  "sourcePage": 27
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "李柏毅",
+                  "sourcePage": 82
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "數學B",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "陳平瑋",
+                  "sourcePage": 9
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習A",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "黃琮瑄",
+                  "sourcePage": 21
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "陳平瑋",
+                  "sourcePage": 9
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "游棋竹",
+                  "sourcePage": 50
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "探究與實作：地理與人",
+              "teachers": [
+                {
+                  "name": "陳柏伶",
+                  "sourcePage": 46
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "陳平瑋",
+                  "sourcePage": 9
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "健康與護理",
+              "teachers": [
+                {
+                  "name": "賴碩伶",
+                  "sourcePage": 74
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "游棋竹",
+                  "sourcePage": 50
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "英語服務學習",
+              "teachers": [
+                {
+                  "name": "黃琮瑄",
+                  "sourcePage": 21
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "探究與實作：地理與人",
+              "teachers": [
+                {
+                  "name": "陳柏伶",
+                  "sourcePage": 46
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "陳平瑋",
+                  "sourcePage": 9
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "陳平瑋",
+                  "sourcePage": 9
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國際文化理解與戲劇表",
+              "teachers": [
+                {
+                  "name": "黃琮瑄",
+                  "sourcePage": 21
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "英語服務學習",
+              "teachers": [
+                {
+                  "name": "黃琮瑄",
+                  "sourcePage": 21
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學B",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "黃琮瑄",
+                  "sourcePage": 21
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學B",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "國際文化理解與戲劇表",
+              "teachers": [
+                {
+                  "name": "黃琮瑄",
+                  "sourcePage": 21
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "全美語課程(輔)",
+              "teachers": [
+                {
+                  "name": "黃琮瑄",
+                  "sourcePage": 21
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "陳平瑋",
+                  "sourcePage": 9
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "黃琮瑄",
+                  "sourcePage": 21
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會(輔)",
+              "teachers": [
+                {
+                  "name": "吳宗原",
+                  "sourcePage": 54
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-33",
+      "code": "2",
+      "publicCode": "S202",
+      "name": "高二感恩",
+      "homeroomTeacher": "陳文婷",
+      "sourcePage": 33,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳文婷",
+                  "sourcePage": 32
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳文婷",
+                  "sourcePage": 32
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳文婷",
+                  "sourcePage": 32
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳文婷",
+                  "sourcePage": 32
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳文婷",
+                  "sourcePage": 32
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "陳平瑋",
+                  "sourcePage": 9
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "李柏毅",
+                  "sourcePage": 82
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生命教育活動",
+              "teachers": [
+                {
+                  "name": "陳文婷",
+                  "sourcePage": 32
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "健康與護理",
+              "teachers": [
+                {
+                  "name": "賴碩伶",
+                  "sourcePage": 74
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "藝術生活",
+              "teachers": [
+                {
+                  "name": "曾愛達",
+                  "sourcePage": 27
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學B",
+              "teachers": [
+                {
+                  "name": "陳文婷",
+                  "sourcePage": 32
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "呂金玲",
+                  "sourcePage": 45
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "陳平瑋",
+                  "sourcePage": 9
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "陳平瑋",
+                  "sourcePage": 9
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "探究與實作：地理與人",
+              "teachers": [
+                {
+                  "name": "謝岱霖",
+                  "sourcePage": 55
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習A",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "物理-探究A",
+              "teachers": [
+                {
+                  "name": "吳淑敏",
+                  "sourcePage": 60
+                },
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "呂金玲",
+                  "sourcePage": 45
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "數學B",
+              "teachers": [
+                {
+                  "name": "陳文婷",
+                  "sourcePage": 32
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "探究與實作：地理與人",
+              "teachers": [
+                {
+                  "name": "謝岱霖",
+                  "sourcePage": 55
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習B",
+              "teachers": [],
+              "runningClass": true
+            },
+            {
+              "subject": "物理-探究A",
+              "teachers": [
+                {
+                  "name": "吳淑敏",
+                  "sourcePage": 60
+                },
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "李柏毅",
+                  "sourcePage": 82
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "領域課程：科技應用專",
+              "teachers": [
+                {
+                  "name": "楊淑青",
+                  "sourcePage": 77
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "陳文婷",
+                  "sourcePage": 32
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "陳平瑋",
+                  "sourcePage": 9
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "領域課程：科技應用專",
+              "teachers": [
+                {
+                  "name": "楊淑青",
+                  "sourcePage": 77
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "工程設計專題",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "全民國防教育",
+              "teachers": [
+                {
+                  "name": "賴昀締",
+                  "sourcePage": 89
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "陳文婷",
+                  "sourcePage": 32
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "美術",
+              "teachers": [
+                {
+                  "name": "張簡景鈴",
+                  "sourcePage": 88
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "工程設計專題",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學B",
+              "teachers": [
+                {
+                  "name": "陳文婷",
+                  "sourcePage": 32
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學B",
+              "teachers": [
+                {
+                  "name": "陳文婷",
+                  "sourcePage": 32
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "公民與社會(輔)",
+              "teachers": [
+                {
+                  "name": "呂金玲",
+                  "sourcePage": 45
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史(輔)",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "陳平瑋",
+                  "sourcePage": 9
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "陳文婷",
+                  "sourcePage": 32
+                }
+              ],
+              "runningClass": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-34",
+      "code": "2",
+      "publicCode": "S203",
+      "name": "高二善解",
+      "homeroomTeacher": "許蘭馨",
+      "sourcePage": 34,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "物理-探究A",
+              "teachers": [
+                {
+                  "name": "吳淑敏",
+                  "sourcePage": 60
+                },
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "藝術生活",
+              "teachers": [
+                {
+                  "name": "曾愛達",
+                  "sourcePage": 27
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳泰璋",
+                  "sourcePage": 81
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生命教育活動",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "工程設計專題",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "物理-探究A",
+              "teachers": [
+                {
+                  "name": "吳淑敏",
+                  "sourcePage": 60
+                },
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "游棋竹",
+                  "sourcePage": 50
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學A",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "游棋竹",
+                  "sourcePage": 50
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "工程設計專題",
+              "teachers": [
+                {
+                  "name": "簡志雄",
+                  "sourcePage": 75
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習B",
+              "teachers": [],
+              "runningClass": true
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "美術",
+              "teachers": [
+                {
+                  "name": "張簡景鈴",
+                  "sourcePage": 88
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "數學A",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "呂金玲",
+                  "sourcePage": 45
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習A",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "周成蓉",
+                  "sourcePage": 11
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "周成蓉",
+                  "sourcePage": 11
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "呂金玲",
+                  "sourcePage": 45
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "全民國防教育",
+              "teachers": [
+                {
+                  "name": "賴昀締",
+                  "sourcePage": 89
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "探究與實作：地理與人",
+              "teachers": [
+                {
+                  "name": "謝岱霖",
+                  "sourcePage": 55
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "領域課程：科技應用專",
+              "teachers": [
+                {
+                  "name": "楊淑青",
+                  "sourcePage": 77
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "健康與護理",
+              "teachers": [
+                {
+                  "name": "賴碩伶",
+                  "sourcePage": 74
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "探究與實作：地理與人",
+              "teachers": [
+                {
+                  "name": "謝岱霖",
+                  "sourcePage": 55
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "領域課程：科技應用專",
+              "teachers": [
+                {
+                  "name": "楊淑青",
+                  "sourcePage": 77
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "周成蓉",
+                  "sourcePage": 11
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學A",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "周成蓉",
+                  "sourcePage": 11
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學A",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳泰璋",
+                  "sourcePage": 81
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史(輔)",
+              "teachers": [
+                {
+                  "name": "游棋竹",
+                  "sourcePage": 50
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會(輔)",
+              "teachers": [
+                {
+                  "name": "呂金玲",
+                  "sourcePage": 45
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "周成蓉",
+                  "sourcePage": 11
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-35",
+      "code": "2",
+      "publicCode": "S204",
+      "name": "高二包容",
+      "homeroomTeacher": "王婉真",
+      "sourcePage": 35,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "王婉真",
+                  "sourcePage": 39
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "王婉真",
+                  "sourcePage": 39
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "王婉真",
+                  "sourcePage": 39
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "王婉真",
+                  "sourcePage": 39
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "王婉真",
+                  "sourcePage": 39
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "黃琮瑄",
+                  "sourcePage": 21
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "健康與護理",
+              "teachers": [
+                {
+                  "name": "賴碩伶",
+                  "sourcePage": 74
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學A",
+              "teachers": [
+                {
+                  "name": "王婉真",
+                  "sourcePage": 39
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生命教育活動",
+              "teachers": [
+                {
+                  "name": "王婉真",
+                  "sourcePage": 39
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "陳平瑋",
+                  "sourcePage": 9
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "陳平瑋",
+                  "sourcePage": 9
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "陳平瑋",
+                  "sourcePage": 9
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "吳宗原",
+                  "sourcePage": 54
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "吳宗原",
+                  "sourcePage": 54
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "黃琮瑄",
+                  "sourcePage": 21
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "數學A",
+              "teachers": [
+                {
+                  "name": "王婉真",
+                  "sourcePage": 39
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "黃荷雯",
+                  "sourcePage": 87
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習A",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "陳平瑋",
+                  "sourcePage": 9
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修物理-力學一",
+              "teachers": [
+                {
+                  "name": "王威程",
+                  "sourcePage": 66
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "全民國防教育",
+              "teachers": [
+                {
+                  "name": "賴昀締",
+                  "sourcePage": 89
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修化學-物質與能量",
+              "teachers": [
+                {
+                  "name": "王湘屏",
+                  "sourcePage": 73
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習B",
+              "teachers": [],
+              "runningClass": true
+            },
+            {
+              "subject": "美術",
+              "teachers": [
+                {
+                  "name": "張簡景鈴",
+                  "sourcePage": 88
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修生物-生命的起源",
+              "teachers": [
+                {
+                  "name": "張宏州",
+                  "sourcePage": 64
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "黃琮瑄",
+                  "sourcePage": 21
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "王婉真",
+                  "sourcePage": 39
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "黃琮瑄",
+                  "sourcePage": 21
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "黃荷雯",
+                  "sourcePage": 87
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "選修物理-力學一",
+              "teachers": [
+                {
+                  "name": "王威程",
+                  "sourcePage": 66
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "物理-探究A",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                },
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "王婉真",
+                  "sourcePage": 39
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學A",
+              "teachers": [
+                {
+                  "name": "王婉真",
+                  "sourcePage": 39
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修化學-物質與能量",
+              "teachers": [
+                {
+                  "name": "王湘屏",
+                  "sourcePage": 73
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "藝術生活",
+              "teachers": [
+                {
+                  "name": "曾愛達",
+                  "sourcePage": 27
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "物理-探究A",
+              "teachers": [
+                {
+                  "name": "余志誠",
+                  "sourcePage": 61
+                },
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修生物-生命的起源",
+              "teachers": [
+                {
+                  "name": "張宏州",
+                  "sourcePage": 64
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學A",
+              "teachers": [
+                {
+                  "name": "王婉真",
+                  "sourcePage": 39
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "王婉真",
+                  "sourcePage": 39
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "化學(輔)",
+              "teachers": [
+                {
+                  "name": "王湘屏",
+                  "sourcePage": 73
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "陳平瑋",
+                  "sourcePage": 9
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "黃琮瑄",
+                  "sourcePage": 21
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "物理(輔)",
+              "teachers": [
+                {
+                  "name": "王威程",
+                  "sourcePage": 66
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-36",
+      "code": "2",
+      "publicCode": "S205",
+      "name": "高二合心",
+      "homeroomTeacher": "張宏州",
+      "sourcePage": 36,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "張宏州",
+                  "sourcePage": 64
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "張宏州",
+                  "sourcePage": 64
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "張宏州",
+                  "sourcePage": 64
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "張宏州",
+                  "sourcePage": 64
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "張宏州",
+                  "sourcePage": 64
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "物理-探究A",
+              "teachers": [
+                {
+                  "name": "吳淑敏",
+                  "sourcePage": 60
+                },
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學A",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生命教育活動",
+              "teachers": [
+                {
+                  "name": "張宏州",
+                  "sourcePage": 64
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "美術",
+              "teachers": [
+                {
+                  "name": "張簡景鈴",
+                  "sourcePage": 88
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "物理-探究A",
+              "teachers": [
+                {
+                  "name": "吳淑敏",
+                  "sourcePage": 60
+                },
+                {
+                  "name": "林怡君",
+                  "sourcePage": 62
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "周成蓉",
+                  "sourcePage": 11
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "周成蓉",
+                  "sourcePage": 11
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "健康與護理",
+              "teachers": [
+                {
+                  "name": "賴碩伶",
+                  "sourcePage": 74
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習B",
+              "teachers": [],
+              "runningClass": true
+            },
+            {
+              "subject": "數學A",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學A",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "藝術生活",
+              "teachers": [
+                {
+                  "name": "曾愛達",
+                  "sourcePage": 27
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "全民國防教育",
+              "teachers": [
+                {
+                  "name": "賴昀締",
+                  "sourcePage": 89
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習A",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳泰璋",
+                  "sourcePage": 81
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "吳宗原",
+                  "sourcePage": 54
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "選修化學-物質與能量",
+              "teachers": [
+                {
+                  "name": "韋尚賢",
+                  "sourcePage": 69
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "吳宗原",
+                  "sourcePage": 54
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "張宏州",
+                  "sourcePage": 64
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修物理-力學一",
+              "teachers": [
+                {
+                  "name": "陳冠廷",
+                  "sourcePage": 71
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "數學A",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "陳泰璋",
+                  "sourcePage": 81
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "張宏州",
+                  "sourcePage": 64
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "周成蓉",
+                  "sourcePage": 11
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "周成蓉",
+                  "sourcePage": 11
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "選修生物-生命的起源",
+              "teachers": [
+                {
+                  "name": "張宏州",
+                  "sourcePage": 64
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修物理-力學一",
+              "teachers": [
+                {
+                  "name": "陳冠廷",
+                  "sourcePage": 71
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修生物-生命的起源",
+              "teachers": [
+                {
+                  "name": "張宏州",
+                  "sourcePage": 64
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修化學-物質與能量",
+              "teachers": [
+                {
+                  "name": "韋尚賢",
+                  "sourcePage": 69
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "吳念祖",
+                  "sourcePage": 33
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "物理(輔)",
+              "teachers": [
+                {
+                  "name": "陳冠廷",
+                  "sourcePage": 71
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "化學(輔)",
+              "teachers": [
+                {
+                  "name": "韋尚賢",
+                  "sourcePage": 69
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "許蘭馨",
+                  "sourcePage": 17
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "周成蓉",
+                  "sourcePage": 11
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-37",
+      "code": "2",
+      "publicCode": "S206",
+      "name": "高二和氣",
+      "homeroomTeacher": "陳泓緻",
+      "sourcePage": 37,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "公民與社會",
+              "teachers": [
+                {
+                  "name": "呂金玲",
+                  "sourcePage": 45
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學A",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生命教育活動",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "全民國防教育",
+              "teachers": [
+                {
+                  "name": "賴昀締",
+                  "sourcePage": 89
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學A",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修化學-物質與能量",
+              "teachers": [
+                {
+                  "name": "韋尚賢",
+                  "sourcePage": 69
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "吳秋宏",
+                  "sourcePage": 84
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "藝術生活",
+              "teachers": [
+                {
+                  "name": "曾愛達",
+                  "sourcePage": 27
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "物理-探究A",
+              "teachers": [
+                {
+                  "name": "吳淑敏",
+                  "sourcePage": 60
+                },
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "吳秋宏",
+                  "sourcePage": 84
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習B",
+              "teachers": [],
+              "runningClass": true
+            },
+            {
+              "subject": "選修生物-生命的起源",
+              "teachers": [
+                {
+                  "name": "張宏州",
+                  "sourcePage": 64
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修生物-生命的起源",
+              "teachers": [
+                {
+                  "name": "張宏州",
+                  "sourcePage": 64
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "物理-探究A",
+              "teachers": [
+                {
+                  "name": "吳淑敏",
+                  "sourcePage": 60
+                },
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習A",
+              "teachers": [],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修物理-力學一",
+              "teachers": [
+                {
+                  "name": "陳冠廷",
+                  "sourcePage": 71
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "成大科學教育課程(二)",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史",
+              "teachers": [
+                {
+                  "name": "李嘉祥",
+                  "sourcePage": 47
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "成大科學教育課程(二)",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修物理-力學一",
+              "teachers": [
+                {
+                  "name": "陳冠廷",
+                  "sourcePage": 71
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學A",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "健康與護理",
+              "teachers": [
+                {
+                  "name": "賴碩伶",
+                  "sourcePage": 74
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "科學專題研究",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修化學-物質與能量",
+              "teachers": [
+                {
+                  "name": "韋尚賢",
+                  "sourcePage": 69
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學A",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "科學專題研究(輔)",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "張善治",
+                  "sourcePage": 1
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "陳泓緻",
+                  "sourcePage": 37
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "物理(輔)",
+              "teachers": [
+                {
+                  "name": "陳冠廷",
+                  "sourcePage": 71
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-38",
+      "code": "3",
+      "publicCode": "S301",
+      "name": "高三知足",
+      "homeroomTeacher": "曾郁佳",
+      "sourcePage": 38,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "社會環境議題",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學乙",
+              "teachers": [
+                {
+                  "name": "林書淵",
+                  "sourcePage": 35
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "數學乙",
+              "teachers": [
+                {
+                  "name": "林書淵",
+                  "sourcePage": 35
+                }
+              ],
+              "runningClass": true
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "民主政治與法律",
+              "teachers": [
+                {
+                  "name": "呂金玲",
+                  "sourcePage": 45
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "語文表達與傳播應用",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "家政",
+              "teachers": [
+                {
+                  "name": "顏雨詩",
+                  "sourcePage": 3
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "李柏毅",
+                  "sourcePage": 82
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民(三)",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "英文作文",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "永續海洋與保育",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學乙",
+              "teachers": [
+                {
+                  "name": "林書淵",
+                  "sourcePage": 35
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "專題研究與刊物編輯",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習B",
+              "teachers": [
+                {
+                  "name": "游棋竹",
+                  "sourcePage": 50
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "英文作文",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習C",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "社會環境議題",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "永續海洋與保育",
+              "teachers": [
+                {
+                  "name": "寧凱婕",
+                  "sourcePage": 16
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "社會環境議題",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "數學乙",
+              "teachers": [
+                {
+                  "name": "林書淵",
+                  "sourcePage": 35
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習A",
+              "teachers": [
+                {
+                  "name": "林書淵",
+                  "sourcePage": 35
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "民主政治與法律",
+              "teachers": [
+                {
+                  "name": "呂金玲",
+                  "sourcePage": 45
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "李柏毅",
+                  "sourcePage": 82
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "藝術生活",
+              "teachers": [
+                {
+                  "name": "曾愛達",
+                  "sourcePage": 27
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "民主政治與法律",
+              "teachers": [
+                {
+                  "name": "呂金玲",
+                  "sourcePage": 45
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "族群、性別與國家的歷",
+              "teachers": [
+                {
+                  "name": "游棋竹",
+                  "sourcePage": 50
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "族群、性別與國家的歷",
+              "teachers": [
+                {
+                  "name": "游棋竹",
+                  "sourcePage": 50
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "族群、性別與國家的歷",
+              "teachers": [
+                {
+                  "name": "游棋竹",
+                  "sourcePage": 50
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "地理(輔)",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "林書淵",
+                  "sourcePage": 35
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "莊淑珺",
+                  "sourcePage": 2
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史(輔)",
+              "teachers": [
+                {
+                  "name": "游棋竹",
+                  "sourcePage": 50
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-39",
+      "code": "3",
+      "publicCode": "S302",
+      "name": "高三感恩",
+      "homeroomTeacher": "蔡文隆",
+      "sourcePage": 39,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "族群、性別與國家的歷",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "族群、性別與國家的歷",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "社會環境議題",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學乙",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "數學乙",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": true
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英文作文",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "家政",
+              "teachers": [
+                {
+                  "name": "顏雨詩",
+                  "sourcePage": 3
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "民主政治與法律",
+              "teachers": [
+                {
+                  "name": "呂金玲",
+                  "sourcePage": 45
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "彈性學習C",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英文作文",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學乙",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "家政",
+              "teachers": [
+                {
+                  "name": "顏雨詩",
+                  "sourcePage": 3
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民(三)",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "社會環境議題",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "語文表達與傳播應用",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "數學乙",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "藝術生活",
+              "teachers": [
+                {
+                  "name": "曾愛達",
+                  "sourcePage": 27
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習A",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "族群、性別與國家的歷",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "補強-英語文",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "民主政治與法律",
+              "teachers": [
+                {
+                  "name": "呂金玲",
+                  "sourcePage": 45
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "補強-英語文",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "胡鳳玲",
+                  "sourcePage": 91
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "民主政治與法律",
+              "teachers": [
+                {
+                  "name": "呂金玲",
+                  "sourcePage": 45
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "胡鳳玲",
+                  "sourcePage": 91
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習B",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "社會環境議題",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "曾郁佳",
+                  "sourcePage": 18
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "蔡文隆",
+                  "sourcePage": 31
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "地理(輔)",
+              "teachers": [
+                {
+                  "name": "劉姿伶",
+                  "sourcePage": 53
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史(輔)",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-40",
+      "code": "3",
+      "publicCode": "S303",
+      "name": "高三善解",
+      "homeroomTeacher": "翁子喬",
+      "sourcePage": 40,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "家政",
+              "teachers": [
+                {
+                  "name": "顏雨詩",
+                  "sourcePage": 3
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學乙",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "數學乙",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": true
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "社會環境議題",
+              "teachers": [
+                {
+                  "name": "賈旻曄",
+                  "sourcePage": 51
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "家政",
+              "teachers": [
+                {
+                  "name": "顏雨詩",
+                  "sourcePage": 3
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "族群、性別與國家的歷",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "社會環境議題",
+              "teachers": [
+                {
+                  "name": "賈旻曄",
+                  "sourcePage": 51
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民(三)",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "英文作文",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "民主政治與法律",
+              "teachers": [
+                {
+                  "name": "盧佩君",
+                  "sourcePage": 57
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學乙",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "族群、性別與國家的歷",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "英文作文",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "補強-英語文",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "社會環境議題",
+              "teachers": [
+                {
+                  "name": "賈旻曄",
+                  "sourcePage": 51
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "補強-英語文",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "李柏毅",
+                  "sourcePage": 82
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "數學乙",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "李柏毅",
+                  "sourcePage": 82
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習A",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "語文表達與傳播應用",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "彈性學習C",
+              "teachers": [
+                {
+                  "name": "賈旻曄",
+                  "sourcePage": 51
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "民主政治與法律",
+              "teachers": [
+                {
+                  "name": "盧佩君",
+                  "sourcePage": 57
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習B",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "民主政治與法律",
+              "teachers": [
+                {
+                  "name": "盧佩君",
+                  "sourcePage": 57
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "族群、性別與國家的歷",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "藝術生活",
+              "teachers": [
+                {
+                  "name": "曾愛達",
+                  "sourcePage": 27
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": true
+            },
+            {
+              "subject": "地理(輔)",
+              "teachers": [
+                {
+                  "name": "賈旻曄",
+                  "sourcePage": 51
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "歷史(輔)",
+              "teachers": [
+                {
+                  "name": "周怡君",
+                  "sourcePage": 56
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-41",
+      "code": "3",
+      "publicCode": "S304",
+      "name": "高三包容",
+      "homeroomTeacher": "鄭沛文",
+      "sourcePage": 41,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英文作文",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學甲",
+              "teachers": [
+                {
+                  "name": "歐宗穎",
+                  "sourcePage": 43
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修地球科學-大氣、",
+              "teachers": [
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "選修化學-化學反應與",
+              "teachers": [
+                {
+                  "name": "宋佩盈",
+                  "sourcePage": 68
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英文作文",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修生物-動物體的構",
+              "teachers": [
+                {
+                  "name": "鄭博仁",
+                  "sourcePage": 67
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學甲",
+              "teachers": [
+                {
+                  "name": "歐宗穎",
+                  "sourcePage": 43
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "藝術生活",
+              "teachers": [
+                {
+                  "name": "曾愛達",
+                  "sourcePage": 27
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修物理-波動、光及",
+              "teachers": [
+                {
+                  "name": "王威程",
+                  "sourcePage": 66
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修化學-化學反應與",
+              "teachers": [
+                {
+                  "name": "宋佩盈",
+                  "sourcePage": 68
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修化學-有機化學與",
+              "teachers": [
+                {
+                  "name": "宋佩盈",
+                  "sourcePage": 68
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修生物-細胞與遺傳",
+              "teachers": [
+                {
+                  "name": "鄭博仁",
+                  "sourcePage": 67
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "選修物理-波動、光及",
+              "teachers": [
+                {
+                  "name": "王威程",
+                  "sourcePage": 66
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習A",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "語文表達與傳播應用",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修物理-電磁現象一",
+              "teachers": [
+                {
+                  "name": "王威程",
+                  "sourcePage": 66
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民(三)",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "彈性學習C",
+              "teachers": [
+                {
+                  "name": "歐宗穎",
+                  "sourcePage": 43
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修生物-細胞與遺傳",
+              "teachers": [
+                {
+                  "name": "鄭博仁",
+                  "sourcePage": 67
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習B",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學甲",
+              "teachers": [
+                {
+                  "name": "歐宗穎",
+                  "sourcePage": 43
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學甲",
+              "teachers": [
+                {
+                  "name": "歐宗穎",
+                  "sourcePage": 43
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修化學-有機化學與",
+              "teachers": [
+                {
+                  "name": "宋佩盈",
+                  "sourcePage": 68
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "胡鳳玲",
+                  "sourcePage": 91
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "胡鳳玲",
+                  "sourcePage": 91
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修地球科學-大氣、",
+              "teachers": [
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修物理-電磁現象一",
+              "teachers": [
+                {
+                  "name": "王威程",
+                  "sourcePage": 66
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "翁子喬",
+                  "sourcePage": 28
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "化學(輔)",
+              "teachers": [
+                {
+                  "name": "宋佩盈",
+                  "sourcePage": 68
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "物理(輔)",
+              "teachers": [
+                {
+                  "name": "王威程",
+                  "sourcePage": 66
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "鄭沛文",
+                  "sourcePage": 7
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "歐宗穎",
+                  "sourcePage": 43
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-42",
+      "code": "3",
+      "publicCode": "S305",
+      "name": "高三合心",
+      "homeroomTeacher": "張瀛鐸",
+      "sourcePage": 42,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修地球科學-大氣、",
+              "teachers": [
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "陳立祺",
+                  "sourcePage": 20
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修生物-細胞與遺傳",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學甲",
+              "teachers": [
+                {
+                  "name": "歐宗穎",
+                  "sourcePage": 43
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "選修物理-波動、光及",
+              "teachers": [
+                {
+                  "name": "王威程",
+                  "sourcePage": 66
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學甲",
+              "teachers": [
+                {
+                  "name": "歐宗穎",
+                  "sourcePage": 43
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修物理-電磁現象一",
+              "teachers": [
+                {
+                  "name": "王威程",
+                  "sourcePage": 66
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "數學甲",
+              "teachers": [
+                {
+                  "name": "歐宗穎",
+                  "sourcePage": 43
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修生物-動物體的構",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "藝術生活",
+              "teachers": [
+                {
+                  "name": "曾愛達",
+                  "sourcePage": 27
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "李柏毅",
+                  "sourcePage": 82
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民(三)",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "語文表達與傳播應用",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修物理-電磁現象一",
+              "teachers": [
+                {
+                  "name": "王威程",
+                  "sourcePage": 66
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修化學-化學反應與",
+              "teachers": [
+                {
+                  "name": "韋尚賢",
+                  "sourcePage": 69
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修化學-化學反應與",
+              "teachers": [
+                {
+                  "name": "韋尚賢",
+                  "sourcePage": 69
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修地球科學-大氣、",
+              "teachers": [
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "英文作文",
+              "teachers": [
+                {
+                  "name": "陳立祺",
+                  "sourcePage": 20
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修化學-有機化學與",
+              "teachers": [
+                {
+                  "name": "韋尚賢",
+                  "sourcePage": 69
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習C",
+              "teachers": [
+                {
+                  "name": "歐宗穎",
+                  "sourcePage": 43
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "陳立祺",
+                  "sourcePage": 20
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "英文作文",
+              "teachers": [
+                {
+                  "name": "陳立祺",
+                  "sourcePage": 20
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習B",
+              "teachers": [
+                {
+                  "name": "陳立祺",
+                  "sourcePage": 20
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習A",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修生物-細胞與遺傳",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "選修化學-有機化學與",
+              "teachers": [
+                {
+                  "name": "韋尚賢",
+                  "sourcePage": 69
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "李柏毅",
+                  "sourcePage": 82
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學甲",
+              "teachers": [
+                {
+                  "name": "歐宗穎",
+                  "sourcePage": 43
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修物理-波動、光及",
+              "teachers": [
+                {
+                  "name": "王威程",
+                  "sourcePage": 66
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "物理(輔)",
+              "teachers": [
+                {
+                  "name": "王威程",
+                  "sourcePage": 66
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "張瀛鐸",
+                  "sourcePage": 5
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "陳立祺",
+                  "sourcePage": 20
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "歐宗穎",
+                  "sourcePage": 43
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "化學(輔)",
+              "teachers": [
+                {
+                  "name": "韋尚賢",
+                  "sourcePage": 69
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-43",
+      "code": "3",
+      "publicCode": "S306",
+      "name": "高三和氣",
+      "homeroomTeacher": "吳威德",
+      "sourcePage": 43,
+      "rows": [
+        {
+          "period": {
+            "name": "晨光時",
+            "time": "07:30-07:55"
+          },
+          "cells": [
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "晨光時間",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第一節",
+            "time": "08:00-08:50"
+          },
+          "cells": [
+            {
+              "subject": "選修化學-化學反應與",
+              "teachers": [
+                {
+                  "name": "宋佩盈",
+                  "sourcePage": 68
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學甲",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第二節",
+            "time": "09:05-09:55"
+          },
+          "cells": [
+            {
+              "subject": "選修物理-電磁現象一",
+              "teachers": [
+                {
+                  "name": "陳冠廷",
+                  "sourcePage": 71
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "胡鳳玲",
+                  "sourcePage": 91
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修化學-有機化學與",
+              "teachers": [
+                {
+                  "name": "宋佩盈",
+                  "sourcePage": 68
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學甲",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "數學甲",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第三節",
+            "time": "10:05-10:55"
+          },
+          "cells": [
+            {
+              "subject": "數學甲",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "語文表達與傳播應用",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修生物-細胞與遺傳",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修物理-波動、光及",
+              "teachers": [
+                {
+                  "name": "陳冠廷",
+                  "sourcePage": 71
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第四節",
+            "time": "11:05-11:55"
+          },
+          "cells": [
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習A",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修物理-電磁現象一",
+              "teachers": [
+                {
+                  "name": "陳冠廷",
+                  "sourcePage": 71
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修化學-化學反應與",
+              "teachers": [
+                {
+                  "name": "宋佩盈",
+                  "sourcePage": 68
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "慈濟學與全球公民(三)",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第五節",
+            "time": "13:10-14:00"
+          },
+          "cells": [
+            {
+              "subject": "選修地球科學-大氣、",
+              "teachers": [
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修化學-有機化學與",
+              "teachers": [
+                {
+                  "name": "宋佩盈",
+                  "sourcePage": 68
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "班會",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習B",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "生物醫學科學探究",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第六節",
+            "time": "14:10-15:00"
+          },
+          "cells": [
+            {
+              "subject": "選修生物-動物體的構",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修生物-細胞與遺傳",
+              "teachers": [
+                {
+                  "name": "林家琪",
+                  "sourcePage": 63
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "團體活動時間",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "彈性學習C",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英文作文",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第七節",
+            "time": "15:15-16:05"
+          },
+          "cells": [
+            {
+              "subject": "選修物理-波動、光及",
+              "teachers": [
+                {
+                  "name": "陳冠廷",
+                  "sourcePage": 71
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "選修地球科學-大氣、",
+              "teachers": [
+                {
+                  "name": "黃丞皞",
+                  "sourcePage": 70
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "體育",
+              "teachers": [
+                {
+                  "name": "胡鳳玲",
+                  "sourcePage": 91
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英文作文",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        },
+        {
+          "period": {
+            "name": "第八節",
+            "time": "16:10-17:00"
+          },
+          "cells": [
+            {
+              "subject": "數學(輔)",
+              "teachers": [
+                {
+                  "name": "吳威德",
+                  "sourcePage": 36
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "英語文(輔)",
+              "teachers": [
+                {
+                  "name": "蔡維佳",
+                  "sourcePage": 22
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "物理(輔)",
+              "teachers": [
+                {
+                  "name": "陳冠廷",
+                  "sourcePage": 71
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "化學(輔)",
+              "teachers": [
+                {
+                  "name": "宋佩盈",
+                  "sourcePage": 68
+                }
+              ],
+              "runningClass": false
+            },
+            {
+              "subject": "國語文(輔)",
+              "teachers": [
+                {
+                  "name": "莊仁傑",
+                  "sourcePage": 4
+                }
+              ],
+              "runningClass": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "id": "101",
+      "name": "張善治",
+      "sessions": [
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 1,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 2,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 3,
+          "row": 1,
+          "subject": "生命教育活動"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 4,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 0,
+          "row": 4,
+          "subject": "彈性學習A"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 3,
+          "row": 4,
+          "subject": "慈濟學與全球公民(一)"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 3,
+          "row": 6,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 0,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 0,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 2,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 3,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 1,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 4,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 4,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 1,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 3,
+          "row": 5,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 1,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 2,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "className": "高二合心",
+          "day": 2,
+          "row": 3,
+          "subject": "彈性學習B",
+          "note": "上課地點：高二合心",
+          "linkable": false
+        }
+      ]
+    },
+    {
+      "id": "102",
+      "name": "莊淑珺",
+      "sessions": [
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 0,
+          "row": 3,
+          "subject": "慈濟學與全球公民"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 1,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 2,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 3,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 4,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 0,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 4,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 0,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 2,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 3,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 4,
+          "row": 5,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 1,
+          "row": 6,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 1,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 0,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 1,
+          "row": 2,
+          "subject": "語文表達與傳播應用"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 1,
+          "row": 5,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 3,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 4,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 2,
+          "row": 8,
+          "subject": "國語文(輔)"
+        }
+      ]
+    },
+    {
+      "id": "103",
+      "name": "顏雨詩",
+      "sessions": [
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 4,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 1,
+          "row": 6,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 3,
+          "row": 6,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 0,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 2,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 3,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 4,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 2,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 0,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 1,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 3,
+          "row": 5,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 4,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 1,
+          "row": 5,
+          "subject": "閩南語文"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 0,
+          "row": 2,
+          "subject": "閩南語文"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 2,
+          "row": 2,
+          "subject": "家政"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 3,
+          "row": 2,
+          "subject": "家政"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 3,
+          "row": 3,
+          "subject": "家政"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 1,
+          "row": 1,
+          "subject": "家政"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 1,
+          "row": 2,
+          "subject": "家政"
+        },
+        {
+          "day": 4,
+          "row": 5,
+          "subject": "多元選修",
+          "note": "上課地點：高一善解",
+          "linkable": false
+        },
+        {
+          "day": 4,
+          "row": 6,
+          "subject": "多元選修",
+          "note": "上課地點：高一善解",
+          "linkable": false
+        }
+      ]
+    },
+    {
+      "id": "104",
+      "name": "莊仁傑",
+      "sessions": [
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 2,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 1,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 0,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 1,
+          "row": 3,
+          "subject": "慈濟學與全球公民"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 3,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 4,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 3,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 0,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 3,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 4,
+          "row": 5,
+          "subject": "語文表達與傳播應用"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 1,
+          "row": 6,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 4,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 0,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 3,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 4,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 2,
+          "row": 3,
+          "subject": "語文表達與傳播應用"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 0,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 1,
+          "row": 4,
+          "subject": "彈性學習A"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 1,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 4,
+          "row": 8,
+          "subject": "國語文(輔)"
+        }
+      ]
+    },
+    {
+      "id": "106",
+      "name": "張瀛鐸",
+      "sessions": [
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 4,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 1,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 3,
+          "row": 5,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 0,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 2,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 4,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 0,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 1,
+          "row": 4,
+          "subject": "語文表達與傳播應用"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 2,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 3,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 4,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 3,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 0,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 2,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 3,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 4,
+          "row": 3,
+          "subject": "慈濟學與全球公民(三)"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 0,
+          "row": 4,
+          "subject": "語文表達與傳播應用"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 3,
+          "row": 6,
+          "subject": "彈性學習A"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 4,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 1,
+          "row": 8,
+          "subject": "國語文(輔)"
+        }
+      ]
+    },
+    {
+      "id": "110",
+      "name": "林詩怡",
+      "sessions": [
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 0,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 3,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 4,
+          "row": 5,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 1,
+          "row": 6,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 2,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 4,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 0,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 2,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 3,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 1,
+          "row": 5,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 4,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 0,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 1,
+          "row": 1,
+          "subject": "生命教育活動"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 4,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 1,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 2,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 0,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 3,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 1,
+          "row": 8,
+          "subject": "國語文(輔)"
+        }
+      ]
+    },
+    {
+      "id": "111",
+      "name": "鄭沛文",
+      "sessions": [
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 2,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 0,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 1,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 3,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 0,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 1,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 2,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 0,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 4,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 2,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 0,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 4,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 1,
+          "row": 4,
+          "subject": "彈性學習A"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 2,
+          "row": 4,
+          "subject": "語文表達與傳播應用"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 4,
+          "row": 4,
+          "subject": "慈濟學與全球公民(三)"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 3,
+          "row": 5,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 1,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 3,
+          "row": 8,
+          "subject": "國語文(輔)"
+        }
+      ]
+    },
+    {
+      "id": "113",
+      "name": "黃育樺",
+      "sessions": [
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 1,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 2,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 3,
+          "row": 6,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 4,
+          "row": 6,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 0,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 4,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 0,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 1,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 2,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 3,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 4,
+          "row": 5,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 3,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-17",
+          "className": "國二數理",
+          "day": 2,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 4,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 0,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 2,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 1,
+          "row": 5,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 3,
+          "row": 5,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 1,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 4,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 3,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 0,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 1,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 2,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 0,
+          "row": 8,
+          "subject": "國語文(輔)"
+        }
+      ]
+    },
+    {
+      "id": "125",
+      "name": "陳平瑋",
+      "sessions": [
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 2,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 3,
+          "row": 1,
+          "subject": "生命教育活動"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 1,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 4,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 3,
+          "row": 6,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 1,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 1,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 4,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 0,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 3,
+          "row": 5,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 3,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 4,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 0,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 1,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 3,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 2,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "className": "高二包容",
+          "day": 2,
+          "row": 3,
+          "subject": "彈性學習B",
+          "note": "上課地點：高二包容",
+          "linkable": false
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 2,
+          "row": 4,
+          "subject": "彈性學習A",
+          "note": "上課地點：高二知足",
+          "linkable": true
+        }
+      ]
+    },
+    {
+      "id": "126",
+      "name": "李曉蘭",
+      "sessions": [
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 2,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 3,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 4,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 3,
+          "row": 5,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 2,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 4,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 4,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 1,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 2,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 3,
+          "row": 6,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 4,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 3,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 3,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 1,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 4,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 2,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 3,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 2,
+          "row": 8,
+          "subject": "國語文(輔)"
+        }
+      ]
+    },
+    {
+      "id": "129",
+      "name": "周成蓉",
+      "sessions": [
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 2,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 3,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 0,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 3,
+          "row": 5,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 4,
+          "row": 5,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 0,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 3,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 4,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 0,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 2,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 3,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 2,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 0,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 3,
+          "row": 6,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 4,
+          "row": 6,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 4,
+          "row": 8,
+          "subject": "國語文(輔)"
+        }
+      ]
+    },
+    {
+      "id": "130",
+      "name": "林旻璇",
+      "sessions": [
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 0,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 4,
+          "row": 6,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 1,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 2,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 3,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 0,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 3,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 0,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 2,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 1,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 4,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 1,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-09",
+          "className": "國一數理",
+          "day": 4,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 2,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 1,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 3,
+          "row": 5,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 4,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 2,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 2,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 3,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 1,
+          "row": 5,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 0,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 3,
+          "row": 8,
+          "subject": "國語文(輔)"
+        }
+      ]
+    },
+    {
+      "id": "131",
+      "name": "潘宜潔",
+      "sessions": [
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 0,
+          "row": 2,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 1,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 4,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 2,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 3,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 1,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 0,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 3,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 1,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 4,
+          "row": 5,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 2,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 3,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 1,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 2,
+          "row": 3,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 0,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 4,
+          "row": 4,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 3,
+          "row": 6,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 4,
+          "row": 8,
+          "subject": "國語文(輔)"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 2,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 4,
+          "row": 1,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 3,
+          "row": 5,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 0,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 1,
+          "row": 7,
+          "subject": "國語文"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 2,
+          "row": 8,
+          "subject": "國語文(輔)"
+        }
+      ]
+    },
+    {
+      "id": "132",
+      "name": "蘇治維",
+      "sessions": [
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 1,
+          "row": 1,
+          "subject": "本土語文"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 0,
+          "row": 4,
+          "subject": "本土語文"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 2,
+          "row": 2,
+          "subject": "本土語文"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 3,
+          "row": 2,
+          "subject": "本土語文"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 1,
+          "row": 4,
+          "subject": "本土語文"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 3,
+          "row": 3,
+          "subject": "本土語文"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 0,
+          "row": 2,
+          "subject": "本土語文"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 4,
+          "row": 3,
+          "subject": "本土語文"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 4,
+          "row": 4,
+          "subject": "本土語文"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 4,
+          "row": 7,
+          "subject": "本土語文"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 2,
+          "row": 7,
+          "subject": "本土語文"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 1,
+          "row": 3,
+          "subject": "本土語文"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 0,
+          "row": 7,
+          "subject": "本土語文"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 2,
+          "row": 4,
+          "subject": "本土語文"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 3,
+          "row": 6,
+          "subject": "本土語文"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 0,
+          "row": 1,
+          "subject": "閩南語文"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 3,
+          "row": 5,
+          "subject": "閩南語文"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 1,
+          "row": 6,
+          "subject": "閩南語文"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 1,
+          "row": 5,
+          "subject": "閩南語文"
+        }
+      ]
+    },
+    {
+      "id": "201",
+      "name": "傅克斯",
+      "sessions": [
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 1,
+          "row": 2,
+          "subject": "世界關懷行A"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 4,
+          "row": 1,
+          "subject": "世界關懷行A"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 4,
+          "row": 6,
+          "subject": "世界關懷行A"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 2,
+          "row": 4,
+          "subject": "世界關懷行A"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 2,
+          "row": 3,
+          "subject": "世界關懷行A"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 2,
+          "row": 1,
+          "subject": "世界關懷行A"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 1,
+          "row": 7,
+          "subject": "世界關懷行A"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 3,
+          "row": 1,
+          "subject": "世界關懷行A"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 1,
+          "row": 1,
+          "subject": "世界關懷行A"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 3,
+          "row": 8,
+          "subject": "全美語課程(輔)"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 0,
+          "row": 3,
+          "subject": "世界關懷行A"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 0,
+          "row": 8,
+          "subject": "全美語課程(輔)"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 0,
+          "row": 1,
+          "subject": "世界關懷行A"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 4,
+          "row": 8,
+          "subject": "全美語課程(輔)"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 3,
+          "row": 6,
+          "subject": "世界關懷行A"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 0,
+          "row": 5,
+          "subject": "世界關懷行A"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 1,
+          "row": 5,
+          "subject": "世界關懷行A"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 4,
+          "row": 5,
+          "subject": "世界關懷行A"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 3,
+          "row": 3,
+          "subject": "世界關懷行A"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 3,
+          "row": 5,
+          "subject": "世界關懷行A"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 3,
+          "row": 2,
+          "subject": "世界關懷行A"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 0,
+          "row": 7,
+          "subject": "世界關懷行A"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 1,
+          "row": 8,
+          "subject": "全美語課程(輔)"
+        }
+      ]
+    },
+    {
+      "id": "202",
+      "name": "寧凱婕",
+      "sessions": [
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 0,
+          "row": 8,
+          "subject": "全美語課程(輔)"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 2,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 1,
+          "row": 5,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 0,
+          "row": 6,
+          "subject": "慈濟學與全球公民"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 3,
+          "row": 7,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 4,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 2,
+          "row": 2,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 4,
+          "row": 5,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 0,
+          "row": 7,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 2,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 4,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 0,
+          "row": 3,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 2,
+          "row": 3,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 3,
+          "row": 3,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 1,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 1,
+          "row": 3,
+          "subject": "永續海洋與保育"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 3,
+          "row": 4,
+          "subject": "永續海洋與保育"
+        }
+      ]
+    },
+    {
+      "id": "204",
+      "name": "許蘭馨",
+      "sessions": [
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 2,
+          "row": 8,
+          "subject": "全美語課程(輔)"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 4,
+          "row": 8,
+          "subject": "全美語課程(輔)"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 2,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 4,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 3,
+          "row": 4,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 1,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 3,
+          "row": 1,
+          "subject": "生命教育活動"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 0,
+          "row": 3,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 1,
+          "row": 3,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 3,
+          "row": 3,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 4,
+          "row": 5,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 0,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 0,
+          "row": 2,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 4,
+          "row": 2,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 3,
+          "row": 5,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 1,
+          "row": 7,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 3,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 2,
+          "row": 4,
+          "subject": "彈性學習A",
+          "note": "上課地點：高二善解",
+          "linkable": true
+        }
+      ]
+    },
+    {
+      "id": "205",
+      "name": "曾郁佳",
+      "sessions": [
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 3,
+          "row": 8,
+          "subject": "全美語課程(輔)"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 0,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 3,
+          "row": 4,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 4,
+          "row": 5,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 2,
+          "row": 7,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 1,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 2,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 4,
+          "row": 2,
+          "subject": "慈濟學與全球公民(三)"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 0,
+          "row": 3,
+          "subject": "英文作文"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 3,
+          "row": 3,
+          "subject": "專題研究與刊物編輯"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 0,
+          "row": 4,
+          "subject": "英文作文"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 1,
+          "row": 7,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 4,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 1,
+          "row": 2,
+          "subject": "英文作文"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 2,
+          "row": 2,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 1,
+          "row": 3,
+          "subject": "英文作文"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 0,
+          "row": 6,
+          "subject": "補強-英語文"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 3,
+          "row": 6,
+          "subject": "補強-英語文"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 4,
+          "row": 7,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 0,
+          "row": 8,
+          "subject": "英語文(輔)"
+        }
+      ]
+    },
+    {
+      "id": "207",
+      "name": "郭修佑",
+      "sessions": [
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 3,
+          "row": 8,
+          "subject": "全美語課程(輔)"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 2,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 0,
+          "row": 5,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 4,
+          "row": 7,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 1,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 2,
+          "row": 8,
+          "subject": "全美語課程(輔)"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 4,
+          "row": 2,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 1,
+          "row": 4,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 2,
+          "row": 4,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 0,
+          "row": 6,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 4,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 3,
+          "row": 1,
+          "subject": "生命教育活動"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 4,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 1,
+          "row": 3,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 2,
+          "row": 3,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 3,
+          "row": 3,
+          "subject": "慈濟學與全球公民(一)"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 0,
+          "row": 4,
+          "subject": "彈性學習A"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 3,
+          "row": 5,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 0,
+          "row": 8,
+          "subject": "英語文(輔)"
+        }
+      ]
+    },
+    {
+      "id": "209",
+      "name": "陳立祺",
+      "sessions": [
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 0,
+          "row": 8,
+          "subject": "全美語課程(輔)"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 4,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 0,
+          "row": 3,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 3,
+          "row": 4,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 1,
+          "row": 5,
+          "subject": "慈濟學與全球公民"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 1,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 0,
+          "row": 2,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 4,
+          "row": 2,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 2,
+          "row": 3,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 3,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 2,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 0,
+          "row": 5,
+          "subject": "英文作文"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 4,
+          "row": 5,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 0,
+          "row": 6,
+          "subject": "英文作文"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 2,
+          "row": 8,
+          "subject": "英語文(輔)"
+        }
+      ]
+    },
+    {
+      "id": "210",
+      "name": "黃琮瑄",
+      "sessions": [
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 0,
+          "row": 2,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 1,
+          "row": 3,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 3,
+          "row": 4,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 0,
+          "row": 6,
+          "subject": "英語服務學習"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 4,
+          "row": 6,
+          "subject": "國際文化理解與戲劇表"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 0,
+          "row": 7,
+          "subject": "英語服務學習"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 2,
+          "row": 7,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 4,
+          "row": 7,
+          "subject": "國際文化理解與戲劇表"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 0,
+          "row": 8,
+          "subject": "全美語課程(輔)"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 2,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 0,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 4,
+          "row": 2,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 1,
+          "row": 5,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 3,
+          "row": 5,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 3,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "className": "高二感恩",
+          "day": 2,
+          "row": 3,
+          "subject": "彈性學習B",
+          "note": "上課地點：高二感恩",
+          "linkable": false
+        }
+      ]
+    },
+    {
+      "id": "212",
+      "name": "蔡維佳",
+      "sessions": [
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 1,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 4,
+          "row": 2,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 0,
+          "row": 5,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 3,
+          "row": 6,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 2,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 3,
+          "row": 1,
+          "subject": "生命教育活動"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 4,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 2,
+          "row": 3,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 3,
+          "row": 3,
+          "subject": "慈濟學與全球公民(一)"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 0,
+          "row": 4,
+          "subject": "彈性學習A"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 1,
+          "row": 4,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 0,
+          "row": 7,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 3,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 2,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 1,
+          "row": 3,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 4,
+          "row": 6,
+          "subject": "英文作文"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 4,
+          "row": 7,
+          "subject": "英文作文"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 1,
+          "row": 8,
+          "subject": "英語文(輔)"
+        }
+      ]
+    },
+    {
+      "id": "213",
+      "name": "蔡宜珊",
+      "sessions": [
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 2,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 3,
+          "row": 3,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 0,
+          "row": 5,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 3,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-09",
+          "className": "國一數理",
+          "day": 0,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 4,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 1,
+          "row": 3,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 2,
+          "row": 3,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 3,
+          "row": 6,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 4,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "day": 4,
+          "row": 5,
+          "subject": "多元選修",
+          "note": "上課地點：高一知足",
+          "linkable": false
+        },
+        {
+          "day": 4,
+          "row": 6,
+          "subject": "多元選修",
+          "note": "上課地點：高一知足",
+          "linkable": false
+        }
+      ]
+    },
+    {
+      "id": "214",
+      "name": "黃喻苹",
+      "sessions": [
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 4,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 1,
+          "row": 5,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 3,
+          "row": 5,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 2,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 0,
+          "row": 2,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 4,
+          "row": 5,
+          "subject": "世界關懷行B"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 3,
+          "row": 6,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 2,
+          "row": 7,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 0,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 0,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 3,
+          "row": 3,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 1,
+          "row": 6,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 4,
+          "row": 6,
+          "subject": "世界關懷行B"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 1,
+          "row": 8,
+          "subject": "英語文(輔)"
+        }
+      ]
+    },
+    {
+      "id": "215",
+      "name": "翟垣皓",
+      "sessions": [
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 4,
+          "row": 8,
+          "subject": "全美語課程(輔)"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 0,
+          "row": 5,
+          "subject": "世界關懷行B"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 3,
+          "row": 1,
+          "subject": "世界關懷行B"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 4,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 1,
+          "row": 3,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 0,
+          "row": 7,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 2,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 0,
+          "row": 4,
+          "subject": "世界關懷行B"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 1,
+          "row": 4,
+          "subject": "世界關懷行B"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 3,
+          "row": 6,
+          "subject": "世界關懷行B"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 4,
+          "row": 6,
+          "subject": "世界關懷行B"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 2,
+          "row": 3,
+          "subject": "世界關懷行B"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 0,
+          "row": 2,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 2,
+          "row": 2,
+          "subject": "世界關懷行B"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 4,
+          "row": 2,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 3,
+          "row": 5,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 0,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 0,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 3,
+          "row": 3,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 4,
+          "row": 5,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 3,
+          "row": 7,
+          "subject": "世界關懷行B"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 1,
+          "row": 8,
+          "subject": "英語文(輔)"
+        }
+      ]
+    },
+    {
+      "id": "216",
+      "name": "蔡錦鳳",
+      "sessions": [
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 1,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 2,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 3,
+          "row": 2,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 0,
+          "row": 4,
+          "subject": "慈濟學與全球公民"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 4,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 2,
+          "row": 2,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 1,
+          "row": 6,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 4,
+          "row": 6,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 1,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 0,
+          "row": 2,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 2,
+          "row": 4,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 1,
+          "row": 7,
+          "subject": "世界關懷行B"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 4,
+          "row": 7,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 2,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 0,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 3,
+          "row": 3,
+          "subject": "世界關懷行B"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 1,
+          "row": 4,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 3,
+          "row": 7,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 0,
+          "row": 8,
+          "subject": "英語文(輔)"
+        }
+      ]
+    },
+    {
+      "id": "223",
+      "name": "曾愛達",
+      "sessions": [
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 0,
+          "row": 2,
+          "subject": "世界關懷行A"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 2,
+          "row": 8,
+          "subject": "全美語課程(輔)"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 0,
+          "row": 5,
+          "subject": "世界關懷行A"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 1,
+          "row": 8,
+          "subject": "全美語課程(輔)"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 3,
+          "row": 6,
+          "subject": "世界關懷行A"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 4,
+          "row": 8,
+          "subject": "全美語課程(輔)"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 3,
+          "row": 5,
+          "subject": "世界關懷行A"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 0,
+          "row": 8,
+          "subject": "全美語課程(輔)"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 3,
+          "row": 3,
+          "subject": "藝術生活"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 1,
+          "row": 2,
+          "subject": "藝術生活"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 1,
+          "row": 1,
+          "subject": "藝術生活"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 0,
+          "row": 7,
+          "subject": "藝術生活"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 0,
+          "row": 4,
+          "subject": "藝術生活"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 4,
+          "row": 2,
+          "subject": "藝術生活"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 1,
+          "row": 6,
+          "subject": "藝術生活"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 1,
+          "row": 5,
+          "subject": "藝術生活"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 2,
+          "row": 7,
+          "subject": "藝術生活"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 0,
+          "row": 3,
+          "subject": "藝術生活"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 2,
+          "row": 3,
+          "subject": "藝術生活"
+        },
+        {
+          "day": 4,
+          "row": 5,
+          "subject": "多元選修",
+          "note": "上課地點：國中部分組教室",
+          "linkable": false
+        },
+        {
+          "day": 4,
+          "row": 6,
+          "subject": "多元選修",
+          "note": "上課地點：國中部分組教室",
+          "linkable": false
+        }
+      ]
+    },
+    {
+      "id": "230",
+      "name": "翁子喬",
+      "sessions": [
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 0,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 3,
+          "row": 6,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 2,
+          "row": 7,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 4,
+          "row": 7,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 1,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 2,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 4,
+          "row": 2,
+          "subject": "慈濟學與全球公民(三)"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 0,
+          "row": 3,
+          "subject": "英文作文"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 0,
+          "row": 4,
+          "subject": "英文作文"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 1,
+          "row": 4,
+          "subject": "補強-英語文"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 3,
+          "row": 4,
+          "subject": "補強-英語文"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 3,
+          "row": 7,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 4,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 1,
+          "row": 1,
+          "subject": "英文作文"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 1,
+          "row": 2,
+          "subject": "英文作文"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 2,
+          "row": 2,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 0,
+          "row": 6,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 0,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "className": "高二善解",
+          "day": 2,
+          "row": 3,
+          "subject": "彈性學習B",
+          "note": "上課地點：高二善解",
+          "linkable": false
+        }
+      ]
+    },
+    {
+      "id": "231",
+      "name": "盧鈺縈",
+      "sessions": [
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 0,
+          "row": 2,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 3,
+          "row": 2,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 0,
+          "row": 4,
+          "subject": "世界關懷行B"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 4,
+          "row": 5,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 4,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 0,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 3,
+          "row": 3,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 2,
+          "row": 4,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 0,
+          "row": 5,
+          "subject": "世界關懷行B"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 2,
+          "row": 8,
+          "subject": "英語文(輔)"
+        }
+      ]
+    },
+    {
+      "id": "232",
+      "name": "簡丞楨",
+      "sessions": [
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 2,
+          "row": 2,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 0,
+          "row": 4,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 4,
+          "row": 5,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 3,
+          "row": 6,
+          "subject": "世界關懷行B"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 1,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 1,
+          "row": 2,
+          "subject": "世界關懷行B"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 1,
+          "row": 6,
+          "subject": "世界關懷行B"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 2,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 1,
+          "row": 5,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 0,
+          "row": 6,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 4,
+          "row": 6,
+          "subject": "世界關懷行B"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 3,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 3,
+          "row": 5,
+          "subject": "世界關懷行B"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 3,
+          "row": 4,
+          "subject": "世界關懷行B"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 3,
+          "row": 2,
+          "subject": "世界關懷行B"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 2,
+          "row": 4,
+          "subject": "世界關懷行B"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 4,
+          "row": 2,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 0,
+          "row": 3,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 2,
+          "row": 7,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 4,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 3,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 4,
+          "row": 1,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 0,
+          "row": 7,
+          "subject": "英語文"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 2,
+          "row": 8,
+          "subject": "英語文(輔)"
+        },
+        {
+          "classId": "class-17",
+          "className": "國二數理",
+          "day": 0,
+          "row": 8,
+          "subject": "英語文(輔)"
+        }
+      ]
+    },
+    {
+      "id": "302",
+      "name": "蔡文隆",
+      "sessions": [
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 2,
+          "row": 1,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 0,
+          "row": 3,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 4,
+          "row": 5,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 3,
+          "row": 7,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 2,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 0,
+          "row": 2,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 1,
+          "row": 2,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 2,
+          "row": 2,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 3,
+          "row": 4,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 3,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 3,
+          "row": 1,
+          "subject": "數學乙"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 4,
+          "row": 1,
+          "subject": "數學乙"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 2,
+          "row": 3,
+          "subject": "數學乙"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 4,
+          "row": 3,
+          "subject": "慈濟學與全球公民(三)"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 0,
+          "row": 5,
+          "subject": "數學乙"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 3,
+          "row": 5,
+          "subject": "彈性學習A"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 1,
+          "row": 8,
+          "subject": "數學(輔)"
+        }
+      ]
+    },
+    {
+      "id": "303",
+      "name": "陳文婷",
+      "sessions": [
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 1,
+          "row": 2,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 4,
+          "row": 3,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 0,
+          "row": 5,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 3,
+          "row": 5,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 3,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 3,
+          "row": 4,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 4,
+          "row": 4,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 0,
+          "row": 6,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 2,
+          "row": 7,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 0,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 3,
+          "row": 1,
+          "subject": "生命教育活動"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 2,
+          "row": 2,
+          "subject": "數學B"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 0,
+          "row": 4,
+          "subject": "數學B"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 1,
+          "row": 7,
+          "subject": "數學B"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 3,
+          "row": 7,
+          "subject": "數學B"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 4,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 2,
+          "row": 4,
+          "subject": "彈性學習A",
+          "note": "上課地點：高二感恩",
+          "linkable": true
+        }
+      ]
+    },
+    {
+      "id": "304",
+      "name": "吳念祖",
+      "sessions": [
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 0,
+          "row": 2,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 1,
+          "row": 2,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 4,
+          "row": 4,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 2,
+          "row": 7,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 1,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 0,
+          "row": 1,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 1,
+          "row": 1,
+          "subject": "數學探究"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 3,
+          "row": 1,
+          "subject": "生命教育活動"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 4,
+          "row": 2,
+          "subject": "數學探究"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 0,
+          "row": 4,
+          "subject": "彈性學習A"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 2,
+          "row": 4,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 3,
+          "row": 4,
+          "subject": "慈濟學與全球公民(一)"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 3,
+          "row": 5,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 1,
+          "row": 7,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 2,
+          "row": 8,
+          "subject": "科學專題研究(輔)"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 3,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 2,
+          "row": 1,
+          "subject": "數學A"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 3,
+          "row": 3,
+          "subject": "數學A"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 4,
+          "row": 3,
+          "subject": "數學A"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 0,
+          "row": 6,
+          "subject": "數學A"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 0,
+          "row": 8,
+          "subject": "數學(輔)"
+        }
+      ]
+    },
+    {
+      "id": "305",
+      "name": "王斐亭",
+      "sessions": [
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 1,
+          "row": 2,
+          "subject": "慈濟學與全球公民"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 2,
+          "row": 4,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 4,
+          "row": 4,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 0,
+          "row": 5,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 1,
+          "row": 6,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 4,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 3,
+          "row": 1,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 2,
+          "row": 2,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 0,
+          "row": 3,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 1,
+          "row": 5,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 3,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 2,
+          "row": 1,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 3,
+          "row": 2,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 4,
+          "row": 2,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 0,
+          "row": 6,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 0,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "day": 4,
+          "row": 5,
+          "subject": "多元選修",
+          "note": "上課地點：數學科專科教室",
+          "linkable": false
+        }
+      ]
+    },
+    {
+      "id": "306",
+      "name": "林書淵",
+      "sessions": [
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 2,
+          "row": 4,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 0,
+          "row": 6,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 1,
+          "row": 7,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 4,
+          "row": 7,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 2,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 3,
+          "row": 1,
+          "subject": "數學乙"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 4,
+          "row": 1,
+          "subject": "數學乙"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 2,
+          "row": 3,
+          "subject": "數學乙"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 0,
+          "row": 5,
+          "subject": "數學乙"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 3,
+          "row": 5,
+          "subject": "彈性學習A"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 1,
+          "row": 8,
+          "subject": "數學(輔)"
+        }
+      ]
+    },
+    {
+      "id": "307",
+      "name": "吳威德",
+      "sessions": [
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 2,
+          "row": 2,
+          "subject": "數學B"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 0,
+          "row": 4,
+          "subject": "數學B"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 1,
+          "row": 7,
+          "subject": "數學B"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 3,
+          "row": 7,
+          "subject": "數學B"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 4,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 3,
+          "row": 1,
+          "subject": "數學乙"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 4,
+          "row": 1,
+          "subject": "數學乙"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 2,
+          "row": 3,
+          "subject": "數學乙"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 0,
+          "row": 5,
+          "subject": "數學乙"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 3,
+          "row": 5,
+          "subject": "彈性學習A"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 1,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 1,
+          "row": 1,
+          "subject": "數學甲"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 3,
+          "row": 2,
+          "subject": "數學甲"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 4,
+          "row": 2,
+          "subject": "數學甲"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 0,
+          "row": 3,
+          "subject": "數學甲"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 4,
+          "row": 4,
+          "subject": "慈濟學與全球公民(三)"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 3,
+          "row": 6,
+          "subject": "彈性學習C"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 0,
+          "row": 8,
+          "subject": "數學(輔)"
+        }
+      ]
+    },
+    {
+      "id": "309",
+      "name": "陳泓緻",
+      "sessions": [
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 0,
+          "row": 1,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 1,
+          "row": 1,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 3,
+          "row": 4,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 4,
+          "row": 4,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 1,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 2,
+          "row": 2,
+          "subject": "數學A"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 0,
+          "row": 4,
+          "subject": "數學A"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 1,
+          "row": 7,
+          "subject": "數學A"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 3,
+          "row": 7,
+          "subject": "數學A"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 4,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 2,
+          "row": 1,
+          "subject": "數學A"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 3,
+          "row": 1,
+          "subject": "生命教育活動"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 1,
+          "row": 2,
+          "subject": "數學A"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 0,
+          "row": 5,
+          "subject": "成大科學教育課程(二)"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 0,
+          "row": 6,
+          "subject": "成大科學教育課程(二)"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 3,
+          "row": 6,
+          "subject": "數學A"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 0,
+          "row": 7,
+          "subject": "科學專題研究"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 4,
+          "row": 7,
+          "subject": "數學A"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 0,
+          "row": 8,
+          "subject": "科學專題研究(輔)"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 3,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "className": "高二和氣",
+          "day": 2,
+          "row": 3,
+          "subject": "彈性學習B",
+          "note": "上課地點：高二和氣",
+          "linkable": false
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 2,
+          "row": 4,
+          "subject": "彈性學習A",
+          "note": "上課地點：高二和氣",
+          "linkable": true
+        }
+      ]
+    },
+    {
+      "id": "312",
+      "name": "陳怡婷",
+      "sessions": [
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 4,
+          "row": 1,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 3,
+          "row": 2,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 0,
+          "row": 5,
+          "subject": "慈濟學與全球公民"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 1,
+          "row": 5,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 0,
+          "row": 7,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 2,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 0,
+          "row": 1,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 1,
+          "row": 1,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 4,
+          "row": 2,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 3,
+          "row": 7,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 0,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 2,
+          "row": 1,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 3,
+          "row": 3,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 4,
+          "row": 6,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 1,
+          "row": 7,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 4,
+          "row": 8,
+          "subject": "數學(輔)"
+        }
+      ]
+    },
+    {
+      "id": "313",
+      "name": "王婉真",
+      "sessions": [
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 1,
+          "row": 1,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 4,
+          "row": 1,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 0,
+          "row": 4,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 3,
+          "row": 5,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 1,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 0,
+          "row": 1,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 2,
+          "row": 2,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 4,
+          "row": 2,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 3,
+          "row": 3,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 2,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 2,
+          "row": 1,
+          "subject": "數學A"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 3,
+          "row": 1,
+          "subject": "生命教育活動"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 0,
+          "row": 3,
+          "subject": "數學A"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 3,
+          "row": 6,
+          "subject": "數學A"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 4,
+          "row": 7,
+          "subject": "數學A"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 0,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 2,
+          "row": 4,
+          "subject": "彈性學習A",
+          "note": "上課地點：高二包容",
+          "linkable": true
+        }
+      ]
+    },
+    {
+      "id": "314",
+      "name": "王聖賢",
+      "sessions": [
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 3,
+          "row": 1,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 4,
+          "row": 1,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 0,
+          "row": 4,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 2,
+          "row": 4,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 0,
+          "row": 5,
+          "subject": "慈濟學與全球公民"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 3,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 4,
+          "row": 2,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 2,
+          "row": 3,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 3,
+          "row": 4,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 1,
+          "row": 7,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 0,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 1,
+          "row": 1,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 0,
+          "row": 6,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 3,
+          "row": 7,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 4,
+          "row": 7,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 2,
+          "row": 8,
+          "subject": "數學(輔)"
+        }
+      ]
+    },
+    {
+      "id": "315",
+      "name": "王美雅",
+      "sessions": [
+        {
+          "classId": "class-09",
+          "className": "國一數理",
+          "day": 2,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 2,
+          "row": 1,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 1,
+          "row": 6,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 3,
+          "row": 6,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 4,
+          "row": 6,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 3,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 0,
+          "row": 1,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 2,
+          "row": 3,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 4,
+          "row": 3,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 3,
+          "row": 5,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 4,
+          "row": 8,
+          "subject": "數學(輔)"
+        }
+      ]
+    },
+    {
+      "id": "316",
+      "name": "張齡之",
+      "sessions": [
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 2,
+          "row": 2,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 4,
+          "row": 3,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 3,
+          "row": 4,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 0,
+          "row": 6,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 1,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 2,
+          "row": 3,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 3,
+          "row": 3,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 0,
+          "row": 5,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 4,
+          "row": 5,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 0,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-17",
+          "className": "國二數理",
+          "day": 3,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-17",
+          "className": "國二數理",
+          "day": 4,
+          "row": 8,
+          "subject": "數學(輔)"
+        }
+      ]
+    },
+    {
+      "id": "318",
+      "name": "歐宗穎",
+      "sessions": [
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 0,
+          "row": 1,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 3,
+          "row": 2,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 2,
+          "row": 4,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 1,
+          "row": 5,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 0,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 1,
+          "row": 1,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 0,
+          "row": 2,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 3,
+          "row": 3,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 4,
+          "row": 7,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 2,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 2,
+          "row": 1,
+          "subject": "數學甲"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 4,
+          "row": 2,
+          "subject": "數學甲"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 0,
+          "row": 5,
+          "subject": "彈性學習C"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 1,
+          "row": 6,
+          "subject": "數學甲"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 3,
+          "row": 6,
+          "subject": "數學甲"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 4,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 4,
+          "row": 1,
+          "subject": "數學甲"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 1,
+          "row": 2,
+          "subject": "數學甲"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 0,
+          "row": 3,
+          "subject": "數學甲"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 3,
+          "row": 5,
+          "subject": "彈性學習C"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 2,
+          "row": 7,
+          "subject": "數學甲"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 3,
+          "row": 8,
+          "subject": "數學(輔)"
+        }
+      ]
+    },
+    {
+      "id": "319",
+      "name": "郭盈瑜",
+      "sessions": [
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 4,
+          "row": 2,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 3,
+          "row": 3,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 0,
+          "row": 5,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 2,
+          "row": 7,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 3,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 4,
+          "row": 1,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 3,
+          "row": 2,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 0,
+          "row": 3,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 1,
+          "row": 7,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 2,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 2,
+          "row": 1,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 1,
+          "row": 2,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 4,
+          "row": 4,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 3,
+          "row": 6,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 4,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 2,
+          "row": 2,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 1,
+          "row": 5,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 3,
+          "row": 5,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 0,
+          "row": 6,
+          "subject": "數學"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 1,
+          "row": 8,
+          "subject": "數學(輔)"
+        },
+        {
+          "className": "高二知足",
+          "day": 2,
+          "row": 3,
+          "subject": "彈性學習B",
+          "note": "上課地點：高二知足",
+          "linkable": false
+        },
+        {
+          "day": 4,
+          "row": 6,
+          "subject": "多元選修",
+          "note": "上課地點：數學科專科教室",
+          "linkable": false
+        }
+      ]
+    },
+    {
+      "id": "401",
+      "name": "呂金玲",
+      "sessions": [
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 3,
+          "row": 1,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 1,
+          "row": 5,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 1,
+          "row": 2,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 2,
+          "row": 7,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 3,
+          "row": 5,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 0,
+          "row": 1,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 4,
+          "row": 4,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 4,
+          "row": 7,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 2,
+          "row": 1,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 3,
+          "row": 2,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 4,
+          "row": 3,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 0,
+          "row": 8,
+          "subject": "公民與社會(輔)"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 1,
+          "row": 4,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 0,
+          "row": 5,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 2,
+          "row": 8,
+          "subject": "公民與社會(輔)"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 1,
+          "row": 1,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 0,
+          "row": 2,
+          "subject": "民主政治與法律"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 4,
+          "row": 5,
+          "subject": "民主政治與法律"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 3,
+          "row": 6,
+          "subject": "民主政治與法律"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 4,
+          "row": 2,
+          "subject": "民主政治與法律"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 1,
+          "row": 6,
+          "subject": "民主政治與法律"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 0,
+          "row": 7,
+          "subject": "民主政治與法律"
+        }
+      ]
+    },
+    {
+      "id": "402",
+      "name": "陳柏伶",
+      "sessions": [
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 0,
+          "row": 6,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 4,
+          "row": 8,
+          "subject": "地理(輔)"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 1,
+          "row": 7,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 2,
+          "row": 8,
+          "subject": "地理(輔)"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 3,
+          "row": 5,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 0,
+          "row": 8,
+          "subject": "地理(輔)"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 1,
+          "row": 5,
+          "subject": "探究與實作：地理與人"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 1,
+          "row": 6,
+          "subject": "探究與實作：地理與人"
+        },
+        {
+          "day": 4,
+          "row": 5,
+          "subject": "多元選修",
+          "note": "上課地點：社會科專科教室",
+          "linkable": false
+        }
+      ]
+    },
+    {
+      "id": "403",
+      "name": "李嘉祥",
+      "sessions": [
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 4,
+          "row": 1,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 0,
+          "row": 4,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 4,
+          "row": 3,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 0,
+          "row": 8,
+          "subject": "歷史(輔)"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 2,
+          "row": 4,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 3,
+          "row": 8,
+          "subject": "歷史(輔)"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 1,
+          "row": 2,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 1,
+          "row": 8,
+          "subject": "歷史(輔)"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 1,
+          "row": 1,
+          "subject": "生命教育活動"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 2,
+          "row": 1,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 3,
+          "row": 1,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 2,
+          "row": 2,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 0,
+          "row": 7,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 0,
+          "row": 2,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 4,
+          "row": 4,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 2,
+          "row": 8,
+          "subject": "歷史(輔)"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 0,
+          "row": 5,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 3,
+          "row": 7,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 0,
+          "row": 1,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 3,
+          "row": 2,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 1,
+          "row": 5,
+          "subject": "歷史"
+        }
+      ]
+    },
+    {
+      "id": "404",
+      "name": "林季英",
+      "sessions": [
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 2,
+          "row": 4,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 1,
+          "row": 8,
+          "subject": "歷史(輔)"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 1,
+          "row": 3,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 3,
+          "row": 8,
+          "subject": "歷史(輔)"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 4,
+          "row": 2,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 4,
+          "row": 5,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 4,
+          "row": 4,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 2,
+          "row": 3,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 1,
+          "row": 7,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 3,
+          "row": 7,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 1,
+          "row": 4,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 0,
+          "row": 5,
+          "subject": "歷史"
+        }
+      ]
+    },
+    {
+      "id": "405",
+      "name": "許文婕",
+      "sessions": [
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 3,
+          "row": 1,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 2,
+          "row": 8,
+          "subject": "地理(輔)"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 4,
+          "row": 5,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 3,
+          "row": 8,
+          "subject": "地理(輔)"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 2,
+          "row": 4,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 0,
+          "row": 8,
+          "subject": "地理(輔)"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 0,
+          "row": 3,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 1,
+          "row": 8,
+          "subject": "地理(輔)"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 0,
+          "row": 6,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 4,
+          "row": 8,
+          "subject": "地理(輔)"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 1,
+          "row": 4,
+          "subject": "慈濟學與全球公民"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 4,
+          "row": 4,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 0,
+          "row": 2,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 4,
+          "row": 6,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 1,
+          "row": 3,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 1,
+          "row": 2,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 1,
+          "row": 6,
+          "subject": "地理"
+        }
+      ]
+    },
+    {
+      "id": "407",
+      "name": "游棋竹",
+      "sessions": [
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 4,
+          "row": 2,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 3,
+          "row": 7,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 0,
+          "row": 5,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 4,
+          "row": 5,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 1,
+          "row": 2,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 3,
+          "row": 2,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 1,
+          "row": 8,
+          "subject": "歷史(輔)"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 4,
+          "row": 6,
+          "subject": "族群、性別與國家的歷"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 0,
+          "row": 7,
+          "subject": "族群、性別與國家的歷"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 2,
+          "row": 7,
+          "subject": "族群、性別與國家的歷"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 3,
+          "row": 8,
+          "subject": "歷史(輔)"
+        }
+      ]
+    },
+    {
+      "id": "408",
+      "name": "賈旻曄",
+      "sessions": [
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 1,
+          "row": 3,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 1,
+          "row": 4,
+          "subject": "慈濟學與全球公民"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 1,
+          "row": 7,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 1,
+          "row": 5,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 4,
+          "row": 3,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 3,
+          "row": 1,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 0,
+          "row": 4,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 3,
+          "row": 7,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 0,
+          "row": 2,
+          "subject": "社會環境議題"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 3,
+          "row": 2,
+          "subject": "社會環境議題"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 2,
+          "row": 4,
+          "subject": "社會環境議題"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 0,
+          "row": 6,
+          "subject": "彈性學習C"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 2,
+          "row": 8,
+          "subject": "地理(輔)"
+        },
+        {
+          "day": 4,
+          "row": 6,
+          "subject": "多元選修",
+          "note": "上課地點：社會科專科教室",
+          "linkable": false
+        }
+      ]
+    },
+    {
+      "id": "409",
+      "name": "林昱汝",
+      "sessions": [
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 0,
+          "row": 6,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 4,
+          "row": 7,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 3,
+          "row": 8,
+          "subject": "公民與社會(輔)"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 1,
+          "row": 6,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 3,
+          "row": 6,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 4,
+          "row": 8,
+          "subject": "公民與社會(輔)"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 1,
+          "row": 5,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 3,
+          "row": 5,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 2,
+          "row": 8,
+          "subject": "公民與社會(輔)"
+        }
+      ]
+    },
+    {
+      "id": "410",
+      "name": "劉姿伶",
+      "sessions": [
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 4,
+          "row": 6,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 3,
+          "row": 1,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 1,
+          "row": 6,
+          "subject": "慈濟學與全球公民"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 2,
+          "row": 3,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 4,
+          "row": 7,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 3,
+          "row": 8,
+          "subject": "地理(輔)"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 1,
+          "row": 2,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 0,
+          "row": 6,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 1,
+          "row": 1,
+          "subject": "社會環境議題"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 1,
+          "row": 4,
+          "subject": "彈性學習C"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 2,
+          "row": 4,
+          "subject": "社會環境議題"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 4,
+          "row": 4,
+          "subject": "社會環境議題"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 0,
+          "row": 8,
+          "subject": "地理(輔)"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 2,
+          "row": 1,
+          "subject": "社會環境議題"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 0,
+          "row": 3,
+          "subject": "彈性學習C"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 0,
+          "row": 4,
+          "subject": "社會環境議題"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 3,
+          "row": 7,
+          "subject": "社會環境議題"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 2,
+          "row": 8,
+          "subject": "地理(輔)"
+        }
+      ]
+    },
+    {
+      "id": "411",
+      "name": "吳宗原",
+      "sessions": [
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 3,
+          "row": 5,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 0,
+          "row": 4,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 3,
+          "row": 6,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 2,
+          "row": 3,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 2,
+          "row": 4,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 4,
+          "row": 7,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 4,
+          "row": 1,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 0,
+          "row": 3,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 0,
+          "row": 5,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 4,
+          "row": 3,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 1,
+          "row": 7,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 1,
+          "row": 6,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 0,
+          "row": 1,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 1,
+          "row": 1,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 3,
+          "row": 8,
+          "subject": "公民與社會(輔)"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 2,
+          "row": 2,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 3,
+          "row": 2,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 4,
+          "row": 4,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 1,
+          "row": 5,
+          "subject": "公民與社會"
+        }
+      ]
+    },
+    {
+      "id": "412",
+      "name": "謝岱霖",
+      "sessions": [
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 1,
+          "row": 7,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 3,
+          "row": 7,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 2,
+          "row": 2,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 4,
+          "row": 4,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 1,
+          "row": 8,
+          "subject": "地理(輔)"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 0,
+          "row": 2,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 2,
+          "row": 7,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 0,
+          "row": 5,
+          "subject": "地理"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 1,
+          "row": 3,
+          "subject": "探究與實作：地理與人"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 1,
+          "row": 4,
+          "subject": "探究與實作：地理與人"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 3,
+          "row": 5,
+          "subject": "探究與實作：地理與人"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 3,
+          "row": 6,
+          "subject": "探究與實作：地理與人"
+        }
+      ]
+    },
+    {
+      "id": "414",
+      "name": "周怡君",
+      "sessions": [
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 3,
+          "row": 1,
+          "subject": "生命教育活動"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 0,
+          "row": 2,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 3,
+          "row": 2,
+          "subject": "慈濟學與全球公民(一)"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 0,
+          "row": 4,
+          "subject": "彈性學習A"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 1,
+          "row": 4,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 1,
+          "row": 3,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 0,
+          "row": 5,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 3,
+          "row": 6,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 0,
+          "row": 1,
+          "subject": "族群、性別與國家的歷"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 1,
+          "row": 1,
+          "subject": "族群、性別與國家的歷"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 4,
+          "row": 5,
+          "subject": "族群、性別與國家的歷"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 4,
+          "row": 8,
+          "subject": "歷史(輔)"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 2,
+          "row": 2,
+          "subject": "族群、性別與國家的歷"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 4,
+          "row": 3,
+          "subject": "族群、性別與國家的歷"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 1,
+          "row": 7,
+          "subject": "族群、性別與國家的歷"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 3,
+          "row": 8,
+          "subject": "歷史(輔)"
+        }
+      ]
+    },
+    {
+      "id": "422",
+      "name": "盧佩君",
+      "sessions": [
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 4,
+          "row": 2,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 4,
+          "row": 4,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 0,
+          "row": 2,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 2,
+          "row": 7,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 1,
+          "row": 7,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 4,
+          "row": 7,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 4,
+          "row": 6,
+          "subject": "公民與社會"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 1,
+          "row": 3,
+          "subject": "民主政治與法律"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 3,
+          "row": 6,
+          "subject": "民主政治與法律"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 0,
+          "row": 7,
+          "subject": "民主政治與法律"
+        }
+      ]
+    },
+    {
+      "id": "426",
+      "name": "黃逸寧",
+      "sessions": [
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 2,
+          "row": 3,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 2,
+          "row": 4,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 1,
+          "row": 7,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 1,
+          "row": 6,
+          "subject": "歷史"
+        }
+      ]
+    },
+    {
+      "id": "427",
+      "name": "李榮洲",
+      "sessions": [
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 0,
+          "row": 5,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 1,
+          "row": 5,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 1,
+          "row": 7,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 0,
+          "row": 8,
+          "subject": "歷史(輔)"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 0,
+          "row": 6,
+          "subject": "歷史"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 1,
+          "row": 8,
+          "subject": "歷史(輔)"
+        }
+      ]
+    },
+    {
+      "id": "501",
+      "name": "吳淑敏",
+      "sessions": [
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 4,
+          "row": 3,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 4,
+          "row": 4,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 3,
+          "row": 6,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 3,
+          "row": 7,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 1,
+          "row": 3,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 1,
+          "row": 4,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 4,
+          "row": 5,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 0,
+          "row": 6,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 0,
+          "row": 7,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 4,
+          "row": 1,
+          "subject": "物理-探究A"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 4,
+          "row": 2,
+          "subject": "物理-探究A"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 3,
+          "row": 3,
+          "subject": "物理-探究A"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 3,
+          "row": 4,
+          "subject": "物理-探究A"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 0,
+          "row": 1,
+          "subject": "物理-探究A"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 0,
+          "row": 2,
+          "subject": "物理-探究A"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 1,
+          "row": 1,
+          "subject": "物理-探究A"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 1,
+          "row": 2,
+          "subject": "物理-探究A"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 0,
+          "row": 3,
+          "subject": "物理-探究A"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 0,
+          "row": 4,
+          "subject": "物理-探究A"
+        }
+      ]
+    },
+    {
+      "id": "502",
+      "name": "余志誠",
+      "sessions": [
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 4,
+          "row": 2,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 3,
+          "row": 7,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 0,
+          "row": 8,
+          "subject": "理化(輔)"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 1,
+          "row": 3,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 2,
+          "row": 3,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 3,
+          "row": 8,
+          "subject": "理化(輔)"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 1,
+          "row": 4,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 4,
+          "row": 6,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 2,
+          "row": 8,
+          "subject": "理化(輔)"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 2,
+          "row": 4,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 0,
+          "row": 7,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 1,
+          "row": 8,
+          "subject": "理化(輔)"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 1,
+          "row": 1,
+          "subject": "生命教育活動"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 0,
+          "row": 4,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 4,
+          "row": 5,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 4,
+          "row": 8,
+          "subject": "理化(輔)"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 1,
+          "row": 6,
+          "subject": "物理-探究A"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 1,
+          "row": 7,
+          "subject": "物理-探究A"
+        }
+      ]
+    },
+    {
+      "id": "503",
+      "name": "林怡君",
+      "sessions": [
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 4,
+          "row": 3,
+          "subject": "地球科學"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 1,
+          "row": 6,
+          "subject": "慈濟學與全球公民"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 0,
+          "row": 1,
+          "subject": "地球科學"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 2,
+          "row": 3,
+          "subject": "慈濟學與全球公民"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 2,
+          "row": 4,
+          "subject": "慈濟學與全球公民"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 3,
+          "row": 4,
+          "subject": "地球科學"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 2,
+          "row": 2,
+          "subject": "慈濟學與全球公民"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 4,
+          "row": 7,
+          "subject": "地球科學"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 4,
+          "row": 4,
+          "subject": "地球科學"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 2,
+          "row": 7,
+          "subject": "地球科學"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 0,
+          "row": 6,
+          "subject": "地球科學"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 1,
+          "row": 7,
+          "subject": "地球科學"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 0,
+          "row": 3,
+          "subject": "地球科學"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 3,
+          "row": 7,
+          "subject": "地球科學"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 3,
+          "row": 1,
+          "subject": "生命教育活動"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 3,
+          "row": 2,
+          "subject": "慈濟學與全球公民(一)"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 0,
+          "row": 4,
+          "subject": "彈性學習A"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 1,
+          "row": 1,
+          "subject": "物理-探究A"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 1,
+          "row": 2,
+          "subject": "物理-探究A"
+        },
+        {
+          "day": 4,
+          "row": 5,
+          "subject": "多元選修",
+          "note": "上課地點：高一包容",
+          "linkable": false
+        }
+      ]
+    },
+    {
+      "id": "504",
+      "name": "林家琪",
+      "sessions": [
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 1,
+          "row": 1,
+          "subject": "生命教育活動"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 0,
+          "row": 8,
+          "subject": "生物(輔)"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 4,
+          "row": 8,
+          "subject": "生物(輔)"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 2,
+          "row": 8,
+          "subject": "生物(輔)"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 0,
+          "row": 1,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 4,
+          "row": 3,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 1,
+          "row": 8,
+          "subject": "生物(輔)"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 2,
+          "row": 1,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 1,
+          "row": 5,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 3,
+          "row": 8,
+          "subject": "生物(輔)"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 3,
+          "row": 1,
+          "subject": "選修生物-細胞與遺傳"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 1,
+          "row": 3,
+          "subject": "選修生物-動物體的構"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 4,
+          "row": 6,
+          "subject": "選修生物-細胞與遺傳"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 3,
+          "row": 3,
+          "subject": "選修生物-細胞與遺傳"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 4,
+          "row": 5,
+          "subject": "生物醫學科學探究"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 0,
+          "row": 6,
+          "subject": "選修生物-動物體的構"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 1,
+          "row": 6,
+          "subject": "選修生物-細胞與遺傳"
+        }
+      ]
+    },
+    {
+      "id": "505",
+      "name": "張宏州",
+      "sessions": [
+        {
+          "classId": "class-17",
+          "className": "國二數理",
+          "day": 1,
+          "row": 8,
+          "subject": "生物(輔)"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 1,
+          "row": 4,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 0,
+          "row": 6,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 4,
+          "row": 7,
+          "subject": "科學閱讀"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 4,
+          "row": 4,
+          "subject": "選修生物-生命的起源"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 2,
+          "row": 7,
+          "subject": "選修生物-生命的起源"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 3,
+          "row": 1,
+          "subject": "生命教育活動"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 0,
+          "row": 7,
+          "subject": "選修生物-生命的起源"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 3,
+          "row": 7,
+          "subject": "選修生物-生命的起源"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 3,
+          "row": 3,
+          "subject": "選修生物-生命的起源"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 4,
+          "row": 3,
+          "subject": "選修生物-生命的起源"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 2,
+          "row": 4,
+          "subject": "彈性學習A",
+          "note": "上課地點：高二合心",
+          "linkable": true
+        },
+        {
+          "day": 4,
+          "row": 6,
+          "subject": "多元選修",
+          "note": "上課地點：高一合心",
+          "linkable": false
+        }
+      ]
+    },
+    {
+      "id": "506",
+      "name": "黃靜瑩",
+      "sessions": [
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 4,
+          "row": 2,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 1,
+          "row": 3,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 2,
+          "row": 4,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 3,
+          "row": 1,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 2,
+          "row": 2,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 0,
+          "row": 3,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 4,
+          "row": 3,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 1,
+          "row": 5,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 0,
+          "row": 7,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 0,
+          "row": 2,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 3,
+          "row": 4,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 2,
+          "row": 7,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 3,
+          "row": 2,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 1,
+          "row": 6,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 4,
+          "row": 6,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 2,
+          "row": 3,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 0,
+          "row": 5,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 4,
+          "row": 7,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 1,
+          "row": 8,
+          "subject": "生物(輔)"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 4,
+          "row": 8,
+          "subject": "生物(輔)"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 0,
+          "row": 8,
+          "subject": "生物(輔)"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 2,
+          "row": 8,
+          "subject": "生物(輔)"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 3,
+          "row": 8,
+          "subject": "生物(輔)"
+        }
+      ]
+    },
+    {
+      "id": "507",
+      "name": "王威程",
+      "sessions": [
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 1,
+          "row": 2,
+          "subject": "物理"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 2,
+          "row": 4,
+          "subject": "物理"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 0,
+          "row": 3,
+          "subject": "物理"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 2,
+          "row": 7,
+          "subject": "物理"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 2,
+          "row": 2,
+          "subject": "物理"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 1,
+          "row": 6,
+          "subject": "物理"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 4,
+          "row": 3,
+          "subject": "選修物理-力學一"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 0,
+          "row": 6,
+          "subject": "選修物理-力學一"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 4,
+          "row": 8,
+          "subject": "物理(輔)"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 1,
+          "row": 3,
+          "subject": "選修物理-波動、光及"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 0,
+          "row": 4,
+          "subject": "選修物理-波動、光及"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 3,
+          "row": 4,
+          "subject": "選修物理-電磁現象一"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 4,
+          "row": 7,
+          "subject": "選修物理-電磁現象一"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 2,
+          "row": 8,
+          "subject": "物理(輔)"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 0,
+          "row": 2,
+          "subject": "選修物理-波動、光及"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 4,
+          "row": 2,
+          "subject": "選修物理-電磁現象一"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 1,
+          "row": 4,
+          "subject": "選修物理-電磁現象一"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 3,
+          "row": 7,
+          "subject": "選修物理-波動、光及"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 0,
+          "row": 8,
+          "subject": "物理(輔)"
+        }
+      ]
+    },
+    {
+      "id": "508",
+      "name": "鄭博仁",
+      "sessions": [
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 2,
+          "row": 3,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 0,
+          "row": 6,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 3,
+          "row": 7,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 4,
+          "row": 1,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 0,
+          "row": 3,
+          "subject": "慈濟學與全球公民"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 0,
+          "row": 7,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 2,
+          "row": 7,
+          "subject": "生物"
+        },
+        {
+          "classId": "class-09",
+          "className": "國一數理",
+          "day": 1,
+          "row": 8,
+          "subject": "生物(輔)"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 1,
+          "row": 4,
+          "subject": "綜合活動A-家政"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 1,
+          "row": 3,
+          "subject": "綜合活動A-家政"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 3,
+          "row": 2,
+          "subject": "選修生物-動物體的構"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 4,
+          "row": 3,
+          "subject": "選修生物-細胞與遺傳"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 1,
+          "row": 5,
+          "subject": "選修生物-細胞與遺傳"
+        }
+      ]
+    },
+    {
+      "id": "510",
+      "name": "宋佩盈",
+      "sessions": [
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 0,
+          "row": 2,
+          "subject": "選修化學-化學反應與"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 2,
+          "row": 3,
+          "subject": "選修化學-化學反應與"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 3,
+          "row": 3,
+          "subject": "選修化學-有機化學與"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 4,
+          "row": 6,
+          "subject": "選修化學-有機化學與"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 1,
+          "row": 8,
+          "subject": "化學(輔)"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 0,
+          "row": 1,
+          "subject": "選修化學-化學反應與"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 2,
+          "row": 2,
+          "subject": "選修化學-有機化學與"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 3,
+          "row": 4,
+          "subject": "選修化學-化學反應與"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 1,
+          "row": 5,
+          "subject": "選修化學-有機化學與"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 3,
+          "row": 8,
+          "subject": "化學(輔)"
+        }
+      ]
+    },
+    {
+      "id": "511",
+      "name": "韋尚賢",
+      "sessions": [
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 4,
+          "row": 4,
+          "subject": "化學"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 1,
+          "row": 6,
+          "subject": "化學"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 0,
+          "row": 8,
+          "subject": "化學(輔)"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 0,
+          "row": 5,
+          "subject": "選修化學-物質與能量"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 4,
+          "row": 7,
+          "subject": "選修化學-物質與能量"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 2,
+          "row": 8,
+          "subject": "化學(輔)"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 2,
+          "row": 2,
+          "subject": "選修化學-物質與能量"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 3,
+          "row": 7,
+          "subject": "選修化學-物質與能量"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 2,
+          "row": 4,
+          "subject": "選修化學-化學反應與"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 3,
+          "row": 4,
+          "subject": "選修化學-化學反應與"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 1,
+          "row": 5,
+          "subject": "選修化學-有機化學與"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 0,
+          "row": 7,
+          "subject": "選修化學-有機化學與"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 4,
+          "row": 8,
+          "subject": "化學(輔)"
+        }
+      ]
+    },
+    {
+      "id": "512",
+      "name": "黃丞皞",
+      "sessions": [
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 1,
+          "row": 2,
+          "subject": "地球科學"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 2,
+          "row": 3,
+          "subject": "慈濟學與全球公民"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 2,
+          "row": 2,
+          "subject": "慈濟學與全球公民"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 0,
+          "row": 7,
+          "subject": "地球科學"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 1,
+          "row": 5,
+          "subject": "慈濟學與全球公民"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 0,
+          "row": 6,
+          "subject": "地球科學"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 2,
+          "row": 4,
+          "subject": "慈濟學與全球公民"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 4,
+          "row": 7,
+          "subject": "地球科學"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 4,
+          "row": 1,
+          "subject": "物理-探究A"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 4,
+          "row": 2,
+          "subject": "物理-探究A"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 3,
+          "row": 3,
+          "subject": "物理-探究A"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 3,
+          "row": 4,
+          "subject": "物理-探究A"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 0,
+          "row": 1,
+          "subject": "物理-探究A"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 0,
+          "row": 2,
+          "subject": "物理-探究A"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 1,
+          "row": 6,
+          "subject": "物理-探究A"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 1,
+          "row": 7,
+          "subject": "物理-探究A"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 0,
+          "row": 3,
+          "subject": "物理-探究A"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 0,
+          "row": 4,
+          "subject": "物理-探究A"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 3,
+          "row": 1,
+          "subject": "選修地球科學-大氣、"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 3,
+          "row": 7,
+          "subject": "選修地球科學-大氣、"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 1,
+          "row": 1,
+          "subject": "選修地球科學-大氣、"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 4,
+          "row": 4,
+          "subject": "選修地球科學-大氣、"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 0,
+          "row": 5,
+          "subject": "選修地球科學-大氣、"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 2,
+          "row": 7,
+          "subject": "選修地球科學-大氣、"
+        },
+        {
+          "day": 4,
+          "row": 6,
+          "subject": "多元選修",
+          "note": "上課地點：高一包容",
+          "linkable": false
+        }
+      ]
+    },
+    {
+      "id": "517",
+      "name": "陳冠廷",
+      "sessions": [
+        {
+          "classId": "class-09",
+          "className": "國一數理",
+          "day": 3,
+          "row": 8,
+          "subject": "理化(輔)"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 4,
+          "row": 5,
+          "subject": "選修物理-力學一"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 2,
+          "row": 7,
+          "subject": "選修物理-力學一"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 1,
+          "row": 8,
+          "subject": "物理(輔)"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 4,
+          "row": 4,
+          "subject": "選修物理-力學一"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 1,
+          "row": 6,
+          "subject": "選修物理-力學一"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 4,
+          "row": 8,
+          "subject": "物理(輔)"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 0,
+          "row": 2,
+          "subject": "選修物理-電磁現象一"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 4,
+          "row": 3,
+          "subject": "選修物理-波動、光及"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 2,
+          "row": 4,
+          "subject": "選修物理-電磁現象一"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 0,
+          "row": 7,
+          "subject": "選修物理-波動、光及"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 2,
+          "row": 8,
+          "subject": "物理(輔)"
+        }
+      ]
+    },
+    {
+      "id": "523",
+      "name": "林宏鋕",
+      "sessions": [
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 3,
+          "row": 1,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 1,
+          "row": 4,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 4,
+          "row": 7,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 4,
+          "row": 2,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 2,
+          "row": 4,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 1,
+          "row": 5,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 4,
+          "row": 1,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 3,
+          "row": 2,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 2,
+          "row": 3,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 2,
+          "row": 2,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 0,
+          "row": 5,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 3,
+          "row": 7,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 4,
+          "row": 3,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 3,
+          "row": 4,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 1,
+          "row": 7,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 1,
+          "row": 2,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 0,
+          "row": 6,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 1,
+          "row": 8,
+          "subject": "理化(輔)"
+        },
+        {
+          "day": 4,
+          "row": 5,
+          "subject": "多元選修",
+          "note": "上課地點：高一合心",
+          "linkable": false
+        }
+      ]
+    },
+    {
+      "id": "524",
+      "name": "王湘屏",
+      "sessions": [
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 3,
+          "row": 2,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 2,
+          "row": 3,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 4,
+          "row": 5,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 1,
+          "row": 1,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 3,
+          "row": 3,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 0,
+          "row": 5,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 0,
+          "row": 2,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 4,
+          "row": 3,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 2,
+          "row": 8,
+          "subject": "理化(輔)"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 3,
+          "row": 4,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 1,
+          "row": 5,
+          "subject": "理化"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 3,
+          "row": 8,
+          "subject": "理化(輔)"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 4,
+          "row": 2,
+          "subject": "化學"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 2,
+          "row": 4,
+          "subject": "化學"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 4,
+          "row": 8,
+          "subject": "化學(輔)"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 2,
+          "row": 1,
+          "subject": "化學"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 1,
+          "row": 2,
+          "subject": "化學"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 0,
+          "row": 8,
+          "subject": "化學(輔)"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 1,
+          "row": 4,
+          "subject": "選修化學-物質與能量"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 4,
+          "row": 6,
+          "subject": "選修化學-物質與能量"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 1,
+          "row": 8,
+          "subject": "化學(輔)"
+        }
+      ]
+    },
+    {
+      "id": "603",
+      "name": "賴碩伶",
+      "sessions": [
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 1,
+          "row": 4,
+          "subject": "健康教育"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 0,
+          "row": 2,
+          "subject": "健康教育"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 1,
+          "row": 7,
+          "subject": "健康教育"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 2,
+          "row": 2,
+          "subject": "健康教育"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 3,
+          "row": 4,
+          "subject": "健康教育"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 0,
+          "row": 1,
+          "subject": "健康教育"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 4,
+          "row": 7,
+          "subject": "健康教育"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 0,
+          "row": 4,
+          "subject": "健康教育"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 3,
+          "row": 2,
+          "subject": "健康教育"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 4,
+          "row": 4,
+          "subject": "健康教育"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 0,
+          "row": 6,
+          "subject": "健康教育"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 2,
+          "row": 7,
+          "subject": "健康教育"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 3,
+          "row": 6,
+          "subject": "健康教育"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 4,
+          "row": 3,
+          "subject": "健康教育"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 3,
+          "row": 1,
+          "subject": "健康教育"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 3,
+          "row": 5,
+          "subject": "健康與護理"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 4,
+          "row": 1,
+          "subject": "健康與護理"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 1,
+          "row": 6,
+          "subject": "健康與護理"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 1,
+          "row": 1,
+          "subject": "健康與護理"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 1,
+          "row": 3,
+          "subject": "健康與護理"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 4,
+          "row": 6,
+          "subject": "健康與護理"
+        }
+      ]
+    },
+    {
+      "id": "604",
+      "name": "簡志雄",
+      "sessions": [
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 1,
+          "row": 1,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 1,
+          "row": 2,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 0,
+          "row": 1,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 0,
+          "row": 2,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 0,
+          "row": 3,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 0,
+          "row": 4,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 3,
+          "row": 3,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 3,
+          "row": 4,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 3,
+          "row": 1,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 3,
+          "row": 2,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 1,
+          "row": 6,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 1,
+          "row": 7,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 1,
+          "row": 3,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 1,
+          "row": 4,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 2,
+          "row": 1,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 2,
+          "row": 2,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 3,
+          "row": 6,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 3,
+          "row": 7,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 4,
+          "row": 3,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 4,
+          "row": 4,
+          "subject": "生活科技"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 0,
+          "row": 6,
+          "subject": "工程設計專題"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 0,
+          "row": 7,
+          "subject": "工程設計專題"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 4,
+          "row": 1,
+          "subject": "工程設計專題"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 4,
+          "row": 2,
+          "subject": "工程設計專題"
+        }
+      ]
+    },
+    {
+      "id": "607",
+      "name": "黃秀玲",
+      "sessions": [
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 2,
+          "row": 7,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 3,
+          "row": 7,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 4,
+          "row": 3,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 3,
+          "row": 3,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 2,
+          "row": 2,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 3,
+          "row": 2,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 1,
+          "row": 5,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 1,
+          "row": 3,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 1,
+          "row": 1,
+          "subject": "生命教育活動"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 0,
+          "row": 4,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 1,
+          "row": 7,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 0,
+          "row": 3,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 0,
+          "row": 7,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 1,
+          "row": 4,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 4,
+          "row": 1,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 0,
+          "row": 6,
+          "subject": "資訊科技"
+        },
+        {
+          "day": 4,
+          "row": 5,
+          "subject": "多元選修",
+          "note": "上課地點：電腦教室一",
+          "linkable": false
+        },
+        {
+          "day": 4,
+          "row": 6,
+          "subject": "多元選修",
+          "note": "上課地點：電腦教室一",
+          "linkable": false
+        }
+      ]
+    },
+    {
+      "id": "608",
+      "name": "楊淑青",
+      "sessions": [
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 3,
+          "row": 3,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 1,
+          "row": 6,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 3,
+          "row": 4,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 0,
+          "row": 5,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 3,
+          "row": 2,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 1,
+          "row": 7,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 1,
+          "row": 5,
+          "subject": "領域課程：科技應用專"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 4,
+          "row": 5,
+          "subject": "領域課程：科技應用專"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 0,
+          "row": 6,
+          "subject": "領域課程：科技應用專"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 4,
+          "row": 6,
+          "subject": "領域課程：科技應用專"
+        }
+      ]
+    },
+    {
+      "id": "609",
+      "name": "林承勳",
+      "sessions": [
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 0,
+          "row": 3,
+          "subject": "綜合活動B-童軍"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 0,
+          "row": 6,
+          "subject": "慈濟學與全球公民"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 4,
+          "row": 6,
+          "subject": "綜合活動B-童軍"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 1,
+          "row": 6,
+          "subject": "綜合活動B-童軍"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 1,
+          "row": 5,
+          "subject": "綜合活動B-童軍"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 0,
+          "row": 2,
+          "subject": "綜合活動B-童軍"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 3,
+          "row": 2,
+          "subject": "綜合活動B-童軍"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 3,
+          "row": 1,
+          "subject": "綜合活動B-童軍"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 1,
+          "row": 1,
+          "subject": "綜合活動B-童軍"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 4,
+          "row": 2,
+          "subject": "綜合活動B-童軍"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 0,
+          "row": 5,
+          "subject": "綜合活動B-童軍"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 4,
+          "row": 7,
+          "subject": "綜合活動B-童軍"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 2,
+          "row": 7,
+          "subject": "綜合活動B-童軍"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 3,
+          "row": 4,
+          "subject": "綜合活動B-童軍"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 2,
+          "row": 1,
+          "subject": "綜合活動B-童軍"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 1,
+          "row": 2,
+          "subject": "綜合活動B-童軍"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 3,
+          "row": 7,
+          "subject": "綜合活動B-童軍"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 4,
+          "row": 4,
+          "subject": "綜合活動B-童軍"
+        }
+      ]
+    },
+    {
+      "id": "610",
+      "name": "吳巧伶",
+      "sessions": [
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 1,
+          "row": 6,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 3,
+          "row": 4,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 0,
+          "row": 3,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 1,
+          "row": 7,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 2,
+          "row": 7,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 4,
+          "row": 3,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 0,
+          "row": 4,
+          "subject": "慈濟學與全球公民"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 4,
+          "row": 2,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 4,
+          "row": 7,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 0,
+          "row": 7,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 1,
+          "row": 3,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 3,
+          "row": 3,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 1,
+          "row": 4,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 0,
+          "row": 6,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 3,
+          "row": 7,
+          "subject": "音樂"
+        },
+        {
+          "day": 4,
+          "row": 5,
+          "subject": "多元選修",
+          "note": "上課地點：音樂教室",
+          "linkable": false
+        },
+        {
+          "day": 4,
+          "row": 6,
+          "subject": "多元選修",
+          "note": "上課地點：音樂教室",
+          "linkable": false
+        }
+      ]
+    },
+    {
+      "id": "611",
+      "name": "張育綺",
+      "sessions": [
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 3,
+          "row": 3,
+          "subject": "視覺藝術"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 0,
+          "row": 1,
+          "subject": "視覺藝術"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 3,
+          "row": 7,
+          "subject": "視覺藝術"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 4,
+          "row": 6,
+          "subject": "視覺藝術"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 1,
+          "row": 6,
+          "subject": "視覺藝術"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 1,
+          "row": 4,
+          "subject": "視覺藝術"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 2,
+          "row": 2,
+          "subject": "視覺藝術"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 4,
+          "row": 4,
+          "subject": "視覺藝術"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 1,
+          "row": 7,
+          "subject": "視覺藝術"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 1,
+          "row": 3,
+          "subject": "視覺藝術"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 1,
+          "row": 1,
+          "subject": "生命教育活動"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 2,
+          "row": 7,
+          "subject": "視覺藝術"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 3,
+          "row": 4,
+          "subject": "視覺藝術"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 0,
+          "row": 3,
+          "subject": "視覺藝術"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 0,
+          "row": 5,
+          "subject": "視覺藝術"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 4,
+          "row": 3,
+          "subject": "視覺藝術"
+        }
+      ]
+    },
+    {
+      "id": "614",
+      "name": "陳泰璋",
+      "sessions": [
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 1,
+          "row": 4,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 4,
+          "row": 6,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 4,
+          "row": 3,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 0,
+          "row": 5,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 0,
+          "row": 1,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 1,
+          "row": 1,
+          "subject": "生命教育活動"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 2,
+          "row": 2,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 4,
+          "row": 1,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-28",
+          "className": "高一善解",
+          "day": 0,
+          "row": 7,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 3,
+          "row": 2,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-30",
+          "className": "高一合心",
+          "day": 0,
+          "row": 3,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 2,
+          "row": 1,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 4,
+          "row": 7,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 3,
+          "row": 4,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 1,
+          "row": 6,
+          "subject": "體育"
+        }
+      ]
+    },
+    {
+      "id": "620",
+      "name": "李柏毅",
+      "sessions": [
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 1,
+          "row": 1,
+          "subject": "生命教育活動"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 4,
+          "row": 1,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 0,
+          "row": 7,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 0,
+          "row": 3,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 3,
+          "row": 7,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 1,
+          "row": 2,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 4,
+          "row": 3,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 2,
+          "row": 1,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 0,
+          "row": 5,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 3,
+          "row": 2,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 0,
+          "row": 6,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 4,
+          "row": 4,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 1,
+          "row": 5,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 3,
+          "row": 3,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
+          "day": 1,
+          "row": 7,
+          "subject": "體育"
+        }
+      ]
+    },
+    {
+      "id": "625",
+      "name": "洪嘉穗",
+      "sessions": [
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 3,
+          "row": 4,
+          "subject": "綜合活動C-輔導"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 1,
+          "row": 3,
+          "subject": "綜合活動C-輔導"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 3,
+          "row": 2,
+          "subject": "綜合活動C-輔導"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 1,
+          "row": 4,
+          "subject": "綜合活動C-輔導"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 0,
+          "row": 5,
+          "subject": "綜合活動C-輔導"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 4,
+          "row": 6,
+          "subject": "綜合活動C-輔導"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 4,
+          "row": 4,
+          "subject": "綜合活動C-輔導"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 4,
+          "row": 7,
+          "subject": "綜合活動C-輔導"
+        }
+      ]
+    },
+    {
+      "id": "632",
+      "name": "吳秋宏",
+      "sessions": [
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 3,
+          "row": 1,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 4,
+          "row": 2,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 1,
+          "row": 5,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 3,
+          "row": 5,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 0,
+          "row": 7,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-31",
+          "className": "高一和氣",
+          "day": 2,
+          "row": 7,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 3,
+          "row": 2,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 1,
+          "row": 3,
+          "subject": "體育"
+        }
+      ]
+    },
+    {
+      "id": "634",
+      "name": "鄭莞柔",
+      "sessions": [
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 3,
+          "row": 7,
+          "subject": "綜合活動C-輔導"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 1,
+          "row": 6,
+          "subject": "綜合活動C-輔導"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 4,
+          "row": 5,
+          "subject": "綜合活動C-輔導"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 1,
+          "row": 5,
+          "subject": "綜合活動C-輔導"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 4,
+          "row": 3,
+          "subject": "綜合活動C-輔導"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 0,
+          "row": 3,
+          "subject": "綜合活動C-輔導"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 3,
+          "row": 6,
+          "subject": "綜合活動C-輔導"
+        }
+      ]
+    },
+    {
+      "id": "637",
+      "name": "楊芳玲",
+      "sessions": [
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 0,
+          "row": 7,
+          "subject": "綜合活動C-輔導"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 1,
+          "row": 6,
+          "subject": "綜合活動C-輔導"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 4,
+          "row": 7,
+          "subject": "綜合活動C-輔導"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 4,
+          "row": 4,
+          "subject": "綜合活動C-輔導"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 4,
+          "row": 6,
+          "subject": "綜合活動C-輔導"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 1,
+          "row": 2,
+          "subject": "綜合活動C-輔導"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 4,
+          "row": 3,
+          "subject": "綜合活動C-輔導"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 1,
+          "row": 4,
+          "subject": "綜合活動C-輔導"
+        }
+      ]
+    },
+    {
+      "id": "638",
+      "name": "黃荷雯",
+      "sessions": [
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 0,
+          "row": 2,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 3,
+          "row": 5,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 4,
+          "row": 7,
+          "subject": "健康教育"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 3,
+          "row": 2,
+          "subject": "健康教育"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 1,
+          "row": 7,
+          "subject": "健康教育"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 1,
+          "row": 4,
+          "subject": "健康教育"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 0,
+          "row": 4,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 0,
+          "row": 5,
+          "subject": "健康教育"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 3,
+          "row": 6,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 0,
+          "row": 7,
+          "subject": "健康教育"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 3,
+          "row": 3,
+          "subject": "健康教育"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 0,
+          "row": 1,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 1,
+          "row": 5,
+          "subject": "健康教育"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 3,
+          "row": 7,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 4,
+          "row": 1,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-26",
+          "className": "高一知足",
+          "day": 2,
+          "row": 2,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 1,
+          "row": 1,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-27",
+          "className": "高一感恩",
+          "day": 4,
+          "row": 3,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 4,
+          "row": 2,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-29",
+          "className": "高一包容",
+          "day": 2,
+          "row": 7,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 1,
+          "row": 3,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 4,
+          "row": 5,
+          "subject": "體育"
+        }
+      ]
+    },
+    {
+      "id": "640",
+      "name": "張簡景鈴",
+      "sessions": [
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 3,
+          "row": 3,
+          "subject": "視覺藝術"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 3,
+          "row": 5,
+          "subject": "視覺藝術"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 4,
+          "row": 5,
+          "subject": "視覺藝術"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 4,
+          "row": 7,
+          "subject": "視覺藝術"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 3,
+          "row": 1,
+          "subject": "視覺藝術"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 3,
+          "row": 7,
+          "subject": "視覺藝術"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 4,
+          "row": 4,
+          "subject": "視覺藝術"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 3,
+          "row": 6,
+          "subject": "視覺藝術"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 3,
+          "row": 2,
+          "subject": "美術"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 4,
+          "row": 6,
+          "subject": "美術"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 4,
+          "row": 3,
+          "subject": "美術"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 3,
+          "row": 4,
+          "subject": "美術"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 4,
+          "row": 1,
+          "subject": "美術"
+        }
+      ]
+    },
+    {
+      "id": "641",
+      "name": "賴昀締",
+      "sessions": [
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 0,
+          "row": 6,
+          "subject": "綜合活動B-童軍"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 0,
+          "row": 1,
+          "subject": "綜合活動B-童軍"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 0,
+          "row": 7,
+          "subject": "綜合活動B-童軍"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 1,
+          "row": 3,
+          "subject": "綜合活動B-童軍"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 1,
+          "row": 2,
+          "subject": "綜合活動B-童軍"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 1,
+          "row": 1,
+          "subject": "綜合活動B-童軍"
+        },
+        {
+          "classId": "class-32",
+          "className": "高二知足",
+          "day": 0,
+          "row": 3,
+          "subject": "全民國防教育"
+        },
+        {
+          "classId": "class-33",
+          "className": "高二感恩",
+          "day": 1,
+          "row": 6,
+          "subject": "全民國防教育"
+        },
+        {
+          "classId": "class-34",
+          "className": "高二善解",
+          "day": 1,
+          "row": 5,
+          "subject": "全民國防教育"
+        },
+        {
+          "classId": "class-35",
+          "className": "高二包容",
+          "day": 0,
+          "row": 4,
+          "subject": "全民國防教育"
+        },
+        {
+          "classId": "class-36",
+          "className": "高二合心",
+          "day": 1,
+          "row": 4,
+          "subject": "全民國防教育"
+        },
+        {
+          "classId": "class-37",
+          "className": "高二和氣",
+          "day": 0,
+          "row": 2,
+          "subject": "全民國防教育"
+        }
+      ]
+    },
+    {
+      "id": "642",
+      "name": "黃逸欣",
+      "sessions": [
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 2,
+          "row": 1,
+          "subject": "表演藝術"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 0,
+          "row": 4,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 1,
+          "row": 2,
+          "subject": "表演藝術"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 3,
+          "row": 6,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 2,
+          "row": 2,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 1,
+          "row": 6,
+          "subject": "表演藝術"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 0,
+          "row": 1,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 4,
+          "row": 6,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 4,
+          "row": 5,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 2,
+          "row": 7,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 3,
+          "row": 2,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 1,
+          "row": 5,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 0,
+          "row": 3,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 1,
+          "row": 7,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 3,
+          "row": 1,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 4,
+          "row": 3,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 3,
+          "row": 5,
+          "subject": "音樂"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 0,
+          "row": 5,
+          "subject": "音樂"
+        }
+      ]
+    },
+    {
+      "id": "643",
+      "name": "胡鳳玲",
+      "sessions": [
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 1,
+          "row": 1,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 4,
+          "row": 2,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 0,
+          "row": 3,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 4,
+          "row": 7,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 0,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 1,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 2,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 3,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 4,
+          "row": 0,
+          "subject": "晨光時間"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 3,
+          "row": 1,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 1,
+          "row": 3,
+          "subject": "慈濟學與全球公民"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 2,
+          "row": 5,
+          "subject": "班會"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 1,
+          "row": 6,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 2,
+          "row": 6,
+          "subject": "團體活動時間"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 4,
+          "row": 5,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 0,
+          "row": 6,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 4,
+          "row": 6,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
+          "day": 1,
+          "row": 7,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 0,
+          "row": 7,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 2,
+          "row": 7,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 1,
+          "row": 2,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 3,
+          "row": 7,
+          "subject": "體育"
+        }
+      ]
+    },
+    {
+      "id": "645",
+      "name": "周淑娟",
+      "sessions": [
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 4,
+          "row": 4,
+          "subject": "綜合活動A-家政"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 4,
+          "row": 3,
+          "subject": "綜合活動A-家政"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 3,
+          "row": 7,
+          "subject": "綜合活動A-家政"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 3,
+          "row": 6,
+          "subject": "綜合活動A-家政"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 1,
+          "row": 2,
+          "subject": "綜合活動A-家政"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 1,
+          "row": 1,
+          "subject": "綜合活動A-家政"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 1,
+          "row": 4,
+          "subject": "綜合活動A-家政"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 1,
+          "row": 3,
+          "subject": "綜合活動A-家政"
+        },
+        {
+          "classId": "class-10",
+          "className": "國二知足",
+          "day": 0,
+          "row": 2,
+          "subject": "綜合活動A-家政"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 4,
+          "row": 6,
+          "subject": "綜合活動A-家政"
+        },
+        {
+          "classId": "class-12",
+          "className": "國二善解",
+          "day": 0,
+          "row": 7,
+          "subject": "綜合活動A-家政"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 0,
+          "row": 6,
+          "subject": "綜合活動A-家政"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 0,
+          "row": 1,
+          "subject": "綜合活動A-家政"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 0,
+          "row": 4,
+          "subject": "綜合活動A-家政"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 0,
+          "row": 3,
+          "subject": "綜合活動A-家政"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 3,
+          "row": 4,
+          "subject": "綜合活動A-家政"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 3,
+          "row": 3,
+          "subject": "綜合活動A-家政"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 3,
+          "row": 2,
+          "subject": "綜合活動A-家政"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 3,
+          "row": 1,
+          "subject": "綜合活動A-家政"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 1,
+          "row": 7,
+          "subject": "綜合活動A-家政"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 1,
+          "row": 6,
+          "subject": "綜合活動A-家政"
+        }
+      ]
+    },
+    {
+      "id": "646",
+      "name": "洪婉晴",
+      "sessions": [
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 0,
+          "row": 1,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 3,
+          "row": 4,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 0,
+          "row": 6,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 3,
+          "row": 6,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 0,
+          "row": 2,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 4,
+          "row": 6,
+          "subject": "體育"
+        }
+      ]
+    },
+    {
+      "id": "647",
+      "name": "楊順宇",
+      "sessions": [
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 1,
+          "row": 4,
+          "subject": "表演藝術"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 1,
+          "row": 3,
+          "subject": "表演藝術"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 4,
+          "row": 7,
+          "subject": "表演藝術"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 4,
+          "row": 5,
+          "subject": "表演藝術"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 0,
+          "row": 3,
+          "subject": "表演藝術"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 3,
+          "row": 5,
+          "subject": "表演藝術"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 3,
+          "row": 6,
+          "subject": "表演藝術"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 4,
+          "row": 6,
+          "subject": "表演藝術"
+        },
+        {
+          "classId": "class-13",
+          "className": "國二包容",
+          "day": 3,
+          "row": 7,
+          "subject": "表演藝術"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 1,
+          "row": 2,
+          "subject": "表演藝術"
+        },
+        {
+          "classId": "class-15",
+          "className": "國二和氣",
+          "day": 3,
+          "row": 3,
+          "subject": "表演藝術"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 3,
+          "row": 2,
+          "subject": "表演藝術"
+        },
+        {
+          "classId": "class-18",
+          "className": "國三知足",
+          "day": 0,
+          "row": 1,
+          "subject": "表演藝術"
+        },
+        {
+          "classId": "class-19",
+          "className": "國三感恩",
+          "day": 4,
+          "row": 4,
+          "subject": "表演藝術"
+        },
+        {
+          "classId": "class-20",
+          "className": "國三善解",
+          "day": 0,
+          "row": 6,
+          "subject": "表演藝術"
+        },
+        {
+          "classId": "class-21",
+          "className": "國三包容",
+          "day": 0,
+          "row": 2,
+          "subject": "表演藝術"
+        },
+        {
+          "classId": "class-22",
+          "className": "國三合心",
+          "day": 0,
+          "row": 5,
+          "subject": "表演藝術"
+        },
+        {
+          "classId": "class-23",
+          "className": "國三和氣",
+          "day": 2,
+          "row": 7,
+          "subject": "表演藝術"
+        },
+        {
+          "classId": "class-24",
+          "className": "國三互愛",
+          "day": 1,
+          "row": 6,
+          "subject": "表演藝術"
+        },
+        {
+          "classId": "class-25",
+          "className": "國三協力",
+          "day": 4,
+          "row": 2,
+          "subject": "表演藝術"
+        }
+      ]
+    },
+    {
+      "id": "648",
+      "name": "許家銘",
+      "sessions": [
+        {
+          "classId": "class-01",
+          "className": "國一知足",
+          "day": 2,
+          "row": 1,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 2,
+          "row": 3,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-03",
+          "className": "國一善解",
+          "day": 2,
+          "row": 4,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 2,
+          "row": 2,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-05",
+          "className": "國一合心",
+          "day": 4,
+          "row": 1,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-06",
+          "className": "國一和氣",
+          "day": 4,
+          "row": 2,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 4,
+          "row": 3,
+          "subject": "資訊科技"
+        },
+        {
+          "classId": "class-08",
+          "className": "國一協力",
+          "day": 4,
+          "row": 4,
+          "subject": "資訊科技"
+        }
+      ]
+    },
+    {
+      "id": "649",
+      "name": "陳奕霖",
+      "sessions": [
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 1,
+          "row": 4,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-02",
+          "className": "國一感恩",
+          "day": 3,
+          "row": 6,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 1,
+          "row": 2,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-04",
+          "className": "國一包容",
+          "day": 4,
+          "row": 4,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 1,
+          "row": 1,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-07",
+          "className": "國一互愛",
+          "day": 3,
+          "row": 5,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 4,
+          "row": 2,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-11",
+          "className": "國二感恩",
+          "day": 2,
+          "row": 3,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 4,
+          "row": 3,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-14",
+          "className": "國二合心",
+          "day": 2,
+          "row": 4,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 1,
+          "row": 3,
+          "subject": "體育"
+        },
+        {
+          "classId": "class-16",
+          "className": "國二互愛",
+          "day": 3,
+          "row": 7,
+          "subject": "體育"
+        }
+      ]
+    },
+    {
+      "id": "721",
+      "name": "葉梅花",
+      "sessions": []
+    },
+    {
+      "id": "729",
+      "name": "劉柔秀",
+      "sessions": []
+    }
+  ],
+  "qualityReport": {
+    "unmatchedClassCells": [
+      {
+        "class": "高一知足",
+        "day": "五",
+        "period": "第五節",
+        "text": "多元選修"
+      },
+      {
+        "class": "高一知足",
+        "day": "五",
+        "period": "第六節",
+        "text": "多元選修"
+      },
+      {
+        "class": "高一感恩",
+        "day": "五",
+        "period": "第五節",
+        "text": "多元選修"
+      },
+      {
+        "class": "高一感恩",
+        "day": "五",
+        "period": "第六節",
+        "text": "多元選修"
+      },
+      {
+        "class": "高一善解",
+        "day": "五",
+        "period": "第五節",
+        "text": "多元選修"
+      },
+      {
+        "class": "高一善解",
+        "day": "五",
+        "period": "第六節",
+        "text": "多元選修"
+      },
+      {
+        "class": "高一包容",
+        "day": "五",
+        "period": "第五節",
+        "text": "多元選修"
+      },
+      {
+        "class": "高一包容",
+        "day": "五",
+        "period": "第六節",
+        "text": "多元選修"
+      },
+      {
+        "class": "高一合心",
+        "day": "五",
+        "period": "第五節",
+        "text": "多元選修"
+      },
+      {
+        "class": "高一合心",
+        "day": "五",
+        "period": "第六節",
+        "text": "多元選修"
+      },
+      {
+        "class": "高一和氣",
+        "day": "五",
+        "period": "第五節",
+        "text": "多元選修"
+      },
+      {
+        "class": "高一和氣",
+        "day": "五",
+        "period": "第六節",
+        "text": "多元選修"
+      },
+      {
+        "class": "高二知足",
+        "day": "三",
+        "period": "第三節",
+        "text": "彈性學習B"
+      },
+      {
+        "class": "高二知足",
+        "day": "三",
+        "period": "第四節",
+        "text": "彈性學習A"
+      },
+      {
+        "class": "高二感恩",
+        "day": "三",
+        "period": "第三節",
+        "text": "彈性學習A"
+      },
+      {
+        "class": "高二感恩",
+        "day": "三",
+        "period": "第四節",
+        "text": "彈性學習B"
+      },
+      {
+        "class": "高二善解",
+        "day": "三",
+        "period": "第三節",
+        "text": "彈性學習B"
+      },
+      {
+        "class": "高二善解",
+        "day": "三",
+        "period": "第四節",
+        "text": "彈性學習A"
+      },
+      {
+        "class": "高二包容",
+        "day": "三",
+        "period": "第三節",
+        "text": "彈性學習A"
+      },
+      {
+        "class": "高二包容",
+        "day": "三",
+        "period": "第四節",
+        "text": "彈性學習B"
+      },
+      {
+        "class": "高二合心",
+        "day": "三",
+        "period": "第三節",
+        "text": "彈性學習B"
+      },
+      {
+        "class": "高二合心",
+        "day": "三",
+        "period": "第四節",
+        "text": "彈性學習A"
+      },
+      {
+        "class": "高二和氣",
+        "day": "三",
+        "period": "第三節",
+        "text": "彈性學習B"
+      },
+      {
+        "class": "高二和氣",
+        "day": "三",
+        "period": "第四節",
+        "text": "彈性學習A"
+      }
+    ]
+  }
+};
