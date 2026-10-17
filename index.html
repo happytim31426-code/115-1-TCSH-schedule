@@ -22,15 +22,38 @@
           <select id="view-type">
             <option value="class">班級課表</option>
             <option value="teacher">教師課表</option>
+            <option value="swap">代調課</option>
+            <option value="recruit">可招生教師</option>
           </select>
         </div>
-        <div class="control-group grow">
+        <div class="control-group grow" id="schedule-picker-group">
           <label for="schedule-select" id="schedule-select-label">選擇班級</label>
           <select id="schedule-select"></select>
         </div>
       </section>
 
-      <section class="schedule-card" aria-live="polite">
+      <section class="tool-card is-hidden" id="swap-tool">
+        <h2>代調課</h2>
+        <p>選擇原授課教師、時段與班級，系統會列出可交換的授課教師與其可調課時段。</p>
+        <div class="tool-grid">
+          <label>調課教師<select id="swap-teacher"></select></label>
+          <label>調課星期<select id="swap-day"></select></label>
+          <label>調課節次<select id="swap-period"></select></label>
+          <label>調課班級<select id="swap-class"></select></label>
+        </div>
+        <button class="action-button" id="swap-search" type="button">查詢可代調教師</button>
+        <div class="tool-results" id="swap-results"></div>
+      </section>
+
+      <section class="tool-card is-hidden" id="recruit-tool">
+        <h2>可招生教師清單</h2>
+        <p>列出指定日第一節可支援招生的教師，並優先顯示第一、二節皆無課的非導師。</p>
+        <div class="tool-grid compact"><label>星期<select id="recruit-day"></select></label></div>
+        <button class="action-button" id="recruit-search" type="button">查詢教師</button>
+        <div class="tool-results" id="recruit-results"></div>
+      </section>
+
+      <section class="schedule-card" id="schedule-card" aria-live="polite">
         <div class="schedule-heading">
           <div>
             <p class="eyebrow" id="schedule-kind">班級課表</p>
