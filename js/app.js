@@ -75,7 +75,7 @@ function teacherView(record) {
   tableBody.innerHTML = rows.map((row, rowIndex) => `<tr><td>${row.period.name}\n${row.period.time}</td>${data.meta.days.map((_, day) => {
     const items = slots.get(`${day}-${rowIndex}`) || [];
     if (!items.length) return "<td></td>";
-    return `<td>${items.map(item => { const run = byId(item.classId)?.rows[rowIndex]?.cells[day]?.runningClass; const place = item.linkable === false ? `<span class="location">${item.className}</span>` : `<button class="schedule-link" data-class="${item.classId}">${item.className}</button>`; return `<div class="course">${item.subject}</div>${run ? '<span class="badge">跑班</span>' : ""}${item.note ? `<div class="note">${item.note}</div>` : ""}<div class="teacher">${place}</div>`; }).join('<hr class="cell-divider">')}</td>`;
+    return `<td>${items.map(item => { const run = byId(item.classId)?.rows[rowIndex]?.cells[day]?.runningClass; const place = item.linkable === false ? `<span class="location">${item.className || ""}</span>` : `<button class="schedule-link" data-class="${item.classId}">${item.className}</button>`; return `<div class="course">${item.subject}</div>${item.grouped ? '<span class="badge">分組</span>' : run ? '<span class="badge">跑班</span>' : ""}${item.note ? `<div class="note">${item.note}</div>` : ""}<div class="teacher">${place}</div>`; }).join('<hr class="cell-divider">')}</td>`;
   }).join("")}</tr>`).join("");
 }
 function populateLookup(preferred) {
@@ -142,7 +142,7 @@ function highlightComparison(candidateDay, candidateRow) {
 }
 function comparisonTeacher(name, panel) {
   const record = teacher(name);
-  document.querySelector(panel).innerHTML = comparisonTable(`${record.id} ${record.name}`, (day, row) => record.sessions.filter(item => item.day === day && item.row === row).map(item => `<div class="course">${item.subject}</div>${item.linkable !== false && item.classId ? `<small>${item.className || ""}</small>` : ""}`).join("<hr>"));
+  document.querySelector(panel).innerHTML = comparisonTable(`${record.id} ${record.name}`, (day, row) => record.sessions.filter(item => item.day === day && item.row === row).map(item => `<div class="course">${item.subject}</div>${item.grouped ? '<span class="badge">分組</span>' : ""}${item.linkable !== false && item.classId ? `<small>${item.className || ""}</small>` : ""}`).join("<hr>"));
 }
 function updateComparison() {
   const name = document.querySelector("#swap-teacher").value;

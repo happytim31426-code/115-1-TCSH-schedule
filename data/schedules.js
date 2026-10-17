@@ -26522,6 +26522,30 @@ window.SCHEDULE_DATA = {
           "day": 1,
           "row": 8,
           "subject": "英語文(輔)"
+        },
+        {
+          "day": 2,
+          "row": 4,
+          "subject": "臺灣手語",
+          "grouped": true,
+          "linkable": false,
+          "sourcePage": 25
+        },
+        {
+          "day": 1,
+          "row": 5,
+          "subject": "臺灣手語",
+          "grouped": true,
+          "linkable": false,
+          "sourcePage": 25
+        },
+        {
+          "day": 1,
+          "row": 6,
+          "subject": "臺灣手語",
+          "grouped": true,
+          "linkable": false,
+          "sourcePage": 25
         }
       ]
     },
@@ -36086,12 +36110,38 @@ window.SCHEDULE_DATA = {
     {
       "id": "721",
       "name": "葉梅花",
-      "sessions": []
+      "sessions": [
+        {
+          "day": 3,
+          "row": 8,
+          "subject": "原住民族語文-阿美語",
+          "grouped": true,
+          "linkable": false,
+          "sourcePage": 97
+        }
+      ]
     },
     {
       "id": "729",
       "name": "劉柔秀",
-      "sessions": []
+      "sessions": [
+        {
+          "day": 1,
+          "row": 3,
+          "subject": "客語文",
+          "grouped": true,
+          "linkable": false,
+          "sourcePage": 98
+        },
+        {
+          "day": 1,
+          "row": 4,
+          "subject": "客語文",
+          "grouped": true,
+          "linkable": false,
+          "sourcePage": 98
+        }
+      ]
     }
   ],
   "qualityReport": {

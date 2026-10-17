@@ -67,7 +67,7 @@ def read_classes(pdf) -> list[dict]:
 def read_teacher_links(pdf, classes: list[dict]):
     class_names = sorted((x["name"] for x in classes), key=len, reverse=True)
     id_for = {x["name"]:x["id"] for x in classes}
-    records, links, elective_slots = {}, defaultdict(list), defaultdict(list)
+    records, links, elective_slots, group_slots = {}, defaultdict(list), defaultdict(list), defaultdict(list)
     for page_no, page in enumerate(pdf.pages, 1):
         heading = re.search(r"教師：(.+)", page_text(page))
         if not heading:
@@ -80,15 +80,19 @@ def read_teacher_links(pdf, classes: list[dict]):
                 value = compact(raw)
                 if teacher in MULTI_ELECTIVE_ROOMS and "多元選修" in value:
                     elective_slots[teacher].append({"day":day,"row":row,"subject":"多元選修","note":f"上課地點：{MULTI_ELECTIVE_ROOMS[teacher]}","linkable":False})
-                for class_name in [x for x in class_names if x in value]:
+                matched_classes = [x for x in class_names if x in value]
+                if value and not matched_classes and not any(subject in value for subject in ("多元選修", "彈性學習A", "彈性學習B")):
+                    subject = re.sub(r"(?:國|高)[一二三][A-Z]?$", "", value)
+                    group_slots[teacher].append({"day":day,"row":row,"subject":subject,"grouped":True,"linkable":False,"sourcePage":page_no})
+                for class_name in matched_classes:
                     links[(id_for[class_name], day, row)].append({"teacher":teacher,"subject":value.replace(class_name,""),"page":page_no})
-    return sorted(records.values(), key=lambda item: int(item["id"]) if item["id"].isdigit() else 9999), links, elective_slots
+    return sorted(records.values(), key=lambda item: int(item["id"]) if item["id"].isdigit() else 9999), links, elective_slots, group_slots
 
 def main():
     with pdfplumber.open(CLASS_PDF) as class_pdf:
         classes = read_classes(class_pdf); class_pages = len(class_pdf.pages)
     with pdfplumber.open(TEACHER_PDF) as teacher_pdf:
-        teachers, links, elective_slots = read_teacher_links(teacher_pdf, classes); teacher_pages = len(teacher_pdf.pages)
+        teachers, links, elective_slots, group_slots = read_teacher_links(teacher_pdf, classes); teacher_pages = len(teacher_pdf.pages)
     index = {item["name"]:[] for item in teachers}; unmatched = []
     for schedule in classes:
         for row_no, row in enumerate(schedule["rows"]):
@@ -116,6 +120,10 @@ def main():
         index.setdefault(schedule["homeroomTeacher"], []).append({"classId":schedule["id"],"className":schedule["name"],"day":2,"row":4,"subject":"彈性學習A","note":f"上課地點：{schedule['name']}","linkable":True})
     for teacher_name, sessions in elective_slots.items():
         index.setdefault(teacher_name, []).extend(sessions)
+    for teacher_name, sessions in group_slots.items():
+        for session in sessions:
+            if not any(item["day"] == session["day"] and item["row"] == session["row"] for item in index[teacher_name]):
+                index[teacher_name].append(session)
     payload = {"meta":{"school":"臺南慈濟高中","term":"115 學年度第 1 學期","effectiveDates":"115.08.31 - 116.01.20","days":DAYS,"classPdfPages":class_pages,"teacherPdfPages":teacher_pages},"classes":classes,"teachers":[{**item,"sessions":index[item["name"]]} for item in teachers],"qualityReport":{"unmatchedClassCells":unmatched}}
     OUT.parent.mkdir(exist_ok=True)
     serialized = json.dumps(payload,ensure_ascii=False,indent=2)
