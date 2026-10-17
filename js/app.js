@@ -64,6 +64,7 @@ function swapSearch() {
   const teacherName = document.querySelector("#swap-teacher").value;
   const day = Number(document.querySelector("#swap-day").value); const row = Number(document.querySelector("#swap-period").value);
   const schedule = byId(document.querySelector("#swap-class").value); const target = schedule.rows[row].cells[day]; const output = document.querySelector("#swap-results");
+  if (!busy(teacherName, day, row)) { output.innerHTML = '<p class="warning">本教師該節無課務</p>'; return; }
   if (!teachesClass(teacherName, schedule.id)) { output.textContent = "本教師無任教該班級"; return; }
   if (blocked(target)) { output.innerHTML = `<p class="warning">「${target.subject}」屬於不可調課程。</p>`; return; }
   const eighth = row === 8; const candidates = [];
@@ -85,7 +86,7 @@ function comparisonTable(heading, cellRenderer) {
 }
 function comparisonTeacher(name, panel) {
   const record = teacher(name);
-  document.querySelector(panel).innerHTML = comparisonTable(`${record.id} ${record.name}`, (day, row) => record.sessions.filter(item => item.day === day && item.row === row).map(item => `<div class="course">${item.subject}</div><small>${item.className || ""}</small>${item.note ? `<div class="note">${item.note}</div>` : ""}`).join("<hr>"));
+  document.querySelector(panel).innerHTML = comparisonTable(`${record.id} ${record.name}`, (day, row) => record.sessions.filter(item => item.day === day && item.row === row).map(item => `<div class="course">${item.subject}</div>${item.linkable !== false && item.classId ? `<small>${item.className || ""}</small>` : ""}`).join("<hr>"));
 }
 function updateComparison() {
   const name = document.querySelector("#swap-teacher").value;
@@ -104,7 +105,7 @@ function recruitSearch() {
   document.querySelector("#recruit-results").innerHTML = `<h3>星期${data.meta.days[day]} 可招生教師</h3><p class="result-note">第一、二節皆無課</p><h4>非導師</h4><ul class="result-list">${list(nonHomeroom) || "<li>無</li>"}</ul><h4>導師</h4><ul class="result-list">${list(homeroom) || "<li>無</li>"}</ul><h4>第一節無課、第二節有課</h4><ul class="result-list">${list(secondBusy) || "<li>無</li>"}</ul>`;
 }
 viewType.addEventListener("change", showMode); picker.addEventListener("change", () => populateLookup(picker.value));
-document.querySelector("#swap-search").addEventListener("click", swapSearch); document.querySelector("#recruit-search").addEventListener("click", recruitSearch);
+document.querySelector("#recruit-search").addEventListener("click", recruitSearch);
 document.addEventListener("click", event => { const target = event.target.closest(".schedule-link"); if (!target) return; if (target.dataset.teacher) { viewType.value = "teacher"; populateLookup(target.dataset.teacher); } if (target.dataset.class) { viewType.value = "class"; populateLookup(target.dataset.class); } });
 document.querySelector("#theme-toggle").addEventListener("click", () => { const dark = document.documentElement.dataset.theme === "dark"; document.documentElement.dataset.theme = dark ? "" : "dark"; document.querySelector("#theme-toggle").textContent = dark ? "夜間閱讀" : "日間閱讀"; });
 document.querySelectorAll("#swap-tool select").forEach(select => select.addEventListener("change", updateComparison));

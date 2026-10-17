@@ -46,6 +46,9 @@ footer { padding:1.25rem; text-align:center; color:#547168; font-size:.85rem; }
 @media (max-width:600px) { .controls { flex-direction:column; } .schedule-heading { align-items:start; flex-direction:column; } .tool-grid { grid-template-columns:1fr; } }
 @media print { .hero { padding:1rem; background:white; color:#18332a; } .controls,.source-card,footer { display:none; } .page-shell { width:100%; margin:0; } .schedule-card { box-shadow:none; padding:0; } }
 .comparison-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; margin-top:1.5rem; }
+#swap-results .result-list { columns:2; column-gap:2rem; }
+#swap-results .result-list li { break-inside:avoid; }
+@media(max-width:600px) { #swap-results .result-list { columns:1; } }
 .comparison-panel { min-width:0; border:1px solid var(--line); border-radius:10px; padding:.65rem; }
 .comparison-panel h3 { font-size:1rem; }
 .comparison-panel table { min-width:360px; font-size:.75rem; }
