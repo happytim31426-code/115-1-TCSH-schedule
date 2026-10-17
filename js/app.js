@@ -16,10 +16,20 @@ const blockedSubjects = ["慈濟學與全球公民", "晨光時間", "班會", "
 
 function byId(id) { return data.classes.find(item => item.id === id); }
 function teacher(name) { return data.teachers.find(item => item.name === name); }
-function blocked(cell, schedule) {
+const withdrawalSlots = [
+  {name:"國二包容", day:1, row:3},
+  {name:"國一合心", day:1, row:4},
+  {name:"國二和氣", day:2, row:4},
+  {name:"高一和氣", day:1, row:5},
+  {name:"高一知足", day:1, row:5},
+  {name:"高一合心", day:1, row:6},
+];
+function blocked(cell, schedule, day, row) {
   const subject = cell.subject.replace(/\s+/g, "");
   const mathRun = schedule && /^(高二|高三)(知足|感恩|善解)$/.test(schedule.name) && subject.includes("數學");
-  return cell.runningClass || mathRun || subject.includes("多元選修") || blockedSubjects.some(item => subject.includes(item));
+  const withdrawal = withdrawalSlots.some(slot => slot.name === schedule?.name && slot.day === day && slot.row === row);
+  const dualPhysics = subject.replace(/[-－–—]/g, "").includes("物理探究A");
+  return cell.runningClass || mathRun || withdrawal || dualPhysics || subject.includes("多元選修") || blockedSubjects.some(item => subject.includes(item));
 }
 function eligibleOrigin(name, schedule, day, row) {
   const cell = schedule.rows[row]?.cells[day];
@@ -100,10 +110,10 @@ function swapSearch() {
   if (!busy(teacherName, day, row)) { output.innerHTML = '<p class="warning">本教師該節無課務</p>'; return; }
   if (!teachesClass(teacherName, schedule.id)) { output.textContent = "本教師無任教該班級"; return; }
   if (!eligibleOrigin(teacherName, schedule, day, row)) { output.textContent = "此時段不是該教師在本班可調課的授課時段。"; return; }
-  if (blocked(target, schedule)) { output.textContent = `「${target.subject}」不能調課`; return; }
+  if (blocked(target, schedule, day, row)) { output.textContent = `「${target.subject}」不能調課`; return; }
   const eighth = row === 8; const candidates = [];
   schedule.rows.forEach((sourceRow, sourceRowIndex) => sourceRow.cells.forEach((cell, sourceDay) => {
-    if (sourceRowIndex === row && sourceDay === day || sourceRowIndex === 0 || blocked(cell, schedule) || (eighth ? sourceRowIndex !== 8 : sourceRowIndex < 1 || sourceRowIndex > 7)) return;
+    if (sourceRowIndex === row && sourceDay === day || sourceRowIndex === 0 || blocked(cell, schedule, sourceDay, sourceRowIndex) || (eighth ? sourceRowIndex !== 8 : sourceRowIndex < 1 || sourceRowIndex > 7)) return;
     cell.teachers.forEach(item => {
       if (item.name === teacherName || busy(item.name, day, row) || busy(teacherName, sourceDay, sourceRowIndex)) return;
       candidates.push({ teacher: item.name, subject: cell.subject, day: sourceDay, row: sourceRowIndex });
