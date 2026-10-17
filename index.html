@@ -52,9 +52,8 @@
       <section class="tool-card is-hidden" id="recruit-tool">
         <h2>可招生教師清單</h2>
         <p>先選星期與學校，再點推薦人員加入該校；點已選姓名可移回推薦清單。需求人數包含一位帶隊老師。</p>
-        <div class="tool-grid compact"><label>星期<select id="recruit-day"></select></label></div>
+        <div class="tool-grid recruit-filters"><label>星期<select id="recruit-day"></select></label><label>該天入班學校數<select id="school-count"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label></div>
         <div id="recruit-roster" aria-live="polite"></div>
-        <label>該天入班學校數<select id="school-count"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
         <p id="recruit-message" role="status"></p>
         <div id="school-plans" class="school-plans"></div>
       </section>
