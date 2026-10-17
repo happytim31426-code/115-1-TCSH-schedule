@@ -16,7 +16,36 @@ const blockedSubjects = ["慈濟學與全球公民", "晨光時間", "班會", "
 
 function byId(id) { return data.classes.find(item => item.id === id); }
 function teacher(name) { return data.teachers.find(item => item.name === name); }
-function blocked(cell) { return cell.runningClass || blockedSubjects.some(subject => cell.subject.includes(subject)); }
+function blocked(cell, schedule) {
+  const subject = cell.subject.replace(/\s+/g, "");
+  const mathRun = schedule && /^(高二|高三)(知足|感恩|善解)$/.test(schedule.name) && subject.includes("數學");
+  return cell.runningClass || mathRun || subject.includes("多元選修") || blockedSubjects.some(item => subject.includes(item));
+}
+function eligibleOrigin(name, schedule, day, row) {
+  const cell = schedule.rows[row]?.cells[day];
+  return row >= 1 && row <= 8 && cell?.subject && !blocked(cell, schedule) &&
+    (cell.teachers.some(item => item.name === name) || teacher(name).sessions.some(item => item.classId === schedule.id && item.day === day && item.row === row));
+}
+function refreshSwapOptions(onlyPeriods = false) {
+  const name = document.querySelector("#swap-teacher").value;
+  const schedule = byId(document.querySelector("#swap-class").value);
+  const daySelect = document.querySelector("#swap-day");
+  const periodSelect = document.querySelector("#swap-period");
+  if (!onlyPeriods) {
+    const previous = daySelect.value;
+    const days = data.meta.days.map((name, day) => ({name, day})).filter(item => periods.some(period => eligibleOrigin(name, schedule, item.day, period.row)));
+    daySelect.innerHTML = optionList(days, item => item.day, item => `星期${item.name}`);
+    if (days.some(item => String(item.day) === previous)) daySelect.value = previous;
+    daySelect.disabled = !days.length;
+    if (!days.length) daySelect.innerHTML = '<option value="">無可調課星期</option>';
+  }
+  const previousPeriod = periodSelect.value;
+  const available = daySelect.value === "" ? [] : periods.filter(period => eligibleOrigin(name, schedule, Number(daySelect.value), period.row));
+  periodSelect.innerHTML = optionList(available, item => item.row, item => `${item.name} ${item.time}`);
+  if (available.some(item => String(item.row) === previousPeriod)) periodSelect.value = previousPeriod;
+  periodSelect.disabled = !available.length;
+  if (!available.length) periodSelect.innerHTML = '<option value="">無可調課節次</option>';
+}
 function busy(name, day, row) { return (teacher(name)?.sessions || []).some(item => item.day === day && item.row === row); }
 function optionList(records, value, label) { return records.map((item, index) => `<option value="${value(item, index)}">${label(item, index)}</option>`).join(""); }
 function entryHtml(entry) {
@@ -61,15 +90,19 @@ function setupTools() {
   document.querySelector("#swap-period").innerHTML = optionList(periods, item => item.row, item => `${item.name} ${item.time}`);
 }
 function swapSearch() {
+  if (document.querySelector("#swap-period").disabled) {
+    document.querySelector("#swap-results").textContent = "該教師在此班沒有可調課的授課時段。";
+    return;
+  }
   const teacherName = document.querySelector("#swap-teacher").value;
   const day = Number(document.querySelector("#swap-day").value); const row = Number(document.querySelector("#swap-period").value);
   const schedule = byId(document.querySelector("#swap-class").value); const target = schedule.rows[row].cells[day]; const output = document.querySelector("#swap-results");
   if (!busy(teacherName, day, row)) { output.innerHTML = '<p class="warning">本教師該節無課務</p>'; return; }
   if (!teachesClass(teacherName, schedule.id)) { output.textContent = "本教師無任教該班級"; return; }
-  if (blocked(target)) { output.innerHTML = `<p class="warning">「${target.subject}」屬於不可調課程。</p>`; return; }
+  if (!eligibleOrigin(teacherName, schedule, day, row)) { output.textContent = "此時段不是該教師在本班可調課的授課時段。"; return; }
   const eighth = row === 8; const candidates = [];
   schedule.rows.forEach((sourceRow, sourceRowIndex) => sourceRow.cells.forEach((cell, sourceDay) => {
-    if (sourceRowIndex === row && sourceDay === day || sourceRowIndex === 0 || blocked(cell) || (eighth ? sourceRowIndex !== 8 : sourceRowIndex < 1 || sourceRowIndex > 7)) return;
+    if (sourceRowIndex === row && sourceDay === day || sourceRowIndex === 0 || blocked(cell, schedule) || (eighth ? sourceRowIndex !== 8 : sourceRowIndex < 1 || sourceRowIndex > 7)) return;
     cell.teachers.forEach(item => {
       if (item.name === teacherName || busy(item.name, day, row) || busy(teacherName, sourceDay, sourceRowIndex)) return;
       candidates.push({ teacher: item.name, subject: cell.subject, day: sourceDay, row: sourceRowIndex });
@@ -108,6 +141,9 @@ viewType.addEventListener("change", showMode); picker.addEventListener("change",
 document.querySelector("#recruit-search").addEventListener("click", recruitSearch);
 document.addEventListener("click", event => { const target = event.target.closest(".schedule-link"); if (!target) return; if (target.dataset.teacher) { viewType.value = "teacher"; populateLookup(target.dataset.teacher); } if (target.dataset.class) { viewType.value = "class"; populateLookup(target.dataset.class); } });
 document.querySelector("#theme-toggle").addEventListener("click", () => { const dark = document.documentElement.dataset.theme === "dark"; document.documentElement.dataset.theme = dark ? "" : "dark"; document.querySelector("#theme-toggle").textContent = dark ? "夜間閱讀" : "日間閱讀"; });
-document.querySelectorAll("#swap-tool select").forEach(select => select.addEventListener("change", updateComparison));
+document.querySelectorAll("#swap-tool select").forEach(select => select.addEventListener("change", () => {
+  if (select.id !== "swap-period") refreshSwapOptions(select.id === "swap-day");
+  updateComparison();
+}));
 document.querySelector("#swap-results").addEventListener("click", event => { const button = event.target.closest("[data-candidate]"); if (button) comparisonTeacher(button.dataset.candidate, "#swap-right"); });
-setupTools(); showMode(); updateComparison();
+setupTools(); showMode(); refreshSwapOptions(); updateComparison();
