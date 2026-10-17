@@ -37,12 +37,17 @@
         <p>選擇原授課教師、時段與班級，系統會列出可交換的授課教師與其可調課時段。</p>
         <div class="tool-grid">
           <label>調課教師<select id="swap-teacher"></select></label>
+          <label>調課班級<select id="swap-class"></select></label>
           <label>調課星期<select id="swap-day"></select></label>
           <label>調課節次<select id="swap-period"></select></label>
-          <label>調課班級<select id="swap-class"></select></label>
         </div>
         <button class="action-button" id="swap-search" type="button">查詢可代調教師</button>
         <div class="tool-results" id="swap-results"></div>
+        <div class="comparison-grid" aria-live="polite">
+          <section id="swap-left" class="comparison-panel"></section>
+          <section id="swap-middle" class="comparison-panel"></section>
+          <section id="swap-right" class="comparison-panel">點選候選教師後，在此顯示課表。</section>
+        </div>
       </section>
 
       <section class="tool-card is-hidden" id="recruit-tool">
