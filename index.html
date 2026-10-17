@@ -51,10 +51,12 @@
 
       <section class="tool-card is-hidden" id="recruit-tool">
         <h2>可招生教師清單</h2>
-        <p>列出指定日第一節可支援招生的教師，並優先顯示第一、二節皆無課的非導師。</p>
+        <p>先選星期與學校，再點推薦人員加入該校；點已選姓名可移回推薦清單。需求人數包含一位帶隊老師。</p>
         <div class="tool-grid compact"><label>星期<select id="recruit-day"></select></label></div>
-        <button class="action-button" id="recruit-search" type="button">查詢教師</button>
-        <div class="tool-results" id="recruit-results"></div>
+        <div id="recruit-roster" aria-live="polite"></div>
+        <label>該天入班學校數<select id="school-count"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+        <p id="recruit-message" role="status"></p>
+        <div id="school-plans" class="school-plans"></div>
       </section>
 
       <section class="schedule-card" id="schedule-card" aria-live="polite">
@@ -79,5 +81,6 @@
     <footer>資料來源：臺南慈濟高中 115 學年度第 1 學期課程表</footer>
     <script src="data/schedules.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/recruit.js"></script>
   </body>
 </html>

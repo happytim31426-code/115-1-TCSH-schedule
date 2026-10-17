@@ -60,3 +60,12 @@ footer { padding:1.25rem; text-align:center; color:#547168; font-size:.85rem; }
 [data-candidate][aria-pressed="true"] { outline:2px solid var(--teal); outline-offset:3px; border-radius:2px; }
 body:has(#view-type option[value="swap"]:checked) .page-shell { width:calc(100% - 2rem); max-width:1900px; }
 @media(max-width:900px) { .comparison-grid { grid-template-columns:1fr; } }
+.recruit-columns { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1.5rem; }
+.person-list,.assigned-list { display:flex; flex-wrap:wrap; gap:.5rem; }
+.person-button { border:1px solid var(--line); border-radius:8px; padding:.45rem .6rem; background:var(--paper); color:var(--ink); cursor:pointer; font:inherit; }
+.person-button:disabled { opacity:.45; cursor:not-allowed; }
+.school-plans { display:grid; gap:1rem; overflow-x:auto; padding:.4rem; }
+.school-plan { border:1px solid var(--line); border-radius:10px; padding:1rem; }
+.school-plan label { display:block; margin-top:1rem; }
+.active-school { outline:3px solid var(--teal); }
+@media(max-width:600px) { .recruit-columns { grid-template-columns:1fr; } }

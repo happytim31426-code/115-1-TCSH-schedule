@@ -152,7 +152,6 @@ function recruitSearch() {
   document.querySelector("#recruit-results").innerHTML = `<h3>星期${data.meta.days[day]} 可招生教師</h3><p class="result-note">第一、二節皆無課</p><h4>非導師</h4><ul class="result-list">${list(nonHomeroom) || "<li>無</li>"}</ul><h4>導師</h4><ul class="result-list">${list(homeroom) || "<li>無</li>"}</ul><h4>第一節無課、第二節有課</h4><ul class="result-list">${list(secondBusy) || "<li>無</li>"}</ul>`;
 }
 viewType.addEventListener("change", showMode); picker.addEventListener("change", () => populateLookup(picker.value));
-document.querySelector("#recruit-search").addEventListener("click", recruitSearch);
 document.addEventListener("click", event => { const target = event.target.closest(".schedule-link"); if (!target) return; if (target.dataset.teacher) { viewType.value = "teacher"; populateLookup(target.dataset.teacher); } if (target.dataset.class) { viewType.value = "class"; populateLookup(target.dataset.class); } });
 document.querySelector("#theme-toggle").addEventListener("click", () => { const dark = document.documentElement.dataset.theme === "dark"; document.documentElement.dataset.theme = dark ? "" : "dark"; document.querySelector("#theme-toggle").textContent = dark ? "夜間閱讀" : "日間閱讀"; });
 document.querySelectorAll("#swap-tool select").forEach(select => select.addEventListener("change", () => {
