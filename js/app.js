@@ -110,13 +110,25 @@ function swapSearch() {
     });
   }));
   const unique = candidates.filter((item, index, all) => index === all.findIndex(other => `${other.teacher}-${other.day}-${other.row}` === `${item.teacher}-${item.day}-${item.row}`));
-  output.innerHTML = unique.length ? `<h3>可代調清單</h3><ul class="result-list">${unique.map(item => `<li><strong>科目：</strong>${item.subject}　<strong>教師：</strong><button type="button" class="schedule-link" data-candidate="${item.teacher}">${item.teacher}</button>　<strong>星期：</strong>${data.meta.days[item.day]}　<strong>節數：</strong>${rows[item.row].period.name}</li>`).join("")}</ul>` : '<p class="result-note">沒有符合所有時段與課程限制的教師。</p>';
+  output.innerHTML = unique.length ? `<h3>可代調清單</h3><p>藍底：原調課時段；橘底：選定候選時段。點選教師姓名比較。</p><ul class="result-list">${unique.map(item => `<li><strong>科目：</strong>${item.subject}　<strong>教師：</strong><button type="button" class="schedule-link" data-candidate="${item.teacher}" data-day="${item.day}" data-row="${item.row}" aria-pressed="false">${item.teacher}</button>　<strong>星期：</strong>${data.meta.days[item.day]}　<strong>節數：</strong>${rows[item.row].period.name}</li>`).join("")}</ul>` : '<p class="result-note">沒有符合所有時段與課程限制的教師。</p>';
 }
 function teachesClass(name, classId) {
   return teacher(name).sessions.some(item => item.classId === classId) || byId(classId).rows.some(row => row.cells.some(cell => cell.teachers.some(item => item.name === name)));
 }
 function comparisonTable(heading, cellRenderer) {
-  return `<h3>${heading}</h3><div class="table-wrap"><table><thead><tr><th>節次</th>${data.meta.days.map(day => `<th>${day}</th>`).join("")}</tr></thead><tbody>${rows.map((row, index) => `<tr><td>${row.period.name}</td>${data.meta.days.map((_, day) => `<td>${cellRenderer(day, index)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+  return `<h3>${heading}</h3><div class="table-wrap"><table><thead><tr><th>節次</th>${data.meta.days.map(day => `<th>${day}</th>`).join("")}</tr></thead><tbody>${rows.map((row, index) => `<tr><td>${row.period.name}</td>${data.meta.days.map((_, day) => `<td data-slot-day="${day}" data-slot-row="${index}">${cellRenderer(day, index)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+}
+function highlightComparison(candidateDay, candidateRow) {
+  const originDay = document.querySelector("#swap-day").value;
+  const originRow = document.querySelector("#swap-period").value;
+  document.querySelectorAll(".comparison-grid td[data-slot-day]").forEach(cell => {
+    const origin = originDay !== "" && originRow !== "" && cell.dataset.slotDay === originDay && cell.dataset.slotRow === originRow;
+    const candidate = candidateDay !== undefined && cell.dataset.slotDay === String(candidateDay) && cell.dataset.slotRow === String(candidateRow);
+    cell.classList.toggle("swap-origin", origin);
+    cell.classList.toggle("swap-candidate", candidate);
+    cell.querySelector(".slot-label")?.remove();
+    if (origin || candidate) cell.insertAdjacentHTML("afterbegin", `<span class="slot-label">${origin ? "原調課" : "候選調課"}</span>`);
+  });
 }
 function comparisonTeacher(name, panel) {
   const record = teacher(name);
@@ -129,6 +141,7 @@ function updateComparison() {
   document.querySelector("#swap-middle").innerHTML = teachesClass(name, schedule.id) ? comparisonTable(`${schedule.name} ${schedule.publicCode}`, (day, row) => { const cell = schedule.rows[row].cells[day]; return `<div class="course">${cell.subject}</div><small>${cell.teachers.map(item => item.name).join("、")}</small>`; }) : "<p>本教師無任教該班級</p>";
   document.querySelector("#swap-right").textContent = "點選候選教師後，在此顯示課表。";
   swapSearch();
+  highlightComparison();
 }
 function recruitSearch() {
   const day = Number(document.querySelector("#recruit-day").value); const homerooms = new Set(data.classes.map(item => item.homeroomTeacher));
@@ -146,5 +159,11 @@ document.querySelectorAll("#swap-tool select").forEach(select => select.addEvent
   if (select.id !== "swap-period") refreshSwapOptions(select.id === "swap-day");
   updateComparison();
 }));
-document.querySelector("#swap-results").addEventListener("click", event => { const button = event.target.closest("[data-candidate]"); if (button) comparisonTeacher(button.dataset.candidate, "#swap-right"); });
+document.querySelector("#swap-results").addEventListener("click", event => {
+  const button = event.target.closest("[data-candidate]");
+  if (!button) return;
+  comparisonTeacher(button.dataset.candidate, "#swap-right");
+  document.querySelectorAll("[data-candidate]").forEach(item => item.setAttribute("aria-pressed", String(item === button)));
+  highlightComparison(button.dataset.day, button.dataset.row);
+});
 setupTools(); showMode(); refreshSwapOptions(); updateComparison();
