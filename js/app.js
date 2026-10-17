@@ -23,7 +23,7 @@ function blocked(cell, schedule) {
 }
 function eligibleOrigin(name, schedule, day, row) {
   const cell = schedule.rows[row]?.cells[day];
-  return row >= 1 && row <= 8 && cell?.subject && !blocked(cell, schedule) &&
+  return row >= 1 && row <= 8 && cell?.subject &&
     (cell.teachers.some(item => item.name === name) || teacher(name).sessions.some(item => item.classId === schedule.id && item.day === day && item.row === row));
 }
 function refreshSwapOptions(onlyPeriods = false) {
@@ -100,6 +100,7 @@ function swapSearch() {
   if (!busy(teacherName, day, row)) { output.innerHTML = '<p class="warning">本教師該節無課務</p>'; return; }
   if (!teachesClass(teacherName, schedule.id)) { output.textContent = "本教師無任教該班級"; return; }
   if (!eligibleOrigin(teacherName, schedule, day, row)) { output.textContent = "此時段不是該教師在本班可調課的授課時段。"; return; }
+  if (blocked(target, schedule)) { output.textContent = `「${target.subject}」不能調課`; return; }
   const eighth = row === 8; const candidates = [];
   schedule.rows.forEach((sourceRow, sourceRowIndex) => sourceRow.cells.forEach((cell, sourceDay) => {
     if (sourceRowIndex === row && sourceDay === day || sourceRowIndex === 0 || blocked(cell, schedule) || (eighth ? sourceRowIndex !== 8 : sourceRowIndex < 1 || sourceRowIndex > 7)) return;
