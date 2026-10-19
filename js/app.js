@@ -87,6 +87,7 @@ function populateLookup(preferred) {
   if (classes) classView(byId(picker.value)); else teacherView(teacher(picker.value));
 }
 function showMode() {
+  document.querySelector('#account-panel').hidden = viewType.value !== 'recruit';
   const lookup = ["class", "teacher"].includes(viewType.value);
   pickerGroup.classList.toggle("is-hidden", !lookup); scheduleCard.classList.toggle("is-hidden", !lookup);
   swapTool.classList.toggle("is-hidden", viewType.value !== "swap"); recruitTool.classList.toggle("is-hidden", viewType.value !== "recruit");
