@@ -2,7 +2,9 @@ const el = id => document.getElementById(id);
 let api, user = null, stopMember = () => {}, stopList = () => {};
 function access(member) {
   window.AUTH_MEMBER = member;
-  el('member-admin').classList.toggle('is-hidden', member?.role !== 'admin');
+  const adminMode = el('view-type').value === 'admin';
+  el('member-admin').classList.toggle('is-hidden', !adminMode || member?.role !== 'admin');
+  el('admin-access-note').classList.toggle('is-hidden', !adminMode || member?.role === 'admin');
   el('recruit-tool').hidden = !member;
   el('recruit-gate').classList.toggle('is-hidden', el('view-type').value !== 'recruit' || !!member);
   for (const id of ['recruit-save','recruit-load']) el(id).disabled = !member;

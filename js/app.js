@@ -87,7 +87,12 @@ function populateLookup(preferred) {
   if (classes) classView(byId(picker.value)); else teacherView(teacher(picker.value));
 }
 function showMode() {
-  document.querySelector('#account-panel').hidden = viewType.value !== 'recruit';
+  const adminMode = viewType.value === 'admin';
+  document.querySelector('#account-panel').hidden = !adminMode && viewType.value !== 'recruit';
+  document.querySelector('#account-heading').textContent = adminMode ? '管理者功能' : '授權登入';
+  document.querySelector('#member-admin').classList.toggle('is-hidden', !adminMode || window.AUTH_MEMBER?.role !== 'admin');
+  document.querySelector('#admin-access-note').classList.toggle('is-hidden', !adminMode || window.AUTH_MEMBER?.role === 'admin');
+  document.querySelector('#admin-open').setAttribute('aria-pressed', String(adminMode));
   const lookup = ["class", "teacher"].includes(viewType.value);
   pickerGroup.classList.toggle("is-hidden", !lookup); scheduleCard.classList.toggle("is-hidden", !lookup);
   swapTool.classList.toggle("is-hidden", viewType.value !== "swap"); recruitTool.classList.toggle("is-hidden", viewType.value !== "recruit");
@@ -164,6 +169,8 @@ function recruitSearch() {
   const nonHomeroom = bothFree.filter(item => !homerooms.has(item.name)); const homeroom = bothFree.filter(item => homerooms.has(item.name));
   document.querySelector("#recruit-results").innerHTML = `<h3>星期${data.meta.days[day]} 可招生教師</h3><p class="result-note">第一、二節皆無課</p><h4>非導師</h4><ul class="result-list">${list(nonHomeroom) || "<li>無</li>"}</ul><h4>導師</h4><ul class="result-list">${list(homeroom) || "<li>無</li>"}</ul><h4>第一節無課、第二節有課</h4><ul class="result-list">${list(secondBusy) || "<li>無</li>"}</ul>`;
 }
+document.querySelector('.controls').insertAdjacentElement('afterend', document.querySelector('#account-panel'));
+document.querySelector('#admin-open').addEventListener('click', () => { viewType.value = 'admin'; showMode(); });
 viewType.addEventListener("change", showMode); picker.addEventListener("change", () => populateLookup(picker.value));
 document.addEventListener("click", event => { const target = event.target.closest(".schedule-link"); if (!target) return; if (target.dataset.teacher) { viewType.value = "teacher"; populateLookup(target.dataset.teacher); } if (target.dataset.class) { viewType.value = "class"; populateLookup(target.dataset.class); } });
 document.querySelector("#theme-toggle").addEventListener("click", () => { const dark = document.documentElement.dataset.theme === "dark"; document.documentElement.dataset.theme = dark ? "" : "dark"; document.querySelector("#theme-toggle").textContent = dark ? "夜間閱讀" : "日間閱讀"; });
