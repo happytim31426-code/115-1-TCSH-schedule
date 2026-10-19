@@ -69,18 +69,20 @@
       </section>
       <section class="tool-card" id="teaching-tool" hidden>
         <h2>教學組代調課規劃</h2>
-        <p>保留基本課表，按日期疊加請假、代課與調課註記。此版為操作原型，不改動公開課表；輸入僅暫存在此頁，重新整理即清除，尚未啟用雲端儲存。</p>
-        <div class="tool-grid">
+        <p>先用三張課表核對指定週次，再新增並預覽。此版可套用到同一次瀏覽的代調課查詢；尚未啟用雲端同步，重新整理會清除，原始教師／班級課表保持不變。</p>
+        <div class="tool-grid" id="teaching-legacy-controls" hidden>
           <label>查看教師<select id="teaching-teacher"></select></label>
           <label>學期週次<select id="teaching-week"></select></label>
           <label>課表呈現<select id="teaching-display"><option value="planned">規劃後＋原課註記</option><option value="base">只看基本課表</option></select></label>
         </div>
         <div class="teaching-actions">
           <button type="button" class="action-button" id="teaching-demo">載入四筆紙本示範</button>
+          <button type="button" class="action-button" id="teaching-apply-local">套用至本次瀏覽的代調課查詢</button>
         </div>
         <p id="teaching-status" role="status">先按「載入四筆紙本示範」檢視註記，也可試填新紀錄。重新整理會清除預覽。</p>
         <div class="teaching-legend"><span>代：由其他教師代課</span><span>調：交換另一日期課程</span><span>原：原定課程</span><span>示範：待核對、不寫入正式紀錄</span></div>
-        <div class="table-wrap" id="teaching-calendar"></div>
+        <div id="teaching-comparison-host"></div>
+        <details><summary>完整行政註記課表</summary><div class="table-wrap" id="teaching-calendar"></div></details>
         <details class="teaching-entry" open><summary>新增課務紀錄</summary>
           <form id="teaching-form">
             <div class="tool-grid">
@@ -108,12 +110,14 @@
       <section class="tool-card is-hidden" id="swap-tool">
         <h2>代調課</h2>
         <p>選擇原授課教師、時段與班級，系統會列出可交換的授課教師與其可調課時段。</p>
-        <div class="tool-grid">
+        <div class="tool-grid swap-filters">
+          <label>學期週次<select id="swap-week"></select></label>
           <label>調課教師<select id="swap-teacher"></select></label>
           <label>調課班級<select id="swap-class"></select></label>
           <label>調課星期<select id="swap-day"></select></label>
           <label>調課節次<select id="swap-period"></select></label>
         </div>
+        <p id="swap-sync-status" role="status"></p>
         <div class="tool-results" id="swap-results"></div>
         <div class="comparison-grid" aria-live="polite">
           <section id="swap-left" class="comparison-panel"></section>
@@ -157,7 +161,9 @@
     </main>
     <footer>資料來源：臺南慈濟高中 115 學年度第 1 學期課程表</footer>
     <script src="data/schedules.js"></script>
+    <script src="js/weekly.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/weekly-comparison.js"></script>
     <script src="js/recruit.js"></script>
     <script src="js/teaching.js"></script>
     <script src="js/firebase-config.js"></script>

@@ -54,8 +54,8 @@ footer { padding:1.25rem; text-align:center; color:#547168; font-size:.85rem; }
 .comparison-panel table { min-width:360px; font-size:.75rem; }
 .comparison-panel td,.comparison-panel th { padding:.35rem .2rem; }
 .comparison-panel td:first-child { width:3rem; }
-.comparison-panel td.swap-origin { background:#dbeafe; color:#122e59; box-shadow:inset 0 0 0 2px #2563eb; }
-.comparison-panel td.swap-candidate { background:#ffedd5; color:#65320b; box-shadow:inset 0 0 0 2px #c65d08; }
+.comparison-panel td.swap-origin:not(.weekly-cell) { background:#dbeafe; color:#122e59; box-shadow:inset 0 0 0 2px #2563eb; }
+.comparison-panel td.swap-candidate:not(.weekly-cell) { background:#ffedd5; color:#65320b; box-shadow:inset 0 0 0 2px #c65d08; }
 .slot-label { display:block; font-size:.65rem; font-weight:700; margin-bottom:.2rem; }
 [data-candidate][aria-pressed="true"] { outline:2px solid var(--teal); outline-offset:3px; border-radius:2px; }
 body[data-workspace="public"]:has(#view-type option[value="swap"]:checked) .page-shell { width:calc(100% - 2rem); max-width:1900px; }
@@ -101,3 +101,23 @@ body[data-workspace="public"]:has(#view-type option[value="swap"]:checked) .page
 .lesson-original { font-size:.75rem; opacity:.7; }
 .leave-tag { display:block; margin:.3rem 0; font-size:.8rem; font-weight:700; color:#8b3900; background:#ffeddb; border-radius:5px; padding:.2rem; }
 .record-warning { color:#8b3900; font-size:.85rem; }
+.swap-filters { grid-template-columns:repeat(5,minmax(0,1fr)); }
+.weekly-cell,.weekly-day { position:relative; }
+.weekly-lesson { position:relative; padding:.3rem .1rem; }
+.change-circle,.leave-circle { display:inline-flex; align-items:center; justify-content:center; width:1.25rem; height:1.25rem; border-radius:50%; border:1px solid currentColor; font-size:.7rem; font-weight:700; position:absolute; right:.1rem; top:.1rem; background:var(--paper); color:var(--ink); }
+.weekly-lesson:has(.change-circle) { padding-top:1.25rem; }
+.leave-circle { color:#983600; background:#ffeadb; }
+.change-tone-0 { background:#ffe4e4; color:#392323; }
+.change-tone-1 { background:#ffeddb; color:#493222; }
+.change-tone-2 { background:#fff9cf; color:#493f20; }
+.change-tone-3 { background:#e3f5e6; color:#223e28; }
+.change-tone-4 { background:#e2edff; color:#22334c; }
+.change-tone-5 { background:#eee2ff; color:#382347; }
+.change-sub { background:#e9eff2; color:#26353b; }
+.vacated-slot { opacity:.65; }
+.comparison-panel td.weekly-cell.swap-origin { outline:2px solid #2563eb; outline-offset:-2px; box-shadow:none; }
+.comparison-panel td.weekly-cell.swap-candidate { outline:2px solid #c65d08; outline-offset:-2px; box-shadow:none; }
+.office-comparison { box-shadow:none; padding:0; margin:1.5rem 0; }
+body[data-office-feature="teaching-plan"] .page-shell { width:calc(100% - 2rem); max-width:1900px; }
+@media(max-width:800px) { .swap-filters { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:480px) { .swap-filters { grid-template-columns:1fr; } }

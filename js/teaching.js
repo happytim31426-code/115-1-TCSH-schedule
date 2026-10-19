@@ -13,6 +13,11 @@
   const related = (record,name) => record.a.teacher === name || record.b?.teacher === name;
   const at = (slot,date,row) => slot && slot.date === date && slot.row === row;
   let records = [];
+  let appliedLocally=false;
+  function syncPreview(){
+    window.WEEKLY.setPreview(records);
+    if(appliedLocally) window.WEEKLY.setPublished(records.map(r=>({id:r.id,kind:r.kind,a:r.a,b:r.b,leaveCode:window.WEEKLY.leaveCode(r.leaveType),order:r.order||0})),true,'此瀏覽器的週課表預覽（未上傳、未跨裝置同步，重新整理會清除）。');
+  }
   function base(name,date,row) { return (teacherBy(name)?.sessions || []).filter(s => s.day === dayOf(date) && s.row === row); }
   function effects(name,date,row,items) {
     const outgoing = [], incoming = [];
@@ -79,10 +84,7 @@
     if (!session) throw Error('請選擇當天的授課課程。');
     return {teacher:name,date,row:session.row,classId:session.classId || '',subject:session.subject};
   }
-  function occupied(name,date,row) {
-    const {outgoing,incoming} = effects(name,date,row,records);
-    return incoming.length > 0 || (base(name,date,row).length > 0 && outgoing.length === 0);
-  }
+  function occupied(name,date,row) { return window.WEEKLY.busy(name,date,row,'admin'); }
   function validate(record) {
     if (!inTerm(record.a.date) || (record.kind === 'swap' && !inTerm(record.b.date))) throw Error('日期須在本學期週一至週五之內。');
     if (record.kind === 'leave') { if (!record.leaveType) throw Error('請選擇假別。'); return; }
@@ -106,7 +108,8 @@
       const a = kind === 'leave' ? {teacher:name,date} : slotFrom(name,date,'entry-course');
       const b = kind === 'swap' ? slotFrom($('entry-partner').value,$('entry-other-date').value,'entry-other-course') : kind === 'sub' ? {teacher:$('entry-partner').value,date,row:a.row} : null;
       const record = {id:crypto.randomUUID(),kind,a,b,leaveType:$('entry-leave').value,note:$('entry-note').value.trim()};
-      validate(record); records.push(record); $('teaching-teacher').value = name; $('teaching-week').value = String(weekOf(date)); $('teaching-display').value = 'planned';
+      validate(record); records.push({...record,order:Date.now()}); $('teaching-teacher').value = name; $('teaching-week').value = String(weekOf(date)); $('teaching-display').value = 'planned';
+      $('swap-teacher').value=name;$('swap-week').value=String(weekOf(date));syncPreview();
       $('teaching-status').textContent = '已加入此頁預覽；重新整理會清除，尚未儲存至任何雲端服務。'; render();
     } catch(error) { $('teaching-status').textContent = error.message; }
   });
@@ -122,6 +125,7 @@
       demo(4,'sub',slot('盧佩君','2026-10-20',8,'國二包容','公民與社會'),{teacher:'許蘭馨',date:'2026-10-20',row:8},'示範暫將「蘭馨老師」對應許蘭馨，請核對。'),
     ];
     records = [...records.filter(r => !r.demo),...samples]; $('teaching-teacher').value = '盧佩君'; $('teaching-week').value = '8'; $('teaching-display').value = 'planned';
+    $('swap-teacher').value='盧佩君';$('swap-week').value='8';$('swap-class').value=id('國二包容');syncPreview();
     $('teaching-status').textContent = '已載入四筆示範。跨週案例請切換第3／5週；10/29案例在第9週。示範不可存入雲端。'; render();
   });
   $('teaching-records').addEventListener('click',event => {
@@ -132,15 +136,33 @@
       if (button.dataset.compare) {
         const other = record.a.teacher === $('teaching-teacher').value ? record.b.teacher : record.a.teacher;
         if (!teacherBy(other)) throw Error('此示範姓名尚未對應教師名單，請先核對。');
-        $('teaching-teacher').value = other;
+        window.WEEKLY_SHOW_PARTNER(other);
       } else {
         records = records.filter(r => r !== record);
+        syncPreview();
       }
       render();
     } catch(error) { $('teaching-status').textContent = `未完成：${error.message}`; button.disabled = false; }
   });
   for (const id of ['teaching-teacher','teaching-week','teaching-display']) $(id).addEventListener('change',render);
   for (const id of ['entry-kind','entry-teacher','entry-date','entry-partner','entry-other-date']) $(id).addEventListener('change',refreshForm);
-  window.addEventListener('authorization-changed',() => { if (!window.AUTH_MEMBER) { records=[]; render(); } });
+  $('entry-partner').addEventListener('change',()=>{if(workspace==='office')window.WEEKLY_SHOW_PARTNER($('entry-partner').value);});
+  window.TEACHING_SELECT=selection=>{
+    if(workspace!=='office')return;
+    $('teaching-teacher').value=selection.teacher;$('teaching-week').value=String(selection.week);
+    $('entry-teacher').value=selection.teacher;if(selection.date)$('entry-date').value=selection.date;
+    refreshForm();if(selection.row){const index=courses(selection.teacher,selection.date).findIndex(s=>s.row===selection.row&&s.classId===$('swap-class').value);if(index>=0)$('entry-course').value=String(index);}
+    render();
+  };
+  window.TEACHING_CANDIDATE=selection=>{
+    if(workspace!=='office')return;
+    $('entry-kind').value='swap';$('entry-partner').value=selection.teacher;$('entry-other-date').value=selection.date;refreshForm();
+    const index=courses(selection.teacher,selection.date).findIndex(s=>s.row===selection.row&&s.classId===$('swap-class').value);if(index>=0)$('entry-other-course').value=String(index);
+  };
+  $('teaching-apply-local').addEventListener('click',()=>{
+    if(!window.AUTH_MEMBER)return;
+    appliedLocally=true;syncPreview();$('teaching-status').textContent='已套用本次瀏覽的代調課查詢。可切到「課表查詢 → 代調課」核對；尚未上傳或儲存，重新整理即清除。';
+  });
+  window.addEventListener('authorization-changed',() => { if (!window.AUTH_MEMBER) { records=[];if(appliedLocally)window.WEEKLY.setPublished([],true,'基本課表（雲端週次同步尚未啟用）。');appliedLocally=false;window.WEEKLY.setPreview([]); render(); } });
   refreshForm(); render();
 })();

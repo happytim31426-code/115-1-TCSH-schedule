@@ -5,6 +5,8 @@ const pickerLabel = document.querySelector("#schedule-select-label");
 const pickerGroup = document.querySelector("#schedule-picker-group");
 const scheduleCard = document.querySelector("#schedule-card");
 const swapTool = document.querySelector("#swap-tool");
+const publicSwapAnchor = document.createComment('public swap workspace');
+swapTool.before(publicSwapAnchor);
 const recruitTool = document.querySelector("#recruit-tool");
 const tableBody = document.querySelector("#schedule-table tbody");
 const title = document.querySelector("#schedule-title");
@@ -99,6 +101,11 @@ function showMode() {
   document.querySelector('#office-controls').hidden = !officeMode || !member;
   document.querySelector('#office-placeholder').hidden = !officeMode || !member || feature !== 'patrol';
   document.querySelector('#teaching-tool').hidden = !officeMode || !member || feature !== 'teaching-plan';
+  const officeComparison = officeMode && !!member && feature === 'teaching-plan';
+  if (officeComparison) document.querySelector('#teaching-comparison-host').append(swapTool);
+  else publicSwapAnchor.after(swapTool);
+  swapTool.classList.toggle('office-comparison', officeComparison);
+  document.body.dataset.officeFeature = officeMode ? feature : '';
   document.querySelector('#office-feature-heading').textContent = feature === 'teaching-plan' ? '教學組代調課規劃' : '巡堂紀錄表';
   document.querySelector('#account-panel').hidden = workspace === 'public';
   document.querySelector('#account-heading').textContent = adminMode ? '管理者功能' : '授權登入';
@@ -109,13 +116,16 @@ function showMode() {
   document.querySelector('#public-open').setAttribute('aria-pressed', String(workspace === 'public'));
   const lookup = workspace === 'public' && ["class", "teacher"].includes(viewType.value);
   pickerGroup.classList.toggle("is-hidden", !lookup); scheduleCard.classList.toggle("is-hidden", !lookup);
-  swapTool.classList.toggle("is-hidden", workspace !== 'public' || viewType.value !== "swap");
+  swapTool.classList.toggle("is-hidden", !officeComparison && (workspace !== 'public' || viewType.value !== "swap"));
   recruitTool.classList.toggle("is-hidden", !officeMode || feature !== 'recruit');
   document.querySelector('#recruit-gate').classList.toggle('is-hidden', !officeMode || !!member);
   recruitTool.hidden = !officeMode || !member || feature !== 'recruit';
   if (lookup) populateLookup();
+  if (officeComparison || (workspace==='public' && viewType.value==='swap')) { refreshSwapOptions(); updateComparison(); }
 }
 function setupTools() {
+  document.querySelector('#swap-week').innerHTML = window.WEEKLY.weekOptions();
+  document.querySelector('#swap-week').value = String(Math.max(1,Math.min(21,window.WEEKLY.weekOf(new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Taipei'})))));
   const days = optionList(data.meta.days, (_, index) => index, day => `星期${day}`);
   document.querySelector("#swap-day").innerHTML = days; document.querySelector("#recruit-day").innerHTML = days;
   document.querySelector("#swap-teacher").innerHTML = optionList(data.teachers, item => item.name, item => `${item.id} ${item.name}`);
