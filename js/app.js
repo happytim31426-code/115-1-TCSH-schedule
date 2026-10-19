@@ -97,7 +97,8 @@ function showMode() {
   document.querySelector('#term-dates').hidden = workspace !== 'public';
   document.querySelector('#public-controls').hidden = workspace !== 'public';
   document.querySelector('#office-controls').hidden = !officeMode || !member;
-  document.querySelector('#office-placeholder').hidden = !officeMode || !member || feature === 'recruit';
+  document.querySelector('#office-placeholder').hidden = !officeMode || !member || feature !== 'patrol';
+  document.querySelector('#teaching-tool').hidden = !officeMode || !member || feature !== 'teaching-plan';
   document.querySelector('#office-feature-heading').textContent = feature === 'teaching-plan' ? '教學組代調課規劃' : '巡堂紀錄表';
   document.querySelector('#account-panel').hidden = workspace === 'public';
   document.querySelector('#account-heading').textContent = adminMode ? '管理者功能' : '授權登入';

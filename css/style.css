@@ -87,3 +87,17 @@ body[data-workspace="public"]:has(#view-type option[value="swap"]:checked) .page
 .admin-header-button { padding:.5rem .85rem; border:1px solid #cceee2; border-radius:999px; color:white; background:transparent; font:inherit; font-weight:700; cursor:pointer; }
 .admin-header-button:hover,.admin-header-button[aria-pressed="true"] { background:#ffffff20; }
 .admin-header-button:focus-visible { outline:3px solid white; outline-offset:3px; }
+#teaching-tool input { width:100%; min-width:0; max-width:100%; padding:.65rem; border:1px solid var(--line); border-radius:8px; background:var(--paper); color:var(--ink); font:inherit; }
+#teaching-tool .tool-grid > label { min-width:0; }
+#account-status { overflow-wrap:anywhere; }
+.teaching-actions,.teaching-legend { display:flex; flex-wrap:wrap; gap:.6rem; margin:1rem 0; }
+.teaching-legend span { padding:.3rem .55rem; background:var(--subtle); border-radius:6px; font-size:.8rem; }
+.teaching-entry { margin:1.5rem 0; padding:1rem; border:1px solid var(--line); border-radius:10px; }
+.teaching-entry summary { cursor:pointer; font-weight:700; }
+#teaching-form > .action-button { margin-top:1rem; }
+.teaching-record { border:1px solid var(--line); padding:1rem; border-radius:10px; margin:.75rem 0; }
+.teaching-record button { margin:.3rem .5rem .1rem 0; }
+.lesson-change { border-left:3px solid var(--teal); padding:.35rem; margin:.4rem 0; text-align:left; background:var(--subtle); font-size:.8rem; }
+.lesson-original { font-size:.75rem; opacity:.7; }
+.leave-tag { display:block; margin:.3rem 0; font-size:.8rem; font-weight:700; color:#8b3900; background:#ffeddb; border-radius:5px; padding:.2rem; }
+.record-warning { color:#8b3900; font-size:.85rem; }

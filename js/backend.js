@@ -5,6 +5,7 @@ function access(member) {
   window.renderWorkspace?.();
   for (const id of ['recruit-save','recruit-load']) el(id).disabled = !member;
   if (!member) { el('member-list').replaceChildren(); el('recruit-cloud-status').textContent = ''; }
+  window.dispatchEvent(new Event('authorization-changed'));
 }
 function errorMessage(error) {
   return ({'auth/unauthorized-domain':'請在 Firebase 驗證設定加入 happytim31426-code.github.io 授權網域。',
