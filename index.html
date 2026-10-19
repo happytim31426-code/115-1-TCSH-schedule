@@ -9,10 +9,14 @@
   </head>
   <body>
     <header class="hero">
-      <button type="button" class="admin-header-button" id="admin-open" aria-pressed="false">管理者功能</button>
+      <nav class="header-navigation" aria-label="網站功能">
+        <button type="button" class="admin-header-button" id="public-open" aria-pressed="true">課表查詢</button>
+        <button type="button" class="admin-header-button" id="office-open" aria-pressed="false">教務處行政業務</button>
+        <button type="button" class="admin-header-button" id="admin-open" aria-pressed="false">管理者功能</button>
+      </nav>
       <p class="eyebrow">臺南慈濟高中</p>
-      <h1>115 學年度第 1 學期課表</h1>
-      <p>實施期間：115.08.31 - 116.01.20</p>
+      <h1 id="page-heading">115 學年度第 1 學期課表</h1>
+      <p id="term-dates">實施期間：115.08.31 - 116.01.20</p>
       <button class="theme-toggle" id="theme-toggle" type="button">夜間閱讀</button>
     </header>
 
@@ -36,21 +40,32 @@
           <div id="member-list"></div>
         </section>
       </section>
-      <section class="controls" aria-label="課表查詢">
+      <section class="controls" id="public-controls" aria-label="課表查詢">
         <div class="control-group">
           <label for="view-type">查詢類型</label>
           <select id="view-type">
             <option value="class">班級課表</option>
             <option value="teacher">教師課表</option>
             <option value="swap">代調課</option>
-            <option value="recruit">可招生教師</option>
-            <option value="admin" hidden>管理者功能</option>
           </select>
         </div>
         <div class="control-group grow" id="schedule-picker-group">
           <label for="schedule-select" id="schedule-select-label">選擇班級</label>
           <select id="schedule-select"></select>
         </div>
+      </section>
+
+      <section class="controls" id="office-controls" aria-label="教務處行政業務查詢" hidden>
+        <div class="control-group grow"><label for="office-type">行政業務查詢類型</label>
+          <select id="office-type">
+            <option value="recruit">招生教師名單規劃</option>
+            <option value="teaching-plan">教學組代調課規劃</option>
+            <option value="patrol">巡堂紀錄表</option>
+          </select>
+        </div>
+      </section>
+      <section class="tool-card" id="office-placeholder" hidden>
+        <h2 id="office-feature-heading"></h2><p>此功能尚在規劃中。</p>
       </section>
 
       <section class="tool-card is-hidden" id="swap-tool">
@@ -70,9 +85,9 @@
         </div>
       </section>
 
-      <section class="tool-card is-hidden" id="recruit-gate"><h2>可招生教師</h2><p>請先使用已授權的 Google 帳號登入。</p></section>
+      <section class="tool-card is-hidden" id="recruit-gate"><h2>教務處行政業務</h2><p>請先使用已授權的 Google 帳號登入。</p></section>
       <section class="tool-card is-hidden" id="recruit-tool" hidden>
-        <h2>可招生教師清單</h2>
+        <h2>招生教師名單規劃</h2>
         <p>先選星期與學校，再點推薦人員加入該校；點已選姓名可移回推薦清單。需求人數包含一位帶隊老師。</p>
         <div class="tool-grid recruit-filters"><label>星期<select id="recruit-day"></select></label><label>該天入班學校數<select id="school-count"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label></div>
         <button type="button" class="action-button" id="recruit-save" disabled>儲存我的雲端安排</button>

@@ -10,6 +10,7 @@ const tableBody = document.querySelector("#schedule-table tbody");
 const title = document.querySelector("#schedule-title");
 const kind = document.querySelector("#schedule-kind");
 const meta = document.querySelector("#schedule-meta");
+let workspace = 'public';
 const rows = data.classes[0].rows;
 const periods = rows.map((row, index) => ({ ...row.period, row: index })).filter(item => /^第[一二三四五六七八]節$/.test(item.name));
 const blockedSubjects = ["慈濟學與全球公民", "晨光時間", "班會", "團體活動時間", "彈性學習A", "彈性學習B"];
@@ -87,17 +88,30 @@ function populateLookup(preferred) {
   if (classes) classView(byId(picker.value)); else teacherView(teacher(picker.value));
 }
 function showMode() {
-  const adminMode = viewType.value === 'admin';
-  document.querySelector('#account-panel').hidden = !adminMode && viewType.value !== 'recruit';
+  const adminMode = workspace === 'admin';
+  const officeMode = workspace === 'office';
+  const member = window.AUTH_MEMBER;
+  const feature = document.querySelector('#office-type').value;
+  document.body.dataset.workspace = workspace;
+  document.querySelector('#page-heading').textContent = adminMode ? '管理者功能' : officeMode ? '教務處行政業務' : '115 學年度第 1 學期課表';
+  document.querySelector('#term-dates').hidden = workspace !== 'public';
+  document.querySelector('#public-controls').hidden = workspace !== 'public';
+  document.querySelector('#office-controls').hidden = !officeMode || !member;
+  document.querySelector('#office-placeholder').hidden = !officeMode || !member || feature === 'recruit';
+  document.querySelector('#office-feature-heading').textContent = feature === 'teaching-plan' ? '教學組代調課規劃' : '巡堂紀錄表';
+  document.querySelector('#account-panel').hidden = workspace === 'public';
   document.querySelector('#account-heading').textContent = adminMode ? '管理者功能' : '授權登入';
   document.querySelector('#member-admin').classList.toggle('is-hidden', !adminMode || window.AUTH_MEMBER?.role !== 'admin');
   document.querySelector('#admin-access-note').classList.toggle('is-hidden', !adminMode || window.AUTH_MEMBER?.role === 'admin');
   document.querySelector('#admin-open').setAttribute('aria-pressed', String(adminMode));
-  const lookup = ["class", "teacher"].includes(viewType.value);
+  document.querySelector('#office-open').setAttribute('aria-pressed', String(officeMode));
+  document.querySelector('#public-open').setAttribute('aria-pressed', String(workspace === 'public'));
+  const lookup = workspace === 'public' && ["class", "teacher"].includes(viewType.value);
   pickerGroup.classList.toggle("is-hidden", !lookup); scheduleCard.classList.toggle("is-hidden", !lookup);
-  swapTool.classList.toggle("is-hidden", viewType.value !== "swap"); recruitTool.classList.toggle("is-hidden", viewType.value !== "recruit");
-  document.querySelector('#recruit-gate').classList.toggle('is-hidden', viewType.value !== 'recruit' || !!window.AUTH_MEMBER);
-  recruitTool.hidden = !window.AUTH_MEMBER;
+  swapTool.classList.toggle("is-hidden", workspace !== 'public' || viewType.value !== "swap");
+  recruitTool.classList.toggle("is-hidden", !officeMode || feature !== 'recruit');
+  document.querySelector('#recruit-gate').classList.toggle('is-hidden', !officeMode || !!member);
+  recruitTool.hidden = !officeMode || !member || feature !== 'recruit';
   if (lookup) populateLookup();
 }
 function setupTools() {
@@ -169,8 +183,11 @@ function recruitSearch() {
   const nonHomeroom = bothFree.filter(item => !homerooms.has(item.name)); const homeroom = bothFree.filter(item => homerooms.has(item.name));
   document.querySelector("#recruit-results").innerHTML = `<h3>星期${data.meta.days[day]} 可招生教師</h3><p class="result-note">第一、二節皆無課</p><h4>非導師</h4><ul class="result-list">${list(nonHomeroom) || "<li>無</li>"}</ul><h4>導師</h4><ul class="result-list">${list(homeroom) || "<li>無</li>"}</ul><h4>第一節無課、第二節有課</h4><ul class="result-list">${list(secondBusy) || "<li>無</li>"}</ul>`;
 }
-document.querySelector('.controls').insertAdjacentElement('afterend', document.querySelector('#account-panel'));
-document.querySelector('#admin-open').addEventListener('click', () => { viewType.value = 'admin'; showMode(); });
+window.renderWorkspace = showMode;
+document.querySelector('#admin-open').addEventListener('click', () => { workspace = 'admin'; showMode(); });
+document.querySelector('#office-open').addEventListener('click', () => { workspace = 'office'; showMode(); });
+document.querySelector('#public-open').addEventListener('click', () => { workspace = 'public'; showMode(); });
+document.querySelector('#office-type').addEventListener('change', showMode);
 viewType.addEventListener("change", showMode); picker.addEventListener("change", () => populateLookup(picker.value));
 document.addEventListener("click", event => { const target = event.target.closest(".schedule-link"); if (!target) return; if (target.dataset.teacher) { viewType.value = "teacher"; populateLookup(target.dataset.teacher); } if (target.dataset.class) { viewType.value = "class"; populateLookup(target.dataset.class); } });
 document.querySelector("#theme-toggle").addEventListener("click", () => { const dark = document.documentElement.dataset.theme === "dark"; document.documentElement.dataset.theme = dark ? "" : "dark"; document.querySelector("#theme-toggle").textContent = dark ? "夜間閱讀" : "日間閱讀"; });
