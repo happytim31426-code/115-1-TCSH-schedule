@@ -1,0 +1,51 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null
+        && request.auth.token.email_verified == true
+        && request.auth.token.firebase.sign_in_provider == 'google.com';
+    }
+    function selfEmail() { return request.auth.token.email; }
+    function member() {
+      return signedIn()
+        && exists(/databases/$(database)/documents/members/$(selfEmail()))
+        && get(/databases/$(database)/documents/members/$(selfEmail())).data.active == true
+        && get(/databases/$(database)/documents/members/$(selfEmail())).data.role in ['admin', 'teacher'];
+    }
+    function admin() {
+      return member() && get(/databases/$(database)/documents/members/$(selfEmail())).data.role == 'admin';
+    }
+    match /members/{email} {
+      allow get: if signedIn() && (email == selfEmail() || admin());
+      allow list: if admin();
+      allow create, update: if admin()
+        && email != selfEmail()
+        && request.resource.data.keys().hasAll(['name', 'role', 'active', 'updatedAt', 'updatedBy'])
+        && request.resource.data.keys().hasOnly(['name', 'role', 'active', 'updatedAt', 'updatedBy'])
+        && request.resource.data.name is string
+        && request.resource.data.name.size() > 0 && request.resource.data.name.size() <= 80
+        && request.resource.data.role in ['admin', 'teacher']
+        && request.resource.data.active is bool
+        && request.resource.data.updatedAt == request.time
+        && request.resource.data.updatedBy == request.auth.uid;
+      allow delete: if false;
+    }
+    match /recruitmentPlans/{id} {
+      allow read: if member();
+      allow create, update: if member()
+        && id == request.auth.uid + '_' + string(request.resource.data.day)
+        && request.resource.data.keys().hasAll(['day', 'plans', 'updatedAt', 'updatedBy'])
+        && request.resource.data.keys().hasOnly(['day', 'plans', 'updatedAt', 'updatedBy'])
+        && request.resource.data.day is int
+        && request.resource.data.day >= 0 && request.resource.data.day <= 4
+        && request.resource.data.plans is list
+        && request.resource.data.plans.size() >= 1 && request.resource.data.plans.size() <= 5
+        && request.resource.data.updatedAt == request.time
+        && request.resource.data.updatedBy == request.auth.uid;
+      allow delete: if false;
+    }
+    // Weekly swaps and photo uploads stay closed until their validation is implemented.
+    match /{document=**} { allow read, write: if false; }
+  }
+}

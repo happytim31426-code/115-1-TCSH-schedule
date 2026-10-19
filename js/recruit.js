@@ -65,5 +65,20 @@
     const count = Number(event.target.value); plans = plans.slice(0,count); while (plans.length < count) plans.push(createSchool()); active = Math.min(active,count-1); say(''); render();
   });
   daySelect.addEventListener('change',() => { plans = plans.map(plan => ({...plan,leader:null,members:[]})); say('已切換星期，原人員安排已清空，請重新選擇。'); render(); });
+  window.RECRUIT_PLANNER = {
+    snapshot: () => ({day:Number(daySelect.value),plans:JSON.parse(JSON.stringify(plans))}),
+    restore: state => {
+      if (!Number.isInteger(state.day) || state.day < 0 || state.day > 4 || !Array.isArray(state.plans) || state.plans.length < 1 || state.plans.length > 5) throw Error('雲端安排格式不正確');
+      const used = new Set(); daySelect.value = String(state.day);
+      plans = state.plans.map(saved => {
+        const plan = createSchool(); plan.need = Number.isInteger(saved.need) ? Math.max(1,Math.min(20,saved.need)) : 1; plan.long = saved.long === true;
+        const accept = name => { if (used.has(name) || !available(findPerson(name),plan.long)) return false; used.add(name); return true; };
+        if (directors.includes(saved.leader) && accept(saved.leader)) plan.leader = saved.leader;
+        for (const name of Array.isArray(saved.members) ? saved.members : []) if (plan.members.length < plan.need-1 && accept(name)) plan.members.push(name);
+        return plan;
+      });
+      active = 0; document.querySelector('#school-count').value = String(plans.length); say(''); render();
+    },
+  };
   render();
 })();

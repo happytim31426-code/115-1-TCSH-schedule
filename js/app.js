@@ -90,6 +90,8 @@ function showMode() {
   const lookup = ["class", "teacher"].includes(viewType.value);
   pickerGroup.classList.toggle("is-hidden", !lookup); scheduleCard.classList.toggle("is-hidden", !lookup);
   swapTool.classList.toggle("is-hidden", viewType.value !== "swap"); recruitTool.classList.toggle("is-hidden", viewType.value !== "recruit");
+  document.querySelector('#recruit-gate').classList.toggle('is-hidden', viewType.value !== 'recruit' || !!window.AUTH_MEMBER);
+  recruitTool.hidden = !window.AUTH_MEMBER;
   if (lookup) populateLookup();
 }
 function setupTools() {
