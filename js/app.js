@@ -170,7 +170,7 @@ function highlightComparison(candidateDay, candidateRow) {
     cell.classList.toggle("swap-origin", origin);
     cell.classList.toggle("swap-candidate", candidate);
     cell.querySelector(".slot-label")?.remove();
-    if (origin || candidate) cell.insertAdjacentHTML("afterbegin", `<span class="slot-label">${origin ? "原調課" : "候選調課"}</span>`);
+    if (workspace !== 'public' && (origin || candidate)) cell.insertAdjacentHTML("afterbegin", `<span class="slot-label">${origin ? "原調課" : "候選調課"}</span>`);
   });
 }
 function comparisonTeacher(name, panel) {

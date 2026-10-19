@@ -52,7 +52,11 @@
   }
   function table(name,week,scope='public'){
     const t=data.teachers.find(t=>t.name===name),dates=Array.from({length:5},(_,d)=>dateFor(week,d));
-    return `<h3>${esc(t?.id||'')} ${esc(name)}</h3><div class="table-wrap"><table><thead><tr><th>第${week}週</th>${dates.map((value,day)=>`<th class="weekly-day">${data.meta.days[day]}<br><small>${value<=end?value.slice(5):'學期結束'}</small>${leaves(name,value,scope).map(code=>`<span class="leave-circle">${code}</span>`).join('')}</th>`).join('')}</tr></thead><tbody>${data.classes[0].rows.map((r,row)=>`<tr><td>${r.period.name}</td>${dates.map(value=>cell(name,value,row,week,scope)).join('')}</tr>`).join('')}</tbody></table></div>`;
+    return `<h3>${esc(t?.id||'')} ${esc(name)}</h3><div class="table-wrap"><table><thead><tr><th>第${week}週</th>${dates.map((value,day)=>header(value,day,leaves(name,value,scope))).join('')}</tr></thead><tbody>${data.classes[0].rows.map((r,row)=>`<tr><td>${r.period.name}</td>${dates.map(value=>cell(name,value,row,week,scope)).join('')}</tr>`).join('')}</tbody></table></div>`;
   }
-  window.WEEKLY={start,end,plus,dayOf,weekOf,inTerm,dateFor,className,esc,leaveCode,valid,lessons,classLessons,leaves,busy,changes,table,tone,active,setPublished,setPreview,get ready(){return ready;},get message(){return message;},weekOptions:()=>Array.from({length:21},(_,i)=>`<option value="${i+1}">第${i+1}週 ${dateFor(i+1,0)}～${dateFor(i+1,4)>end?end:dateFor(i+1,4)}</option>`).join('')};
+  function header(value,day,codes=[]){
+    const titles={'公':'公假','差':'差假','假':'其他／重大假別'};
+    return `<th class="weekly-day"><div class="weekly-heading"><span class="weekday-name">星期${data.meta.days[day]}</span><small class="weekday-date">${value<=end?value.slice(5):'學期結束'}</small><div class="weekly-leave-row">${codes.map(code=>`<span class="leave-circle" title="${titles[code]||code}" aria-label="${titles[code]||code}">${code}</span>`).join('')}</div></div></th>`;
+  }
+  window.WEEKLY={start,end,plus,dayOf,weekOf,inTerm,dateFor,className,esc,leaveCode,valid,lessons,classLessons,leaves,busy,changes,table,header,tone,active,setPublished,setPreview,get ready(){return ready;},get message(){return message;},weekOptions:()=>Array.from({length:21},(_,i)=>`<option value="${i+1}">第${i+1}週 ${dateFor(i+1,0)}～${dateFor(i+1,4)>end?end:dateFor(i+1,4)}</option>`).join('')};
 })();

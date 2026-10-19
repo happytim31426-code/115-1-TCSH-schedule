@@ -38,7 +38,7 @@
   };
   comparisonTeacher=(name,panel)=>{document.querySelector(panel).innerHTML=W.table(name,week(),scope());};
   function classTable(schedule){
-    return `<h3>${W.esc(schedule.name)} ${W.esc(schedule.publicCode)}</h3><div class="table-wrap"><table><thead><tr><th>第${week()}週</th>${data.meta.days.map((name,d)=>`<th>${name}<br><small>${date(d).slice(5)}</small></th>`).join('')}</tr></thead><tbody>${rows.map((p,row)=>`<tr><td>${p.period.name}</td>${data.meta.days.map((_,d)=>{
+    return `<h3>${W.esc(schedule.name)} ${W.esc(schedule.publicCode)}</h3><div class="table-wrap"><table><thead><tr><th>第${week()}週</th>${data.meta.days.map((_,d)=>W.header(date(d),d)).join('')}</tr></thead><tbody>${rows.map((p,row)=>`<tr><td>${p.period.name}</td>${data.meta.days.map((_,d)=>{
       const list=W.classLessons(schedule.id,date(d),row,scope()),latest=list.find(s=>s.change)?.change;
       return `<td class="weekly-cell ${latest?W.tone(latest,week(),scope()):''}" data-slot-day="${d}" data-slot-row="${row}">${list.map(s=>`<div class="weekly-lesson">${s.mark?`<span class="change-circle">${s.mark}</span>`:''}<div class="course">${W.esc(s.subject)}</div><small>${W.esc(s.teacher||'待確認')}</small></div>`).join('<hr>')}</td>`;
     }).join('')}</tr>`).join('')}</tbody></table></div>`;
