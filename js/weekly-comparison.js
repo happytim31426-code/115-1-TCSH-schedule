@@ -13,7 +13,7 @@
   teachesClass=(name,classId)=>data.meta.days.some((_,day)=>rows.some((_,row)=>origins(name,byId(classId),day,row).length>0));
   refreshSwapOptions=(onlyPeriods=false)=>{
     const name=$('swap-teacher').value,schedule=byId($('swap-class').value),ds=$('swap-day'),ps=$('swap-period');
-    if(!onlyPeriods){const old=ds.value;const days=data.meta.days.map((name,day)=>({name,day})).filter(x=>periods.some(p=>eligibleOrigin(name,schedule,x.day,p.row)));ds.innerHTML=optionList(days,x=>x.day,x=>`星期${x.name} ${date(x.day).slice(5)}`);if(days.some(x=>String(x.day)===old))ds.value=old;ds.disabled=!days.length;if(!days.length)ds.innerHTML='<option value="">無授課星期</option>';}
+    if(!onlyPeriods){const old=ds.value;const days=data.meta.days.map((name,day)=>({name,day})).filter(x=>periods.some(p=>eligibleOrigin(name,schedule,x.day,p.row)));ds.innerHTML=optionList(days,x=>x.day,x=>`星期${x.name} ${W.formatDate(date(x.day))}`);if(days.some(x=>String(x.day)===old))ds.value=old;ds.disabled=!days.length;if(!days.length)ds.innerHTML='<option value="">無授課星期</option>';}
     const old=ps.value,available=ds.value===''?[]:periods.filter(p=>eligibleOrigin(name,schedule,Number(ds.value),p.row));
     ps.innerHTML=optionList(available,p=>p.row,p=>`${p.name} ${p.time}`);if(available.some(p=>String(p.row)===old))ps.value=old;ps.disabled=!available.length;if(!available.length)ps.innerHTML='<option value="">無授課節次</option>';
   };

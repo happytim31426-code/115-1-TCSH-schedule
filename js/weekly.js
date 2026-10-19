@@ -7,6 +7,7 @@
   const weekOf=value=>Math.floor((utc(value)-utc(start))/604800000)+1;
   const inTerm=value=>typeof value==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(value)&&!Number.isNaN(+utc(value))&&utc(value).toISOString().slice(0,10)===value&&value>=start&&value<=end&&dayOf(value)>=0&&dayOf(value)<5;
   const dateFor=(week,day)=>plus(start,(Number(week)-1)*7+day);
+  const formatDate=value=>`${Number(value.slice(5,7))}/${Number(value.slice(8,10))}`;
   const className=id=>data.classes.find(c=>c.id===id)?.name||'分組';
   const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   let published=[],preview=[],ready=true,message='目前使用基本課表；雲端週次同步尚未啟用。';
@@ -56,7 +57,7 @@
   }
   function header(value,day,codes=[]){
     const titles={'公':'公假','差':'差假','假':'其他／重大假別'};
-    return `<th class="weekly-day"><div class="weekly-heading"><span class="weekday-name">星期${data.meta.days[day]}</span><small class="weekday-date">${value<=end?value.slice(5):'學期結束'}</small><div class="weekly-leave-row">${codes.map(code=>`<span class="leave-circle" title="${titles[code]||code}" aria-label="${titles[code]||code}">${code}</span>`).join('')}</div></div></th>`;
+    return `<th class="weekly-day"><div class="weekly-heading"><span class="weekday-name">星期${data.meta.days[day]}</span><small class="weekday-date">${value<=end?formatDate(value):'學期結束'}</small><div class="weekly-leave-row">${codes.map(code=>`<span class="leave-circle" title="${titles[code]||code}" aria-label="${titles[code]||code}">${esc(titles[code]||code)}</span>`).join('')}</div></div></th>`;
   }
-  window.WEEKLY={start,end,plus,dayOf,weekOf,inTerm,dateFor,className,esc,leaveCode,valid,lessons,classLessons,leaves,busy,changes,table,header,tone,active,setPublished,setPreview,get ready(){return ready;},get message(){return message;},weekOptions:()=>Array.from({length:21},(_,i)=>`<option value="${i+1}">第${i+1}週 ${dateFor(i+1,0)}～${dateFor(i+1,4)>end?end:dateFor(i+1,4)}</option>`).join('')};
+  window.WEEKLY={start,end,plus,dayOf,weekOf,inTerm,dateFor,formatDate,className,esc,leaveCode,valid,lessons,classLessons,leaves,busy,changes,table,header,tone,active,setPublished,setPreview,get ready(){return ready;},get message(){return message;},weekOptions:()=>Array.from({length:21},(_,i)=>`<option value="${i+1}">第${i+1}週 ${formatDate(dateFor(i+1,0))}～${formatDate(dateFor(i+1,4)>end?end:dateFor(i+1,4))}</option>`).join('')};
 })();

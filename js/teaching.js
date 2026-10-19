@@ -66,7 +66,7 @@
     const planned = $('teaching-display').value === 'planned';
     $('teaching-calendar').innerHTML = `<table><thead><tr><th>第 ${week} 週<br>${esc(name)}</th>${dates.map((date,day) => {
       const leave = planned ? [...new Set(records.filter(r => r.a.teacher === name && r.a.date === date && r.leaveType).map(r => r.leaveType))] : [];
-      return `<th>星期${data.meta.days[day]}<br>${date.slice(5)}${leave.map(type => `<span class="leave-tag">${esc(type)}</span>`).join('')}</th>`;
+      return `<th>星期${data.meta.days[day]}<br>${window.WEEKLY.formatDate(date)}${leave.map(type => `<span class="leave-tag">${esc(type)}</span>`).join('')}</th>`;
     }).join('')}</tr></thead><tbody>${data.classes[0].rows.map((row,index) => `<tr><td>${row.period.name}<br>${row.period.time}</td>${dates.map(date => {
       const lessons = base(name,date,index), change = planned ? effects(name,date,index,records) : {outgoing:[],incoming:[]};
       const original = lessons.map(s => `<div>${esc(s.subject)}<br><small>${esc(className(s.classId))}</small></div>`).join('');
