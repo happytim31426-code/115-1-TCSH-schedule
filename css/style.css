@@ -81,3 +81,7 @@ body:has(#view-type option[value="swap"]:checked) .page-shell { width:calc(100% 
 #member-form input { width:100%; min-width:0; padding:.65rem; border:1px solid var(--line); border-radius:8px; background:var(--paper); color:var(--ink); font:inherit; }
 #member-list button { margin:.3rem; }
 .action-button:disabled { opacity:.5; cursor:not-allowed; }
+.hero { position:relative; }
+.admin-header-button { position:absolute; top:1rem; right:1.25rem; padding:.5rem .85rem; border:1px solid #cceee2; border-radius:999px; color:white; background:transparent; font:inherit; font-weight:700; cursor:pointer; }
+.admin-header-button:hover,.admin-header-button[aria-pressed="true"] { background:#ffffff20; }
+.admin-header-button:focus-visible { outline:3px solid white; outline-offset:3px; }
