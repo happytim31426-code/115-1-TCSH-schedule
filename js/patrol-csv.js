@@ -8,6 +8,20 @@
   }
   function extract(text,classes,issues){
     const rows=parse(text),headers=rows.shift()||[],entries=[],notes=[],warnings=[],seen=new Map();
+    if(headers.includes('班級')&&headers.includes('問題項目')){
+      if(!['日期','巡堂人員','巡堂時段'].every(h=>headers.includes(h)))throw Error('補登CSV缺少日期、巡堂人員或巡堂時段。');
+      let duplicateCount=0;
+      rows.forEach((r,index)=>{if(!r.some(v=>v.trim()))return;const get=h=>(r[headers.indexOf(h)]||'').trim(),m=get('日期').match(/^(\d{4})[\/-](\d{1,2})[\/-](\d{1,2})$/),pm=get('巡堂時段').match(/第([一二三四五六七八1-8])節/),date=m?`${m[1]}-${m[2].padStart(2,'0')}-${m[3].padStart(2,'0')}`:'',period=pm?('一二三四五六七八'.indexOf(pm[1])+1||Number(pm[1])):0,observer=get('巡堂人員'),sourceRow=Number(get('原始來源列'))||index+2;
+        if(!date||Number.isNaN(Date.parse(date+'T12:00:00Z'))||new Date(date+'T12:00:00Z').toISOString().slice(0,10)!==date||!period||!observer||!Number.isInteger(sourceRow)||sourceRow<2){warnings.push(`CSV第${index+2}列：日期、節次、巡堂者或來源列無法辨識。`);return;}
+        const note=get('狀況紀錄');if(!get('班級')&&note){notes.push({date,period,observer,grade:get('年級'),note,sourceRow});return;}
+        const c=classes.find(c=>c.name===get('班級')||c.publicCode===get('班級'));if(!c){warnings.push(`CSV第${index+2}列：班級未對應。`);return;}
+        if(get('巡堂結果')&&get('巡堂結果')!=='需處理'){warnings.push(`CSV第${index+2}列：非需處理紀錄，請改用手動補登。`);return;}
+        const found=issues.filter(s=>get('問題項目').includes(s));if(!found.length&&!note){warnings.push(`CSV第${index+2}列：沒有可辨識的問題或狀況。`);return;}
+        const duplicateRows=(get('合併來源列').match(/\d+/g)||[]).map(Number),entry={date,period,observer,classId:c.id,issues:found.sort(),note,sourceRow,duplicateRows},key=[date,period,observer,c.id].join('|');
+        if(seen.has(key)){const old=seen.get(key);old.issues=[...new Set([...old.issues,...found])].sort();old.duplicateRows.push(sourceRow);if(note&&!old.note.includes(note))old.note=[old.note,note].filter(Boolean).join('\n');duplicateCount++;}else{seen.set(key,entry);entries.push(entry);duplicateCount+=duplicateRows.length;}
+      });
+      return {responseCount:rows.filter(r=>r.some(v=>v.trim())).length,entries,notes,warnings,duplicateCount};
+    }
     if(!['日期','巡堂人員','巡堂時段'].every(h=>headers.includes(h)))throw Error('找不到日期、巡堂人員、巡堂時段欄位，請使用原表單回覆CSV。');
     const column=h=>headers.indexOf(h);let duplicateCount=0;
     rows.forEach((r,index)=>{
