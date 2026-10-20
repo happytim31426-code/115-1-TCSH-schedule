@@ -162,7 +162,9 @@ service cloud.firestore {
         && request.resource.data.date == resource.data.date && request.resource.data.week == resource.data.week
         && request.resource.data.period == resource.data.period && request.resource.data.classId == resource.data.classId
         && request.resource.data.className == resource.data.className && request.resource.data.grade == resource.data.grade
-        && request.resource.data.lessons == resource.data.lessons;
+        && request.resource.data.lessons == resource.data.lessons
+        && request.resource.data.get('observerName','') == resource.data.get('observerName','')
+        && request.resource.data.get('origin',null) == resource.data.get('origin',null);
       allow delete: if false;
     }
     function patrolLesson(list, index) {
@@ -175,7 +177,15 @@ service cloud.firestore {
       let r = request.resource.data;
       return versioned('patrolRecords',id)
         && r.keys().hasAll(['date','week','period','classId','className','grade','lessons','result','issues','note','status'])
-        && r.keys().hasOnly(['date','week','period','classId','className','grade','lessons','result','issues','note','status','revision','createdBy','createdName','createdAt','updatedBy','updatedName','updatedAt'])
+        && r.keys().hasOnly(['date','week','period','classId','className','grade','lessons','result','issues','note','status','observerName','origin','revision','createdBy','createdName','createdAt','updatedBy','updatedName','updatedAt'])
+        && (!r.keys().hasAny(['observerName','origin']) || (admin()
+          && r.keys().hasAll(['observerName','origin'])
+          && r.observerName is string && r.observerName.size() > 0 && r.observerName.size() <= 80
+          && r.origin is map && r.origin.keys().hasAll(['kind','documentId','gid','row']) && r.origin.keys().hasOnly(['kind','documentId','gid','row'])
+          && r.origin.kind in ['manual','csv'] && r.origin.documentId is string && r.origin.documentId.size() <= 120
+          && r.origin.gid is string && r.origin.gid.size() <= 30 && r.origin.row is int
+          && (r.origin.kind == 'manual' ? (r.origin.documentId == '' && r.origin.gid == '' && r.origin.row == 0)
+            : (r.origin.documentId.matches('^[A-Za-z0-9_-]+$') && r.origin.gid.matches('^[0-9]+$') && r.origin.row >= 2))))
         && validDate(r.date) && r.week is int && r.week >= 1 && r.week <= 21
         && r.period is int && r.period >= 1 && r.period <= 8
         && r.classId is string && r.classId.size() > 0 && r.classId.size() <= 40

@@ -6,7 +6,7 @@
     <meta name="description" content="臺南慈濟高中 115 學年度第 1 學期課表查詢" />
     <title>115-1 課表查詢｜臺南慈濟高中</title>
     <link rel="stylesheet" href="css/style.css?v=20261020i" />
-    <link rel="stylesheet" href="css/patrol.css?v=20261020n" />
+    <link rel="stylesheet" href="css/patrol.css?v=20261020o" />
   </head>
   <body>
     <header class="hero">
@@ -42,6 +42,29 @@
           <p id="member-message" role="status"></p>
           <div id="member-list"></div>
         </section>
+      </section>
+      <section class="tool-card" id="patrol-backfill" hidden>
+        <h2>管理員：歷史巡堂紀錄補登</h2>
+        <p>首次使用請先將本次新版 firestore.rules 完整覆蓋至 Firebase 規則並發布，才可儲存原巡堂者及來源資訊。</p>
+        <p>原巡堂者與本次補登管理員分開記錄。只補登已確認的班級，不會替其餘班級建立正常紀錄；舊平台未提供任課教師時，不回推目前課表。</p>
+        <form id="patrol-backfill-form"><div class="tool-grid">
+          <label>實際巡堂日期<input id="backfill-date" type="date" min="2026-08-31" max="2027-01-20" required></label>
+          <label>實際節次<select id="backfill-period"></select></label>
+          <label>原巡堂者<input id="backfill-observer" list="backfill-observers" maxlength="80" required autocomplete="off"></label><datalist id="backfill-observers"></datalist>
+          <label>班級<select id="backfill-class" required></select></label>
+          <label>巡堂結果<select id="backfill-result"><option value="issue">需處理</option><option value="normal">已巡正常</option></select></label>
+          <label>當時任課教師（選填）<input id="backfill-teacher" maxlength="80" placeholder="只填已核實資訊"></label>
+          <label>當時科目（選填）<input id="backfill-subject" maxlength="160" placeholder="未提供可留白"></label>
+        </div><div id="backfill-issues" class="patrol-issues"></div>
+          <label>狀況紀錄<textarea id="backfill-note" maxlength="500" rows="3" placeholder="請避免學生姓名、病情等敏感資訊"></textarea></label>
+          <p id="backfill-source"></p><button type="submit" class="action-button" id="backfill-save">確認並補登此班</button><button type="button" class="person-button" id="backfill-clear">清空表單</button>
+        </form>
+        <details><summary>從舊巡堂表單CSV整理待核對資料</summary><p>請在原Google試算表下載CSV，再於此選取。檔案只在本機解析；不儲存原表電子郵件。只會匯入你勾選「已核對」的問題班級，既有相同巡堂紀錄不會覆寫。</p>
+          <label>來源試算表網址（請先貼上，包含gid）<input id="backfill-sheet-url" type="url" placeholder="貼上來源Google試算表網址，不會放進公開課表"></label>
+          <label>選擇原表CSV<input id="backfill-file" type="file" accept=".csv,text/csv"></label>
+          <p id="backfill-import-summary"></p><div id="backfill-preview"></div><button type="button" class="action-button" id="backfill-import" disabled>匯入已核對的問題班級</button>
+          <details><summary>其他問題原文（包含正常描述，需人工判讀）</summary><div id="backfill-other-notes"></div></details>
+        </details><p id="backfill-status" role="status"></p>
       </section>
       <section class="controls" id="public-controls" aria-label="課表查詢">
         <div class="control-group">
@@ -117,7 +140,7 @@
             <tr><th scope="row">第七節</th><td rowspan="2">陳雲亮</td><td rowspan="2">張玉蓉</td><td rowspan="2">陳雲亮</td><td rowspan="2">張玉蓉</td><td rowspan="2">謝淑惠</td></tr>
             <tr><th scope="row">第八節</th></tr>
           </tbody></table></div><p>手機可左右滑動檢視全表。上表為排班安排，不代表已完成巡堂。每兩節為一個排班時段，實際擇一節登錄。</p>
-          <div class="tool-grid"><label>學期週次<select id="patrol-staff-week"></select></label></div><p>同一位巡堂人員在同一天、同一節巡視多班，合計為一次巡堂；刪除的紀錄不計入。</p><div id="patrol-staff-summary"></div></section>
+          <div class="tool-grid"><label>學期週次<select id="patrol-staff-week"></select></label></div><p>同一位巡堂人員在同一天、同一節巡視多班，合計為一次巡堂；刪除的紀錄不計入。歷史資料若只補有問題班級，未補登的正常巡堂不在次數內。</p><div id="patrol-staff-summary"></div></section>
       </section>
       <section class="tool-card" id="patrol-history" hidden>
         <h2>巡堂登錄紀錄</h2><p>供管理員於巡堂紀錄分析查閱、修正與刪除，每頁五筆。</p><div id="patrol-records"></div>
@@ -276,7 +299,7 @@
     <footer>資料來源：臺南慈濟高中 115 學年度第 1 學期課程表</footer>
     <script src="data/schedules.js"></script>
     <script src="js/weekly.js?v=20261020i"></script>
-    <script src="js/app.js?v=20261020m"></script>
+    <script src="js/app.js?v=20261020o"></script>
     <script src="js/weekly-comparison.js?v=20261020f"></script>
     <script src="js/record-pages.js?v=20261020g"></script>
     <script src="js/recruit.js?v=20261020i"></script>
@@ -285,7 +308,9 @@
     <script src="js/teachers.js?v=20261020g"></script>
     <script src="js/photo-import.js?v=20261020f"></script>
     <script src="js/firebase-config.js"></script>
-    <script src="js/patrol.js?v=20261020n"></script>
-    <script type="module" src="js/backend.js?v=20261020l"></script>
+    <script src="js/patrol-csv.js?v=20261020o"></script>
+    <script src="js/patrol.js?v=20261020o"></script>
+    <script src="js/patrol-backfill.js?v=20261020o"></script>
+    <script type="module" src="js/backend.js?v=20261020o"></script>
   </body>
 </html>

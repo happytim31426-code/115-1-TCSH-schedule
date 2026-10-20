@@ -16,3 +16,8 @@
 #patrol-roster caption { text-align:left; font-size:20px; font-weight:700; margin:10px 0; }
 #patrol-roster td { vertical-align:middle; text-align:center; padding:16px 10px; }
 #patrol-roster tbody tr:nth-child(5) td { border-bottom:1px solid var(--line); }
+#patrol-backfill input:not([type="checkbox"]), #patrol-backfill textarea { width:100%; min-width:0; padding:10px; color:var(--ink); background:var(--paper); border:1px solid var(--line); border-radius:8px; font:inherit; }
+#patrol-backfill input[type="checkbox"] { width:auto; margin-right:8px; }
+#backfill-issues label { display:inline-block; margin:8px 12px 8px 0; }
+#backfill-preview { max-height:600px; overflow:auto; margin:16px 0; }
+#backfill-other-notes { max-height:500px; overflow:auto; }
