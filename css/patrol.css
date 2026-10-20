@@ -15,3 +15,4 @@
 #patrol-roster { min-width:720px; font-size:18px; }
 #patrol-roster caption { text-align:left; font-size:20px; font-weight:700; margin:10px 0; }
 #patrol-roster td { vertical-align:middle; text-align:center; padding:16px 10px; }
+#patrol-roster tbody tr:nth-child(5) td { border-bottom:1px solid var(--line); }

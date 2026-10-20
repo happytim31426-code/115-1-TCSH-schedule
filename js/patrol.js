@@ -46,11 +46,10 @@
   });
   function analysis(){
     const week=$('patrol-filter-week').value,grade=$('patrol-filter-grade').value,t=$('patrol-filter-teacher').value.trim(),n=$('patrol-filter-recorder').value.trim();
-    const filtered=records.filter(r=>(!week||r.week===Number(week))&&(!grade||r.grade===grade)&&(!t||r.lessons.some(s=>s.teacher.includes(t)))&&(!n||(r.createdName||'').includes(n))),live=records.filter(r=>r.status!=='deleted'),normal=live.filter(r=>r.result==='normal').length;
+    const filtered=records.filter(r=>(!week||r.week===Number(week))&&(!grade||r.grade===grade)&&(!t||r.lessons.some(s=>s.teacher.includes(t)))&&(!n||(r.createdName||'').includes(n))),live=records.filter(r=>r.status!=='deleted'),summary=filtered.filter(r=>r.status!=='deleted'),normal=summary.filter(r=>r.result==='normal').length;
     $('patrol-analysis-status').textContent=loaded?'已同步。統計以班級巡查筆數計算，未巡查不視為正常。':'尚未同步巡堂資料；請確認登入與新版資料庫規則。';
-    $('patrol-summary').innerHTML=`<p>已巡查${live.length}筆｜正常${normal}筆｜需處理${live.length-normal}筆｜巡堂人員${new Set(live.map(r=>r.createdBy)).size}人</p><ul>${issues.map(s=>`<li>${E(s)}：${live.filter(r=>r.issues.includes(s)).length}筆</li>`).join('')}</ul><p>同一筆可有多項；雙師／跑班保留多位教師，不自動歸責單一教師。</p>`;
+    $('patrol-summary').innerHTML=`<p>已巡查${summary.length}筆｜正常${normal}筆｜需處理${summary.length-normal}筆｜巡堂人員${new Set(summary.map(r=>r.createdBy)).size}人</p><ul>${issues.map(s=>`<li>${E(s)}：${summary.filter(r=>r.issues.includes(s)).length}筆</li>`).join('')}</ul><p>同一筆可有多項；雙師／跑班保留多位教師，不自動歸責單一教師。</p>`;
     const counts=list=>({total:list.length,normal:list.filter(r=>r.result==='normal').length,issue:list.filter(r=>r.result==='issue').length});
-    $('patrol-grade-summary').innerHTML=`<table><thead><tr><th>年級</th><th>班級巡查筆數</th><th>正常</th><th>需處理</th></tr></thead><tbody>${grades.map(g=>{const c=counts(live.filter(r=>r.grade===g));return `<tr><th>${g}</th><td>${c.total}</td><td>${c.normal}</td><td>${c.issue}</td></tr>`;}).join('')}</tbody></table>`;
     const classWeek=$('patrol-class-week').value,classId=$('patrol-class-select').value,classList=live.filter(r=>r.classId===classId&&(!classWeek||r.week===Number(classWeek))),c=counts(classList),classInfo=D.classes.find(c=>c.id===classId);
     $('patrol-class-summary').innerHTML=`<h4>${E(classInfo?.name||'')}｜${classWeek?`第${Number(classWeek)}週`:'全部週次'}</h4><p>巡查${c.total}筆｜正常${c.normal}筆｜需處理${c.issue}筆</p><ul>${issues.map(s=>`<li>${E(s)}：${classList.filter(r=>r.issues.includes(s)).length}筆</li>`).join('')}</ul><p>其他問題／補充說明：${classList.filter(r=>r.note.trim()).length}筆（可至下方逐筆紀錄查看）。</p>`;
     const staffWeek=$('patrol-staff-week').value,staffList=live.filter(r=>!staffWeek||r.week===Number(staffWeek)),staff=new Map();
