@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="臺南慈濟高中 115 學年度第 1 學期課表查詢" />
     <title>115-1 課表查詢｜臺南慈濟高中</title>
-    <link rel="stylesheet" href="css/style.css?v=20261020e" />
+    <link rel="stylesheet" href="css/style.css?v=20261020f" />
   </head>
   <body>
     <header class="hero">
@@ -81,19 +81,29 @@
       </section>
       <section class="tool-card" id="teaching-tool" hidden>
         <h2>教學組代調課規劃</h2>
-        <p>先用三張課表核對指定週次，再新增草稿並送出。已送出紀錄可逐筆修正或取消，公開代調課查詢會同步更新；原始教師／班級課表保持不變。</p>
+        <p>先用三張課表核對指定週次，填妥後直接送出至公開課表。下方紀錄可修正或刪除；原始教師／班級課表保持不變。</p>
         <div class="tool-grid" id="teaching-legacy-controls" hidden>
           <label>查看教師<select id="teaching-teacher"></select></label>
           <label>學期週次<select id="teaching-week"></select></label>
           <label>課表呈現<select id="teaching-display"><option value="planned">規劃後＋原課註記</option><option value="base">只看基本課表</option></select></label>
         </div>
-        <div class="teaching-actions">
-          <button type="button" class="action-button" id="teaching-demo">載入四筆紙本示範</button>
-          <button type="button" class="action-button" id="teaching-apply-local">送出所有正式草稿至公開課表</button>
-        </div>
-        <p id="teaching-status" role="status">尚未送出的草稿與示範只在此頁預覽，重新整理會清除；已送出紀錄儲存於雲端。</p>
-        <div class="teaching-legend"><span>代：由其他教師代課</span><span>調：交換另一日期課程</span><span>原：原定課程</span><span>示範：待核對、不寫入正式紀錄</span></div>
+        <p id="teaching-status" role="status">核對資料後按「送出至公開課表」，即儲存並同步更新。</p>
         <div id="teaching-comparison-host"></div>
+        <details class="photo-entry" id="photo-entry"><summary>拍照辨識代調課單（本機辨識・人工核對）</summary>
+          <p>照片只留在此瀏覽器，不上傳。首次辨識需下載程式及語言檔；手寫辨識可能不準確。請先將照片轉正，最好只拍上半部姓名與課務表，避開請假事由及簽核等不需要的資訊。</p>
+          <label>拍照或選擇照片<input id="photo-file" type="file" accept="image/jpeg,image/png,image/webp" capture="environment"></label>
+          <div id="photo-workspace" hidden>
+            <div class="teaching-actions"><button type="button" class="person-button" id="photo-rotate">旋轉90°</button><button type="button" class="person-button" id="photo-reset-crop">全圖辨識</button><button type="button" class="action-button" id="photo-recognize">開始本機辨識</button><button type="button" class="person-button" id="photo-clear">清除照片與辨識資料</button></div>
+            <p>可在照片上拖曳框選姓名或課務表，縮小辨識範圍；框選只影響下一次辨識，不會刪改原照片。</p>
+            <canvas id="photo-canvas" aria-label="照片預覽，可拖曳選取辨識區域"></canvas>
+          </div>
+          <p id="photo-status" role="status"></p>
+          <label>辨識文字（可人工修正；僅使用姓名及課務，不會自動帶入請假事由）<textarea id="photo-text" rows="6" maxlength="30000"></textarea></label>
+          <div class="teaching-actions"><button type="button" class="person-button" id="photo-parse">將文字整理為待核對課務</button><button type="button" class="person-button" id="photo-add-row">手動新增一筆待核對課務</button></div>
+          <label>調課老師姓名<input id="photo-applicant" list="photo-teachers" placeholder="請確認完整姓名，不會自動選第一位教師"></label><datalist id="photo-teachers"></datalist>
+          <div id="photo-review"></div>
+          <p>每筆先修改姓名、日期、節次、班級與調／代資訊，再按「已核對，帶入表單」。最後仍須在下方按「送出至公開課表」。未辨識或與原課表不符的項目不會自動發布。</p>
+        </details>
         <details><summary>完整行政註記課表</summary><div class="table-wrap" id="teaching-calendar"></div></details>
         <details class="teaching-entry" open><summary>新增課務紀錄</summary>
           <form id="teaching-form">
@@ -111,7 +121,7 @@
               <label id="entry-other-course-label">交換課程<select id="entry-other-course"></select></label>
             </div>
             <label>備註（選填）<input id="entry-note" maxlength="300" placeholder="例如：公假課務安排；請勿填入病情等敏感細節"></label>
-            <button type="submit" class="action-button" id="entry-submit">新增到規劃預覽</button>
+            <button type="submit" class="action-button" id="entry-submit">送出至公開課表</button>
             <button type="button" class="person-button" id="entry-cancel-edit" hidden>放棄修正</button>
           </form>
         </details>
@@ -208,11 +218,12 @@
     <script src="data/schedules.js"></script>
     <script src="js/weekly.js?v=20261020d"></script>
     <script src="js/app.js?v=20261020e"></script>
-    <script src="js/weekly-comparison.js?v=20261020e"></script>
+    <script src="js/weekly-comparison.js?v=20261020f"></script>
     <script src="js/recruit.js?v=20261020d"></script>
-    <script src="js/teaching.js?v=20261020e"></script>
+    <script src="js/teaching.js?v=20261020f"></script>
     <script src="js/events.js?v=20261020d"></script>
     <script src="js/teachers.js?v=20261020e"></script>
+    <script src="js/photo-import.js?v=20261020f"></script>
     <script src="js/firebase-config.js"></script>
     <script type="module" src="js/backend.js?v=20261020d"></script>
   </body>

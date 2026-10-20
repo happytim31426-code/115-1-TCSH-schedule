@@ -142,3 +142,8 @@ body[data-office-feature="teaching-plan"] .page-shell { width:calc(100% - 2rem);
 #teacher-name-results { margin:.7rem 0; }
 #teacher-free-preview { margin-top:1rem; }
 #teacher-free-preview .free-selected { outline:2px solid var(--teal); outline-offset:-2px; }
+.photo-entry { border:1px solid var(--line); border-radius:10px; padding:1rem; margin:1rem 0; }
+.photo-entry summary { cursor:pointer; font-weight:700; }
+#photo-canvas { display:block; max-width:100%; max-height:65vh; width:auto; height:auto; border:1px solid var(--line); touch-action:none; margin:.75rem 0; }
+#photo-text { width:100%; min-width:0; padding:.65rem; border:1px solid var(--line); border-radius:8px; background:var(--paper); color:var(--ink); font:inherit; }
+#photo-review label { min-width:0; }

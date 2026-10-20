@@ -62,7 +62,7 @@
     $('swap-middle').innerHTML=teachesClass(name,schedule.id)?classTable(schedule):'<p>本教師無任教該班級（所選週次）</p>';
     if(partner?.key===selectionKey())comparisonTeacher(partner.name,'#swap-right');
     else {partner=null;$('swap-right').textContent='點選候選教師後，在此顯示課表。';}
-    $('swap-sync-status').textContent=scope()==='admin'?`${W.message}；行政畫面另含尚未發布的預覽。`:W.ready?W.message:`${W.message}（目前僅顯示基本課表，不能視為已同步）`;
+    $('swap-sync-status').textContent=scope()==='admin'?`${W.message}；核對後直接送出，照片待核對內容不會自動發布。`:W.ready?W.message:`${W.message}（目前僅顯示基本課表，不能視為已同步）`;
     swapSearch();highlightComparison(partner?.day,partner?.row);
     window.TEACHING_SELECT?.({teacher:name,week:week(),date:$('swap-day').value===''?null:date(Number($('swap-day').value)),row:$('swap-period').value===''?null:Number($('swap-period').value)});
   };

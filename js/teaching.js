@@ -13,7 +13,7 @@
   const related = (record,name) => record.a.teacher === name || record.b?.teacher === name;
   const at = (slot,date,row) => slot && slot.date === date && slot.row === row;
   let records = [];
-  let editingId=null, editingRevision=0, saving=false;
+  let editingId=null, editingRevision=0, saving=false, photoReviewMode=false;
   const effective=()=>records.filter(r=>!['cancelled','deleted'].includes(r.status));
   function syncPreview(){
     window.WEEKLY.setPreview(effective());
@@ -71,14 +71,14 @@
       const lessons = base(name,date,index), change = planned ? effects(name,date,index,effective()) : {outgoing:[],incoming:[]};
       const original = lessons.map(s => `<div>${esc(s.subject)}<br><small>${esc(className(s.classId))}</small></div>`).join('');
       if (!change.outgoing.length && !change.incoming.length) return `<td>${original}</td>`;
-      const outgoing = change.outgoing.map(r => { const other = r.a.teacher === name ? r.b : r.a; return `<div class="lesson-change"><b>${r.kind === 'sub' ? '代出' : '調出'}${r.demo ? '・示範' : ''}</b><br>${r.kind === 'sub' ? `由 ${esc(other.teacher)} 代課` : `改於 ${esc(other.date)} 第${other.row}節授課<br>與 ${esc(other.teacher)} 的 ${esc(other.subject)} 交換`}</div>`; }).join('');
-      const incoming = change.incoming.map(({record:r,lesson,label}) => `<div class="lesson-change"><b>${label}${r.demo ? '・示範' : ''}</b><br>${esc(lesson.subject)}<br>${esc(className(lesson.classId))}／${label === '代' ? '代' : '調'}<br>${label === '代' ? `原教師：${esc(lesson.teacher)}` : `原課：${lesson.date} 第${lesson.row}節`}</div>`).join('');
+      const outgoing = change.outgoing.map(r => { const other = r.a.teacher === name ? r.b : r.a; return `<div class="lesson-change"><b>${r.kind === 'sub' ? '代出' : '調出'}</b><br>${r.kind === 'sub' ? `由 ${esc(other.teacher)} 代課` : `改於 ${esc(other.date)} 第${other.row}節授課<br>與 ${esc(other.teacher)} 的 ${esc(other.subject)} 交換`}</div>`; }).join('');
+      const incoming = change.incoming.map(({lesson,label}) => `<div class="lesson-change"><b>${label}</b><br>${esc(lesson.subject)}<br>${esc(className(lesson.classId))}／${label === '代' ? '代' : '調'}<br>${label === '代' ? `原教師：${esc(lesson.teacher)}` : `原課：${lesson.date} 第${lesson.row}節`}</div>`).join('');
       return `<td>${original ? `<div class="lesson-original">${change.outgoing.length ? '原：' : '原有課程：'}${original}</div>` : ''}${outgoing}${incoming}</td>`;
     }).join('')}</tr>`).join('')}</tbody></table>`;
     const visible = [...records].sort((a,b)=>b.a.date.localeCompare(a.a.date)||(b.order||0)-(a.order||0));
     $('teaching-records').innerHTML = visible.map(r => {
       const inactive=['cancelled','deleted'].includes(r.status);
-      return `<article class="teaching-record"><b>${r.demo?'示範・未核對':r.status==='submitted'?'已送出':r.status==='deleted'?'已刪除':r.status==='cancelled'?'已取消':'未送出草稿'}</b><p>${esc(describe(r))}</p><p class="record-meta">${esc(window.WEEKLY.auditText(r))}</p>${r.note?`<p>${esc(r.note)}</p>`:''}${r.b?`<button class="person-button" type="button" data-compare="${esc(r.id)}">對照 ${esc(r.b.teacher)}</button>`:''}${!r.demo&&!inactive?`<button type="button" class="person-button" data-edit-record="${esc(r.id)}">修正</button><button type="button" class="person-button" data-publish-record="${esc(r.id)}">${r.status==='submitted'?'重新送出':'送出至公開課表'}</button>`:''}${!inactive?`<button class="person-button" type="button" data-remove-record="${esc(r.id)}">${r.revision?'整筆刪除':'移除預覽'}</button>`:''}</article>`;
+      return `<article class="teaching-record"><b>${r.status==='submitted'?'已送出':r.status==='deleted'?'已刪除':'已取消'}</b><p>${esc(describe(r))}</p><p class="record-meta">${esc(window.WEEKLY.auditText(r))}</p>${r.note?`<p>${esc(r.note)}</p>`:''}${!inactive?`<button type="button" class="person-button" data-edit-record="${esc(r.id)}">修正</button><button class="person-button" type="button" data-remove-record="${esc(r.id)}">整筆刪除</button>`:''}</article>`;
     }).join('') || '<p>目前尚無登錄紀錄。</p>';
   }
   function slotFrom(name,date,selectId) {
@@ -97,7 +97,7 @@
     if (effective().some(r => r.id!==record.id && r.kind !== 'leave' && [r.a,r.b].some(s => s && ((s.teacher === record.a.teacher && at(s,record.a.date,record.a.row)) || (record.kind === 'swap' && s.teacher === record.b.teacher && at(s,record.b.date,record.b.row)))))) throw Error('原課程已有代調課紀錄，請先修正或取消舊紀錄。');
     if (occupied(record.b.teacher,record.a.date,record.a.row)) throw Error('代課／交換教師在原課時段已有課，請核對衝堂。');
     if (record.kind === 'swap') {
-      if (record.a.classId !== record.b.classId) throw Error('目前登錄先限同班調課；跨班案例可在示範預覽中核對。');
+      if (record.a.classId !== record.b.classId) throw Error('目前登錄先限同班調課，請核對雙方班級。');
       if ((record.a.row === 8) !== (record.b.row === 8)) throw Error('第八節只能與第八節交換。');
       if (occupied(record.a.teacher,record.b.date,record.b.row)) throw Error('原教師在交換時段已有課，請核對衝堂。');
       for (const slot of [record.a,record.b]) {
@@ -112,8 +112,8 @@
     const projection=status==='submitted'?{id:record.id,kind:record.kind,a:record.a,b:record.b,leaveCode:window.WEEKLY.leaveCode(record.leaveType),order:payload.order}:null;
     await window.CLOUD_RECORDS.save('course',record.id,payload,projection,record.revision||0);
   }
-  function stopEditing(){editingId=null;editingRevision=0;$('entry-submit').textContent='新增到規劃預覽';$('entry-cancel-edit').hidden=true;}
-  $('entry-cancel-edit').addEventListener('click',()=>{stopEditing();$('teaching-status').textContent='已放棄修正，原送出紀錄保持不變。';});
+  function stopEditing(){editingId=null;editingRevision=0;photoReviewMode=false;$('entry-submit').textContent='送出至公開課表';$('entry-cancel-edit').hidden=true;}
+  $('entry-cancel-edit').addEventListener('click',()=>{if(saving)return;stopEditing();$('teaching-status').textContent='已放棄本次編輯，原送出紀錄保持不變。';});
   $('teaching-form').addEventListener('submit',async event => {
     event.preventDefault(); if (!window.AUTH_MEMBER) return;
     if(saving)return;
@@ -125,46 +125,25 @@
       if(editingId&&(old?.revision||0)!==editingRevision)throw Error('此筆紀錄已被其他同仁更新，請放棄修正後重新開啟。');
       const record = {...old,id:editingId||crypto.randomUUID(),kind,a,b,leaveType:$('entry-leave').value,note:$('entry-note').value.trim(),order:old?.order||Date.now()};
       validate(record);
-      if(old?.revision){saving=true;await publish(record);stopEditing();$('teaching-status').textContent='修正已送出，公開課表已更新。';return;}
-      records=records.filter(r=>r.id!==record.id);records.push(record);stopEditing(); $('teaching-teacher').value = name; $('teaching-week').value = String(weekOf(date)); $('teaching-display').value = 'planned';
-      $('swap-teacher').value=name;$('swap-week').value=String(weekOf(date));syncPreview();
-      $('teaching-status').textContent = '已加入此頁預覽；重新整理會清除，尚未儲存至任何雲端服務。'; render();
-    } catch(error) { $('teaching-status').textContent = error.message; }finally{saving=false;}
-  });
-  $('teaching-demo').addEventListener('click',() => {
-    if (!window.AUTH_MEMBER) return;
-    const id = name => data.classes.find(c => c.name === name)?.id || '';
-    const slot = (teacher,date,row,cls,subject) => ({teacher,date,row,classId:id(cls),subject});
-    const demo = (n,kind,a,b,note='') => ({id:`demo-${n}`,demo:true,kind,a,b,leaveType:n === 1 ? '公假' : '',note});
-    const samples = [
-      demo(1,'swap',slot('盧佩君','2026-10-21',7,'國二包容','公民與社會'),slot('翟垣皓','2026-10-20',4,'國二包容','英語文')),
-      demo(2,'swap',slot('盧佩君','2026-09-18',2,'國一包容','公民與社會'),slot('Chris','2026-09-30',4,'國一包容','世界關懷行'),'Chris 尚未對應教師編號，僅依提供文字示範。'),
-      demo(3,'swap',slot('盧佩君','2026-10-29',6,'高三善解','民主政治與法律'),slot('莊仁傑','2026-10-30',7,'國三善解','國語文'),'依提供案例保留高三／國三不同班級，待核對。'),
-      demo(4,'sub',slot('盧佩君','2026-10-20',8,'國二包容','公民與社會'),{teacher:'許蘭馨',date:'2026-10-20',row:8},'示範暫將「蘭馨老師」對應許蘭馨，請核對。'),
-    ];
-    records = [...records.filter(r => !r.demo),...samples]; $('teaching-teacher').value = '盧佩君'; $('teaching-week').value = '8'; $('teaching-display').value = 'planned';
-    $('swap-teacher').value='盧佩君';$('swap-week').value='8';$('swap-class').value=id('國二包容');syncPreview();
-    $('teaching-status').textContent = '已載入四筆示範。跨週案例請切換第3／5週；10/29案例在第9週。示範不可存入雲端。'; render();
+      if(kind==='leave'&&effective().some(r=>r.id!==record.id&&r.kind==='leave'&&r.a.teacher===name&&r.a.date===date&&r.leaveType===record.leaveType))throw Error('此教師當日已有相同假別，請直接修正既有紀錄。');
+      saving=true;$('entry-submit').disabled=true;await publish(record);
+      if(!records.some(r=>r.id===record.id&&(r.revision||0)>=(record.revision||0)+1))records=[...records.filter(r=>r.id!==record.id),{...record,status:'submitted',revision:(record.revision||0)+1,createdName:record.createdName||window.AUTH_MEMBER.name,updatedName:window.AUTH_MEMBER.name}];
+      syncPreview();stopEditing();$('teaching-status').textContent=old?'修正已送出，公開課表已更新。':'已送出至公開課表，無須再按第二次發布。';
+      window.dispatchEvent(new CustomEvent('teaching-published',{detail:{id:record.id,kind:record.kind,a:record.a,b:record.b}}));render();
+    } catch(error) { $('teaching-status').textContent = `未送出：${error.message}`; }finally{saving=false;$('entry-submit').disabled=false;}
   });
   $('teaching-records').addEventListener('click',async event => {
     if (!window.AUTH_MEMBER) return;
     if(saving)return;
     const button = event.target.closest('button'); if (!button) return;
-    const record = records.find(r => r.id === (button.dataset.compare || button.dataset.removeRecord||button.dataset.editRecord||button.dataset.publishRecord)); if (!record) return;
+    const record = records.find(r => r.id === (button.dataset.removeRecord||button.dataset.editRecord)); if (!record) return;
     try {
-      if (button.dataset.compare) {
-        const other = record.a.teacher === $('teaching-teacher').value ? record.b.teacher : record.a.teacher;
-        if (!teacherBy(other)) throw Error('此示範姓名尚未對應教師名單，請先核對。');
-        const otherSlot=record.a.teacher===$('teaching-teacher').value?record.b:record.a;
-        window.WEEKLY_SHOW_PARTNER(other,dayOf(otherSlot.date),otherSlot.row,weekOf(otherSlot.date));
-      } else if(button.dataset.editRecord){
+      if(button.dataset.editRecord){
         editingId=record.id;editingRevision=record.revision||0;$('entry-kind').value=record.kind;$('entry-teacher').value=record.a.teacher;$('entry-date').value=record.a.date;$('entry-leave').value=record.leaveType;$('entry-note').value=record.note||'';
         $('swap-week').value=String(weekOf(record.a.date));$('swap-other-week').value=String(weekOf(record.kind==='swap'?record.b.date:record.a.date));$('swap-teacher').value=record.a.teacher;if(record.a.classId)$('swap-class').value=record.a.classId;refreshSwapOptions();updateComparison();
         if(record.b){$('entry-partner').value=record.b.teacher;$('entry-other-date').value=record.b.date;}
         refreshForm();for(const [slot,id] of [[record.a,'entry-course'],[record.b,'entry-other-course']])if(slot?.subject){const index=courses(slot.teacher,slot.date).findIndex(s=>s.row===slot.row&&s.classId===slot.classId&&s.subject===slot.subject);if(index>=0)$(id).value=String(index);}
-        $('entry-submit').textContent=record.revision?'儲存修正並更新公開課表':'儲存草稿修正';$('entry-cancel-edit').hidden=false;$('teaching-form').scrollIntoView({block:'center',behavior:'smooth'});
-      } else if(button.dataset.publishRecord){
-        const previousEditing=editingId;editingId=record.id;try{validate(record);}finally{editingId=previousEditing;}saving=true;await publish(record);$('teaching-status').textContent='已送出，公開代調課查詢已同步更新。';
+        $('entry-submit').textContent='儲存修正並更新公開課表';$('entry-cancel-edit').textContent='放棄修正';$('entry-cancel-edit').hidden=false;$('teaching-form').scrollIntoView({block:'center',behavior:'smooth'});
       } else if(record.revision){
         if(!confirm('確定整筆刪除？公開課表會撤回此筆異動，行政端保留已刪除狀態。'))return;
         saving=true;await publish(record,'deleted');if(editingId===record.id)stopEditing();$('teaching-status').textContent='此筆已刪除，公開課表已撤回此筆異動。';
@@ -180,23 +159,42 @@
   $('entry-partner').addEventListener('change',()=>{if(workspace==='office')window.WEEKLY_SHOW_PARTNER($('entry-partner').value);});
   $('entry-other-date').addEventListener('change',()=>{const date=$('entry-other-date').value;if(workspace==='office'&&inTerm(date))window.WEEKLY_SHOW_PARTNER($('entry-partner').value,dayOf(date),undefined,weekOf(date));});
   window.TEACHING_SELECT=selection=>{
-    if(workspace!=='office'||editingId)return;
+    if(workspace!=='office'||editingId||photoReviewMode||saving)return;
     $('teaching-teacher').value=selection.teacher;$('teaching-week').value=String(selection.week);
     $('entry-teacher').value=selection.teacher;if(selection.date)$('entry-date').value=selection.date;
     refreshForm();if(selection.row){const index=courses(selection.teacher,selection.date).findIndex(s=>s.row===selection.row&&s.classId===$('swap-class').value);if(index>=0)$('entry-course').value=String(index);}
     render();
   };
   window.TEACHING_CANDIDATE=selection=>{
-    if(workspace!=='office')return;
+    if(workspace!=='office'||saving)return;
+    photoReviewMode=false;
     $('entry-kind').value='swap';$('entry-partner').value=selection.teacher;$('entry-other-date').value=selection.date;refreshForm();
     const index=courses(selection.teacher,selection.date).findIndex(s=>s.row===selection.row&&s.classId===$('swap-class').value);if(index>=0)$('entry-other-course').value=String(index);
   };
-  $('teaching-apply-local').addEventListener('click',async()=>{
-    if(!window.AUTH_MEMBER)return;
-    if(saving)return; saving=true;
-    try{for(const record of records.filter(r=>!r.demo&&!r.revision)){const previousEditing=editingId;editingId=record.id;try{validate(record);}finally{editingId=previousEditing;}await publish(record);}$('teaching-status').textContent='草稿已送出至公開課表；示範資料不會送出。';}catch(error){$('teaching-status').textContent=error.message;}finally{saving=false;}
-  });
-  window.addEventListener('cloud-course-records',event=>{records=[...records.filter(r=>!r.revision&&!event.detail.some(c=>c.id===r.id)),...event.detail];syncPreview();render();});
+  window.TEACHING_IMPORT_PHOTO=entry=>{
+    if(!window.AUTH_MEMBER||workspace!=='office')throw Error('請先登入教務處行政業務。');
+    if(saving)throw Error('正在儲存，請稍後。');
+    if(editingId)throw Error('請先完成或放棄目前的修正，再帶入照片課務。');
+    if(!teacherBy(entry.teacher)||!teacherBy(entry.partner))throw Error('請人工確認原教師及調／代課教師的完整姓名，須與教師名單一致。');
+    if(!inTerm(entry.date)||(entry.kind==='swap'&&!inTerm(entry.otherDate)))throw Error('請確認原課及交換日期為本學期週一至週五。');
+    const row=Number(entry.row),otherRow=Number(entry.otherRow);
+    if(!byId(entry.classId)||!Number.isInteger(row)||row<1||row>8)throw Error('請確認原課班級與1～8節的節次。');
+    const aMatches=courses(entry.teacher,entry.date).map((s,index)=>({...s,index})).filter(s=>s.row===row&&s.classId===entry.classId);
+    if(aMatches.length!==1)throw Error('原課日期、教師、節次及班級無法唯一對上基本課表，請重新核對，或直接在下方手動登錄。');
+    let bMatches=[];
+    if(entry.kind==='swap'){
+      bMatches=courses(entry.partner,entry.otherDate).map((s,index)=>({...s,index})).filter(s=>s.row===otherRow&&s.classId===entry.classId);
+      if(bMatches.length!==1)throw Error('交換教師、日期、節次及班級無法唯一對上基本課表，請重新核對。');
+    }
+    stopEditing();photoReviewMode=true;
+    $('entry-kind').value=entry.kind;$('entry-teacher').value=entry.teacher;$('entry-date').value=entry.date;$('entry-partner').value=entry.partner;$('entry-other-date').value=entry.kind==='swap'?entry.otherDate:entry.date;$('entry-leave').value='';$('entry-note').value='';
+    $('swap-week').value=String(weekOf(entry.date));$('swap-other-week').value=String(weekOf(entry.kind==='swap'?entry.otherDate:entry.date));$('swap-teacher').value=entry.teacher;$('swap-class').value=entry.classId;refreshSwapOptions();updateComparison();refreshForm();
+    $('entry-course').value=String(aMatches[0].index);if(bMatches.length)$('entry-other-course').value=String(bMatches[0].index);
+    window.WEEKLY_SHOW_PARTNER(entry.partner,dayOf(entry.kind==='swap'?entry.otherDate:entry.date),entry.kind==='swap'?otherRow:row);
+    $('entry-cancel-edit').hidden=false;$('entry-cancel-edit').textContent='放棄本次帶入';$('teaching-status').textContent='照片資料已帶入，尚未送出。科目依基本課表對應，請核對兩位教師、日期及節次，再送出。';
+    $('teaching-form').closest('details').open=true;$('teaching-form').scrollIntoView({behavior:'smooth',block:'center'});
+  };
+  window.addEventListener('cloud-course-records',event=>{records=event.detail;syncPreview();render();});
   window.addEventListener('authorization-changed',() => { if (!window.AUTH_MEMBER) { records=[];stopEditing();$('entry-note').value='';window.WEEKLY.setPreview([]); render(); } });
   refreshForm(); render();
 })();
