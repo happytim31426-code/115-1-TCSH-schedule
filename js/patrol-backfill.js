@@ -11,7 +11,11 @@
   $('backfill-observers').innerHTML=[...new Set([...D.teachers.map(t=>t.name),...[...$('patrol-roster').querySelectorAll('td')].map(c=>c.textContent.trim())])].map(n=>`<option value="${E(n)}"></option>`).join('');
   $('backfill-issues').innerHTML=issues.map((s,i)=>`<label><input type="checkbox" value="${i}">${E(s)}</label>`).join('');
   function gate(){
+    for(const box of $('backfill-preview').querySelectorAll('[data-history-check]')){const i=Number(box.dataset.historyCheck);const done=completed.has(i)||exists(parsed.entries[i]);box.disabled=!allowed()||busy||done;if(done)box.checked=false;}
     const checked=[...$('backfill-preview').querySelectorAll('[data-history-check]:checked')].filter(b=>!b.disabled).length;
+    const available=[...$('backfill-preview').querySelectorAll('[data-history-check]')].filter(b=>!b.disabled).length;
+    $('backfill-select-all').disabled=!allowed()||busy||!available||checked===available;
+    $('backfill-select-none').disabled=!allowed()||busy||!checked;
     for(const id of ['backfill-save','backfill-import','backfill-file','backfill-sheet-url','backfill-clear','backfill-add-class','backfill-retry'])$(id).disabled=!allowed()||busy||(['backfill-save','backfill-import'].includes(id)&&!loaded)||(id==='backfill-import'&&(!parsed||!parsed.entries.length||!checked))||(id==='backfill-add-class'&&$('backfill-extra-classes').children.length>=D.classes.length-1);
     $('backfill-import-gate').textContent=!allowed()?'請先以管理員帳號登入。':busy?'正在處理，請稍候。':fileError?`檔案未讀取：${fileError}`:!parsed?'請先貼上來源試算表網址（包含gid），再選擇「需處理106筆」CSV。選檔只在本機讀取，不會自動上傳。':!parsed.entries.length?'這份檔案沒有可批次匯入的問題班級；若是「文字待判讀198筆」，請在下方逐筆判讀後帶入補登。':!loaded?`檔案已讀取，但尚未連上雲端，暫不能匯入。${cloudError||'請按「重新檢查雲端連線」，確認帳號權限與Firestore規則。'}`:!checked?'檔案已讀取，請在上方勾選至少一筆「已核對，選取匯入」，按鈕才會開啟。':`已選取${checked}筆，可按下匯入。`;
     for(const fieldset of $('patrol-backfill-form').querySelectorAll('fieldset'))fieldset.disabled=busy;for(const id of ['backfill-date','backfill-period','backfill-observer'])$(id).disabled=busy;
@@ -36,6 +40,7 @@
   $('backfill-preview').onclick=e=>{const b=e.target.closest('[data-history-fill]');if(b)fill(parsed.entries[Number(b.dataset.historyFill)]);};
   $('backfill-other-notes').onclick=e=>{const b=e.target.closest('[data-history-note]');if(b)fill(parsed.notes[Number(b.dataset.historyNote)]);};
   $('backfill-preview').addEventListener('change',gate);
+  for(const [id,checked] of [['backfill-select-all',true],['backfill-select-none',false]])$(id).onclick=()=>{if(!allowed()||busy)return;for(const box of $('backfill-preview').querySelectorAll('[data-history-check]'))if(!box.disabled)box.checked=checked;gate();};
   $('backfill-retry').onclick=async()=>{if(!allowed()||busy)return;busy=true;gate();try{if(!window.PATROL_API?.reload)throw Error('登入服務尚未就緒，請重新整理並確認管理員登入。');await window.PATROL_API.reload();}catch(error){loaded=false;cloudError=error.code==='permission-denied'?'資料庫拒絕存取，請確認管理員權限與新版Firestore規則已發布。':error.message;$('backfill-status').textContent=cloudError;}finally{busy=false;gate();}};
   $('patrol-backfill-form').addEventListener('submit',async event=>{event.preventDefault();if(!allowed()||!loaded||busy)return;let sent=0;try{
     const teacher=$('backfill-teacher').value.trim(),subject=$('backfill-subject').value.trim(),e={date:$('backfill-date').value,period:Number($('backfill-period').value),observer:$('backfill-observer').value.trim(),classId:$('backfill-class').value,result:$('backfill-result').value,issues:[...$('backfill-issues').querySelectorAll('input:checked')].map(b=>issues[Number(b.value)]),note:$('backfill-note').value,lessons:teacher||subject?[{teacher:teacher||'待確認',subject:subject||'待確認'}]:[],origin:origin||{kind:'manual',documentId:'',gid:'',row:0}};
