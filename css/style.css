@@ -157,3 +157,11 @@ body[data-office-feature="teaching-plan"] .page-shell { width:calc(100% - 2rem);
 #event-teacher-groups label { display:inline-flex; align-items:center; margin:.4rem .8rem .4rem 0; }
 #event-teacher-selected { margin:.6rem 0; }
 .delete-confirm { border:1px solid var(--line); background:var(--subtle); border-radius:8px; padding:.7rem; margin-top:.7rem; }
+:root { --patrol-border: #bcd6d0; }
+.patrol-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,320px),1fr)); gap: 16px; margin: 20px 0; }
+.patrol-class { border: 1px solid var(--patrol-border); border-radius: 14px; padding: 18px; min-width: 0; }
+.patrol-class h3 { margin-top: 0; }
+.patrol-class label { display: block; margin: 10px 0; }
+.patrol-issues input[type="checkbox"] { width: auto; margin-right: 8px; }
+.patrol-class textarea { width: 100%; box-sizing: border-box; }
+#patrol-summary ul { columns: 2 250px; }

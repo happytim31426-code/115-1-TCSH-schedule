@@ -6,6 +6,7 @@
     <meta name="description" content="臺南慈濟高中 115 學年度第 1 學期課表查詢" />
     <title>115-1 課表查詢｜臺南慈濟高中</title>
     <link rel="stylesheet" href="css/style.css?v=20261020i" />
+    <link rel="stylesheet" href="css/patrol.css?v=20261020j" />
   </head>
   <body>
     <header class="hero">
@@ -13,6 +14,7 @@
         <button type="button" class="admin-header-button" id="public-open" aria-pressed="true">課表查詢</button>
         <button type="button" class="admin-header-button" id="office-open" aria-pressed="false">教務處行政業務</button>
         <button type="button" class="admin-header-button" id="admin-open" aria-pressed="false">管理者功能</button>
+        <button type="button" class="admin-header-button" id="patrol-open" aria-pressed="false">巡堂紀錄登錄</button>
       </nav>
       <p class="eyebrow">臺南慈濟高中</p>
       <h1 id="page-heading">115 學年度第 1 學期課表</h1>
@@ -33,7 +35,7 @@
           <form id="member-form" class="tool-grid">
             <label>姓名<input id="member-name" maxlength="80" required></label>
             <label>Google Email<input id="member-email" type="email" required></label>
-            <label>角色<select id="member-role"><option value="teacher">授權教師</option><option value="admin">管理員</option></select></label>
+            <label>角色<select id="member-role"><option value="teacher">授權教師</option><option value="patrol">巡堂登錄人員（僅自己的紀錄）</option><option value="admin">管理員</option></select></label>
             <label>狀態<select id="member-active"><option value="true">啟用</option><option value="false">停用</option></select></label>
             <button type="submit" class="action-button">儲存權限</button>
           </form>
@@ -73,9 +75,29 @@
             <option value="events">學校重要活動登錄</option>
             <option value="recruit" selected>招生教師名單規劃</option>
             <option value="teaching-plan">教學組代調課規劃</option>
-            <option value="patrol">巡堂紀錄表</option>
+            <option value="patrol">巡堂紀錄分析</option>
           </select>
         </div>
+      </section>
+      <section class="tool-card" id="patrol-entry" hidden>
+        <h2>巡堂紀錄登錄</h2>
+        <p>排班每次涵蓋兩節，請選擇實際巡堂的一節。未巡查不計入正常紀錄；資料僅限授權人員查閱。</p>
+        <form id="patrol-form">
+          <div class="tool-grid"><label>實際巡堂日期<input id="patrol-date" type="date" min="2026-08-31" max="2027-01-20" required></label><label>實際節次<select id="patrol-period"></select></label><label>年級<select id="patrol-grade"></select></label></div>
+          <p id="patrol-context"></p><p id="patrol-sync" role="status"></p>
+          <div id="patrol-classes" class="patrol-grid"></div>
+          <button type="submit" class="action-button" id="patrol-submit">送出本年級已巡查班級</button>
+          <button type="button" class="person-button" id="patrol-reset">清除未送出內容／取消修改</button>
+        </form>
+        <p id="patrol-status" role="status"></p>
+      </section>
+      <section class="tool-card" id="patrol-analysis" hidden>
+        <h2>巡堂紀錄分析</h2>
+        <div class="tool-grid"><label>學期週次<select id="patrol-filter-week"></select></label><label>年級<select id="patrol-filter-grade"></select></label><label>任課教師姓名<input id="patrol-filter-teacher" type="search" placeholder="選填，輸入部分姓名"></label><label>巡堂人員姓名<input id="patrol-filter-recorder" type="search" placeholder="選填"></label></div>
+        <p id="patrol-analysis-status" role="status"></p><div id="patrol-summary"></div>
+      </section>
+      <section class="tool-card" id="patrol-history" hidden>
+        <h2>巡堂登錄紀錄</h2><p>巡堂人員僅能查看、修正或刪除自己的紀錄；管理員可檢視全部。每頁五筆。</p><div id="patrol-records"></div>
       </section>
       <section class="tool-card" id="office-placeholder" hidden>
         <h2 id="office-feature-heading"></h2><p>此功能尚在規劃中。</p>
@@ -231,7 +253,7 @@
     <footer>資料來源：臺南慈濟高中 115 學年度第 1 學期課程表</footer>
     <script src="data/schedules.js"></script>
     <script src="js/weekly.js?v=20261020i"></script>
-    <script src="js/app.js?v=20261020e"></script>
+    <script src="js/app.js?v=20261020j"></script>
     <script src="js/weekly-comparison.js?v=20261020f"></script>
     <script src="js/record-pages.js?v=20261020g"></script>
     <script src="js/recruit.js?v=20261020i"></script>
@@ -240,6 +262,7 @@
     <script src="js/teachers.js?v=20261020g"></script>
     <script src="js/photo-import.js?v=20261020f"></script>
     <script src="js/firebase-config.js"></script>
-    <script type="module" src="js/backend.js?v=20261020i"></script>
+    <script src="js/patrol.js?v=20261020j"></script>
+    <script type="module" src="js/backend.js?v=20261020j"></script>
   </body>
 </html>

@@ -1,6 +1,7 @@
 const el = id => document.getElementById(id);
 let api, user = null, stopMember = () => {}, stopList = () => {}, stopPrivate=()=>{};
 let privateActive=false;
+let stopPatrol=()=>{};
 let repairLegacyLeaves=()=>{};
 const privateCollection=kind=>({recruit:'recruitmentRecords',course:'courseRecords',event:'schoolEvents'})[kind];
 const publicCollection=kind=>({recruit:'publicRecruitments',course:'publicCourseRecords',event:'publicSchoolEvents'})[kind];
@@ -16,12 +17,21 @@ function startPrivate(member){
 }
 function access(member) {
   window.AUTH_MEMBER = member;
-  if(api)startPrivate(member);
+  if(api)startPrivate(member?.role==='patrol'?null:member);
+  stopPatrol();
+  if(api&&['admin','patrol'].includes(member?.role)){
+    const ref=api.collection(api.db,'patrolRecords');
+    const source=member.role==='admin'?ref:api.query(ref,api.where('createdBy','==',user.uid));
+    stopPatrol=api.onSnapshot(source,{includeMetadataChanges:true},snapshot=>{
+      if(snapshot.metadata.fromCache||snapshot.metadata.hasPendingWrites)return;
+      window.dispatchEvent(new CustomEvent('cloud-patrol-records',{detail:snapshot.docs.map(d=>({...d.data(),id:d.id}))}));
+    },error=>window.dispatchEvent(new CustomEvent('patrol-sync-error',{detail:errorMessage(error)})));
+  }
   window.renderWorkspace?.();
   for (const id of ['recruit-save','recruit-load']) el(id).disabled = !member;
   if (!member) { el('member-list').replaceChildren(); el('recruit-cloud-status').textContent = ''; }
   window.dispatchEvent(new Event('authorization-changed'));
-  if(member)repairLegacyLeaves();else{el('leave-privacy-status').hidden=true;el('leave-privacy-status').textContent='';}
+  if(member && member.role!=='patrol')repairLegacyLeaves();else{el('leave-privacy-status').hidden=true;el('leave-privacy-status').textContent='';}
 }
 function errorMessage(error) {
   return ({'auth/unauthorized-domain':'請在 Firebase 驗證設定加入 happytim31426-code.github.io 授權網域。',
@@ -36,7 +46,7 @@ function memberList(snapshot) {
   for (const record of snapshot.docs) {
     const item = record.data(), button = document.createElement('button');
     button.type = 'button'; button.className = 'person-button';
-    button.textContent = `${item.name}｜${record.id}｜${item.role === 'admin' ? '管理員' : '授權教師'}｜${item.active ? '啟用' : '停用'}`;
+    button.textContent = `${item.name}｜${record.id}｜${item.role === 'admin' ? '管理員' : item.role==='patrol'?'巡堂登錄人員':'授權教師'}｜${item.active ? '啟用' : '停用'}`;
     button.disabled = record.id === user.email;
     button.addEventListener('click', () => {
       el('member-email').value = record.id; el('member-name').value = item.name;
@@ -54,6 +64,20 @@ async function initialize() {
   ]);
   const app = appSDK.initializeApp(window.FIREBASE_CONFIG);
   api = {...authSDK,...dbSDK,auth:authSDK.getAuth(app),db:dbSDK.getFirestore(app)};
+  window.PATROL_API={save:async entries=>{
+    if(!user||!['admin','patrol'].includes(window.AUTH_MEMBER?.role))throw Error('需要巡堂登錄權限。');
+    if(!Array.isArray(entries)||!entries.length||entries.length>43)throw Error('巡堂資料筆數不正確。');
+    const uid=user.uid,name=window.AUTH_MEMBER.name;
+    await api.runTransaction(api.db,async tx=>{
+      const refs=entries.map(e=>api.doc(api.db,'patrolRecords',e.id));
+      const old=await Promise.all(refs.map(ref=>tx.get(ref)));
+      entries.forEach((e,i)=>{
+        const existing=old[i].exists()?old[i].data():null;
+        if((existing?.revision||0)!==e.revision)throw Error('紀錄已被其他同仁更新，請重新載入。');
+        tx.set(refs[i],{...e.data,revision:e.revision+1,createdBy:existing?.createdBy||uid,createdName:existing?.createdName||name,createdAt:existing?.createdAt||api.serverTimestamp(),updatedBy:uid,updatedName:name,updatedAt:api.serverTimestamp()});
+      });
+    });
+  }};
   window.CLOUD_RECORDS={save:async(kind,id,payload,projection,revision)=>{
     if(!user||!window.AUTH_MEMBER)throw Error('請先以授權帳號登入。');
     if(!privateCollection(kind))throw Error('不支援的紀錄類型');
@@ -118,7 +142,7 @@ async function initialize() {
     stopMember = api.onSnapshot(api.doc(api.db,'members',user.email),{includeMetadataChanges:true}, snapshot => {
       stopList();
       const item = snapshot.exists() && !snapshot.metadata.fromCache ? snapshot.data() : null;
-      const member = item?.active === true && ['admin','teacher'].includes(item.role) ? item : null;
+      const member = item?.active === true && ['admin','teacher','patrol'].includes(item.role) ? item : null;
       access(member);
       el('account-status').textContent = `${user.email}｜${member ? (member.role === 'admin' ? '管理員' : '授權教師') : '尚無有效授權，請聯絡管理員。'}`;
       if (member?.role === 'admin') stopList = api.onSnapshot(api.collection(api.db,'members'),memberList,error => { el('member-message').textContent = errorMessage(error); });

@@ -25,7 +25,7 @@ service cloud.firestore {
         && request.resource.data.keys().hasOnly(['name', 'role', 'active', 'updatedAt', 'updatedBy'])
         && request.resource.data.name is string
         && request.resource.data.name.size() > 0 && request.resource.data.name.size() <= 80
-        && request.resource.data.role in ['admin', 'teacher']
+        && request.resource.data.role in ['admin', 'teacher', 'patrol']
         && request.resource.data.active is bool
         && request.resource.data.updatedAt == request.time
         && request.resource.data.updatedBy == request.auth.uid;
@@ -146,6 +146,51 @@ service cloud.firestore {
         && request.resource.data.keys().hasOnly(['week','name','effect','startDay','startRow','endDay','endRow','startClass','endClass','absentTeachers'])
         && getAfter(/databases/$(database)/documents/schoolEvents/$(id)).data.status == 'submitted';
       allow delete: if member();
+    }
+    function patrolUser() {
+      return signedIn()
+        && exists(/databases/$(database)/documents/members/$(selfEmail()))
+        && get(/databases/$(database)/documents/members/$(selfEmail())).data.active == true
+        && get(/databases/$(database)/documents/members/$(selfEmail())).data.role == 'patrol';
+    }
+    match /patrolRecords/{id} {
+      allow get: if admin() || (patrolUser() && (!exists(/databases/$(database)/documents/patrolRecords/$(id)) || resource.data.createdBy == request.auth.uid));
+      allow list: if admin() || (patrolUser() && resource.data.createdBy == request.auth.uid);
+      allow create: if (admin() || patrolUser()) && patrolFields(id)
+        && request.resource.data.status == 'submitted';
+      allow update: if (admin() || (patrolUser() && resource.data.createdBy == request.auth.uid)) && patrolFields(id)
+        && request.resource.data.date == resource.data.date && request.resource.data.week == resource.data.week
+        && request.resource.data.period == resource.data.period && request.resource.data.classId == resource.data.classId
+        && request.resource.data.className == resource.data.className && request.resource.data.grade == resource.data.grade
+        && request.resource.data.lessons == resource.data.lessons;
+      allow delete: if false;
+    }
+    function patrolLesson(list, index) {
+      return list.size() <= index || (list[index] is map
+        && list[index].keys().hasAll(['teacher','subject']) && list[index].keys().hasOnly(['teacher','subject'])
+        && list[index].teacher is string && list[index].teacher.size() <= 80
+        && list[index].subject is string && list[index].subject.size() <= 160);
+    }
+    function patrolFields(id) {
+      let r = request.resource.data;
+      return versioned('patrolRecords',id)
+        && r.keys().hasAll(['date','week','period','classId','className','grade','lessons','result','issues','note','status'])
+        && r.keys().hasOnly(['date','week','period','classId','className','grade','lessons','result','issues','note','status','revision','createdBy','createdName','createdAt','updatedBy','updatedName','updatedAt'])
+        && validDate(r.date) && r.week is int && r.week >= 1 && r.week <= 21
+        && r.period is int && r.period >= 1 && r.period <= 8
+        && r.classId is string && r.classId.size() > 0 && r.classId.size() <= 40
+        && r.className is string && r.className.size() <= 40
+        && r.grade in ['國一','國二','國三','高一','高二','高三']
+        && r.lessons is list && r.lessons.size() <= 12
+        && patrolLesson(r.lessons,0) && patrolLesson(r.lessons,1) && patrolLesson(r.lessons,2)
+        && patrolLesson(r.lessons,3) && patrolLesson(r.lessons,4) && patrolLesson(r.lessons,5)
+        && patrolLesson(r.lessons,6) && patrolLesson(r.lessons,7) && patrolLesson(r.lessons,8)
+        && patrolLesson(r.lessons,9) && patrolLesson(r.lessons,10) && patrolLesson(r.lessons,11)
+        && r.result in ['normal','issue'] && r.issues is list && r.issues.size() <= 9
+        && r.issues.hasOnly(['師生音量需控管','學生趴睡需提醒','3C使用管理待提升','老師遲到/缺課','師生互動待提升','桌椅未靠攏','外堂課門窗未關','電燈、電扇未關','外堂課電視未關'])
+        && r.note is string && r.note.size() <= 500
+        && (r.result == 'issue' ? (r.issues.size() > 0 || r.note.size() > 0) : r.issues.size() == 0)
+        && r.status in ['submitted','deleted'];
     }
     // Photo uploads remain disabled.
     match /{document=**} { allow read, write: if false; }

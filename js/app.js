@@ -93,14 +93,19 @@ function populateLookup(preferred) {
 function showMode() {
   const adminMode = workspace === 'admin';
   const officeMode = workspace === 'office';
-  const member = window.AUTH_MEMBER;
+  const member = window.AUTH_MEMBER?.role === 'patrol' ? null : window.AUTH_MEMBER;
   const feature = document.querySelector('#office-type').value;
   document.body.dataset.workspace = workspace;
   document.querySelector('#page-heading').textContent = adminMode ? '管理者功能' : officeMode ? '教務處行政業務' : '115 學年度第 1 學期課表';
   document.querySelector('#term-dates').hidden = workspace !== 'public';
   document.querySelector('#public-controls').hidden = workspace !== 'public';
   document.querySelector('#office-controls').hidden = !officeMode || !member;
-  document.querySelector('#office-placeholder').hidden = !officeMode || !member || feature !== 'patrol';
+  document.querySelector('#office-placeholder').hidden = true;
+  document.querySelector('#patrol-entry').hidden = workspace !== 'patrol' || !['admin','patrol'].includes(window.AUTH_MEMBER?.role);
+  document.querySelector('#patrol-analysis').hidden = !officeMode || window.AUTH_MEMBER?.role !== 'admin' || feature !== 'patrol';
+  document.querySelector('#patrol-history').hidden = document.querySelector('#patrol-entry').hidden && document.querySelector('#patrol-analysis').hidden;
+  document.querySelector('#patrol-open').setAttribute('aria-pressed', String(workspace === 'patrol'));
+  if(workspace === 'patrol') document.querySelector('#page-heading').textContent = '巡堂紀錄登錄';
   document.querySelector('#teaching-tool').hidden = !officeMode || !member || feature !== 'teaching-plan';
   for(const [id,type] of [['teaching-history-tool','teaching-plan'],['recruit-history-tool','recruit'],['events-tool','events'],['events-history-tool','events']]){const panel=document.getElementById(id);panel.hidden=!officeMode||!member||feature!==type;if(!panel.hidden)panel.parentElement.append(panel);}
   const officeComparison = officeMode && !!member && feature === 'teaching-plan';
@@ -113,6 +118,13 @@ function showMode() {
   document.querySelector('#account-heading').textContent = adminMode ? '管理者功能' : '授權登入';
   document.querySelector('#member-admin').classList.toggle('is-hidden', !adminMode || window.AUTH_MEMBER?.role !== 'admin');
   document.querySelector('#admin-access-note').classList.toggle('is-hidden', !adminMode || window.AUTH_MEMBER?.role === 'admin');
+  if(workspace==='patrol' && !['admin','patrol'].includes(window.AUTH_MEMBER?.role)){
+    document.querySelector('#admin-access-note').textContent='請使用管理員或巡堂登錄人員帳號登入；一般授權教師不自動取得巡堂資料權限。';
+    document.querySelector('#admin-access-note').classList.remove('is-hidden');
+  }else if(officeMode && feature==='patrol' && window.AUTH_MEMBER?.role!=='admin'){
+    document.querySelector('#admin-access-note').textContent='全校巡堂紀錄分析僅供管理員使用。';
+    document.querySelector('#admin-access-note').classList.remove('is-hidden');
+  }else document.querySelector('#admin-access-note').textContent='此功能僅供管理員使用，請使用管理員 Google 帳號登入。';
   document.querySelector('#admin-open').setAttribute('aria-pressed', String(adminMode));
   document.querySelector('#office-open').setAttribute('aria-pressed', String(officeMode));
   document.querySelector('#public-open').setAttribute('aria-pressed', String(workspace === 'public'));
@@ -199,6 +211,7 @@ function recruitSearch() {
   document.querySelector("#recruit-results").innerHTML = `<h3>星期${data.meta.days[day]} 可招生教師</h3><p class="result-note">第一、二節皆無課</p><h4>非導師</h4><ul class="result-list">${list(nonHomeroom) || "<li>無</li>"}</ul><h4>導師</h4><ul class="result-list">${list(homeroom) || "<li>無</li>"}</ul><h4>第一節無課、第二節有課</h4><ul class="result-list">${list(secondBusy) || "<li>無</li>"}</ul>`;
 }
 window.renderWorkspace = showMode;
+document.querySelector('#patrol-open').addEventListener('click', () => { workspace = 'patrol'; showMode(); });
 document.querySelector('#admin-open').addEventListener('click', () => { workspace = 'admin'; showMode(); });
 document.querySelector('#office-open').addEventListener('click', () => { workspace = 'office'; showMode(); });
 document.querySelector('#public-open').addEventListener('click', () => { workspace = 'public'; showMode(); });

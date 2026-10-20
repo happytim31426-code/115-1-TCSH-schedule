@@ -1,0 +1,7 @@
+.patrol-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:16px; margin:20px 0; }
+.patrol-class { border:1px solid #9dbdb5; border-radius:14px; padding:18px; min-width:0; }
+.patrol-class h3 { margin-top:0; }
+.patrol-class label { display:block; margin:10px 0; }
+.patrol-issues input[type="checkbox"] { width:auto; margin-right:8px; }
+.patrol-class textarea { width:100%; box-sizing:border-box; }
+#patrol-summary ul { columns:2 250px; }
