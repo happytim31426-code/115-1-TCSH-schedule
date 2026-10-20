@@ -101,6 +101,7 @@ function showMode() {
   document.querySelector('#office-controls').hidden = !officeMode || !member;
   document.querySelector('#office-placeholder').hidden = !officeMode || !member || feature !== 'patrol';
   document.querySelector('#teaching-tool').hidden = !officeMode || !member || feature !== 'teaching-plan';
+  for(const [id,type] of [['teaching-history-tool','teaching-plan'],['recruit-history-tool','recruit'],['events-tool','events'],['events-history-tool','events']]){const panel=document.getElementById(id);panel.hidden=!officeMode||!member||feature!==type;if(!panel.hidden)panel.parentElement.append(panel);}
   const officeComparison = officeMode && !!member && feature === 'teaching-plan';
   if (officeComparison) document.querySelector('#teaching-comparison-host').append(swapTool);
   else publicSwapAnchor.after(swapTool);

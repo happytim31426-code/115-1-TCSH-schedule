@@ -62,7 +62,7 @@ body[data-workspace="public"]:has(#view-type option[value="swap"]:checked) .page
 @media(max-width:900px) { .comparison-grid { grid-template-columns:1fr; } }
 .recruit-columns { display:grid; grid-template-columns:1fr; gap:1.5rem; margin-bottom:1.5rem; }
 .recruit-groups { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1rem; }
-.tool-grid.recruit-filters { grid-template-columns:repeat(2,minmax(0,14rem)); }
+.tool-grid.recruit-filters { grid-template-columns:repeat(3,minmax(0,1fr)); }
 .person-list,.assigned-list { display:flex; flex-wrap:wrap; gap:.5rem; }
 .person-button { border:1px solid var(--line); border-radius:8px; padding:.45rem .6rem; background:var(--paper); color:var(--ink); cursor:pointer; font:inherit; }
 .person-button:disabled { opacity:.45; cursor:not-allowed; }
@@ -89,6 +89,10 @@ body[data-workspace="public"]:has(#view-type option[value="swap"]:checked) .page
 .admin-header-button:focus-visible { outline:3px solid white; outline-offset:3px; }
 #teaching-tool input { width:100%; min-width:0; max-width:100%; padding:.65rem; border:1px solid var(--line); border-radius:8px; background:var(--paper); color:var(--ink); font:inherit; }
 #teaching-tool .tool-grid > label { min-width:0; }
+#events-tool input { width:100%; min-width:0; padding:.65rem; border:1px solid var(--line); border-radius:8px; background:var(--paper); color:var(--ink); font:inherit; }
+#events-tool .tool-grid > label { min-width:0; }
+#events-form > .tool-grid:first-child > label:last-child { grid-column:span 2; }
+@media(max-width:600px) { #events-form > .tool-grid:first-child > label:last-child { grid-column:auto; } }
 #account-status { overflow-wrap:anywhere; }
 .teaching-actions,.teaching-legend { display:flex; flex-wrap:wrap; gap:.6rem; margin:1rem 0; }
 .teaching-legend span { padding:.3rem .55rem; background:var(--subtle); border-radius:6px; font-size:.8rem; }
@@ -129,3 +133,7 @@ body[data-workspace="public"] .comparison-grid .slot-label { display:none !impor
 body[data-office-feature="teaching-plan"] .page-shell { width:calc(100% - 2rem); max-width:1900px; }
 @media(max-width:800px) { .swap-filters { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:480px) { .swap-filters { grid-template-columns:1fr; } }
+@media(max-width:650px) { .tool-grid.recruit-filters { grid-template-columns:1fr; } }
+.record-meta { font-size:.85rem; color:var(--muted); }
+.event-tag { background:#e4edf9; color:#224876; }
+.event-blocked { box-shadow:inset 0 0 0 1px #b7c8dd; }

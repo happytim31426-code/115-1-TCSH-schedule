@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="臺南慈濟高中 115 學年度第 1 學期課表查詢" />
     <title>115-1 課表查詢｜臺南慈濟高中</title>
-    <link rel="stylesheet" href="css/style.css?v=20261020b" />
+    <link rel="stylesheet" href="css/style.css?v=20261020d" />
   </head>
   <body>
     <header class="hero">
@@ -58,7 +58,8 @@
       <section class="controls" id="office-controls" aria-label="教務處行政業務查詢" hidden>
         <div class="control-group grow"><label for="office-type">行政業務查詢類型</label>
           <select id="office-type">
-            <option value="recruit">招生教師名單規劃</option>
+            <option value="events">學校重要活動登錄</option>
+            <option value="recruit" selected>招生教師名單規劃</option>
             <option value="teaching-plan">教學組代調課規劃</option>
             <option value="patrol">巡堂紀錄表</option>
           </select>
@@ -103,10 +104,34 @@
             <button type="button" class="person-button" id="entry-cancel-edit" hidden>放棄修正</button>
           </form>
         </details>
-        <h3>本週相關紀錄</h3>
-        <p>點「對照」可查看另一位教師；跨週調課可切換到對應週次。示範紀錄只供操作討論。</p>
+      </section>
+
+      <section class="tool-card" id="teaching-history-tool" hidden>
+        <h2>代調課登錄紀錄（跨日期）</h2>
+        <p>列出所有週次的紀錄；刪除會撤回公開課表異動，行政端保留刪除狀態供查核。</p>
         <div id="teaching-records"></div>
       </section>
+      <section class="tool-card" id="recruit-history-tool" hidden>
+        <h2>招生安排登錄紀錄（跨日期）</h2>
+        <div id="recruit-records"></div>
+      </section>
+      <section class="tool-card" id="events-tool" hidden>
+        <h2>學校重要活動登錄</h2>
+        <p>班級依國一、國二、國三、高一、高二、高三排序，起訖班級皆包含。活動會標註在每週代調課表，並禁止範圍內的代調課。</p>
+        <form id="events-form">
+          <div class="tool-grid">
+            <label>學期週次<select id="event-week"></select></label>
+            <label>活動名稱<input id="event-name" maxlength="80" required placeholder="例如：第一次定期考查"></label>
+            <label>課務處理<select id="event-effect"><option value="blocked">保留課程，但禁止代調課（如定期考查）</option><option value="no-class">活動期間無一般課程（如連假、戶外教育）</option></select></label>
+          </div>
+          <div class="tool-grid"><label>開始星期<select id="event-start-day"></select></label><label>開始節次<select id="event-start-row"></select></label><label>結束星期<select id="event-end-day"></select></label><label>結束節次<select id="event-end-row"></select></label></div>
+          <div class="tool-grid"><label>開始班級<select id="event-start-class"></select></label><label>結束班級<select id="event-end-class"></select></label></div>
+          <button type="submit" class="action-button" id="event-submit">送出重要活動</button>
+          <button type="button" class="person-button" id="event-cancel-edit" hidden>放棄修改</button>
+        </form>
+        <p id="event-status" role="status"></p>
+      </section>
+      <section class="tool-card" id="events-history-tool" hidden><h2>重要活動登錄紀錄（跨日期）</h2><div id="event-records"></div></section>
 
       <section class="tool-card is-hidden" id="swap-tool">
         <h2>代調課</h2>
@@ -169,12 +194,13 @@
     </main>
     <footer>資料來源：臺南慈濟高中 115 學年度第 1 學期課程表</footer>
     <script src="data/schedules.js"></script>
-    <script src="js/weekly.js?v=20261020c"></script>
-    <script src="js/app.js?v=20261020b"></script>
-    <script src="js/weekly-comparison.js?v=20261020b"></script>
-    <script src="js/recruit.js?v=20261020c"></script>
-    <script src="js/teaching.js?v=20261020c"></script>
+    <script src="js/weekly.js?v=20261020d"></script>
+    <script src="js/app.js?v=20261020d"></script>
+    <script src="js/weekly-comparison.js?v=20261020d"></script>
+    <script src="js/recruit.js?v=20261020d"></script>
+    <script src="js/teaching.js?v=20261020d"></script>
+    <script src="js/events.js?v=20261020d"></script>
     <script src="js/firebase-config.js"></script>
-    <script type="module" src="js/backend.js?v=20261020c"></script>
+    <script type="module" src="js/backend.js?v=20261020d"></script>
   </body>
 </html>

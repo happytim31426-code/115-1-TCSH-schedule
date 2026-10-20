@@ -12,7 +12,7 @@
   let saved=new Map(), drafts=new Map(), editing=false, pending=false;
   const date=()=>W.dateFor(Number(weekSelect.value),Number(daySelect.value));
   let selectedDate=date();
-  const periodBusy=(name,row)=>W.lessons(name,date(),row,'admin').length>0||W.leaves(name,date(),'admin').length>0;
+  const periodBusy=(name,row)=>W.lessons(name,date(),row,'admin').length>0||W.leaves(name,date(),'admin').length>0||W.teacherEventBusy(name,date(),row);
   const roster = document.querySelector('#recruit-roster');
   const schoolArea = document.querySelector('#school-plans');
   const message = document.querySelector('#recruit-message');
@@ -27,7 +27,8 @@
   }
   function render() {
     const current=saved.get(date()),locked=pending||(current?.status==='submitted'&&!editing);
-    document.querySelector('#recruit-publication-status').textContent=`${W.formatDate(date())}｜${current?.status==='submitted'&&!editing?'已送出':current?.status==='cancelled'?'已取消':'草稿／待送出'}${pending?'（儲存中…）':''}`;
+    document.querySelector('#recruit-publication-status').textContent=`${W.formatDate(date())}｜${current?.status==='submitted'&&!editing?'已送出':current?.status==='cancelled'?'已取消':current?.status==='deleted'?'已刪除':'草稿／待送出'}${current?`｜${W.auditText(current)}`:''}${pending?'（儲存中…）':''}`;
+    document.querySelector('#recruit-records').innerHTML=[...saved.values()].sort((a,b)=>b.date.localeCompare(a.date)).map(r=>`<article class="teaching-record"><b>第${r.week}週 ${W.formatDate(r.date)}｜${({submitted:'已送出',returned:'已退回',cancelled:'已取消',deleted:'已刪除'})[r.status]||'草稿'}</b><p class="record-meta">${W.esc(W.auditText(r))}</p>${r.plans.map((p,i)=>`<p>第${i+1}間｜帶隊：${W.esc(p.leader||'未選')}｜入班：${p.members.map(W.esc).join('、')||'無'}｜需求${p.need}人｜${p.long?'車程超過30分鐘':'車程30分鐘內'}</p>`).join('')}${r.status!=='deleted'?`<button type="button" class="person-button" data-recruit-open="${r.date}">查看／修正</button><button type="button" class="person-button" data-recruit-delete="${r.date}">整筆刪除</button>`:''}</article>`).join('')||'<p>目前尚無已儲存的招生紀錄。</p>';
     document.querySelector('#recruit-publish').hidden=locked;
     for(const id of ['recruit-recall','recruit-cancel'])document.querySelector('#'+id).hidden=current?.status!=='submitted'||pending;
     document.querySelector('#school-count').disabled=locked;
@@ -86,13 +87,14 @@
       if(!window.CLOUD_RECORDS)throw Error('雲端尚未就緒，請確認登入、網路及新版 Firestore 規則。');
       const current=saved.get(date()),record={week:Number(weekSelect.value),day:Number(daySelect.value),date:date(),plans:JSON.parse(JSON.stringify(plans)),status};
       const people=plans.flatMap(p=>[p.leader,...p.members].filter(Boolean).map(name=>({name,long:p.long})));
-      pending=true;render();await window.CLOUD_RECORDS.save('recruit',date(),record,{date:date(),people:status==='submitted'?people:[]},current?.revision||0);
+      pending=true;render();await window.CLOUD_RECORDS.save('recruit',date(),record,status==='deleted'?null:{date:date(),people:status==='submitted'?people:[]},current?.revision||0);
       editing=false;say(status==='submitted'?'已送出，公開代調課同步顯示招生標記。':status==='returned'?'已整筆退回，可修正後再次送出；公開標記已移除。':'已取消；公開標記已移除。');
     }catch(error){say(error.message);}finally{pending=false;render();}
   }
   document.querySelector('#recruit-publish').addEventListener('click',()=>transition('submitted'));
   document.querySelector('#recruit-recall').addEventListener('click',()=>transition('returned'));
   document.querySelector('#recruit-cancel').addEventListener('click',()=>{if(confirm('確定取消此日整筆招生安排？'))transition('cancelled');});
+  document.querySelector('#recruit-records').addEventListener('click',async event=>{const b=event.target.closest('[data-recruit-open],[data-recruit-delete]');if(!b||!window.AUTH_MEMBER||pending)return;const r=saved.get(b.dataset.recruitOpen||b.dataset.recruitDelete);if(!r)return;weekSelect.value=String(r.week);daySelect.value=String(r.day);switchDate();if(b.dataset.recruitDelete){if(confirm('整筆刪除此日招生安排？公開招生標記會移除，行政端保留刪除狀態。'))await transition('deleted');}else{say(r.status==='submitted'?'請先按「整筆退回修正」，再修改名單並重新送出。':'可直接修正後重新送出。');document.querySelector('#recruit-tool').scrollIntoView({behavior:'smooth'});}});
   window.addEventListener('cloud-recruit-records',event=>{const previous=saved.get(date());saved=new Map(event.detail.map(r=>[r.date,r]));const current=saved.get(date());if(current&&current.revision!==previous?.revision){plans=JSON.parse(JSON.stringify(current.plans));document.querySelector('#school-count').value=String(plans.length);active=Math.min(active,plans.length-1);}render();});
   window.addEventListener('authorization-changed',()=>{if(!window.AUTH_MEMBER){saved.clear();drafts.clear();plans=[createSchool()];active=0;document.querySelector('#school-count').value='1';render();}});
   window.RECRUIT_PLANNER = {

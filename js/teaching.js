@@ -14,7 +14,7 @@
   const at = (slot,date,row) => slot && slot.date === date && slot.row === row;
   let records = [];
   let editingId=null, editingRevision=0, saving=false;
-  const effective=()=>records.filter(r=>r.status!=='cancelled');
+  const effective=()=>records.filter(r=>!['cancelled','deleted'].includes(r.status));
   function syncPreview(){
     window.WEEKLY.setPreview(effective());
   }
@@ -75,8 +75,11 @@
       const incoming = change.incoming.map(({record:r,lesson,label}) => `<div class="lesson-change"><b>${label}${r.demo ? '・示範' : ''}</b><br>${esc(lesson.subject)}<br>${esc(className(lesson.classId))}／${label === '代' ? '代' : '調'}<br>${label === '代' ? `原教師：${esc(lesson.teacher)}` : `原課：${lesson.date} 第${lesson.row}節`}</div>`).join('');
       return `<td>${original ? `<div class="lesson-original">${change.outgoing.length ? '原：' : '原有課程：'}${original}</div>` : ''}${outgoing}${incoming}</td>`;
     }).join('')}</tr>`).join('')}</tbody></table>`;
-    const visible = records.filter(r => related(r,name) && (weekOf(r.a.date) === week || (r.kind === 'swap' && weekOf(r.b.date) === week)));
-    $('teaching-records').innerHTML = visible.map(r => `<article class="teaching-record"><b>${r.demo ? '示範・未核對' : r.status==='submitted'?'已送出':r.status==='cancelled'?'已取消':'此頁暫存預覽'}</b><p>${esc(describe(r))}</p>${r.note ? `<p>${esc(r.note)}</p>` : ''}${r.b ? `<button class="person-button" type="button" data-compare="${esc(r.id)}">對照 ${esc(r.a.teacher === name ? r.b.teacher : r.a.teacher)}</button>` : ''}${!r.demo&&r.status!=='cancelled'?`<button type="button" class="person-button" data-edit-record="${esc(r.id)}">修正</button><button type="button" class="person-button" data-publish-record="${esc(r.id)}">${r.status==='submitted'?'重新送出':'送出至公開課表'}</button>`:''}${r.status!=='cancelled'?`<button class="person-button" type="button" data-remove-record="${esc(r.id)}">${r.revision?'取消此筆':'移除預覽'}</button>`:''}</article>`).join('') || '<p>這一週沒有此教師的課務紀錄。</p>';
+    const visible = [...records].sort((a,b)=>b.a.date.localeCompare(a.a.date)||(b.order||0)-(a.order||0));
+    $('teaching-records').innerHTML = visible.map(r => {
+      const inactive=['cancelled','deleted'].includes(r.status);
+      return `<article class="teaching-record"><b>${r.demo?'示範・未核對':r.status==='submitted'?'已送出':r.status==='deleted'?'已刪除':r.status==='cancelled'?'已取消':'未送出草稿'}</b><p>${esc(describe(r))}</p><p class="record-meta">${esc(window.WEEKLY.auditText(r))}</p>${r.note?`<p>${esc(r.note)}</p>`:''}${r.b?`<button class="person-button" type="button" data-compare="${esc(r.id)}">對照 ${esc(r.b.teacher)}</button>`:''}${!r.demo&&!inactive?`<button type="button" class="person-button" data-edit-record="${esc(r.id)}">修正</button><button type="button" class="person-button" data-publish-record="${esc(r.id)}">${r.status==='submitted'?'重新送出':'送出至公開課表'}</button>`:''}${!inactive?`<button class="person-button" type="button" data-remove-record="${esc(r.id)}">${r.revision?'整筆刪除':'移除預覽'}</button>`:''}</article>`;
+    }).join('') || '<p>目前尚無登錄紀錄。</p>';
   }
   function slotFrom(name,date,selectId) {
     const value = $(selectId).value;
@@ -84,10 +87,12 @@
     if (!session) throw Error('請選擇當天的授課課程。');
     return {teacher:name,date,row:session.row,classId:session.classId || '',subject:session.subject};
   }
-  function occupied(name,date,row) { const scope=effective().filter(r=>r.id!==editingId);return window.WEEKLY.lessons(name,date,row,scope).length>0||window.WEEKLY.leaves(name,date,scope).length>0||window.WEEKLY.recruiting(name,date); }
+  function occupied(name,date,row) { const W=window.WEEKLY,scope=effective().filter(r=>r.id!==editingId);return W.lessons(name,date,row,scope).length>0||W.leaves(name,date,scope).length>0||W.recruitBusy(name,date,row)||W.teacherEventBusy(name,date,row); }
   function validate(record) {
     if (!inTerm(record.a.date) || (record.kind === 'swap' && !inTerm(record.b.date))) throw Error('日期須在本學期週一至週五之內。');
     if (record.kind === 'leave') { if (!record.leaveType) throw Error('請選擇假別。'); return; }
+    for(const slot of [record.a,...(record.kind==='swap'?[record.b]:[])])if(window.WEEKLY.recruitBusy(slot.teacher,slot.date,slot.row))throw Error('教師此節已安排招生，不能代調課。');
+    for(const slot of [record.a,...(record.kind==='swap'?[record.b]:[])])if(window.WEEKLY.activityBlocked(slot.classId,slot.date,slot.row))throw Error('該班級此節有學校重要活動，不能代調課。');
     if (record.a.teacher === record.b.teacher) throw Error('請選擇不同的代課／交換教師。');
     if (effective().some(r => r.id!==record.id && r.kind !== 'leave' && [r.a,r.b].some(s => s && ((s.teacher === record.a.teacher && at(s,record.a.date,record.a.row)) || (record.kind === 'swap' && s.teacher === record.b.teacher && at(s,record.b.date,record.b.row)))))) throw Error('原課程已有代調課紀錄，請先修正或取消舊紀錄。');
     if (occupied(record.b.teacher,record.a.date,record.a.row)) throw Error('代課／交換教師在原課時段已有課，請核對衝堂。');
@@ -153,14 +158,15 @@
         window.WEEKLY_SHOW_PARTNER(other);
       } else if(button.dataset.editRecord){
         editingId=record.id;editingRevision=record.revision||0;$('entry-kind').value=record.kind;$('entry-teacher').value=record.a.teacher;$('entry-date').value=record.a.date;$('entry-leave').value=record.leaveType;$('entry-note').value=record.note||'';
+        $('swap-week').value=String(weekOf(record.a.date));$('swap-teacher').value=record.a.teacher;if(record.a.classId)$('swap-class').value=record.a.classId;refreshSwapOptions();updateComparison();
         if(record.b){$('entry-partner').value=record.b.teacher;$('entry-other-date').value=record.b.date;}
         refreshForm();for(const [slot,id] of [[record.a,'entry-course'],[record.b,'entry-other-course']])if(slot?.subject){const index=courses(slot.teacher,slot.date).findIndex(s=>s.row===slot.row&&s.classId===slot.classId&&s.subject===slot.subject);if(index>=0)$(id).value=String(index);}
         $('entry-submit').textContent=record.revision?'儲存修正並更新公開課表':'儲存草稿修正';$('entry-cancel-edit').hidden=false;$('teaching-form').scrollIntoView({block:'center',behavior:'smooth'});
       } else if(button.dataset.publishRecord){
         const previousEditing=editingId;editingId=record.id;try{validate(record);}finally{editingId=previousEditing;}saving=true;await publish(record);$('teaching-status').textContent='已送出，公開代調課查詢已同步更新。';
       } else if(record.revision){
-        if(!confirm('確定取消此筆紀錄？公開課表會恢復未套用此筆的狀態。'))return;
-        saving=true;await publish(record,'cancelled');if(editingId===record.id)stopEditing();$('teaching-status').textContent='此筆已取消，取消紀錄保留供查閱。';
+        if(!confirm('確定整筆刪除？公開課表會撤回此筆異動，行政端保留已刪除狀態。'))return;
+        saving=true;await publish(record,'deleted');if(editingId===record.id)stopEditing();$('teaching-status').textContent='此筆已刪除，公開課表已撤回此筆異動。';
       } else {
         records = records.filter(r => r !== record);
         syncPreview();

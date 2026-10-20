@@ -8,7 +8,7 @@
   window.WEEKLY_SHOW_PARTNER=(name,day,row)=>{partner={name,key:selectionKey(),day,row};comparisonTeacher(name,'#swap-right');highlightComparison(day,row);};
   const date=day=>W.dateFor(week(),day);
   const origins=(name,schedule,day,row)=>W.lessons(name,date(day),row,scope()).filter(s=>s.classId===schedule.id);
-  const isBlocked=(lesson,day,row)=>blocked({subject:lesson.subject,runningClass:lesson.grouped||false},byId(lesson.classId),day,row);
+  const isBlocked=(lesson,day,row)=>W.recruitBusy(lesson.teacher,date(day),row)||W.activityBlocked(lesson.classId,date(day),row)||blocked({subject:lesson.subject,runningClass:lesson.grouped||false},byId(lesson.classId),day,row);
   eligibleOrigin=(name,schedule,day,row)=>row>=1&&row<=8&&origins(name,schedule,day,row).length>0;
   teachesClass=(name,classId)=>data.meta.days.some((_,day)=>rows.some((_,row)=>origins(name,byId(classId),day,row).length>0));
   refreshSwapOptions=(onlyPeriods=false)=>{
@@ -38,7 +38,7 @@
   };
   comparisonTeacher=(name,panel)=>{document.querySelector(panel).innerHTML=W.table(name,week(),scope());};
   function classTable(schedule){
-    return `<h3>${W.esc(schedule.name)} ${W.esc(schedule.publicCode)}</h3><div class="table-wrap"><table><thead><tr><th>第${week()}週</th>${data.meta.days.map((_,d)=>W.header(date(d),d)).join('')}</tr></thead><tbody>${rows.map((p,row)=>`<tr><td>${p.period.name}</td>${data.meta.days.map((_,d)=>{
+    return `<h3>${W.esc(schedule.name)} ${W.esc(schedule.publicCode)}</h3><div class="table-wrap"><table><thead><tr><th>第${week()}週</th>${data.meta.days.map((_,d)=>W.header(date(d),d,W.classEvents(schedule.id,date(d)))).join('')}</tr></thead><tbody>${rows.map((p,row)=>`<tr><td>${p.period.name}</td>${data.meta.days.map((_,d)=>{
       const list=W.classLessons(schedule.id,date(d),row,scope()),latest=list.find(s=>s.change)?.change;
       return `<td class="weekly-cell ${latest?W.tone(latest,week(),scope()):''}" data-slot-day="${d}" data-slot-row="${row}">${list.map(s=>`<div class="weekly-lesson">${s.mark?`<span class="change-circle">${s.mark}</span>`:''}<div class="course">${W.esc(s.subject)}</div><small>${W.esc(s.teacher||'待確認')}</small></div>`).join('<hr>')}</td>`;
     }).join('')}</tr>`).join('')}</tbody></table></div>`;

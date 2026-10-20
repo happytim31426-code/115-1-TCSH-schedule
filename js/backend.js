@@ -1,14 +1,16 @@
 const el = id => document.getElementById(id);
 let api, user = null, stopMember = () => {}, stopList = () => {}, stopPrivate=()=>{};
 let privateActive=false;
+const privateCollection=kind=>({recruit:'recruitmentRecords',course:'courseRecords',event:'schoolEvents'})[kind];
+const publicCollection=kind=>({recruit:'publicRecruitments',course:'publicCourseRecords',event:'publicSchoolEvents'})[kind];
 function startPrivate(member){
   if(!!member===privateActive)return;
   stopPrivate();privateActive=!!member;
-  if(!member){for(const kind of ['recruit','course'])window.dispatchEvent(new CustomEvent(`cloud-${kind}-records`,{detail:[]}));return;}
-  const stops=['recruit','course'].map(kind=>api.onSnapshot(api.collection(api.db,kind==='recruit'?'recruitmentRecords':'courseRecords'),{includeMetadataChanges:true},snapshot=>{
+  if(!member){for(const kind of ['recruit','course','event'])window.dispatchEvent(new CustomEvent(`cloud-${kind}-records`,{detail:[]}));return;}
+  const stops=['recruit','course','event'].map(kind=>api.onSnapshot(api.collection(api.db,privateCollection(kind)),{includeMetadataChanges:true},snapshot=>{
     if(snapshot.metadata.fromCache||snapshot.metadata.hasPendingWrites)return;
     window.dispatchEvent(new CustomEvent(`cloud-${kind}-records`,{detail:snapshot.docs.map(d=>({...d.data(),id:d.id}))}));
-  },error=>{el(kind==='recruit'?'recruit-message':'teaching-status').textContent=errorMessage(error);}));
+  },error=>{el(kind==='recruit'?'recruit-message':kind==='event'?'event-status':'teaching-status').textContent=errorMessage(error);}));
   stopPrivate=()=>stops.forEach(stop=>stop());
 }
 function access(member) {
@@ -52,21 +54,23 @@ async function initialize() {
   api = {...authSDK,...dbSDK,auth:authSDK.getAuth(app),db:dbSDK.getFirestore(app)};
   window.CLOUD_RECORDS={save:async(kind,id,payload,projection,revision)=>{
     if(!user||!window.AUTH_MEMBER)throw Error('請先以授權帳號登入。');
-    const ref=api.doc(api.db,kind==='recruit'?'recruitmentRecords':'courseRecords',id);
-    const pub=api.doc(api.db,kind==='recruit'?'publicRecruitments':'publicCourseRecords',id);
+    if(!privateCollection(kind))throw Error('不支援的紀錄類型');
+    const ref=api.doc(api.db,privateCollection(kind),id);
+    const pub=api.doc(api.db,publicCollection(kind),id);
     try{await api.runTransaction(api.db,async transaction=>{
       const old=await transaction.get(ref),actual=old.exists()?old.data().revision:0;
       if(actual!==revision)throw Error('其他同仁已更新此筆資料，請重新載入後再修正。');
-      transaction.set(ref,{...payload,revision:actual+1,updatedAt:api.serverTimestamp(),updatedBy:user.uid});
+      const existing=old.exists()?old.data():null;
+      transaction.set(ref,{...payload,revision:actual+1,updatedAt:api.serverTimestamp(),updatedBy:user.uid,updatedName:window.AUTH_MEMBER.name,createdName:existing?(existing.createdName||'舊紀錄未記名'):window.AUTH_MEMBER.name,createdBy:existing?.createdBy||existing?.updatedBy||user.uid,createdAt:existing?.createdAt||existing?.updatedAt||api.serverTimestamp()});
       if(projection)transaction.set(pub,projection);else transaction.delete(pub);
     });}catch(error){throw Error(error.code?errorMessage(error):error.message);}
   }};
-  let publicCourses=[],publicRecruitments=[],loaded=new Set();
+  let publicCourses=[],publicRecruitments=[],publicEvents=[],loaded=new Set();
   window.WEEKLY.setPublished([],false,'正在讀取雲端最新課務與招生安排…');
-  const syncPublic=()=>{window.WEEKLY.setPublished(publicCourses,loaded.size===2,loaded.size===2?'已同步雲端最新課務與招生安排。':'正在讀取雲端最新課務與招生安排…');window.WEEKLY.setRecruitments(publicRecruitments);};
-  for(const kind of ['course','recruit'])api.onSnapshot(api.collection(api.db,kind==='course'?'publicCourseRecords':'publicRecruitments'),{includeMetadataChanges:true},snapshot=>{
+  const syncPublic=()=>{window.WEEKLY.setRecruitments(publicRecruitments);window.WEEKLY.setEvents(publicEvents);window.WEEKLY.setPublished(publicCourses,loaded.size===3,loaded.size===3?'已同步雲端最新課務、招生及重要活動。':'正在讀取雲端最新課務、招生及重要活動…');};
+  for(const kind of ['course','recruit','event'])api.onSnapshot(api.collection(api.db,publicCollection(kind)),{includeMetadataChanges:true},snapshot=>{
     if(snapshot.metadata.fromCache||snapshot.metadata.hasPendingWrites)return;
-    const list=snapshot.docs.map(d=>({...d.data(),id:d.id}));if(kind==='course')publicCourses=list;else publicRecruitments=list;loaded.add(kind);syncPublic();
+    const list=snapshot.docs.map(d=>({...d.data(),id:d.id}));if(kind==='course')publicCourses=list;else if(kind==='recruit')publicRecruitments=list;else publicEvents=list;loaded.add(kind);syncPublic();
   },error=>{loaded.delete(kind);window.WEEKLY.setPublished(publicCourses,false,`雲端同步未完成：${errorMessage(error)}`);});
   el('google-login').disabled = false;
   api.onAuthStateChanged(api.auth, current => {
