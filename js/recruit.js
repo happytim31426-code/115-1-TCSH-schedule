@@ -12,7 +12,7 @@
   let saved=new Map(), drafts=new Map(), editing=false, pending=false;
   const date=()=>W.dateFor(Number(weekSelect.value),Number(daySelect.value));
   let selectedDate=date();
-  const periodBusy=(name,row)=>W.lessons(name,date(),row,'admin').length>0||W.leaves(name,date(),'admin').length>0||W.teacherEventBusy(name,date(),row);
+  const periodBusy=(name,row)=>W.lessons(name,date(),row,'admin').length>0||W.onLeave(name,date(),row,'admin')||W.teacherEventBusy(name,date(),row);
   const roster = document.querySelector('#recruit-roster');
   const schoolArea = document.querySelector('#school-plans');
   const message = document.querySelector('#recruit-message');

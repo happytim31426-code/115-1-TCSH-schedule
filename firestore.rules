@@ -83,11 +83,24 @@ service cloud.firestore {
     match /courseRecords/{id} {
       allow read: if member();
       allow create, update: if member() && versioned('courseRecords', id) && course(request.resource.data)
-        && request.resource.data.keys().hasOnly(['kind','a','b','leaveType','note','order','status','revision','updatedAt','updatedBy','updatedName','createdName','createdBy','createdAt'])
+        && request.resource.data.keys().hasOnly(['kind','a','b','leaveType','leaveRange','note','order','status','revision','updatedAt','updatedBy','updatedName','createdName','createdBy','createdAt'])
+        && privateLeaveWindow(request.resource.data)
         && request.resource.data.leaveType in ['','公假','差假','公差假','婚假','產(檢)假','喪假','病假','事假','重大假別','其他']
         && request.resource.data.note is string && request.resource.data.note.size() <= 300
         && request.resource.data.order is number && request.resource.data.status in ['submitted','cancelled','deleted'];
       allow delete: if false;
+    }
+    function privateLeaveWindow(r) {
+      return !r.keys().hasAny(['leaveRange']) || (r.leaveRange is map
+        && r.leaveRange.keys().hasAll(['mode','start','end'])
+        && r.leaveRange.keys().hasOnly(['mode','start','end'])
+        && r.leaveRange.mode in ['all','am','pm','custom']
+        && r.leaveRange.start is int && r.leaveRange.end is int
+        && r.leaveRange.start >= 1 && r.leaveRange.end <= 8 && r.leaveRange.start <= r.leaveRange.end
+        && (r.leaveRange.mode == 'custom'
+          || (r.leaveRange.mode == 'all' && r.leaveRange.start == 1 && r.leaveRange.end == 8)
+          || (r.leaveRange.mode == 'am' && r.leaveRange.start == 1 && r.leaveRange.end == 4)
+          || (r.leaveRange.mode == 'pm' && r.leaveRange.start == 5 && r.leaveRange.end == 8)));
     }
     match /publicRecruitments/{id} {
       allow read: if true;

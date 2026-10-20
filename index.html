@@ -113,7 +113,12 @@
               <label>請假／原課日期<input id="entry-date" type="date" min="2026-08-31" max="2027-01-20" required></label>
               <label>假別（僅行政紀錄，公開統一顯示「假」）<select id="entry-leave"><option>公假</option><option>差假</option><option>公差假</option><option>婚假</option><option>產(檢)假</option><option>喪假</option><option>病假</option><option>事假</option><option>其他</option><option value="">不註記假別（純調課）</option></select></label>
             </div>
-            <p>請假註記以整日顯示；代課、調課則指定課程。可先登錄假別，再逐節處理課務。</p>
+            <div class="tool-grid" id="entry-leave-range-fields">
+              <label>請假時段<select id="entry-leave-mode"><option value="all">全天（第1～8節）</option><option value="am">上半天（第1～4節）</option><option value="pm">下半天（第5～8節）</option><option value="custom">指定節次</option></select></label>
+              <label id="entry-leave-start-label" hidden>起始節次<select id="entry-leave-start"></select></label>
+              <label id="entry-leave-end-label" hidden>結束節次<select id="entry-leave-end"></select></label>
+            </div>
+            <p>後台依請假節次限制代調課，原有課程仍需另行處理。節次範圍僅授權人員可讀；公開只顯示「假」，並保守地將當天視為不可接課。</p>
             <div class="tool-grid">
               <label id="entry-course-label">原授課節次／班級／科目<select id="entry-course"></select></label>
               <label id="entry-partner-label">代課／交換教師<select id="entry-partner"></select></label>
@@ -218,12 +223,12 @@
     </main>
     <footer>資料來源：臺南慈濟高中 115 學年度第 1 學期課程表</footer>
     <script src="data/schedules.js"></script>
-    <script src="js/weekly.js?v=20261020g"></script>
+    <script src="js/weekly.js?v=20261020h"></script>
     <script src="js/app.js?v=20261020e"></script>
     <script src="js/weekly-comparison.js?v=20261020f"></script>
     <script src="js/record-pages.js?v=20261020g"></script>
-    <script src="js/recruit.js?v=20261020g"></script>
-    <script src="js/teaching.js?v=20261020g"></script>
+    <script src="js/recruit.js?v=20261020h"></script>
+    <script src="js/teaching.js?v=20261020h"></script>
     <script src="js/events.js?v=20261020g"></script>
     <script src="js/teachers.js?v=20261020g"></script>
     <script src="js/photo-import.js?v=20261020f"></script>
