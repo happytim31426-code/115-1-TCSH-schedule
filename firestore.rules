@@ -128,19 +128,22 @@ service cloud.firestore {
         && r.startRow is int && r.startRow >= 1 && r.startRow <= 8
         && r.endRow is int && r.endRow >= 1 && r.endRow <= 8
         && r.startDay * 8 + r.startRow <= r.endDay * 8 + r.endRow
-        && r.startClass is string && r.endClass is string;
+        && r.startClass is string && r.endClass is string
+        && (!r.keys().hasAny(['absentTeachers']) || (r.absentTeachers is list && r.absentTeachers.size() <= 120));
     }
     match /schoolEvents/{id} {
       allow read: if member();
       allow create, update: if member() && versioned('schoolEvents',id) && eventFields(request.resource.data)
-        && request.resource.data.keys().hasOnly(['week','name','effect','startDay','startRow','endDay','endRow','startClass','endClass','status','revision','updatedAt','updatedBy','updatedName','createdName','createdBy','createdAt'])
+        && request.resource.data.keys().hasOnly(['week','name','effect','startDay','startRow','endDay','endRow','startClass','endClass','absentTeachers','teacherGroups','otherTeachers','status','revision','updatedAt','updatedBy','updatedName','createdName','createdBy','createdAt'])
+        && (!request.resource.data.keys().hasAny(['teacherGroups']) || (request.resource.data.teacherGroups is list && request.resource.data.teacherGroups.size() <= 6 && request.resource.data.teacherGroups.hasOnly(['國一','國二','國三','高一','高二','高三'])))
+        && (!request.resource.data.keys().hasAny(['otherTeachers']) || (request.resource.data.otherTeachers is list && request.resource.data.otherTeachers.size() <= 120))
         && request.resource.data.status in ['submitted','deleted'];
       allow delete: if false;
     }
     match /publicSchoolEvents/{id} {
       allow read: if true;
       allow create, update: if member() && eventFields(request.resource.data)
-        && request.resource.data.keys().hasOnly(['week','name','effect','startDay','startRow','endDay','endRow','startClass','endClass'])
+        && request.resource.data.keys().hasOnly(['week','name','effect','startDay','startRow','endDay','endRow','startClass','endClass','absentTeachers'])
         && getAfter(/databases/$(database)/documents/schoolEvents/$(id)).data.status == 'submitted';
       allow delete: if member();
     }

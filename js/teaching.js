@@ -13,7 +13,7 @@
   const related = (record,name) => record.a.teacher === name || record.b?.teacher === name;
   const at = (slot,date,row) => slot && slot.date === date && slot.row === row;
   let records = [];
-  let editingId=null, editingRevision=0, saving=false, photoReviewMode=false;
+  let editingId=null, editingRevision=0, saving=false, photoReviewMode=false, deletingId=null;
   const effective=()=>records.filter(r=>!['cancelled','deleted'].includes(r.status));
   function syncPreview(){
     window.WEEKLY.setPreview(effective());
@@ -89,7 +89,7 @@
     const visible = window.RECORD_PAGES.sort(records);
     $('teaching-records').innerHTML = visible.map(r => {
       const inactive=['cancelled','deleted'].includes(r.status);
-      return `<article class="teaching-record"><b>${r.status==='submitted'?'已送出':r.status==='deleted'?'已刪除':'已取消'}</b><p>${esc(describe(r))}</p>${r.kind!=='leave'&&r.leaveType?`<p>假別：${esc(r.leaveType)}｜${esc(window.WEEKLY.leaveRangeText(r))}（僅行政紀錄）</p>`:''}<p class="record-meta">${esc(window.WEEKLY.auditText(r))}</p>${r.note?`<p>${esc(r.note)}</p>`:''}${!inactive?`<button type="button" class="person-button" data-edit-record="${esc(r.id)}">修正</button><button class="person-button" type="button" data-remove-record="${esc(r.id)}">整筆刪除</button>`:''}</article>`;
+      return `<article class="teaching-record"><b>${r.status==='submitted'?'已送出':r.status==='deleted'?'已刪除':'已取消'}</b><p>${esc(describe(r))}</p>${r.kind!=='leave'&&r.leaveType?`<p>假別：${esc(r.leaveType)}｜${esc(window.WEEKLY.leaveRangeText(r))}（僅行政紀錄）</p>`:''}<p class="record-meta">${esc(window.WEEKLY.auditText(r))}</p>${r.note?`<p>${esc(r.note)}</p>`:''}${!inactive?`<button type="button" class="person-button" data-edit-record="${esc(r.id)}">修正</button><button class="person-button" type="button" data-remove-record="${esc(r.id)}">整筆刪除</button>${deletingId===r.id?`<div class="delete-confirm" role="group" aria-label="刪除確認"><p>確定刪除此筆？公開異動將撤回，行政端保留已刪除狀態。</p><button type="button" class="person-button" data-confirm-remove="${esc(r.id)}">確認刪除</button><button type="button" class="person-button" data-cancel-remove="${esc(r.id)}">取消</button></div>`:''}`:''}</article>`;
     }).join('') || '<p>目前尚無登錄紀錄。</p>';
     window.RECORD_PAGES.render('teaching-records');
   }
@@ -122,7 +122,7 @@
   }
   async function publish(record,status='submitted'){
     if(!window.CLOUD_RECORDS)throw Error('雲端尚未就緒，請確認登入、網路與新版 Firestore 規則。');
-    const range=record.leaveType?{leaveRange:window.WEEKLY.leaveRange(record)}:{};
+    const range=record.leaveType&&(status==='submitted'||record.leaveRange)?{leaveRange:window.WEEKLY.leaveRange(record)}:{};
     const payload={kind:record.kind,a:record.a,b:record.b,leaveType:record.leaveType,...range,note:record.note,order:record.order||Date.now(),status};
     // Leave periods are private. Public viewers only receive a generic day-level marker.
     const projection=status==='submitted'?{id:record.id,kind:record.kind,a:record.a,b:record.b,leaveCode:window.WEEKLY.leaveCode(record.leaveType),order:payload.order}:null;
@@ -152,7 +152,9 @@
     if (!window.AUTH_MEMBER) return;
     if(saving)return;
     const button = event.target.closest('button'); if (!button) return;
-    const record = records.find(r => r.id === (button.dataset.removeRecord||button.dataset.editRecord)); if (!record) return;
+    const record = records.find(r => r.id === (button.dataset.removeRecord||button.dataset.editRecord||button.dataset.confirmRemove||button.dataset.cancelRemove)); if (!record) return;
+    if(button.dataset.cancelRemove){deletingId=null;$('teaching-records-status').textContent='已取消刪除，資料未變更。';render();return;}
+    if(button.dataset.removeRecord){deletingId=record.id;$('teaching-records-status').textContent='';render();return;}
     try {
       if(button.dataset.editRecord){
         editingId=record.id;editingRevision=record.revision||0;$('entry-kind').value=record.kind;$('entry-teacher').value=record.a.teacher;$('entry-date').value=record.a.date;
@@ -163,14 +165,15 @@
         refreshForm();for(const [slot,id] of [[record.a,'entry-course'],[record.b,'entry-other-course']])if(slot?.subject){const index=courses(slot.teacher,slot.date).findIndex(s=>s.row===slot.row&&s.classId===slot.classId&&s.subject===slot.subject);if(index>=0)$(id).value=String(index);}
         $('entry-submit').textContent='儲存修正並更新公開課表';$('entry-cancel-edit').textContent='放棄修正';$('entry-cancel-edit').hidden=false;$('teaching-form').scrollIntoView({block:'center',behavior:'smooth'});
       } else if(record.revision){
-        if(!confirm('確定整筆刪除？公開課表會撤回此筆異動，行政端保留已刪除狀態。'))return;
-        saving=true;await publish(record,'deleted');if(editingId===record.id)stopEditing();$('teaching-status').textContent='此筆已刪除，公開課表已撤回此筆異動。';
+        saving=true;button.disabled=true;$('teaching-records-status').textContent='正在刪除，請稍候…';
+        if(window.CLOUD_RECORDS?.remove)await window.CLOUD_RECORDS.remove('course',record.id,record.revision);else await publish(record,'deleted');
+        records=records.map(r=>r.id===record.id&&(r.revision||0)<=record.revision?{...r,status:'deleted',revision:record.revision+1}:r);deletingId=null;syncPreview();if(editingId===record.id)stopEditing();$('teaching-records-status').textContent='已刪除；公開課表已撤回此筆異動。';
       } else {
         records = records.filter(r => r !== record);
         syncPreview();
       }
       render();
-    } catch(error) { $('teaching-status').textContent = `未完成：${error.message}`; button.disabled = false; }finally{saving=false;}
+    } catch(error) { $('teaching-status').textContent = `未完成：${error.message}`;$('teaching-records-status').textContent=`操作未完成：${error.message}`;button.disabled=false; }finally{saving=false;}
   });
   for (const id of ['teaching-teacher','teaching-week','teaching-display']) $(id).addEventListener('change',render);
   for (const id of ['entry-kind','entry-teacher','entry-date','entry-partner','entry-other-date']) $(id).addEventListener('change',refreshForm);
@@ -214,6 +217,6 @@
     $('teaching-form').closest('details').open=true;$('teaching-form').scrollIntoView({behavior:'smooth',block:'center'});
   };
   window.addEventListener('cloud-course-records',event=>{records=event.detail;syncPreview();render();});
-  window.addEventListener('authorization-changed',() => { if (!window.AUTH_MEMBER) { records=[];stopEditing();$('entry-note').value='';window.WEEKLY.setPreview([]); render(); } });
+  window.addEventListener('authorization-changed',() => { if (!window.AUTH_MEMBER) { records=[];deletingId=null;$('teaching-records-status').textContent='';stopEditing();$('entry-note').value='';window.WEEKLY.setPreview([]); render(); } });
   refreshForm(); render();
 })();

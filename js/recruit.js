@@ -115,5 +115,6 @@
       active = 0; document.querySelector('#school-count').value = String(plans.length); say(''); render();
     },
   };
+  window.addEventListener('weekly-changed',render);
   render();
 })();

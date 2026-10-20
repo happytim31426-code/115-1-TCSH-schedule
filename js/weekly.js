@@ -25,10 +25,11 @@
   const activityBlocked=(classId,value,row)=>events.some(e=>eventHit(e,classId,value,row));
   const noClass=(classId,value,row)=>events.some(e=>e.effect==='no-class'&&eventHit(e,classId,value,row));
   const classEvents=(classId,value)=>[...new Set(events.filter(e=>Array.from({length:8},(_,i)=>i+1).some(row=>eventHit(e,classId,value,row))).map(e=>e.name))];
-  const teacherEventBusy=(name,value,row)=>events.some(e=>(data.teachers.find(t=>t.name===name)?.sessions||[]).some(s=>s.day===dayOf(value)&&s.row===row&&eventHit(e,s.classId,value,row)));
+  const eventTimeHit=(e,value,row)=>weekOf(value)===e.week&&dayOf(value)*8+row>=e.startDay*8+e.startRow&&dayOf(value)*8+row<=e.endDay*8+e.endRow;
+  const teacherEventBusy=(name,value,row)=>events.some(e=>eventTimeHit(e,value,row)&&((e.absentTeachers||[]).includes(name)||(data.teachers.find(t=>t.name===name)?.sessions||[]).some(s=>s.day===dayOf(value)&&s.row===row&&eventHit(e,s.classId,value,row))));
   function teacherEvents(name,value,scope='public'){
     const sessions=[...(data.teachers.find(t=>t.name===name)?.sessions||[]),...Array.from({length:8},(_,i)=>lessons(name,value,i+1,scope)).flat()];
-    return [...new Set(events.filter(e=>weekOf(value)===e.week&&dayOf(value)>=e.startDay&&dayOf(value)<=e.endDay&&((e.startClass===orderedClasses[0].id&&e.endClass===orderedClasses.at(-1).id)||sessions.some(s=>classIndex(s.classId)>=classIndex(e.startClass)&&classIndex(s.classId)<=classIndex(e.endClass)))).map(e=>e.name))];
+    return [...new Set(events.filter(e=>weekOf(value)===e.week&&dayOf(value)>=e.startDay&&dayOf(value)<=e.endDay&&((e.absentTeachers||[]).includes(name)||(e.startClass===orderedClasses[0].id&&e.endClass===orderedClasses.at(-1).id)||sessions.some(s=>classIndex(s.classId)>=classIndex(e.startClass)&&classIndex(s.classId)<=classIndex(e.endClass)))).map(e=>e.name))];
   }
   const auditText=r=>{const timestamp=r.updatedAt?.toDate?.()|| (r.updatedAt?.seconds?new Date(r.updatedAt.seconds*1000):null);return `${r.createdName||r.updatedName||'舊紀錄未記名'} 登錄${r.updatedName?`｜最新更新：${r.updatedName}`:''}${timestamp?`｜${timestamp.toLocaleString('zh-TW',{timeZone:'Asia/Taipei',hour12:false})}`:''}`;};
   const leaveCode=value=>['公假','差假','公差假','婚假','產(檢)假','喪假','病假','事假','重大假別','其他','公','差','假'].includes(value)?'假':'';

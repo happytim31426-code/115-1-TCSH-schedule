@@ -67,6 +67,19 @@ async function initialize() {
       if(projection)transaction.set(pub,projection);else transaction.delete(pub);
     });}catch(error){throw Error(error.code?errorMessage(error):error.message);}
   }};
+  window.CLOUD_RECORDS.remove=async(kind,id,revision)=>{
+    if(!user||!window.AUTH_MEMBER)throw Error('請先以授權帳號登入。');
+    if(!privateCollection(kind))throw Error('不支援的紀錄類型');
+    const ref=api.doc(api.db,privateCollection(kind),id),pub=api.doc(api.db,publicCollection(kind),id);
+    try{await api.runTransaction(api.db,async transaction=>{
+      const old=await transaction.get(ref);if(!old.exists())throw Error('此筆紀錄已不存在，請重新整理。');
+      const item=old.data();if(item.revision!==revision)throw Error('其他同仁已更新此筆資料，請重新整理後再操作。');
+      const patch={status:'deleted',revision:revision+1,updatedAt:api.serverTimestamp(),updatedBy:user.uid,updatedName:window.AUTH_MEMBER.name};
+      if(!Object.hasOwn(item,'createdName'))patch.createdName='舊紀錄未記名';if(!Object.hasOwn(item,'createdBy'))patch.createdBy=item.updatedBy||user.uid;if(!Object.hasOwn(item,'createdAt'))patch.createdAt=item.updatedAt||api.serverTimestamp();
+      // Do not synthesize new course/leave fields while deleting a legacy record.
+      transaction.update(ref,patch);transaction.delete(pub);
+    });}catch(error){throw Error(error.code?errorMessage(error):error.message);}
+  };
   let publicCourses=[],publicRecruitments=[],publicEvents=[],loaded=new Set();
   let repairing=false;
   repairLegacyLeaves=async()=>{
