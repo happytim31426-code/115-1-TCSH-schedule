@@ -76,7 +76,7 @@
   }
   function header(value,day,codes=[]){
     const titles={'公':'假','差':'假','假':'假'};
-    return `<th class="weekly-day"><div class="weekly-heading"><span class="weekday-name">星期${data.meta.days[day]}</span><small class="weekday-date">${value<=end?formatDate(value):'學期結束'}</small><div class="weekly-leave-row">${codes.map(code=>`<span class="leave-circle" title="${titles[code]||code}" aria-label="${titles[code]||code}">${esc(titles[code]||code)}</span>`).join('')}</div></div></th>`;
+    return `<th class="weekly-day"><div class="weekly-heading"><span class="weekday-name">星期${data.meta.days[day]}</span><small class="weekday-date">${value<=end?formatDate(value):'學期結束'}</small><div class="weekly-leave-row">${codes.map(code=>`<span class="leave-circle" title="${esc(titles[code]||code)}" aria-label="${esc(titles[code]||code)}">${esc(titles[code]||code)}</span>`).join('')}</div></div></th>`;
   }
   window.WEEKLY={start,end,plus,dayOf,weekOf,inTerm,dateFor,formatDate,className,esc,leaveCode,valid,lessons,classLessons,leaves,busy,changes,table,header,tone,active,setPublished,setPreview,setRecruitments,recruiting,recruitBusy,orderedClasses,validEvent,setEvents,activityBlocked,classEvents,teacherEvents,teacherEventBusy,auditText,get ready(){return ready;},get message(){return message;},weekOptions:()=>Array.from({length:21},(_,i)=>`<option value="${i+1}">第${i+1}週 ${formatDate(dateFor(i+1,0))}～${formatDate(dateFor(i+1,4)>end?end:dateFor(i+1,4))}</option>`).join('')};
 })();
