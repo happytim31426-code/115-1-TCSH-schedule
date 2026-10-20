@@ -5,3 +5,5 @@
 .patrol-issues input[type="checkbox"] { width:auto; margin-right:8px; }
 .patrol-class textarea { width:100%; box-sizing:border-box; }
 #patrol-summary ul { columns:2 250px; }
+.patrol-grade { margin:28px 0; padding-top:8px; border-top:2px solid #9dbdb5; }
+.patrol-introduction { line-height:1.9; margin-bottom:24px; }

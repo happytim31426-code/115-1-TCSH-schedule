@@ -6,7 +6,7 @@
     <meta name="description" content="臺南慈濟高中 115 學年度第 1 學期課表查詢" />
     <title>115-1 課表查詢｜臺南慈濟高中</title>
     <link rel="stylesheet" href="css/style.css?v=20261020i" />
-    <link rel="stylesheet" href="css/patrol.css?v=20261020j" />
+    <link rel="stylesheet" href="css/patrol.css?v=20261020k" />
   </head>
   <body>
     <header class="hero">
@@ -81,12 +81,20 @@
       </section>
       <section class="tool-card" id="patrol-entry" hidden>
         <h2>巡堂紀錄登錄</h2>
-        <p>排班每次涵蓋兩節，請選擇實際巡堂的一節。未巡查不計入正常紀錄；資料僅限授權人員查閱。</p>
+        <div class="patrol-introduction">
+          <p>敬愛的巡堂師長您好～</p>
+          <p>感恩您協助巡視各班課堂，共同維護校園秩序與教學品質。</p>
+          <p>巡堂時請協助留意以下事項：</p>
+          <ul><li><strong>教師授課</strong>：確認課務安排及教學情形。</li><li><strong>學生學習</strong>：留意學生出席、學習狀態及專注情形。</li><li><strong>班級秩序</strong>：注意課堂秩序、環境整潔與安全。</li><li><strong>特殊狀況</strong>：如有學生身體不適或其他突發情形，請協助記錄並即時回報。</li></ul>
+          <p>感謝您以專業與用心協助守護師生良好的教學與學習環境！</p>
+          <p><strong>臺南慈濟高中 教學組 敬上</strong></p>
+        </div>
         <form id="patrol-form">
-          <div class="tool-grid"><label>實際巡堂日期<input id="patrol-date" type="date" min="2026-08-31" max="2027-01-20" required></label><label>實際節次<select id="patrol-period"></select></label><label>年級<select id="patrol-grade"></select></label></div>
+          <div class="tool-grid"><label>實際巡堂日期<input id="patrol-date" type="date" min="2026-08-31" max="2027-01-20" required></label><label>實際節次<select id="patrol-period"></select></label></div>
           <p id="patrol-context"></p><p id="patrol-sync" role="status"></p>
-          <div id="patrol-classes" class="patrol-grid"></div>
-          <button type="submit" class="action-button" id="patrol-submit">送出本年級已巡查班級</button>
+          <div id="patrol-classes"></div>
+          <p>各班預設為「已巡正常」，請確認實際巡查結果；沒有巡查的班級請改為「未巡查」，不會送出。</p>
+          <button type="submit" class="action-button" id="patrol-submit">送出全部已巡查班級</button>
           <button type="button" class="person-button" id="patrol-reset">清除未送出內容／取消修改</button>
         </form>
         <p id="patrol-status" role="status"></p>
@@ -262,7 +270,7 @@
     <script src="js/teachers.js?v=20261020g"></script>
     <script src="js/photo-import.js?v=20261020f"></script>
     <script src="js/firebase-config.js"></script>
-    <script src="js/patrol.js?v=20261020j"></script>
-    <script type="module" src="js/backend.js?v=20261020j"></script>
+    <script src="js/patrol.js?v=20261020k"></script>
+    <script type="module" src="js/backend.js?v=20261020k"></script>
   </body>
 </html>

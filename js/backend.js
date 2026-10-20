@@ -64,19 +64,24 @@ async function initialize() {
   ]);
   const app = appSDK.initializeApp(window.FIREBASE_CONFIG);
   api = {...authSDK,...dbSDK,auth:authSDK.getAuth(app),db:dbSDK.getFirestore(app)};
-  window.PATROL_API={save:async entries=>{
+  window.PATROL_API={save:async (entries,onCommitted=()=>{})=>{
     if(!user||!['admin','patrol'].includes(window.AUTH_MEMBER?.role))throw Error('需要巡堂登錄權限。');
     if(!Array.isArray(entries)||!entries.length||entries.length>43)throw Error('巡堂資料筆數不正確。');
     const uid=user.uid,name=window.AUTH_MEMBER.name;
+    // Bound per-transaction rule document accesses when submitting all grades.
+    for(let offset=0;offset<entries.length;offset+=5){
+    const chunk=entries.slice(offset,offset+5);
     await api.runTransaction(api.db,async tx=>{
-      const refs=entries.map(e=>api.doc(api.db,'patrolRecords',e.id));
+      const refs=chunk.map(e=>api.doc(api.db,'patrolRecords',e.id));
       const old=await Promise.all(refs.map(ref=>tx.get(ref)));
-      entries.forEach((e,i)=>{
+      chunk.forEach((e,i)=>{
         const existing=old[i].exists()?old[i].data():null;
         if((existing?.revision||0)!==e.revision)throw Error('紀錄已被其他同仁更新，請重新載入。');
         tx.set(refs[i],{...e.data,revision:e.revision+1,createdBy:existing?.createdBy||uid,createdName:existing?.createdName||name,createdAt:existing?.createdAt||api.serverTimestamp(),updatedBy:uid,updatedName:name,updatedAt:api.serverTimestamp()});
       });
     });
+    onCommitted(chunk);
+    }
   }};
   window.CLOUD_RECORDS={save:async(kind,id,payload,projection,revision)=>{
     if(!user||!window.AUTH_MEMBER)throw Error('請先以授權帳號登入。');
