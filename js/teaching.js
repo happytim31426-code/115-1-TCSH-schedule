@@ -155,10 +155,11 @@
       if (button.dataset.compare) {
         const other = record.a.teacher === $('teaching-teacher').value ? record.b.teacher : record.a.teacher;
         if (!teacherBy(other)) throw Error('此示範姓名尚未對應教師名單，請先核對。');
-        window.WEEKLY_SHOW_PARTNER(other);
+        const otherSlot=record.a.teacher===$('teaching-teacher').value?record.b:record.a;
+        window.WEEKLY_SHOW_PARTNER(other,dayOf(otherSlot.date),otherSlot.row,weekOf(otherSlot.date));
       } else if(button.dataset.editRecord){
         editingId=record.id;editingRevision=record.revision||0;$('entry-kind').value=record.kind;$('entry-teacher').value=record.a.teacher;$('entry-date').value=record.a.date;$('entry-leave').value=record.leaveType;$('entry-note').value=record.note||'';
-        $('swap-week').value=String(weekOf(record.a.date));$('swap-teacher').value=record.a.teacher;if(record.a.classId)$('swap-class').value=record.a.classId;refreshSwapOptions();updateComparison();
+        $('swap-week').value=String(weekOf(record.a.date));$('swap-other-week').value=String(weekOf(record.kind==='swap'?record.b.date:record.a.date));$('swap-teacher').value=record.a.teacher;if(record.a.classId)$('swap-class').value=record.a.classId;refreshSwapOptions();updateComparison();
         if(record.b){$('entry-partner').value=record.b.teacher;$('entry-other-date').value=record.b.date;}
         refreshForm();for(const [slot,id] of [[record.a,'entry-course'],[record.b,'entry-other-course']])if(slot?.subject){const index=courses(slot.teacher,slot.date).findIndex(s=>s.row===slot.row&&s.classId===slot.classId&&s.subject===slot.subject);if(index>=0)$(id).value=String(index);}
         $('entry-submit').textContent=record.revision?'儲存修正並更新公開課表':'儲存草稿修正';$('entry-cancel-edit').hidden=false;$('teaching-form').scrollIntoView({block:'center',behavior:'smooth'});
@@ -177,6 +178,7 @@
   for (const id of ['teaching-teacher','teaching-week','teaching-display']) $(id).addEventListener('change',render);
   for (const id of ['entry-kind','entry-teacher','entry-date','entry-partner','entry-other-date']) $(id).addEventListener('change',refreshForm);
   $('entry-partner').addEventListener('change',()=>{if(workspace==='office')window.WEEKLY_SHOW_PARTNER($('entry-partner').value);});
+  $('entry-other-date').addEventListener('change',()=>{const date=$('entry-other-date').value;if(workspace==='office'&&inTerm(date))window.WEEKLY_SHOW_PARTNER($('entry-partner').value,dayOf(date),undefined,weekOf(date));});
   window.TEACHING_SELECT=selection=>{
     if(workspace!=='office'||editingId)return;
     $('teaching-teacher').value=selection.teacher;$('teaching-week').value=String(selection.week);

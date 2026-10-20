@@ -88,6 +88,7 @@ function populateLookup(preferred) {
   picker.innerHTML = optionList(records, item => classes ? item.id : item.name, item => classes ? `${item.name} ${item.publicCode}` : `${item.id} ${item.name}`);
   if (preferred) picker.value = preferred;
   if (classes) classView(byId(picker.value)); else teacherView(teacher(picker.value));
+  window.dispatchEvent(new Event('teacher-lookup-selected'));
 }
 function showMode() {
   const adminMode = workspace === 'admin';
@@ -116,6 +117,7 @@ function showMode() {
   document.querySelector('#office-open').setAttribute('aria-pressed', String(officeMode));
   document.querySelector('#public-open').setAttribute('aria-pressed', String(workspace === 'public'));
   const lookup = workspace === 'public' && ["class", "teacher"].includes(viewType.value);
+  document.getElementById('teacher-search-tool').hidden=workspace!=='public'||viewType.value!=='teacher';
   pickerGroup.classList.toggle("is-hidden", !lookup); scheduleCard.classList.toggle("is-hidden", !lookup);
   swapTool.classList.toggle("is-hidden", !officeComparison && (workspace !== 'public' || viewType.value !== "swap"));
   recruitTool.classList.toggle("is-hidden", !officeMode || feature !== 'recruit');
@@ -127,6 +129,7 @@ function showMode() {
 function setupTools() {
   document.querySelector('#swap-week').innerHTML = window.WEEKLY.weekOptions();
   document.querySelector('#swap-week').value = String(Math.max(1,Math.min(21,window.WEEKLY.weekOf(new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Taipei'})))));
+  document.querySelector('#swap-other-week').innerHTML=window.WEEKLY.weekOptions();document.querySelector('#swap-other-week').value=document.querySelector('#swap-week').value;
   const days = optionList(data.meta.days, (_, index) => index, day => `星期${day}`);
   document.querySelector("#swap-day").innerHTML = days; document.querySelector("#recruit-day").innerHTML = days;
   document.querySelector("#swap-teacher").innerHTML = optionList(data.teachers, item => item.name, item => `${item.id} ${item.name}`);
@@ -201,7 +204,7 @@ document.querySelector('#office-open').addEventListener('click', () => { workspa
 document.querySelector('#public-open').addEventListener('click', () => { workspace = 'public'; showMode(); });
 document.querySelector('#office-type').addEventListener('change', showMode);
 viewType.addEventListener("change", showMode); picker.addEventListener("change", () => populateLookup(picker.value));
-document.addEventListener("click", event => { const target = event.target.closest(".schedule-link"); if (!target) return; if (target.dataset.teacher) { viewType.value = "teacher"; populateLookup(target.dataset.teacher); } if (target.dataset.class) { viewType.value = "class"; populateLookup(target.dataset.class); } });
+document.addEventListener("click", event => { const target = event.target.closest(".schedule-link"); if (!target) return; if (target.dataset.teacher) { viewType.value = "teacher"; showMode();populateLookup(target.dataset.teacher); } if (target.dataset.class) { viewType.value = "class"; showMode();populateLookup(target.dataset.class); } });
 document.querySelector("#theme-toggle").addEventListener("click", () => { const dark = document.documentElement.dataset.theme === "dark"; document.documentElement.dataset.theme = dark ? "" : "dark"; document.querySelector("#theme-toggle").textContent = dark ? "夜間閱讀" : "日間閱讀"; });
 document.querySelectorAll("#swap-tool select").forEach(select => select.addEventListener("change", () => {
   if (select.id !== "swap-period") refreshSwapOptions(select.id === "swap-day");

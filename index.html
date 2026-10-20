@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="臺南慈濟高中 115 學年度第 1 學期課表查詢" />
     <title>115-1 課表查詢｜臺南慈濟高中</title>
-    <link rel="stylesheet" href="css/style.css?v=20261020d" />
+    <link rel="stylesheet" href="css/style.css?v=20261020e" />
   </head>
   <body>
     <header class="hero">
@@ -55,6 +55,17 @@
         </div>
       </section>
 
+      <section class="tool-card" id="teacher-search-tool" hidden>
+        <label for="teacher-name-query">輸入教師姓名或編號</label>
+        <input id="teacher-name-query" type="search" autocomplete="off" placeholder="例如：林（請從下方結果選擇教師）">
+        <div id="teacher-name-results" class="person-list" aria-live="polite"></div>
+        <details id="teacher-advanced"><summary>進階查詢：指定日期、節次的空堂教師（選填）</summary>
+          <p>依最新週課務查詢；排除假別、招生及重要活動占用。一般教師課表仍保留基本課表。</p>
+          <div class="tool-grid"><label>日期<input id="teacher-free-date" type="date" min="2026-08-31" max="2027-01-20"></label><label>節次<select id="teacher-free-period"><option value="">請選擇節次</option></select></label></div>
+          <p id="teacher-free-status" role="status"></p><div id="teacher-free-results" class="person-list"></div>
+          <div id="teacher-free-preview" hidden></div>
+        </details>
+      </section>
       <section class="controls" id="office-controls" aria-label="教務處行政業務查詢" hidden>
         <div class="control-group grow"><label for="office-type">行政業務查詢類型</label>
           <select id="office-type">
@@ -137,11 +148,12 @@
         <h2>代調課</h2>
         <p>選擇原授課教師、時段與班級，系統會列出可交換的授課教師與其可調課時段。</p>
         <div class="tool-grid swap-filters">
-          <label>學期週次<select id="swap-week"></select></label>
+          <label>原調課週次<select id="swap-week"></select></label>
           <label>調課教師<select id="swap-teacher"></select></label>
           <label>調課班級<select id="swap-class"></select></label>
           <label>調課星期<select id="swap-day"></select></label>
           <label>調課節次<select id="swap-period"></select></label>
+          <label>被調課週次<select id="swap-other-week"></select></label>
         </div>
         <p id="swap-sync-status" role="status"></p>
         <div class="tool-results" id="swap-results"></div>
@@ -195,11 +207,12 @@
     <footer>資料來源：臺南慈濟高中 115 學年度第 1 學期課程表</footer>
     <script src="data/schedules.js"></script>
     <script src="js/weekly.js?v=20261020d"></script>
-    <script src="js/app.js?v=20261020d"></script>
-    <script src="js/weekly-comparison.js?v=20261020d"></script>
+    <script src="js/app.js?v=20261020e"></script>
+    <script src="js/weekly-comparison.js?v=20261020e"></script>
     <script src="js/recruit.js?v=20261020d"></script>
-    <script src="js/teaching.js?v=20261020d"></script>
+    <script src="js/teaching.js?v=20261020e"></script>
     <script src="js/events.js?v=20261020d"></script>
+    <script src="js/teachers.js?v=20261020e"></script>
     <script src="js/firebase-config.js"></script>
     <script type="module" src="js/backend.js?v=20261020d"></script>
   </body>

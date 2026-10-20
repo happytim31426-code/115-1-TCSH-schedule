@@ -3,12 +3,24 @@
   const W=window.WEEKLY,$=id=>document.getElementById(id);
   const scope=()=>workspace==='office'?'admin':'public';
   const week=()=>Number($('swap-week').value);
+  const otherWeek=()=>Number($('swap-other-week').value);
   let partner=null;
-  const selectionKey=()=>`${$('swap-teacher').value}|${week()}|${$('swap-class').value}`;
-  window.WEEKLY_SHOW_PARTNER=(name,day,row)=>{partner={name,key:selectionKey(),day,row};comparisonTeacher(name,'#swap-right');highlightComparison(day,row);};
+  const selectionKey=()=>`${$('swap-teacher').value}|${week()}|${otherWeek()}|${$('swap-class').value}|${$('swap-day').value}|${$('swap-period').value}`;
+  window.WEEKLY_SHOW_PARTNER=(name,day,row,targetWeek)=>{if(targetWeek)$('swap-other-week').value=String(targetWeek);partner={name,key:selectionKey(),day,row};comparisonTeacher(name,'#swap-right');highlightComparison(day,row);};
   const date=day=>W.dateFor(week(),day);
   const origins=(name,schedule,day,row)=>W.lessons(name,date(day),row,scope()).filter(s=>s.classId===schedule.id);
-  const isBlocked=(lesson,day,row)=>W.recruitBusy(lesson.teacher,date(day),row)||W.activityBlocked(lesson.classId,date(day),row)||blocked({subject:lesson.subject,runningClass:lesson.grouped||false},byId(lesson.classId),day,row);
+  const isBlocked=(lesson,day,row,value=date(day))=>W.recruitBusy(lesson.teacher,value,row)||W.activityBlocked(lesson.classId,value,row)||blocked({subject:lesson.subject,runningClass:lesson.grouped||false},byId(lesson.classId),day,row);
+  highlightComparison=(candidateDay,candidateRow)=>{
+    for(const panel of document.querySelectorAll('.comparison-panel')){
+      const displayedWeek=panel.id==='swap-right'?otherWeek():week();
+      for(const cell of panel.querySelectorAll('td[data-slot-day]')){
+        const origin=displayedWeek===week()&&$('swap-day').value!==''&&$('swap-period').value!==''&&cell.dataset.slotDay===$('swap-day').value&&cell.dataset.slotRow===$('swap-period').value;
+        const candidate=displayedWeek===otherWeek()&&candidateDay!==undefined&&cell.dataset.slotDay===String(candidateDay)&&cell.dataset.slotRow===String(candidateRow);
+        cell.classList.toggle('swap-origin',origin);cell.classList.toggle('swap-candidate',candidate);cell.querySelector('.slot-label')?.remove();
+        if(workspace!=='public'&&(origin||candidate))cell.insertAdjacentHTML('afterbegin',`<span class="slot-label">${origin?'原調課':'候選調課'}</span>`);
+      }
+    }
+  };
   eligibleOrigin=(name,schedule,day,row)=>row>=1&&row<=8&&origins(name,schedule,day,row).length>0;
   teachesClass=(name,classId)=>data.meta.days.some((_,day)=>rows.some((_,row)=>origins(name,byId(classId),day,row).length>0));
   refreshSwapOptions=(onlyPeriods=false)=>{
@@ -27,16 +39,17 @@
     if(target.change){output.textContent='這節課已經過教學組代調；再次調整請先由教學組撤銷原紀錄。';return;}
     const result=[];
     for(let d=0;d<5;d++)for(let r=1;r<=8;r++){
-      if(d===day&&r===row||(row===8)!==(r===8))continue;
-      for(const lesson of W.classLessons(schedule.id,date(d),r,scope())){
-        if(!lesson.teacher||lesson.teacher===name||lesson.change||isBlocked(lesson,d,r)||W.busy(lesson.teacher,date(day),row,scope())||W.busy(name,date(d),r,scope()))continue;
+      const candidateDate=W.dateFor(otherWeek(),d);
+      if(candidateDate===date(day)&&r===row||(row===8)!==(r===8)||!W.inTerm(candidateDate))continue;
+      for(const lesson of W.classLessons(schedule.id,candidateDate,r,scope())){
+        if(!lesson.teacher||lesson.teacher===name||lesson.change||isBlocked(lesson,d,r,candidateDate)||W.busy(lesson.teacher,date(day),row,scope())||W.busy(name,candidateDate,r,scope()))continue;
         result.push({...lesson,day:d,row:r});
       }
     }
     const unique=result.filter((s,i,a)=>i===a.findIndex(x=>x.teacher===s.teacher&&x.day===s.day&&x.row===s.row));
-    output.innerHTML=unique.length?`<h3>可代調清單</h3><p>紅橙黃綠藍紫：已發布的課務配對；藍框：原選取時段；橘框：候選時段。點姓名對照。</p><ul class="result-list">${unique.map(s=>`<li>科目：${W.esc(s.subject)}　教師：<button type="button" class="schedule-link" data-candidate="${W.esc(s.teacher)}" data-day="${s.day}" data-row="${s.row}" aria-pressed="false">${W.esc(s.teacher)}</button>　星期：${data.meta.days[s.day]}　節數：第${s.row}節</li>`).join('')}</ul>`:'<p>沒有符合本週最新課務與課程限制的候選教師。</p>';
+    output.innerHTML=unique.length?`<h3>可代調清單（被調課第${otherWeek()}週）</h3><p>左、中：原調課第${week()}週；右：被調課第${otherWeek()}週。藍框為原時段，橘框為候選時段。點姓名對照。</p><ul class="result-list">${unique.map(s=>`<li>科目：${W.esc(s.subject)}　教師：<button type="button" class="schedule-link" data-candidate="${W.esc(s.teacher)}" data-day="${s.day}" data-row="${s.row}" aria-pressed="false">${W.esc(s.teacher)}</button>　日期：${W.formatDate(W.dateFor(otherWeek(),s.day))}（${data.meta.days[s.day]}）　節數：第${s.row}節</li>`).join('')}</ul>`:'<p>所選被調課週次沒有符合最新課務與課程限制的候選教師。</p>';
   };
-  comparisonTeacher=(name,panel)=>{document.querySelector(panel).innerHTML=W.table(name,week(),scope());};
+  comparisonTeacher=(name,panel)=>{document.querySelector(panel).innerHTML=W.table(name,panel==='#swap-right'?otherWeek():week(),scope());};
   function classTable(schedule){
     return `<h3>${W.esc(schedule.name)} ${W.esc(schedule.publicCode)}</h3><div class="table-wrap"><table><thead><tr><th>第${week()}週</th>${data.meta.days.map((_,d)=>W.header(date(d),d,W.classEvents(schedule.id,date(d)))).join('')}</tr></thead><tbody>${rows.map((p,row)=>`<tr><td>${p.period.name}</td>${data.meta.days.map((_,d)=>{
       const list=W.classLessons(schedule.id,date(d),row,scope()),latest=list.find(s=>s.change)?.change;
@@ -57,7 +70,7 @@
   $('swap-results').addEventListener('click',event=>{
     const b=event.target.closest('[data-candidate]');if(!b)return;
     partner={name:b.dataset.candidate,key:selectionKey(),day:b.dataset.day,row:b.dataset.row};
-    window.TEACHING_CANDIDATE?.({teacher:b.dataset.candidate,date:date(Number(b.dataset.day)),row:Number(b.dataset.row)});
+    window.TEACHING_CANDIDATE?.({teacher:b.dataset.candidate,date:W.dateFor(otherWeek(),Number(b.dataset.day)),row:Number(b.dataset.row)});
   });
   refreshSwapOptions();updateComparison();
 })();

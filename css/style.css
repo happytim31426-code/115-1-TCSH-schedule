@@ -105,7 +105,8 @@ body[data-workspace="public"]:has(#view-type option[value="swap"]:checked) .page
 .lesson-original { font-size:.75rem; opacity:.7; }
 .leave-tag { display:block; margin:.3rem 0; font-size:.8rem; font-weight:700; color:#8b3900; background:#ffeddb; border-radius:5px; padding:.2rem; }
 .record-warning { color:#8b3900; font-size:.85rem; }
-.swap-filters { grid-template-columns:repeat(5,minmax(0,1fr)); }
+.swap-filters { grid-template-columns:repeat(6,minmax(0,1fr)); }
+.swap-filters label,.swap-filters select { min-width:0; }
 .weekly-cell,.weekly-day { position:relative; }
 .weekly-lesson { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:start; column-gap:.25rem; row-gap:.15rem; padding:.3rem .1rem; }
 .weekly-lesson .course { grid-column:1; grid-row:1; line-height:1.5; }
@@ -137,3 +138,7 @@ body[data-office-feature="teaching-plan"] .page-shell { width:calc(100% - 2rem);
 .record-meta { font-size:.85rem; color:var(--muted); }
 .event-tag { background:#e4edf9; color:#224876; }
 .event-blocked { box-shadow:inset 0 0 0 1px #b7c8dd; }
+#teacher-search-tool input { width:100%; min-width:0; padding:.65rem; border:1px solid var(--line); border-radius:8px; background:var(--paper); color:var(--ink); font:inherit; }
+#teacher-name-results { margin:.7rem 0; }
+#teacher-free-preview { margin-top:1rem; }
+#teacher-free-preview .free-selected { outline:2px solid var(--teal); outline-offset:-2px; }
