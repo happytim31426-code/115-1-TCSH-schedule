@@ -1,7 +1,19 @@
 const el = id => document.getElementById(id);
-let api, user = null, stopMember = () => {}, stopList = () => {};
+let api, user = null, stopMember = () => {}, stopList = () => {}, stopPrivate=()=>{};
+let privateActive=false;
+function startPrivate(member){
+  if(!!member===privateActive)return;
+  stopPrivate();privateActive=!!member;
+  if(!member){for(const kind of ['recruit','course'])window.dispatchEvent(new CustomEvent(`cloud-${kind}-records`,{detail:[]}));return;}
+  const stops=['recruit','course'].map(kind=>api.onSnapshot(api.collection(api.db,kind==='recruit'?'recruitmentRecords':'courseRecords'),{includeMetadataChanges:true},snapshot=>{
+    if(snapshot.metadata.fromCache||snapshot.metadata.hasPendingWrites)return;
+    window.dispatchEvent(new CustomEvent(`cloud-${kind}-records`,{detail:snapshot.docs.map(d=>({...d.data(),id:d.id}))}));
+  },error=>{el(kind==='recruit'?'recruit-message':'teaching-status').textContent=errorMessage(error);}));
+  stopPrivate=()=>stops.forEach(stop=>stop());
+}
 function access(member) {
   window.AUTH_MEMBER = member;
+  if(api)startPrivate(member);
   window.renderWorkspace?.();
   for (const id of ['recruit-save','recruit-load']) el(id).disabled = !member;
   if (!member) { el('member-list').replaceChildren(); el('recruit-cloud-status').textContent = ''; }
@@ -38,6 +50,24 @@ async function initialize() {
   ]);
   const app = appSDK.initializeApp(window.FIREBASE_CONFIG);
   api = {...authSDK,...dbSDK,auth:authSDK.getAuth(app),db:dbSDK.getFirestore(app)};
+  window.CLOUD_RECORDS={save:async(kind,id,payload,projection,revision)=>{
+    if(!user||!window.AUTH_MEMBER)throw Error('請先以授權帳號登入。');
+    const ref=api.doc(api.db,kind==='recruit'?'recruitmentRecords':'courseRecords',id);
+    const pub=api.doc(api.db,kind==='recruit'?'publicRecruitments':'publicCourseRecords',id);
+    try{await api.runTransaction(api.db,async transaction=>{
+      const old=await transaction.get(ref),actual=old.exists()?old.data().revision:0;
+      if(actual!==revision)throw Error('其他同仁已更新此筆資料，請重新載入後再修正。');
+      transaction.set(ref,{...payload,revision:actual+1,updatedAt:api.serverTimestamp(),updatedBy:user.uid});
+      if(projection)transaction.set(pub,projection);else transaction.delete(pub);
+    });}catch(error){throw Error(error.code?errorMessage(error):error.message);}
+  }};
+  let publicCourses=[],publicRecruitments=[],loaded=new Set();
+  window.WEEKLY.setPublished([],false,'正在讀取雲端最新課務與招生安排…');
+  const syncPublic=()=>{window.WEEKLY.setPublished(publicCourses,loaded.size===2,loaded.size===2?'已同步雲端最新課務與招生安排。':'正在讀取雲端最新課務與招生安排…');window.WEEKLY.setRecruitments(publicRecruitments);};
+  for(const kind of ['course','recruit'])api.onSnapshot(api.collection(api.db,kind==='course'?'publicCourseRecords':'publicRecruitments'),{includeMetadataChanges:true},snapshot=>{
+    if(snapshot.metadata.fromCache||snapshot.metadata.hasPendingWrites)return;
+    const list=snapshot.docs.map(d=>({...d.data(),id:d.id}));if(kind==='course')publicCourses=list;else publicRecruitments=list;loaded.add(kind);syncPublic();
+  },error=>{loaded.delete(kind);window.WEEKLY.setPublished(publicCourses,false,`雲端同步未完成：${errorMessage(error)}`);});
   el('google-login').disabled = false;
   api.onAuthStateChanged(api.auth, current => {
     stopMember(); stopList(); access(null); user = current;
@@ -76,15 +106,16 @@ el('recruit-save').addEventListener('click',async () => {
   if (!api || !window.AUTH_MEMBER || !window.RECRUIT_PLANNER) return;
   const state = window.RECRUIT_PLANNER.snapshot();
   try {
-    await api.setDoc(api.doc(api.db,'recruitmentPlans',`${user.uid}_${state.day}`),{...state,updatedAt:api.serverTimestamp(),updatedBy:user.uid});
-    el('recruit-cloud-status').textContent = '已儲存此星期的安排，同帳號同星期再次儲存會覆蓋草稿。';
+    await api.setDoc(api.doc(api.db,'recruitmentPlans',`${user.uid}_${state.week}_${state.day}`),{...state,updatedAt:api.serverTimestamp(),updatedBy:user.uid});
+    el('recruit-cloud-status').textContent = '已儲存此週、此星期的個人草稿（尚未送出至公開課表）。';
   } catch(error) { el('recruit-cloud-status').textContent = errorMessage(error); }
 });
 el('recruit-load').addEventListener('click',async () => {
   if (!api || !window.AUTH_MEMBER || !window.RECRUIT_PLANNER) return;
   try {
     const day = Number(el('recruit-day').value);
-    const record = await api.getDocFromServer(api.doc(api.db,'recruitmentPlans',`${user.uid}_${day}`));
+    const week=Number(el('recruit-week').value);
+    const record = await api.getDocFromServer(api.doc(api.db,'recruitmentPlans',`${user.uid}_${week}_${day}`));
     if (!record.exists()) { el('recruit-cloud-status').textContent = '此帳號尚未儲存這個星期的安排。'; return; }
     if (!confirm('載入雲端安排將取代畫面中未儲存的安排，是否繼續？')) return;
     window.RECRUIT_PLANNER.restore(record.data()); el('recruit-cloud-status').textContent = '已載入並依目前課表重新檢查人員。';

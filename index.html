@@ -69,7 +69,7 @@
       </section>
       <section class="tool-card" id="teaching-tool" hidden>
         <h2>教學組代調課規劃</h2>
-        <p>先用三張課表核對指定週次，再新增並預覽。此版可套用到同一次瀏覽的代調課查詢；尚未啟用雲端同步，重新整理會清除，原始教師／班級課表保持不變。</p>
+        <p>先用三張課表核對指定週次，再新增草稿並送出。已送出紀錄可逐筆修正或取消，公開代調課查詢會同步更新；原始教師／班級課表保持不變。</p>
         <div class="tool-grid" id="teaching-legacy-controls" hidden>
           <label>查看教師<select id="teaching-teacher"></select></label>
           <label>學期週次<select id="teaching-week"></select></label>
@@ -77,9 +77,9 @@
         </div>
         <div class="teaching-actions">
           <button type="button" class="action-button" id="teaching-demo">載入四筆紙本示範</button>
-          <button type="button" class="action-button" id="teaching-apply-local">套用至本次瀏覽的代調課查詢</button>
+          <button type="button" class="action-button" id="teaching-apply-local">送出所有正式草稿至公開課表</button>
         </div>
-        <p id="teaching-status" role="status">先按「載入四筆紙本示範」檢視註記，也可試填新紀錄。重新整理會清除預覽。</p>
+        <p id="teaching-status" role="status">尚未送出的草稿與示範只在此頁預覽，重新整理會清除；已送出紀錄儲存於雲端。</p>
         <div class="teaching-legend"><span>代：由其他教師代課</span><span>調：交換另一日期課程</span><span>原：原定課程</span><span>示範：待核對、不寫入正式紀錄</span></div>
         <div id="teaching-comparison-host"></div>
         <details><summary>完整行政註記課表</summary><div class="table-wrap" id="teaching-calendar"></div></details>
@@ -99,7 +99,8 @@
               <label id="entry-other-course-label">交換課程<select id="entry-other-course"></select></label>
             </div>
             <label>備註（選填）<input id="entry-note" maxlength="300" placeholder="例如：公假課務安排；請勿填入病情等敏感細節"></label>
-            <button type="submit" class="action-button">新增到規劃預覽</button>
+            <button type="submit" class="action-button" id="entry-submit">新增到規劃預覽</button>
+            <button type="button" class="person-button" id="entry-cancel-edit" hidden>放棄修正</button>
           </form>
         </details>
         <h3>本週相關紀錄</h3>
@@ -130,7 +131,14 @@
       <section class="tool-card is-hidden" id="recruit-tool" hidden>
         <h2>招生教師名單規劃</h2>
         <p>先選星期與學校，再點推薦人員加入該校；點已選姓名可移回推薦清單。需求人數包含一位帶隊老師。</p>
-        <div class="tool-grid recruit-filters"><label>星期<select id="recruit-day"></select></label><label>該天入班學校數<select id="school-count"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label></div>
+        <div class="tool-grid recruit-filters"><label>學期週次<select id="recruit-week"></select></label><label>星期<select id="recruit-day"></select></label><label>該天入班學校數<select id="school-count"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label></div>
+        <p id="recruit-publication-status" role="status"></p>
+        <div class="teaching-actions">
+          <button type="button" class="action-button" id="recruit-publish">送出至公開代調課查詢</button>
+          <button type="button" class="person-button" id="recruit-recall" hidden>整筆退回修正</button>
+          <button type="button" class="person-button" id="recruit-cancel" hidden>取消本日安排</button>
+        </div>
+        <p>送出後會在該週日期下方標註「招生」；整筆退回或取消會同步移除標記。請先發布新版 Firestore 規則以啟用雲端功能。</p>
         <button type="button" class="action-button" id="recruit-save" disabled>儲存我的雲端安排</button>
         <button type="button" class="action-button" id="recruit-load" disabled>載入我的雲端安排</button>
         <p id="recruit-cloud-status" role="status"></p>
@@ -161,12 +169,12 @@
     </main>
     <footer>資料來源：臺南慈濟高中 115 學年度第 1 學期課程表</footer>
     <script src="data/schedules.js"></script>
-    <script src="js/weekly.js?v=20261020b"></script>
+    <script src="js/weekly.js?v=20261020c"></script>
     <script src="js/app.js?v=20261020b"></script>
     <script src="js/weekly-comparison.js?v=20261020b"></script>
-    <script src="js/recruit.js"></script>
-    <script src="js/teaching.js?v=20261020b"></script>
+    <script src="js/recruit.js?v=20261020c"></script>
+    <script src="js/teaching.js?v=20261020c"></script>
     <script src="js/firebase-config.js"></script>
-    <script type="module" src="js/backend.js"></script>
+    <script type="module" src="js/backend.js?v=20261020c"></script>
   </body>
 </html>
