@@ -94,8 +94,10 @@ function showMode() {
   const adminMode = workspace === 'admin';
   const officeMode = workspace === 'office';
   const member = window.AUTH_MEMBER?.role === 'patrol' ? null : window.AUTH_MEMBER;
-  document.querySelector('#patrol-backfill').hidden = !adminMode || window.AUTH_MEMBER?.role !== 'admin';
   const feature = document.querySelector('#office-type').value;
+  const patrolBackfill = document.querySelector('#patrol-backfill');
+  patrolBackfill.hidden = !officeMode || feature !== 'patrol' || window.AUTH_MEMBER?.role !== 'admin';
+  document.querySelector('#patrol-history').before(patrolBackfill);
   document.body.dataset.workspace = workspace;
   document.querySelector('#page-heading').textContent = adminMode ? '管理者功能' : officeMode ? '教務處行政業務' : '115 學年度第 1 學期課表';
   document.querySelector('#term-dates').hidden = workspace !== 'public';
