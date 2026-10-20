@@ -13,7 +13,7 @@
   const related = (record,name) => record.a.teacher === name || record.b?.teacher === name;
   const at = (slot,date,row) => slot && slot.date === date && slot.row === row;
   let records = [];
-  let editingId=null, saving=false;
+  let editingId=null, editingRevision=0, saving=false;
   const effective=()=>records.filter(r=>r.status!=='cancelled');
   function syncPreview(){
     window.WEEKLY.setPreview(effective());
@@ -107,7 +107,7 @@
     const projection=status==='submitted'?{id:record.id,kind:record.kind,a:record.a,b:record.b,leaveCode:window.WEEKLY.leaveCode(record.leaveType),order:payload.order}:null;
     await window.CLOUD_RECORDS.save('course',record.id,payload,projection,record.revision||0);
   }
-  function stopEditing(){editingId=null;$('entry-submit').textContent='新增到規劃預覽';$('entry-cancel-edit').hidden=true;}
+  function stopEditing(){editingId=null;editingRevision=0;$('entry-submit').textContent='新增到規劃預覽';$('entry-cancel-edit').hidden=true;}
   $('entry-cancel-edit').addEventListener('click',()=>{stopEditing();$('teaching-status').textContent='已放棄修正，原送出紀錄保持不變。';});
   $('teaching-form').addEventListener('submit',async event => {
     event.preventDefault(); if (!window.AUTH_MEMBER) return;
@@ -117,6 +117,7 @@
       const a = kind === 'leave' ? {teacher:name,date} : slotFrom(name,date,'entry-course');
       const b = kind === 'swap' ? slotFrom($('entry-partner').value,$('entry-other-date').value,'entry-other-course') : kind === 'sub' ? {teacher:$('entry-partner').value,date,row:a.row} : null;
       const old=records.find(r=>r.id===editingId);
+      if(editingId&&(old?.revision||0)!==editingRevision)throw Error('此筆紀錄已被其他同仁更新，請放棄修正後重新開啟。');
       const record = {...old,id:editingId||crypto.randomUUID(),kind,a,b,leaveType:$('entry-leave').value,note:$('entry-note').value.trim(),order:old?.order||Date.now()};
       validate(record);
       if(old?.revision){saving=true;await publish(record);stopEditing();$('teaching-status').textContent='修正已送出，公開課表已更新。';return;}
@@ -151,7 +152,7 @@
         if (!teacherBy(other)) throw Error('此示範姓名尚未對應教師名單，請先核對。');
         window.WEEKLY_SHOW_PARTNER(other);
       } else if(button.dataset.editRecord){
-        editingId=record.id;$('entry-kind').value=record.kind;$('entry-teacher').value=record.a.teacher;$('entry-date').value=record.a.date;$('entry-leave').value=record.leaveType;$('entry-note').value=record.note||'';
+        editingId=record.id;editingRevision=record.revision||0;$('entry-kind').value=record.kind;$('entry-teacher').value=record.a.teacher;$('entry-date').value=record.a.date;$('entry-leave').value=record.leaveType;$('entry-note').value=record.note||'';
         if(record.b){$('entry-partner').value=record.b.teacher;$('entry-other-date').value=record.b.date;}
         refreshForm();for(const [slot,id] of [[record.a,'entry-course'],[record.b,'entry-other-course']])if(slot?.subject){const index=courses(slot.teacher,slot.date).findIndex(s=>s.row===slot.row&&s.classId===slot.classId&&s.subject===slot.subject);if(index>=0)$(id).value=String(index);}
         $('entry-submit').textContent=record.revision?'儲存修正並更新公開課表':'儲存草稿修正';$('entry-cancel-edit').hidden=false;$('teaching-form').scrollIntoView({block:'center',behavior:'smooth'});
@@ -188,6 +189,6 @@
     try{for(const record of records.filter(r=>!r.demo&&!r.revision)){const previousEditing=editingId;editingId=record.id;try{validate(record);}finally{editingId=previousEditing;}await publish(record);}$('teaching-status').textContent='草稿已送出至公開課表；示範資料不會送出。';}catch(error){$('teaching-status').textContent=error.message;}finally{saving=false;}
   });
   window.addEventListener('cloud-course-records',event=>{records=[...records.filter(r=>!r.revision&&!event.detail.some(c=>c.id===r.id)),...event.detail];syncPreview();render();});
-  window.addEventListener('authorization-changed',() => { if (!window.AUTH_MEMBER) { records=[];stopEditing();window.WEEKLY.setPreview([]); render(); } });
+  window.addEventListener('authorization-changed',() => { if (!window.AUTH_MEMBER) { records=[];stopEditing();$('entry-note').value='';window.WEEKLY.setPreview([]); render(); } });
   refreshForm(); render();
 })();
