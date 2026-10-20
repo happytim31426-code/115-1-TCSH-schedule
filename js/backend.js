@@ -15,9 +15,7 @@ function startPrivate(member){
   },error=>{el(kind==='recruit'?'recruit-message':kind==='event'?'event-status':'teaching-status').textContent=errorMessage(error);}));
   stopPrivate=()=>stops.forEach(stop=>stop());
 }
-function access(member) {
-  window.AUTH_MEMBER = member;
-  if(api)startPrivate(member?.role==='patrol'?null:member);
+function listenPatrol(member) {
   stopPatrol();
   if(api&&['admin','patrol'].includes(member?.role)){
     const ref=api.collection(api.db,'patrolRecords');
@@ -27,6 +25,11 @@ function access(member) {
       window.dispatchEvent(new CustomEvent('cloud-patrol-records',{detail:snapshot.docs.map(d=>({...d.data(),id:d.id}))}));
     },error=>window.dispatchEvent(new CustomEvent('patrol-sync-error',{detail:errorMessage(error)})));
   }
+}
+function access(member) {
+  window.AUTH_MEMBER = member;
+  if(api)startPrivate(member?.role==='patrol'?null:member);
+  listenPatrol(member);
   window.renderWorkspace?.();
   for (const id of ['recruit-save','recruit-load']) el(id).disabled = !member;
   if (!member) { el('member-list').replaceChildren(); el('recruit-cloud-status').textContent = ''; }
@@ -85,6 +88,14 @@ async function initialize() {
     onCommitted(chunk);
     }
   }};
+  window.PATROL_API.reload=async()=>{
+    if(!user||window.AUTH_MEMBER?.role!=='admin')throw Error('需要管理員權限。');
+    const uid=user.uid;
+    const snapshot=await api.getDocsFromServer(api.collection(api.db,'patrolRecords'));
+    if(!user||user.uid!==uid||window.AUTH_MEMBER?.role!=='admin')throw Error('登入狀態已改變，請重新登入。');
+    listenPatrol(window.AUTH_MEMBER);
+    window.dispatchEvent(new CustomEvent('cloud-patrol-records',{detail:snapshot.docs.map(d=>({...d.data(),id:d.id}))}));
+  };
   window.CLOUD_RECORDS={save:async(kind,id,payload,projection,revision)=>{
     if(!user||!window.AUTH_MEMBER)throw Error('請先以授權帳號登入。');
     if(!privateCollection(kind))throw Error('不支援的紀錄類型');

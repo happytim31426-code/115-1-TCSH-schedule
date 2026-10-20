@@ -66,7 +66,8 @@
         <details><summary>從舊巡堂表單CSV整理待核對資料</summary><p>請在原Google試算表下載CSV，再於此選取。檔案只在本機解析；不儲存原表電子郵件。只會匯入你勾選「已核對」的問題班級，既有相同巡堂紀錄不會覆寫。</p>
           <label>來源試算表網址（請先貼上，包含gid）<input id="backfill-sheet-url" type="url" placeholder="貼上來源Google試算表網址，不會放進公開課表"></label>
           <label>選擇原表CSV<input id="backfill-file" type="file" accept=".csv,text/csv"></label>
-          <p id="backfill-import-summary"></p><div id="backfill-preview"></div><button type="button" class="action-button" id="backfill-import" disabled>匯入已核對的問題班級</button>
+          <p id="backfill-import-summary"></p><div id="backfill-preview"></div>
+          <p id="backfill-import-gate" role="status"></p><button type="button" class="person-button" id="backfill-retry">重新檢查雲端連線</button><button type="button" class="action-button" id="backfill-import" disabled>匯入已核對的問題班級</button>
           <details><summary>其他問題原文（包含正常描述，需人工判讀）</summary><div id="backfill-other-notes"></div></details>
         </details><p id="backfill-status" role="status"></p>
       </section>
@@ -321,7 +322,7 @@
     <script src="js/firebase-config.js"></script>
     <script src="js/patrol-csv.js?v=20261020r"></script>
     <script src="js/patrol.js?v=20261020o"></script>
-    <script src="js/patrol-backfill.js?v=20261020r"></script>
-    <script type="module" src="js/backend.js?v=20261020o"></script>
+    <script src="js/patrol-backfill.js?v=20261020t"></script>
+    <script type="module" src="js/backend.js?v=20261020t"></script>
   </body>
 </html>
