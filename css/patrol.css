@@ -21,3 +21,6 @@
 #backfill-issues label { display:inline-block; margin:8px 12px 8px 0; }
 #backfill-preview { max-height:600px; overflow:auto; margin:16px 0; }
 #backfill-other-notes { max-height:500px; overflow:auto; }
+.backfill-class-card { min-width:0; border:1px solid var(--line); border-radius:12px; padding:16px; margin:18px 0; }
+.backfill-class-card legend { font-weight:700; padding:0 8px; }
+.backfill-class-card .patrol-issues label { display:inline-block; margin:8px 12px 8px 0; }

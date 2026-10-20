@@ -6,7 +6,7 @@
     <meta name="description" content="臺南慈濟高中 115 學年度第 1 學期課表查詢" />
     <title>115-1 課表查詢｜臺南慈濟高中</title>
     <link rel="stylesheet" href="css/style.css?v=20261020i" />
-    <link rel="stylesheet" href="css/patrol.css?v=20261020o" />
+    <link rel="stylesheet" href="css/patrol.css?v=20261020p" />
   </head>
   <body>
     <header class="hero">
@@ -51,13 +51,17 @@
           <label>實際巡堂日期<input id="backfill-date" type="date" min="2026-08-31" max="2027-01-20" required></label>
           <label>實際節次<select id="backfill-period"></select></label>
           <label>原巡堂者<input id="backfill-observer" list="backfill-observers" maxlength="80" required autocomplete="off"></label><datalist id="backfill-observers"></datalist>
+        </div><fieldset class="backfill-class-card" id="backfill-primary"><legend>班級紀錄1</legend><div class="tool-grid">
           <label>班級<select id="backfill-class" required></select></label>
           <label>巡堂結果<select id="backfill-result"><option value="issue">需處理</option><option value="normal">已巡正常</option></select></label>
           <label>當時任課教師（選填）<input id="backfill-teacher" maxlength="80" placeholder="只填已核實資訊"></label>
           <label>當時科目（選填）<input id="backfill-subject" maxlength="160" placeholder="未提供可留白"></label>
         </div><div id="backfill-issues" class="patrol-issues"></div>
           <label>狀況紀錄<textarea id="backfill-note" maxlength="500" rows="3" placeholder="請避免學生姓名、病情等敏感資訊"></textarea></label>
-          <p id="backfill-source"></p><button type="submit" class="action-button" id="backfill-save">確認並補登此班</button><button type="button" class="person-button" id="backfill-clear">清空表單</button>
+          <p id="backfill-source"></p></fieldset>
+          <div id="backfill-extra-classes"></div>
+          <p>日期、節次及原巡堂者共用；每班分別填寫狀況，最後一次送出。既有同次紀錄會略過，不會覆寫。</p>
+          <button type="button" class="person-button" id="backfill-add-class">＋新增班級</button><button type="submit" class="action-button" id="backfill-save">確認並一次補登全部班級</button><button type="button" class="person-button" id="backfill-clear">清空表單</button>
         </form>
         <details><summary>從舊巡堂表單CSV整理待核對資料</summary><p>請在原Google試算表下載CSV，再於此選取。檔案只在本機解析；不儲存原表電子郵件。只會匯入你勾選「已核對」的問題班級，既有相同巡堂紀錄不會覆寫。</p>
           <label>來源試算表網址（請先貼上，包含gid）<input id="backfill-sheet-url" type="url" placeholder="貼上來源Google試算表網址，不會放進公開課表"></label>
@@ -310,7 +314,7 @@
     <script src="js/firebase-config.js"></script>
     <script src="js/patrol-csv.js?v=20261020o"></script>
     <script src="js/patrol.js?v=20261020o"></script>
-    <script src="js/patrol-backfill.js?v=20261020o"></script>
+    <script src="js/patrol-backfill.js?v=20261020p"></script>
     <script type="module" src="js/backend.js?v=20261020o"></script>
   </body>
 </html>
