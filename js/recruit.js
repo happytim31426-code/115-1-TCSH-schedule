@@ -9,7 +9,7 @@
   const daySelect = document.querySelector('#recruit-day');
   const W=window.WEEKLY, weekSelect=document.querySelector('#recruit-week');
   weekSelect.innerHTML=W.weekOptions();weekSelect.value=document.querySelector('#swap-week').value||'8';
-  let saved=new Map(), drafts=new Map(), editing=false, pending=false;
+  let saved=new Map(), drafts=new Map(), editing=false, pending=false, statisticsLoaded=false;
   const date=()=>W.dateFor(Number(weekSelect.value),Number(daySelect.value));
   let selectedDate=date();
   const periodBusy=(name,row)=>W.lessons(name,date(),row,'admin').length>0||W.onLeave(name,date(),row,'admin')||W.teacherEventBusy(name,date(),row);
@@ -25,7 +25,21 @@
     const note = periodBusy(person.name,2) ? '<sup aria-label="第二節有課">*</sup>' : '';
     return `<button type="button" class="person-button" data-person="${person.name}" data-role="${role}" ${permitted ? '' : 'disabled'}>${person.name}${note}</button>`;
   }
+  function renderStatistics(){
+    const summary=document.querySelector('#recruit-statistics-summary'),output=document.querySelector('#recruit-statistics-results');
+    if(!statisticsLoaded){summary.textContent='尚未讀取雲端招生紀錄，暫不計算。';output.replaceChildren();return;}
+    const counts=new Map(),add=name=>{if(typeof name!=='string'||!name.trim())return null;name=name.trim();if(!counts.has(name))counts.set(name,{name,leader:0,member:0,total:0});return counts.get(name);};
+    people.filter(p=>!excluded.has(p.name)).forEach(p=>add(p.name));
+    const submitted=[...saved.values()].filter(r=>r.status==='submitted');
+    for(const record of submitted){const leaders=new Set(),members=new Set();for(const plan of Array.isArray(record.plans)?record.plans:[]){if(typeof plan.leader==='string'&&plan.leader.trim())leaders.add(plan.leader.trim());for(const name of Array.isArray(plan.members)?plan.members:[])if(typeof name==='string'&&name.trim())members.add(name.trim());}for(const name of new Set([...leaders,...members])){const item=add(name);item.total++;if(leaders.has(name))item.leader++;else item.member++;}}
+    const list=[...counts.values()].sort((a,b)=>b.total-a.total||(Number(teacher(a.name)?.id)||Infinity)-(Number(teacher(b.name)?.id)||Infinity)||a.name.localeCompare(b.name,'zh-TW'));
+    summary.textContent=`有效安排${submitted.length}天｜曾安排${list.filter(p=>p.total>0).length}人｜累計派出${list.reduce((sum,p)=>sum+p.total,0)}人次（全學期，依雲端已同步紀錄計算）`;
+    const query=document.querySelector('#recruit-statistics-query').value.trim(),visible=list.filter(p=>!query||p.name.includes(query)||String(teacher(p.name)?.id||'').includes(query));
+    output.innerHTML=`<table><thead><tr><th scope="col">教師／職員</th><th scope="col">帶隊</th><th scope="col">入班</th><th scope="col">合計</th></tr></thead><tbody>${visible.map(p=>`<tr data-recruit-stat-name="${W.esc(p.name)}"><th scope="row">${W.esc(teacher(p.name)?.id||'')} ${W.esc(p.name)}</th><td>${p.leader}</td><td>${p.member}</td><td>${p.total}</td></tr>`).join('')}</tbody></table>${visible.length?'':'<p>沒有符合的教師。</p>'}`;
+  }
+  document.querySelector('#recruit-statistics-query').addEventListener('input',renderStatistics);
   function render() {
+    renderStatistics();
     const current=saved.get(date()),locked=pending||(current?.status==='submitted'&&!editing);
     document.querySelector('#recruit-publication-status').textContent=`${W.formatDate(date())}｜${current?.status==='submitted'&&!editing?'已送出':current?.status==='cancelled'?'已取消':current?.status==='deleted'?'已刪除':'草稿／待送出'}${current?`｜${W.auditText(current)}`:''}${pending?'（儲存中…）':''}`;
     document.querySelector('#recruit-records').innerHTML=window.RECORD_PAGES.sort([...saved.values()]).map(r=>`<article class="teaching-record"><b>第${r.week}週 ${W.formatDate(r.date)}｜${({submitted:'已送出',returned:'已退回',cancelled:'已取消',deleted:'已刪除'})[r.status]||'草稿'}</b><p class="record-meta">${W.esc(W.auditText(r))}</p>${r.plans.map((p,i)=>`<p>第${i+1}間｜帶隊：${W.esc(p.leader||'未選')}｜入班：${p.members.map(W.esc).join('、')||'無'}｜需求${p.need}人｜${p.long?'車程超過30分鐘':'車程30分鐘內'}</p>`).join('')}${r.status!=='deleted'?`<button type="button" class="person-button" data-recruit-open="${r.date}">查看／修正</button><button type="button" class="person-button" data-recruit-delete="${r.date}">整筆刪除</button>`:''}</article>`).join('')||'<p>目前尚無已儲存的招生紀錄。</p>';
@@ -96,8 +110,8 @@
   document.querySelector('#recruit-recall').addEventListener('click',()=>transition('returned'));
   document.querySelector('#recruit-cancel').addEventListener('click',()=>{if(confirm('確定取消此日整筆招生安排？'))transition('cancelled');});
   document.querySelector('#recruit-records').addEventListener('click',async event=>{const b=event.target.closest('[data-recruit-open],[data-recruit-delete]');if(!b||!window.AUTH_MEMBER||pending)return;const r=saved.get(b.dataset.recruitOpen||b.dataset.recruitDelete);if(!r)return;weekSelect.value=String(r.week);daySelect.value=String(r.day);switchDate();if(b.dataset.recruitDelete){if(confirm('整筆刪除此日招生安排？公開招生標記會移除，行政端保留刪除狀態。'))await transition('deleted');}else{say(r.status==='submitted'?'請先按「整筆退回修正」，再修改名單並重新送出。':'可直接修正後重新送出。');document.querySelector('#recruit-tool').scrollIntoView({behavior:'smooth'});}});
-  window.addEventListener('cloud-recruit-records',event=>{const previous=saved.get(date());saved=new Map(event.detail.map(r=>[r.date,r]));const current=saved.get(date());if(current&&current.revision!==previous?.revision){plans=JSON.parse(JSON.stringify(current.plans));document.querySelector('#school-count').value=String(plans.length);active=Math.min(active,plans.length-1);}render();});
-  window.addEventListener('authorization-changed',()=>{if(!window.AUTH_MEMBER){saved.clear();drafts.clear();plans=[createSchool()];active=0;document.querySelector('#school-count').value='1';render();}});
+  window.addEventListener('cloud-recruit-records',event=>{const previous=saved.get(date());saved=new Map(event.detail.map(r=>[r.date,r]));statisticsLoaded=true;const current=saved.get(date());if(current&&current.revision!==previous?.revision){plans=JSON.parse(JSON.stringify(current.plans));document.querySelector('#school-count').value=String(plans.length);active=Math.min(active,plans.length-1);}render();});
+  window.addEventListener('authorization-changed',()=>{if(!window.AUTH_MEMBER){saved.clear();drafts.clear();statisticsLoaded=false;document.querySelector('#recruit-statistics-query').value='';plans=[createSchool()];active=0;document.querySelector('#school-count').value='1';render();}});
   window.RECRUIT_PLANNER = {
     snapshot: () => ({week:Number(weekSelect.value),day:Number(daySelect.value),plans:JSON.parse(JSON.stringify(plans))}),
     restore: state => {

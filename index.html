@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="臺南慈濟高中 115 學年度第 1 學期課表查詢" />
     <title>115-1 課表查詢｜臺南慈濟高中</title>
-    <link rel="stylesheet" href="css/style.css?v=20261020i" />
+    <link rel="stylesheet" href="css/style.css?v=20261020s" />
     <link rel="stylesheet" href="css/patrol.css?v=20261020p" />
   </head>
   <body>
@@ -211,6 +211,13 @@
         <div id="teaching-records"></div>
       </section>
       <section class="tool-card" id="recruit-history-tool" hidden>
+        <section id="recruit-statistics" aria-labelledby="recruit-statistics-heading">
+          <h2 id="recruit-statistics-heading">教師招生安排次數統計</h2>
+          <p>統計全學期已送出的有效安排，含帶隊與入班。同一人同一天計1次，重複名單不重複計次；退回、取消、刪除與未送出草稿不計，修正重新送出後同步更新。</p>
+          <p id="recruit-statistics-summary" role="status"></p>
+          <label for="recruit-statistics-query">搜尋教師姓名或編號（選填）</label><input id="recruit-statistics-query" type="search" placeholder="輸入部分姓名或教師編號" autocomplete="off">
+          <div class="table-wrap" id="recruit-statistics-results"></div>
+        </section>
         <h2>招生安排登錄紀錄（跨日期）</h2>
         <div id="recruit-records"></div>
       </section>
@@ -306,7 +313,7 @@
     <script src="js/app.js?v=20261020q"></script>
     <script src="js/weekly-comparison.js?v=20261020f"></script>
     <script src="js/record-pages.js?v=20261020g"></script>
-    <script src="js/recruit.js?v=20261020i"></script>
+    <script src="js/recruit.js?v=20261020s"></script>
     <script src="js/teaching.js?v=20261020i"></script>
     <script src="js/events.js?v=20261020i"></script>
     <script src="js/teachers.js?v=20261020g"></script>

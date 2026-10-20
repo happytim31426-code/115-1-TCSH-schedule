@@ -165,3 +165,9 @@ body[data-office-feature="teaching-plan"] .page-shell { width:calc(100% - 2rem);
 .patrol-issues input[type="checkbox"] { width: auto; margin-right: 8px; }
 .patrol-class textarea { width: 100%; box-sizing: border-box; }
 #patrol-summary ul { columns: 2 250px; }
+#recruit-statistics { padding-bottom:24px; margin-bottom:24px; border-bottom:1px solid var(--line); }
+#recruit-statistics-query { width:100%; padding:10px; margin:8px 0 16px; font:inherit; color:var(--ink); background:var(--paper); border:1px solid var(--line); border-radius:8px; }
+#recruit-statistics-results { max-height:440px; overflow:auto; }
+#recruit-statistics-results table { min-width:300px; }
+#recruit-statistics-results thead th { position:sticky; top:0; z-index:1; background:var(--subtle); }
+#recruit-statistics-results tbody tr:nth-child(5) td { border-bottom:1px solid var(--line); }
