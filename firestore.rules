@@ -84,7 +84,7 @@ service cloud.firestore {
       allow read: if member();
       allow create, update: if member() && versioned('courseRecords', id) && course(request.resource.data)
         && request.resource.data.keys().hasOnly(['kind','a','b','leaveType','note','order','status','revision','updatedAt','updatedBy','updatedName','createdName','createdBy','createdAt'])
-        && request.resource.data.leaveType in ['','公假','差假','重大假別','其他']
+        && request.resource.data.leaveType in ['','公假','差假','公差假','婚假','產(檢)假','喪假','病假','事假','重大假別','其他']
         && request.resource.data.note is string && request.resource.data.note.size() <= 300
         && request.resource.data.order is number && request.resource.data.status in ['submitted','cancelled','deleted'];
       allow delete: if false;
@@ -101,7 +101,7 @@ service cloud.firestore {
       allow read: if true;
       allow create, update: if member() && course(request.resource.data)
         && request.resource.data.keys().hasOnly(['id','kind','a','b','leaveCode','order'])
-        && request.resource.data.id == id && request.resource.data.leaveCode in ['','公','差','假']
+        && request.resource.data.id == id && request.resource.data.leaveCode in ['','假']
         && request.resource.data.order is number
         && getAfter(/databases/$(database)/documents/courseRecords/$(id)).data.status == 'submitted';
       allow delete: if member();

@@ -75,11 +75,12 @@
       const incoming = change.incoming.map(({lesson,label}) => `<div class="lesson-change"><b>${label}</b><br>${esc(lesson.subject)}<br>${esc(className(lesson.classId))}／${label === '代' ? '代' : '調'}<br>${label === '代' ? `原教師：${esc(lesson.teacher)}` : `原課：${lesson.date} 第${lesson.row}節`}</div>`).join('');
       return `<td>${original ? `<div class="lesson-original">${change.outgoing.length ? '原：' : '原有課程：'}${original}</div>` : ''}${outgoing}${incoming}</td>`;
     }).join('')}</tr>`).join('')}</tbody></table>`;
-    const visible = [...records].sort((a,b)=>b.a.date.localeCompare(a.a.date)||(b.order||0)-(a.order||0));
+    const visible = window.RECORD_PAGES.sort(records);
     $('teaching-records').innerHTML = visible.map(r => {
       const inactive=['cancelled','deleted'].includes(r.status);
-      return `<article class="teaching-record"><b>${r.status==='submitted'?'已送出':r.status==='deleted'?'已刪除':'已取消'}</b><p>${esc(describe(r))}</p><p class="record-meta">${esc(window.WEEKLY.auditText(r))}</p>${r.note?`<p>${esc(r.note)}</p>`:''}${!inactive?`<button type="button" class="person-button" data-edit-record="${esc(r.id)}">修正</button><button class="person-button" type="button" data-remove-record="${esc(r.id)}">整筆刪除</button>`:''}</article>`;
+      return `<article class="teaching-record"><b>${r.status==='submitted'?'已送出':r.status==='deleted'?'已刪除':'已取消'}</b><p>${esc(describe(r))}</p>${r.kind!=='leave'&&r.leaveType?`<p>假別：${esc(r.leaveType)}（僅行政紀錄）</p>`:''}<p class="record-meta">${esc(window.WEEKLY.auditText(r))}</p>${r.note?`<p>${esc(r.note)}</p>`:''}${!inactive?`<button type="button" class="person-button" data-edit-record="${esc(r.id)}">修正</button><button class="person-button" type="button" data-remove-record="${esc(r.id)}">整筆刪除</button>`:''}</article>`;
     }).join('') || '<p>目前尚無登錄紀錄。</p>';
+    window.RECORD_PAGES.render('teaching-records');
   }
   function slotFrom(name,date,selectId) {
     const value = $(selectId).value;
@@ -139,7 +140,9 @@
     const record = records.find(r => r.id === (button.dataset.removeRecord||button.dataset.editRecord)); if (!record) return;
     try {
       if(button.dataset.editRecord){
-        editingId=record.id;editingRevision=record.revision||0;$('entry-kind').value=record.kind;$('entry-teacher').value=record.a.teacher;$('entry-date').value=record.a.date;$('entry-leave').value=record.leaveType;$('entry-note').value=record.note||'';
+        editingId=record.id;editingRevision=record.revision||0;$('entry-kind').value=record.kind;$('entry-teacher').value=record.a.teacher;$('entry-date').value=record.a.date;
+        if(record.leaveType&&!Array.from($('entry-leave').options).some(o=>o.value===record.leaveType))$('entry-leave').add(new Option(`${record.leaveType}（舊紀錄）`,record.leaveType));
+        $('entry-leave').value=record.leaveType;$('entry-note').value=record.note||'';
         $('swap-week').value=String(weekOf(record.a.date));$('swap-other-week').value=String(weekOf(record.kind==='swap'?record.b.date:record.a.date));$('swap-teacher').value=record.a.teacher;if(record.a.classId)$('swap-class').value=record.a.classId;refreshSwapOptions();updateComparison();
         if(record.b){$('entry-partner').value=record.b.teacher;$('entry-other-date').value=record.b.date;}
         refreshForm();for(const [slot,id] of [[record.a,'entry-course'],[record.b,'entry-other-course']])if(slot?.subject){const index=courses(slot.teacher,slot.date).findIndex(s=>s.row===slot.row&&s.classId===slot.classId&&s.subject===slot.subject);if(index>=0)$(id).value=String(index);}

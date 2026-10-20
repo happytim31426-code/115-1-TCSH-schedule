@@ -11,7 +11,8 @@
   const payload=r=>Object.fromEntries(fields.map(k=>[k,r[k]]));
   const text=r=>`第${r.week}週 ${W.formatDate(W.dateFor(r.week,r.startDay))} 第${r.startRow}節 ～ ${W.formatDate(W.dateFor(r.week,r.endDay))} 第${r.endRow}節｜${W.className(r.startClass)} ～ ${W.className(r.endClass)}｜${r.effect==='no-class'?'無一般課程':'禁止代調課'}`;
   function render(){
-    $('event-records').innerHTML=[...records].sort((a,b)=>b.week-a.week||b.startDay-a.startDay).map(r=>`<article class="teaching-record"><b>${W.esc(r.name)}｜${r.status==='deleted'?'已刪除':'已送出'}</b><p>${W.esc(text(r))}</p><p class="record-meta">${W.esc(W.auditText(r))}</p>${r.status!=='deleted'?`<button type="button" class="person-button" data-event-edit="${W.esc(r.id)}">修改</button><button type="button" class="person-button" data-event-delete="${W.esc(r.id)}">整筆刪除</button>`:''}</article>`).join('')||'<p>目前尚無活動紀錄。</p>';
+    $('event-records').innerHTML=window.RECORD_PAGES.sort(records).map(r=>`<article class="teaching-record"><b>${W.esc(r.name)}｜${r.status==='deleted'?'已刪除':'已送出'}</b><p>${W.esc(text(r))}</p><p class="record-meta">${W.esc(W.auditText(r))}</p>${r.status!=='deleted'?`<button type="button" class="person-button" data-event-edit="${W.esc(r.id)}">修改</button><button type="button" class="person-button" data-event-delete="${W.esc(r.id)}">整筆刪除</button>`:''}</article>`).join('')||'<p>目前尚無活動紀錄。</p>';
+    window.RECORD_PAGES.render('event-records');
   }
   function reset(){editing=null;$('event-submit').textContent='送出重要活動';$('event-cancel-edit').hidden=true;}
   async function save(r,status){if(!window.CLOUD_RECORDS)throw Error('雲端尚未就緒，請確認登入及新版規則。');await window.CLOUD_RECORDS.save('event',r.id,{...payload(r),status},status==='submitted'?payload(r):null,r.revision||0);}

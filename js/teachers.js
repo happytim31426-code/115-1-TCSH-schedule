@@ -1,6 +1,11 @@
 (() => {
   const W=window.WEEKLY,$=id=>document.getElementById(id),query=$('teacher-name-query');
   const resultButton=t=>`<button type="button" class="person-button" data-choice-teacher="${W.esc(t.name)}">${W.esc(t.id)} ${W.esc(t.name)}</button>`;
+  const swapQuery=$('swap-teacher-query'),swapMatches=$('swap-teacher-matches');
+  const filterSwap=filtering=>{$('swap-tool').querySelector('.comparison-grid').hidden=filtering;$('swap-results').hidden=filtering;};
+  swapQuery.addEventListener('input',()=>{const value=swapQuery.value.trim();filterSwap(!!value);swapMatches.innerHTML=value?data.teachers.filter(t=>t.name.includes(value)||String(t.id).includes(value)).map(t=>`<button type="button" class="person-button" data-swap-choice="${W.esc(t.name)}">${W.esc(t.id)} ${W.esc(t.name)}</button>`).join('')||'<p>找不到符合的教師，請重新輸入。</p>':'';});
+  swapMatches.addEventListener('click',event=>{const b=event.target.closest('[data-swap-choice]');if(!b)return;$('swap-teacher').value=b.dataset.swapChoice;swapQuery.value=b.dataset.swapChoice;swapMatches.replaceChildren();$('swap-teacher').dispatchEvent(new Event('change',{bubbles:true}));});
+  $('swap-teacher').addEventListener('change',()=>{swapQuery.value=$('swap-teacher').value;swapMatches.replaceChildren();filterSwap(false);});
   let previewTeacher=null;
   $('teacher-free-period').insertAdjacentHTML('beforeend',Array.from({length:8},(_,i)=>`<option value="${i+1}">第${i+1}節</option>`).join(''));
   function clearPreview(){previewTeacher=null;$('teacher-free-preview').hidden=true;$('teacher-free-preview').replaceChildren();}

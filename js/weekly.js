@@ -31,7 +31,7 @@
     return [...new Set(events.filter(e=>weekOf(value)===e.week&&dayOf(value)>=e.startDay&&dayOf(value)<=e.endDay&&((e.startClass===orderedClasses[0].id&&e.endClass===orderedClasses.at(-1).id)||sessions.some(s=>classIndex(s.classId)>=classIndex(e.startClass)&&classIndex(s.classId)<=classIndex(e.endClass)))).map(e=>e.name))];
   }
   const auditText=r=>{const timestamp=r.updatedAt?.toDate?.()|| (r.updatedAt?.seconds?new Date(r.updatedAt.seconds*1000):null);return `${r.createdName||r.updatedName||'舊紀錄未記名'} 登錄${r.updatedName?`｜最新更新：${r.updatedName}`:''}${timestamp?`｜${timestamp.toLocaleString('zh-TW',{timeZone:'Asia/Taipei',hour12:false})}`:''}`;};
-  const leaveCode=value=>({'公假':'公','差假':'差','重大假別':'假','其他':'假'})[value]||(['公','差','假'].includes(value)?value:'');
+  const leaveCode=value=>['公假','差假','公差假','婚假','產(檢)假','喪假','病假','事假','重大假別','其他','公','差','假'].includes(value)?'假':'';
   function validSlot(s,full=true){return s&&typeof s.teacher==='string'&&s.teacher.length>0&&s.teacher.length<=80&&inTerm(s.date)&&(!full||(Number.isInteger(s.row)&&s.row>=1&&s.row<=8&&typeof s.classId==='string'&&typeof s.subject==='string'&&s.subject.length<=160));}
   function valid(r){return r&&typeof r.id==='string'&&['leave','sub','swap'].includes(r.kind)&&validSlot(r.a,r.kind!=='leave')&&(r.kind==='leave'||(r.kind==='swap'?validSlot(r.b):r.b&&typeof r.b.teacher==='string'&&r.b.teacher.length>0&&r.b.teacher.length<=80));}
   const active=scope=>(Array.isArray(scope)?scope:scope==='admin'?[...published.filter(r=>!preview.some(p=>p.id===r.id)),...preview]:published).filter(valid).sort((a,b)=>(a.order||0)-(b.order||0)||a.id.localeCompare(b.id));
@@ -75,7 +75,7 @@
     return `<h3>${esc(t?.id||'')} ${esc(name)}</h3><div class="table-wrap"><table><thead><tr><th>第${week}週</th>${dates.map((value,day)=>header(value,day,[...leaves(name,value,scope),...(recruiting(name,value)?['招生']:[]),...teacherEvents(name,value,scope)])).join('')}</tr></thead><tbody>${data.classes[0].rows.map((r,row)=>`<tr><td>${r.period.name}</td>${dates.map(value=>cell(name,value,row,week,scope)).join('')}</tr>`).join('')}</tbody></table></div>`;
   }
   function header(value,day,codes=[]){
-    const titles={'公':'公假','差':'差假','假':'其他／重大假別'};
+    const titles={'公':'假','差':'假','假':'假'};
     return `<th class="weekly-day"><div class="weekly-heading"><span class="weekday-name">星期${data.meta.days[day]}</span><small class="weekday-date">${value<=end?formatDate(value):'學期結束'}</small><div class="weekly-leave-row">${codes.map(code=>`<span class="leave-circle" title="${titles[code]||code}" aria-label="${titles[code]||code}">${esc(titles[code]||code)}</span>`).join('')}</div></div></th>`;
   }
   window.WEEKLY={start,end,plus,dayOf,weekOf,inTerm,dateFor,formatDate,className,esc,leaveCode,valid,lessons,classLessons,leaves,busy,changes,table,header,tone,active,setPublished,setPreview,setRecruitments,recruiting,recruitBusy,orderedClasses,validEvent,setEvents,activityBlocked,classEvents,teacherEvents,teacherEventBusy,auditText,get ready(){return ready;},get message(){return message;},weekOptions:()=>Array.from({length:21},(_,i)=>`<option value="${i+1}">第${i+1}週 ${formatDate(dateFor(i+1,0))}～${formatDate(dateFor(i+1,4)>end?end:dateFor(i+1,4))}</option>`).join('')};

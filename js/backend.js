@@ -1,6 +1,7 @@
 const el = id => document.getElementById(id);
 let api, user = null, stopMember = () => {}, stopList = () => {}, stopPrivate=()=>{};
 let privateActive=false;
+let repairLegacyLeaves=()=>{};
 const privateCollection=kind=>({recruit:'recruitmentRecords',course:'courseRecords',event:'schoolEvents'})[kind];
 const publicCollection=kind=>({recruit:'publicRecruitments',course:'publicCourseRecords',event:'publicSchoolEvents'})[kind];
 function startPrivate(member){
@@ -20,6 +21,7 @@ function access(member) {
   for (const id of ['recruit-save','recruit-load']) el(id).disabled = !member;
   if (!member) { el('member-list').replaceChildren(); el('recruit-cloud-status').textContent = ''; }
   window.dispatchEvent(new Event('authorization-changed'));
+  if(member)repairLegacyLeaves();else{el('leave-privacy-status').hidden=true;el('leave-privacy-status').textContent='';}
 }
 function errorMessage(error) {
   return ({'auth/unauthorized-domain':'請在 Firebase 驗證設定加入 happytim31426-code.github.io 授權網域。',
@@ -66,11 +68,31 @@ async function initialize() {
     });}catch(error){throw Error(error.code?errorMessage(error):error.message);}
   }};
   let publicCourses=[],publicRecruitments=[],publicEvents=[],loaded=new Set();
+  let repairing=false;
+  repairLegacyLeaves=async()=>{
+    if(repairing||!user||!window.AUTH_MEMBER)return;
+    const legacy=publicCourses.filter(r=>['公','差'].includes(r.leaveCode));if(!legacy.length)return;
+    repairing=true;const uid=user.uid,note=el('leave-privacy-status');note.hidden=false;note.textContent='正在將舊公開假別轉為「假」，不更動行政假別…';
+    try{
+      for(const record of legacy){
+        if(user?.uid!==uid||!window.AUTH_MEMBER)break;
+        await api.runTransaction(api.db,async transaction=>{
+          const ref=api.doc(api.db,'publicCourseRecords',record.id),privateRef=api.doc(api.db,'courseRecords',record.id);
+          const [pub,priv]=await Promise.all([transaction.get(ref),transaction.get(privateRef)]);
+          if(pub.exists()&&['公','差'].includes(pub.data().leaveCode)){
+            if(!priv.exists()||priv.data().status!=='submitted')throw Error('有舊公開紀錄無法對上有效行政資料，請聯絡管理員核對。');
+            transaction.update(ref,{leaveCode:'假'});
+          }
+        });
+      }
+      if(user?.uid===uid&&window.AUTH_MEMBER)note.textContent='舊公開假別已統一為「假」，行政端詳細假別保留。';
+    }catch(error){if(user?.uid===uid&&window.AUTH_MEMBER)note.textContent=`舊公開假別轉換尚未完成：${error.code?errorMessage(error):error.message}。請重新登入重試。`;}finally{repairing=false;}
+  };
   window.WEEKLY.setPublished([],false,'正在讀取雲端最新課務與招生安排…');
   const syncPublic=()=>{window.WEEKLY.setRecruitments(publicRecruitments);window.WEEKLY.setEvents(publicEvents);window.WEEKLY.setPublished(publicCourses,loaded.size===3,loaded.size===3?'已同步雲端最新課務、招生及重要活動。':'正在讀取雲端最新課務、招生及重要活動…');};
   for(const kind of ['course','recruit','event'])api.onSnapshot(api.collection(api.db,publicCollection(kind)),{includeMetadataChanges:true},snapshot=>{
     if(snapshot.metadata.fromCache||snapshot.metadata.hasPendingWrites)return;
-    const list=snapshot.docs.map(d=>({...d.data(),id:d.id}));if(kind==='course')publicCourses=list;else if(kind==='recruit')publicRecruitments=list;else publicEvents=list;loaded.add(kind);syncPublic();
+    const list=snapshot.docs.map(d=>({...d.data(),id:d.id}));if(kind==='course')publicCourses=list;else if(kind==='recruit')publicRecruitments=list;else publicEvents=list;loaded.add(kind);syncPublic();if(kind==='course')repairLegacyLeaves();
   },error=>{loaded.delete(kind);window.WEEKLY.setPublished(publicCourses,false,`雲端同步未完成：${errorMessage(error)}`);});
   el('google-login').disabled = false;
   api.onAuthStateChanged(api.auth, current => {

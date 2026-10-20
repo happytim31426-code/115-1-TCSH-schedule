@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="臺南慈濟高中 115 學年度第 1 學期課表查詢" />
     <title>115-1 課表查詢｜臺南慈濟高中</title>
-    <link rel="stylesheet" href="css/style.css?v=20261020f" />
+    <link rel="stylesheet" href="css/style.css?v=20261020g" />
   </head>
   <body>
     <header class="hero">
@@ -24,6 +24,7 @@
       <section class="tool-card" id="account-panel" hidden>
         <h2 id="account-heading">授權登入</h2>
         <p id="account-status" role="status">登入服務尚未設定，公開課表可照常查詢。</p>
+        <p id="leave-privacy-status" role="status" hidden></p>
         <button type="button" class="action-button" id="google-login" disabled>使用 Google 帳號登入</button>
         <button type="button" class="action-button is-hidden" id="google-logout">登出</button>
         <p id="admin-access-note" class="is-hidden">此功能僅供管理員使用，請使用管理員 Google 帳號登入。</p>
@@ -81,13 +82,12 @@
       </section>
       <section class="tool-card" id="teaching-tool" hidden>
         <h2>教學組代調課規劃</h2>
-        <p>先用三張課表核對指定週次，填妥後直接送出至公開課表。下方紀錄可修正或刪除；原始教師／班級課表保持不變。</p>
         <div class="tool-grid" id="teaching-legacy-controls" hidden>
           <label>查看教師<select id="teaching-teacher"></select></label>
           <label>學期週次<select id="teaching-week"></select></label>
           <label>課表呈現<select id="teaching-display"><option value="planned">規劃後＋原課註記</option><option value="base">只看基本課表</option></select></label>
         </div>
-        <p id="teaching-status" role="status">核對資料後按「送出至公開課表」，即儲存並同步更新。</p>
+        <p id="teaching-status" role="status"></p>
         <div id="teaching-comparison-host"></div>
         <details class="photo-entry" id="photo-entry"><summary>拍照辨識代調課單（本機辨識・人工核對）</summary>
           <p>照片只留在此瀏覽器，不上傳。首次辨識需下載程式及語言檔；手寫辨識可能不準確。請先將照片轉正，最好只拍上半部姓名與課務表，避開請假事由及簽核等不需要的資訊。</p>
@@ -111,7 +111,7 @@
               <label>處理方式<select id="entry-kind"><option value="leave">請假註記</option><option value="sub">代課</option><option value="swap">調課</option></select></label>
               <label>請假／原授課教師<select id="entry-teacher"></select></label>
               <label>請假／原課日期<input id="entry-date" type="date" min="2026-08-31" max="2027-01-20" required></label>
-              <label>假別<select id="entry-leave"><option>公假</option><option>差假</option><option>重大假別</option><option>其他</option><option value="">不註記假別（純調課）</option></select></label>
+              <label>假別（僅行政紀錄，公開統一顯示「假」）<select id="entry-leave"><option>公假</option><option>差假</option><option>公差假</option><option>婚假</option><option>產(檢)假</option><option>喪假</option><option>病假</option><option>事假</option><option>其他</option><option value="">不註記假別（純調課）</option></select></label>
             </div>
             <p>請假註記以整日顯示；代課、調課則指定課程。可先登錄假別，再逐節處理課務。</p>
             <div class="tool-grid">
@@ -160,11 +160,13 @@
         <div class="tool-grid swap-filters">
           <label>原調課週次<select id="swap-week"></select></label>
           <label>調課教師<select id="swap-teacher"></select></label>
+          <label>輸入調課教師姓名／編號<input id="swap-teacher-query" type="search" autocomplete="off" placeholder="例如：林，請再點選下方教師"></label>
           <label>調課班級<select id="swap-class"></select></label>
           <label>調課星期<select id="swap-day"></select></label>
           <label>調課節次<select id="swap-period"></select></label>
           <label>被調課週次<select id="swap-other-week"></select></label>
         </div>
+        <div id="swap-teacher-matches" class="person-list" aria-live="polite"></div>
         <p id="swap-sync-status" role="status"></p>
         <div class="tool-results" id="swap-results"></div>
         <div class="comparison-grid" aria-live="polite">
@@ -216,15 +218,16 @@
     </main>
     <footer>資料來源：臺南慈濟高中 115 學年度第 1 學期課程表</footer>
     <script src="data/schedules.js"></script>
-    <script src="js/weekly.js?v=20261020d"></script>
+    <script src="js/weekly.js?v=20261020g"></script>
     <script src="js/app.js?v=20261020e"></script>
     <script src="js/weekly-comparison.js?v=20261020f"></script>
-    <script src="js/recruit.js?v=20261020d"></script>
-    <script src="js/teaching.js?v=20261020f"></script>
-    <script src="js/events.js?v=20261020d"></script>
-    <script src="js/teachers.js?v=20261020e"></script>
+    <script src="js/record-pages.js?v=20261020g"></script>
+    <script src="js/recruit.js?v=20261020g"></script>
+    <script src="js/teaching.js?v=20261020g"></script>
+    <script src="js/events.js?v=20261020g"></script>
+    <script src="js/teachers.js?v=20261020g"></script>
     <script src="js/photo-import.js?v=20261020f"></script>
     <script src="js/firebase-config.js"></script>
-    <script type="module" src="js/backend.js?v=20261020d"></script>
+    <script type="module" src="js/backend.js?v=20261020g"></script>
   </body>
 </html>
