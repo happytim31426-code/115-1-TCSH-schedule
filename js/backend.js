@@ -67,6 +67,7 @@ async function initialize() {
   window.PATROL_API={save:async (entries,onCommitted=()=>{})=>{
     if(!user||!['admin','patrol'].includes(window.AUTH_MEMBER?.role))throw Error('需要巡堂登錄權限。');
     if(!Array.isArray(entries)||!entries.length||entries.length>43)throw Error('巡堂資料筆數不正確。');
+    if(entries.some(e=>e.revision===0&&['class-09','class-17'].includes(e.data.classId)&&e.data.period>=1&&e.data.period<=7))throw Error('國一、國二數理班第1～7節免巡堂登錄，第8節才開放。');
     const uid=user.uid,name=window.AUTH_MEMBER.name;
     // Bound per-transaction rule document accesses when submitting all grades.
     for(let offset=0;offset<entries.length;offset+=5){

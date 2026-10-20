@@ -3,6 +3,7 @@
   const grades=['國一','國二','國三','高一','高二','高三'],issues=['師生音量需控管','學生趴睡需提醒','3C使用管理待提升','老師遲到/缺課','師生互動待提升','桌椅未靠攏','外堂課門窗未關','電燈、電扇未關','外堂課電視未關'];
   let drafts=new Map(),records=[],editing=null,loaded=false,saving=false,confirmDelete=null,submitted=new Set();
   const option=(v,t)=>`<option value="${E(v)}">${E(t)}</option>`;
+  const patrolClosed=(c,period)=>['國一數理','國二數理'].includes(c.name)&&Number(period)>=1&&Number(period)<=7;
   $('patrol-period').innerHTML=Array.from({length:8},(_,i)=>option(String(i+1),D.classes[0].rows[i+1].period.name+' '+D.classes[0].rows[i+1].period.time)).join('');
   $('patrol-filter-grade').innerHTML=option('','全部年級')+grades.map(g=>option(g,g)).join('');
   $('patrol-filter-week').innerHTML=option('','全部週次')+W.weekOptions();
@@ -13,12 +14,13 @@
     const date=$('patrol-date').value,row=Number($('patrol-period').value),valid=W.inTerm(date)&&W.dayOf(date)>=0&&W.dayOf(date)<5;
     $('patrol-context').textContent=valid?`第${W.weekOf(date)}週｜星期${D.meta.days[W.dayOf(date)]}｜第${row}節｜巡堂人員：${window.AUTH_MEMBER?.name||'請登入'}${editing?'｜修正紀錄：保留當時課務快照':''}`:'請選擇學期內星期一至五。';
     $('patrol-sync').textContent=W.message;
-    $('patrol-submit').disabled=saving||!valid||!W.ready||!loaded||!window.AUTH_MEMBER;
+    $('patrol-submit').disabled=saving||!valid||!W.ready||!loaded||!window.AUTH_MEMBER||!!(editing&&patrolClosed({name:editing.className},row));
     for(const id of ['patrol-date','patrol-period'])$(id).disabled=saving||!!editing;
     $('patrol-reset').disabled=saving;
     const classes=D.classes.filter(c=>!editing||c.id===editing.classId);
     $('patrol-classes').innerHTML=valid?grades.filter(g=>classes.some(c=>c.name.startsWith(g))).map(g=>`<section class="patrol-grade"><h2>${g}</h2><div class="patrol-grid">${classes.filter(c=>c.name.startsWith(g)).map(c=>{
       const d=drafts.get(c.id)||{result:'normal',issues:[],note:''},lessons=editing?editing.lessons:snapshot(c);
+      if(patrolClosed(c,row))return `<section class="patrol-class patrol-closed" data-patrol-closed="${E(c.id)}"><h3>${E(c.name)} ${E(c.publicCode)}</h3><p>第1～7節免巡堂登錄，第8節才開放。</p><label>巡查結果<select disabled aria-label="${E(c.name)}本節免登錄"><option>免登錄（本節不送出）</option></select></label></section>`;
       if(!editing&&submitted.has(c.id))return `<section class="patrol-class"><h3>${E(c.name)} ${E(c.publicCode)}</h3><p>✓ 本次已送出，可至下方紀錄修正。</p></section>`;
       return `<section class="patrol-class" data-patrol-class="${E(c.id)}"><h3>${E(c.name)} ${E(c.publicCode)}</h3><p>${lessons.map(s=>`${E(s.subject)}｜${E(s.teacher)}`).join('<br>')||'無課／停課，或任課資訊待確認'}</p><label>巡查結果<select data-patrol-result ${saving?'disabled':''}>${[['unvisited','未巡查'],['normal','已巡正常'],['issue','需處理']].map(([v,t])=>`<option value="${v}" ${v===d.result?'selected':''}>${t}</option>`).join('')}</select></label><div class="patrol-issues" ${d.result==='issue'?'':'hidden'}>${issues.map((s,i)=>`<label><input type="checkbox" data-patrol-issue="${i}" ${d.issues.includes(s)?'checked':''} ${saving?'disabled':''}>${E(s)}</label>`).join('')}</div><label ${d.result==='unvisited'?'hidden':''}>其他問題／說明（勿填學生姓名、病情等敏感資料）<textarea data-patrol-note maxlength="500" rows="2" ${saving?'disabled':''}>${E(d.note)}</textarea></label></section>`;
     }).join('')}</div></section>`).join(''):'';
@@ -30,7 +32,7 @@
   function payload(r){return Object.fromEntries(['date','week','period','classId','className','grade','lessons','result','issues','note','status'].map(k=>[k,r[k]]));}
   $('patrol-form').addEventListener('submit',async e=>{
     e.preventDefault();if(saving||!window.AUTH_MEMBER||!W.ready||!loaded)return;
-    const date=$('patrol-date').value,period=Number($('patrol-period').value),selected=(editing?D.classes.filter(c=>c.id===editing.classId):D.classes.filter(c=>!submitted.has(c.id))).map(c=>[c.id,drafts.get(c.id)||{result:'normal',issues:[],note:''}]).filter(([,d])=>d.result!=='unvisited');
+    const date=$('patrol-date').value,period=Number($('patrol-period').value),selected=(editing?D.classes.filter(c=>c.id===editing.classId):D.classes.filter(c=>!submitted.has(c.id))).filter(c=>!patrolClosed(c,period)).map(c=>[c.id,drafts.get(c.id)||{result:'normal',issues:[],note:''}]).filter(([,d])=>d.result!=='unvisited');
     if(!W.inTerm(date)||W.dayOf(date)<0||W.dayOf(date)>4)return;
     if(!selected.length){$('patrol-status').textContent='請至少登錄一個已巡查班級。';return;}
     if(selected.some(([,d])=>d.result==='issue'&&!d.issues.length&&!d.note.trim())){$('patrol-status').textContent='需處理的班級請勾選項目或填寫說明。';return;}
