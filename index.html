@@ -6,15 +6,15 @@
     <meta name="description" content="臺南慈濟高中 115 學年度第 1 學期課表查詢" />
     <title>115-1 課表查詢｜臺南慈濟高中</title>
     <link rel="stylesheet" href="css/style.css?v=20261020i" />
-    <link rel="stylesheet" href="css/patrol.css?v=20261020k" />
+    <link rel="stylesheet" href="css/patrol.css?v=20261020m" />
   </head>
   <body>
     <header class="hero">
       <nav class="header-navigation" aria-label="網站功能">
         <button type="button" class="admin-header-button" id="public-open" aria-pressed="true">課表查詢</button>
+        <button type="button" class="admin-header-button" id="patrol-open" aria-pressed="false">巡堂紀錄登錄</button>
         <button type="button" class="admin-header-button" id="office-open" aria-pressed="false">教務處行政業務</button>
         <button type="button" class="admin-header-button" id="admin-open" aria-pressed="false">管理者功能</button>
-        <button type="button" class="admin-header-button" id="patrol-open" aria-pressed="false">巡堂紀錄登錄</button>
       </nav>
       <p class="eyebrow">臺南慈濟高中</p>
       <h1 id="page-heading">115 學年度第 1 學期課表</h1>
@@ -101,11 +101,26 @@
       </section>
       <section class="tool-card" id="patrol-analysis" hidden>
         <h2>巡堂紀錄分析</h2>
+        <p id="patrol-analysis-status" role="status"></p>
+        <section class="patrol-analysis-part"><h3>一、全年段統計（全部週次）</h3><div id="patrol-summary"></div><div id="patrol-grade-summary" class="table-wrap"></div></section>
+        <section class="patrol-analysis-part"><h3>二、班級累積結果</h3><div class="tool-grid"><label>選擇班級<select id="patrol-class-select"></select></label><label>學期週次<select id="patrol-class-week"></select></label></div><div id="patrol-class-summary"></div></section>
+        <section class="patrol-analysis-part"><h3>三、行政巡堂人員累積次數與週次明細</h3>
+          <div class="table-wrap"><table id="patrol-roster"><caption>巡堂排班表</caption><thead><tr><th scope="col">巡堂節次</th><th scope="col">星期一</th><th scope="col">星期二</th><th scope="col">星期三</th><th scope="col">星期四</th><th scope="col">星期五</th></tr></thead><tbody>
+            <tr><th scope="row">第一節</th><td rowspan="2">林書淵</td><td rowspan="2">林曉瑩</td><td rowspan="2">陳柏伶</td><td rowspan="2">陳柏伶</td><td rowspan="2">張齡之</td></tr>
+            <tr><th scope="row">第二節</th></tr>
+            <tr><th scope="row">第三節</th><td rowspan="2">陳冠廷</td><td rowspan="2">林昱汝</td><td rowspan="2">洪嘉穗</td><td rowspan="2">謝岱霖</td><td rowspan="2">林昱汝</td></tr>
+            <tr><th scope="row">第四節</th></tr>
+            <tr><th scope="row">第五節</th><td rowspan="2">宋佩盈</td><td rowspan="2">謝淑惠</td><td rowspan="2">張齡之</td><td rowspan="2">楊淑青</td><td rowspan="2">林曉瑩</td></tr>
+            <tr><th scope="row">第六節</th></tr>
+            <tr><th scope="row">第七節</th><td rowspan="2">陳雲亮</td><td rowspan="2">張玉蓉</td><td rowspan="2">陳雲亮</td><td rowspan="2">張玉蓉</td><td rowspan="2">謝淑惠</td></tr>
+            <tr><th scope="row">第八節</th></tr>
+          </tbody></table></div><p>手機可左右滑動檢視全表。上表為排班安排，不代表已完成巡堂。每兩節為一個排班時段，實際擇一節登錄。</p>
+          <div class="tool-grid"><label>學期週次<select id="patrol-staff-week"></select></label></div><p>同一位巡堂人員在同一天、同一節巡視多班，合計為一次巡堂；刪除的紀錄不計入。</p><div id="patrol-staff-summary"></div></section>
+        <h3>逐筆紀錄篩選</h3>
         <div class="tool-grid"><label>學期週次<select id="patrol-filter-week"></select></label><label>年級<select id="patrol-filter-grade"></select></label><label>任課教師姓名<input id="patrol-filter-teacher" type="search" placeholder="選填，輸入部分姓名"></label><label>巡堂人員姓名<input id="patrol-filter-recorder" type="search" placeholder="選填"></label></div>
-        <p id="patrol-analysis-status" role="status"></p><div id="patrol-summary"></div>
       </section>
       <section class="tool-card" id="patrol-history" hidden>
-        <h2>巡堂登錄紀錄</h2><p>巡堂人員僅能查看、修正或刪除自己的紀錄；管理員可檢視全部。每頁五筆。</p><div id="patrol-records"></div>
+        <h2>巡堂登錄紀錄</h2><p>供管理員於巡堂紀錄分析查閱、修正與刪除，每頁五筆。</p><div id="patrol-records"></div>
       </section>
       <section class="tool-card" id="office-placeholder" hidden>
         <h2 id="office-feature-heading"></h2><p>此功能尚在規劃中。</p>
@@ -261,7 +276,7 @@
     <footer>資料來源：臺南慈濟高中 115 學年度第 1 學期課程表</footer>
     <script src="data/schedules.js"></script>
     <script src="js/weekly.js?v=20261020i"></script>
-    <script src="js/app.js?v=20261020j"></script>
+    <script src="js/app.js?v=20261020m"></script>
     <script src="js/weekly-comparison.js?v=20261020f"></script>
     <script src="js/record-pages.js?v=20261020g"></script>
     <script src="js/recruit.js?v=20261020i"></script>
@@ -270,7 +285,7 @@
     <script src="js/teachers.js?v=20261020g"></script>
     <script src="js/photo-import.js?v=20261020f"></script>
     <script src="js/firebase-config.js"></script>
-    <script src="js/patrol.js?v=20261020l"></script>
+    <script src="js/patrol.js?v=20261020m"></script>
     <script type="module" src="js/backend.js?v=20261020l"></script>
   </body>
 </html>

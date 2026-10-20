@@ -103,7 +103,7 @@ function showMode() {
   document.querySelector('#office-placeholder').hidden = true;
   document.querySelector('#patrol-entry').hidden = workspace !== 'patrol' || !['admin','patrol'].includes(window.AUTH_MEMBER?.role);
   document.querySelector('#patrol-analysis').hidden = !officeMode || window.AUTH_MEMBER?.role !== 'admin' || feature !== 'patrol';
-  document.querySelector('#patrol-history').hidden = document.querySelector('#patrol-entry').hidden && document.querySelector('#patrol-analysis').hidden;
+  document.querySelector('#patrol-history').hidden = document.querySelector('#patrol-analysis').hidden;
   document.querySelector('#patrol-open').setAttribute('aria-pressed', String(workspace === 'patrol'));
   if(workspace === 'patrol') document.querySelector('#page-heading').textContent = '巡堂紀錄登錄';
   document.querySelector('#teaching-tool').hidden = !officeMode || !member || feature !== 'teaching-plan';

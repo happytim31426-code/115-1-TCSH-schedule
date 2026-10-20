@@ -7,6 +7,8 @@
   $('patrol-period').innerHTML=Array.from({length:8},(_,i)=>option(String(i+1),D.classes[0].rows[i+1].period.name+' '+D.classes[0].rows[i+1].period.time)).join('');
   $('patrol-filter-grade').innerHTML=option('','全部年級')+grades.map(g=>option(g,g)).join('');
   $('patrol-filter-week').innerHTML=option('','全部週次')+W.weekOptions();
+  $('patrol-class-select').innerHTML=W.orderedClasses.map(c=>option(c.id,`${c.name} ${c.publicCode}`)).join('');
+  for(const id of ['patrol-class-week','patrol-staff-week'])$(id).innerHTML=option('','全部週次')+W.weekOptions();
   const today=new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Taipei'});
   $('patrol-date').value=W.inTerm(today)&&W.dayOf(today)<5?today:W.start;
   function snapshot(c){return [...new Map(W.classLessons(c.id,$('patrol-date').value,Number($('patrol-period').value),'public').map(s=>[`${s.teacher}|${s.subject}`,{teacher:s.teacher||'待確認',subject:s.subject||'待確認'}])).values()];}
@@ -44,13 +46,22 @@
   });
   function analysis(){
     const week=$('patrol-filter-week').value,grade=$('patrol-filter-grade').value,t=$('patrol-filter-teacher').value.trim(),n=$('patrol-filter-recorder').value.trim();
-    const filtered=records.filter(r=>(!week||r.week===Number(week))&&(!grade||r.grade===grade)&&(!t||r.lessons.some(s=>s.teacher.includes(t)))&&(!n||(r.createdName||'').includes(n))),live=filtered.filter(r=>r.status!=='deleted'),normal=live.filter(r=>r.result==='normal').length;
+    const filtered=records.filter(r=>(!week||r.week===Number(week))&&(!grade||r.grade===grade)&&(!t||r.lessons.some(s=>s.teacher.includes(t)))&&(!n||(r.createdName||'').includes(n))),live=records.filter(r=>r.status!=='deleted'),normal=live.filter(r=>r.result==='normal').length;
     $('patrol-analysis-status').textContent=loaded?'已同步。統計以班級巡查筆數計算，未巡查不視為正常。':'尚未同步巡堂資料；請確認登入與新版資料庫規則。';
     $('patrol-summary').innerHTML=`<p>已巡查${live.length}筆｜正常${normal}筆｜需處理${live.length-normal}筆｜巡堂人員${new Set(live.map(r=>r.createdBy)).size}人</p><ul>${issues.map(s=>`<li>${E(s)}：${live.filter(r=>r.issues.includes(s)).length}筆</li>`).join('')}</ul><p>同一筆可有多項；雙師／跑班保留多位教師，不自動歸責單一教師。</p>`;
+    const counts=list=>({total:list.length,normal:list.filter(r=>r.result==='normal').length,issue:list.filter(r=>r.result==='issue').length});
+    $('patrol-grade-summary').innerHTML=`<table><thead><tr><th>年級</th><th>班級巡查筆數</th><th>正常</th><th>需處理</th></tr></thead><tbody>${grades.map(g=>{const c=counts(live.filter(r=>r.grade===g));return `<tr><th>${g}</th><td>${c.total}</td><td>${c.normal}</td><td>${c.issue}</td></tr>`;}).join('')}</tbody></table>`;
+    const classWeek=$('patrol-class-week').value,classId=$('patrol-class-select').value,classList=live.filter(r=>r.classId===classId&&(!classWeek||r.week===Number(classWeek))),c=counts(classList),classInfo=D.classes.find(c=>c.id===classId);
+    $('patrol-class-summary').innerHTML=`<h4>${E(classInfo?.name||'')}｜${classWeek?`第${Number(classWeek)}週`:'全部週次'}</h4><p>巡查${c.total}筆｜正常${c.normal}筆｜需處理${c.issue}筆</p><ul>${issues.map(s=>`<li>${E(s)}：${classList.filter(r=>r.issues.includes(s)).length}筆</li>`).join('')}</ul><p>其他問題／補充說明：${classList.filter(r=>r.note.trim()).length}筆（可至下方逐筆紀錄查看）。</p>`;
+    const staffWeek=$('patrol-staff-week').value,staffList=live.filter(r=>!staffWeek||r.week===Number(staffWeek)),staff=new Map();
+    for(const r of staffList){const key=r.createdBy||r.createdName||'unknown';if(!staff.has(key))staff.set(key,{name:r.createdName||'舊紀錄未記名',sessions:new Map(),count:0});const person=staff.get(key);person.count++;const sessionKey=`${r.date}|${r.period}`;if(!person.sessions.has(sessionKey))person.sessions.set(sessionKey,{date:r.date,period:r.period,week:r.week,classes:new Set(),issues:0});const s=person.sessions.get(sessionKey);s.classes.add(r.className);if(r.result==='issue')s.issues++;}
+    const recordedNames=new Set([...staff.values()].map(p=>p.name));
+    for(const name of new Set([...$('patrol-roster').querySelectorAll('td')].map(cell=>cell.textContent.trim()).filter(n=>n&&n!=='待補'))){if(!recordedNames.has(name))staff.set(`roster:${name}`,{name,sessions:new Map(),count:0});}
+    $('patrol-staff-summary').innerHTML=[...staff.values()].sort((a,b)=>b.sessions.size-a.sessions.size||a.name.localeCompare(b.name,'zh-TW')).map(p=>`<details><summary>${E(p.name)}｜巡堂${p.sessions.size}次｜班級巡查${p.count}筆</summary>${p.sessions.size?'':'<p>此查詢範圍尚無巡堂紀錄。</p>'}<ul>${[...p.sessions.values()].sort((a,b)=>b.date.localeCompare(a.date)||b.period-a.period).map(s=>`<li>第${s.week}週｜${E(s.date)} 星期${D.meta.days[W.dayOf(s.date)]} 第${s.period}節｜${s.classes.size}班｜需處理${s.issues}筆<br>${[...s.classes].map(E).join('、')}</li>`).join('')}</ul></details>`).join('')||'<p>目前沒有巡堂人員紀錄。</p>';
     $('patrol-records').innerHTML=window.RECORD_PAGES.sort(filtered).map(r=>`<article class="teaching-record"><h3>${E(r.date)} 第${r.period}節 ${E(r.className)}｜${r.status==='deleted'?'已刪除':r.result==='normal'?'已巡正常':'需處理'}</h3><p>當時課務：${r.lessons.map(s=>`${E(s.subject)}／${E(s.teacher)}`).join('、')||'無課或待確認'}</p><p>${r.issues.map(E).join('、')}</p><p>${E(r.note)}</p><p class="record-meta">${E(W.auditText(r))}</p>${r.status!=='deleted'?`<button type="button" class="person-button" data-patrol-edit="${E(r.id)}">修正</button><button type="button" class="person-button" data-patrol-delete="${E(r.id)}">${confirmDelete===r.id?'確認刪除':'刪除'}</button>`:''}</article>`).join('')||'<p>沒有符合條件的紀錄。</p>';
     window.RECORD_PAGES.render('patrol-records');
   }
-  for(const id of ['patrol-filter-week','patrol-filter-grade','patrol-filter-teacher','patrol-filter-recorder'])$(id).addEventListener('input',analysis);
+  for(const id of ['patrol-filter-week','patrol-filter-grade','patrol-filter-teacher','patrol-filter-recorder','patrol-class-select','patrol-class-week','patrol-staff-week'])$(id).addEventListener('input',analysis);
   $('patrol-records').addEventListener('click',async e=>{
     const edit=e.target.closest('[data-patrol-edit]'),del=e.target.closest('[data-patrol-delete]');if(!edit&&!del)return;
     const r=records.find(r=>r.id===(edit?edit.dataset.patrolEdit:del.dataset.patrolDelete));if(!r)return;

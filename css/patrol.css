@@ -7,3 +7,11 @@
 #patrol-summary ul { columns:2 250px; }
 .patrol-grade { margin:28px 0; padding-top:8px; border-top:2px solid #9dbdb5; }
 .patrol-introduction { line-height:1.9; margin-bottom:24px; }
+.patrol-analysis-part { margin:24px 0; padding-top:12px; border-top:1px solid var(--line); }
+.patrol-analysis-part details { margin:12px 0; padding:12px; border:1px solid var(--line); border-radius:8px; }
+.patrol-analysis-part summary { cursor:pointer; font-weight:700; }
+#patrol-form > .tool-grid > label:first-child { font-size:20px; min-width:0; }
+#patrol-date { width:100%; min-width:0; min-height:48px; padding:10px; font:inherit; font-size:20px; color:var(--ink); background:var(--paper); border:1px solid var(--line); border-radius:8px; }
+#patrol-roster { min-width:720px; font-size:18px; }
+#patrol-roster caption { text-align:left; font-size:20px; font-weight:700; margin:10px 0; }
+#patrol-roster td { vertical-align:middle; text-align:center; padding:16px 10px; }
