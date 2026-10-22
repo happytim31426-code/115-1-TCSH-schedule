@@ -110,7 +110,7 @@ function showMode() {
   document.querySelector('#patrol-open').setAttribute('aria-pressed', String(workspace === 'patrol'));
   if(workspace === 'patrol') document.querySelector('#page-heading').textContent = '巡堂紀錄登錄';
   document.querySelector('#teaching-tool').hidden = !officeMode || !member || feature !== 'teaching-plan';
-  for(const [id,type] of [['teaching-history-tool','teaching-plan'],['recruit-history-tool','recruit'],['events-tool','events'],['events-history-tool','events']]){const panel=document.getElementById(id);panel.hidden=!officeMode||!member||feature!==type;if(!panel.hidden)panel.parentElement.append(panel);}
+  for(const [id,type] of [['teaching-history-tool','teaching-plan'],['recruit-history-tool','recruit'],['recruit-records-tool','recruit'],['events-tool','events'],['events-history-tool','events']]){const panel=document.getElementById(id);panel.hidden=!officeMode||!member||feature!==type;if(!panel.hidden)panel.parentElement.append(panel);}
   const officeComparison = officeMode && !!member && feature === 'teaching-plan';
   if (officeComparison) document.querySelector('#teaching-comparison-host').append(swapTool);
   else publicSwapAnchor.after(swapTool);
