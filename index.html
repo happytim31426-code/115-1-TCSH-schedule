@@ -212,6 +212,17 @@
         <div id="teaching-records"></div>
       </section>
       <section class="tool-card" id="recruit-history-tool" hidden>
+        <details id="recruit-import-tool" hidden>
+          <summary>招生試算表歷史安排匯入（管理員）</summary>
+          <p>下載來源試算表目前分頁的CSV後選檔。只處理本學期平日早上、姓名完整的安排；車程一律30分鐘內。已有任何紀錄的日期整天略過，不覆蓋；異常日期留待人工確認。以帶隊與入班名單人數登錄，不以班級數推定人數。歷史名單不重新依現行課表篩人。</p>
+          <label>選擇招生CSV<input type="file" id="recruit-import-file" accept=".csv,text/csv"></label>
+          <p id="recruit-import-status" role="status"></p>
+          <button type="button" class="person-button" id="recruit-import-all" disabled>全選可匯入日期</button>
+          <button type="button" class="person-button" id="recruit-import-none" disabled>取消全選</button>
+          <div id="recruit-import-preview"></div>
+          <button type="button" class="action-button" id="recruit-import-submit" disabled>匯入勾選日期並送出至公開課表</button>
+          <details><summary>待確認／略過項目</summary><div id="recruit-import-review"></div></details>
+        </details>
         <section id="recruit-statistics" aria-labelledby="recruit-statistics-heading">
           <h2 id="recruit-statistics-heading">教師招生安排次數統計</h2>
           <p>統計全學期已送出的有效安排，含帶隊與入班。同一人同一天計1次，重複名單不重複計次；退回、取消、刪除與未送出草稿不計，修正重新送出後同步更新。</p>
@@ -321,8 +332,9 @@
     <script src="js/photo-import.js?v=20261020f"></script>
     <script src="js/firebase-config.js"></script>
     <script src="js/patrol-csv.js?v=20261020r"></script>
+    <script src="js/recruit-import.js?v=20261022b"></script>
     <script src="js/patrol.js?v=20261020o"></script>
     <script src="js/patrol-backfill.js?v=20261021a"></script>
-    <script type="module" src="js/backend.js?v=20261020t"></script>
+    <script type="module" src="js/backend.js?v=20261022b"></script>
   </body>
 </html>

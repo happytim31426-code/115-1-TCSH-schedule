@@ -96,13 +96,14 @@ async function initialize() {
     listenPatrol(window.AUTH_MEMBER);
     window.dispatchEvent(new CustomEvent('cloud-patrol-records',{detail:snapshot.docs.map(d=>({...d.data(),id:d.id}))}));
   };
-  window.CLOUD_RECORDS={save:async(kind,id,payload,projection,revision)=>{
+  window.CLOUD_RECORDS={save:async(kind,id,payload,projection,revision,createOnly=false)=>{
     if(!user||!window.AUTH_MEMBER)throw Error('請先以授權帳號登入。');
     if(!privateCollection(kind))throw Error('不支援的紀錄類型');
     const ref=api.doc(api.db,privateCollection(kind),id);
     const pub=api.doc(api.db,publicCollection(kind),id);
     try{await api.runTransaction(api.db,async transaction=>{
       const old=await transaction.get(ref),actual=old.exists()?old.data().revision:0;
+      if(createOnly&&old.exists())throw Error('此日期已有紀錄，已略過，不覆蓋。');
       if(actual!==revision)throw Error('其他同仁已更新此筆資料，請重新載入後再修正。');
       const existing=old.exists()?old.data():null;
       transaction.set(ref,{...payload,revision:actual+1,updatedAt:api.serverTimestamp(),updatedBy:user.uid,updatedName:window.AUTH_MEMBER.name,createdName:existing?(existing.createdName||'舊紀錄未記名'):window.AUTH_MEMBER.name,createdBy:existing?.createdBy||existing?.updatedBy||user.uid,createdAt:existing?.createdAt||existing?.updatedAt||api.serverTimestamp()});
