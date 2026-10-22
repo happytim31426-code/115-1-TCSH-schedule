@@ -42,4 +42,24 @@
   viewType.addEventListener('change',()=>{clearPreview();query.value='';$('teacher-name-results').replaceChildren();});
   window.addEventListener('weekly-changed',()=>{const old=previewTeacher;freeSearch();if(old&&W.inTerm($('teacher-free-date').value)&&$('teacher-free-period').value&&!W.busy(old,$('teacher-free-date').value,Number($('teacher-free-period').value)))$('teacher-free-results').querySelector(`[data-choice-teacher="${CSS.escape(old)}"]`)?.click();});
   freeSearch();
+  const commonNames=new Set();let commonConfirmed=false;
+  $('teacher-common-week').insertAdjacentHTML('beforeend',W.weekOptions());
+  function commonMatches(){const value=$('teacher-common-query').value.trim();$('teacher-common-matches').innerHTML=value?data.teachers.filter(t=>!commonNames.has(t.name)&&(t.name.includes(value)||String(t.id).includes(value))).map(t=>`<button type="button" class="person-button" data-common-add="${W.esc(t.name)}">${W.esc(t.id)} ${W.esc(t.name)}</button>`).join('')||'<p>沒有符合或尚未加入的教師。</p>':'';}
+  function commonReset(){commonConfirmed=false;$('teacher-common-results').replaceChildren();$('teacher-common-status').textContent=commonNames.size<2?'請選取至少2位教師；不影響原本的教師課表查詢。':'名單／週次已更新，請按確認重新查詢。';$('teacher-common-confirm').disabled=commonNames.size<2;$('teacher-common-selected').innerHTML=[...commonNames].map(name=>`<button type="button" class="person-button" data-common-remove="${W.esc(name)}">${W.esc(teacher(name)?.id||'')} ${W.esc(name)} ×</button>`).join('')||'<span>尚未加入教師</span>';commonMatches();}
+  function commonSearch(){
+    $('teacher-common-results').replaceChildren();if(commonNames.size<2){commonReset();return;}
+    const week=Number($('teacher-common-week').value),status=$('teacher-common-status');commonConfirmed=true;
+    if(week&&!W.ready){status.textContent='最新課務尚未同步，暫不提供當週共同空堂。';return;}
+    const slots=[];for(let day=0;day<5;day++){const date=week?W.dateFor(week,day):null;if(date&&!W.inTerm(date))continue;const free=[];for(let row=1;row<=8;row++){const available=[...commonNames].every(name=>week?!W.busy(name,date,row):!(teacher(name)?.sessions||[]).some(s=>s.day===day&&s.row===row));if(available)free.push(row);}if(free.length)slots.push({day,date,free});}
+    status.textContent=`${week?`第${week}週（依已同步課務）`:'原始課表'}｜${commonNames.size}位教師｜共同空堂${slots.reduce((n,s)=>n+s.free.length,0)}節。`;
+    $('teacher-common-results').innerHTML=slots.length?`<ul>${slots.map(s=>`<li><strong>星期${'一二三四五'[s.day]}${s.date?`（${W.formatDate(s.date)}）`:''}</strong>：${s.free.map(row=>`第${row}節`).join('、')}</li>`).join('')}</ul>`:'<p>所選教師沒有共同空堂。</p>';
+  }
+  $('teacher-common-query').addEventListener('input',commonMatches);
+  $('teacher-common-matches').addEventListener('click',event=>{const b=event.target.closest('[data-common-add]');if(!b||!teacher(b.dataset.commonAdd))return;commonNames.add(b.dataset.commonAdd);$('teacher-common-query').value='';commonReset();});
+  $('teacher-common-selected').addEventListener('click',event=>{const b=event.target.closest('[data-common-remove]');if(b){commonNames.delete(b.dataset.commonRemove);commonReset();}});
+  $('teacher-common-week').addEventListener('change',commonReset);
+  $('teacher-common-confirm').addEventListener('click',commonSearch);
+  $('teacher-common-clear').addEventListener('click',()=>{commonNames.clear();$('teacher-common-query').value='';commonReset();});
+  window.addEventListener('weekly-changed',()=>{if(commonConfirmed&&$('teacher-common-week').value)commonSearch();});
+  commonReset();
 })();

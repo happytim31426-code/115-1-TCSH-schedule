@@ -96,6 +96,15 @@
           <p id="teacher-free-status" role="status"></p><div id="teacher-free-results" class="person-list"></div>
           <div id="teacher-free-preview" hidden></div>
         </details>
+        <details id="teacher-common-advanced"><summary>進階查詢：多位教師共同空堂（選填）</summary>
+          <p>輸入姓名或編號，再點選加入教師名單，至少選擇2位後按確認。預設依原始課表比對；選填週次則依當週已登錄課務排除占用，公開請假範圍採整日保守排除。共同空堂不代表所有課程皆可調課。</p>
+          <div class="tool-grid"><label>加入教師<input id="teacher-common-query" type="search" autocomplete="off" placeholder="輸入部分姓名或教師編號"></label><label>學期週次（選填）<select id="teacher-common-week"><option value="">原始課表（預設）</option></select></label></div>
+          <div id="teacher-common-matches" class="person-list" aria-live="polite"></div>
+          <p>已選教師（點姓名可移除）</p><div id="teacher-common-selected" class="person-list"></div>
+          <button id="teacher-common-confirm" type="button" class="action-button">確認查詢共同空堂</button>
+          <button id="teacher-common-clear" type="button" class="person-button">清空名單</button>
+          <p id="teacher-common-status" role="status"></p><div id="teacher-common-results"></div>
+        </details>
       </section>
       <section class="controls" id="office-controls" aria-label="教務處行政業務查詢" hidden>
         <div class="control-group grow"><label for="office-type">行政業務查詢類型</label>
@@ -328,7 +337,7 @@
     <script src="js/recruit.js?v=20261020s"></script>
     <script src="js/teaching.js?v=20261020i"></script>
     <script src="js/events.js?v=20261020i"></script>
-    <script src="js/teachers.js?v=20261020g"></script>
+    <script src="js/teachers.js?v=20261022c"></script>
     <script src="js/photo-import.js?v=20261020f"></script>
     <script src="js/firebase-config.js"></script>
     <script src="js/patrol-csv.js?v=20261020r"></script>
