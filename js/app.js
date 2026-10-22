@@ -223,6 +223,7 @@ viewType.addEventListener("change", showMode); picker.addEventListener("change",
 document.addEventListener("click", event => { const target = event.target.closest(".schedule-link"); if (!target) return; if (target.dataset.teacher) { viewType.value = "teacher"; showMode();populateLookup(target.dataset.teacher); } if (target.dataset.class) { viewType.value = "class"; showMode();populateLookup(target.dataset.class); } });
 document.querySelector("#theme-toggle").addEventListener("click", () => { const dark = document.documentElement.dataset.theme === "dark"; document.documentElement.dataset.theme = dark ? "" : "dark"; document.querySelector("#theme-toggle").textContent = dark ? "夜間閱讀" : "日間閱讀"; });
 document.querySelectorAll("#swap-tool select").forEach(select => select.addEventListener("change", () => {
+  if (select.id === "swap-week") document.querySelector('#swap-other-week').value = select.value;
   if (select.id !== "swap-period") refreshSwapOptions(select.id === "swap-day");
   updateComparison();
 }));
