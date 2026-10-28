@@ -33,7 +33,7 @@
     if(!code)return [];
     const room=roomMap.get(code),teacher=teacherMap.get(id),config=d.constraints[id],errors=[];
     if(!room||!teacher||!config)return ['班級碼或教師不存在'];
-    if(!s.ready)return ['請先儲存第一天日期與國高中考試日程'];
+    if(!W.inTerm(s.date)||!(room.publicCode[0]==='J'?s.junior:s.senior))errors.push('請先儲存第一天日期與對應部別的考試日程');
     if(config.duty)errors.push('試務工作人員不排監考');
     if(config.blocked[period])errors.push('該教師此節不得監考（命題巡堂／請假／招生等）');
     if(config.children.includes(code))errors.push('不可監考子女就讀班級');
@@ -79,6 +79,7 @@
   }
   function render(){
     if(!allowed())return;
+    closePicker();
     const s=source(),d=state();
     if(s.ready&&d.source!==s.signature&&!roster.some(t=>d.assignments[t.id].some(Boolean))){d.source=s.signature;d.reviewed=false;}
     $('inv-title').textContent=`${window.EXAM_CONTEXT.get().label}｜第一天${s.date?` ${W.formatDate(s.date)}`:''}監考編排表`;
@@ -89,14 +90,14 @@
   function refresh(){
     if(!allowed())return;
     const d=state(),s=source(),r=report(d,s);
-    $('inv-source-status').textContent=!s.ready?'請先儲存第一天日期、國中及高中第一天日程，尚不能排班。':d.source!==s.signature?'已儲存日程已變更。現有試排保留，請按「套用最新已儲存日程並重檢」。':`日程來源：${s.date}｜國中版次${s.junior.revision}／高中版次${s.senior.revision}｜${rooms.length}個一般班級，每節各須一位教師。`;
+    $('inv-source-status').textContent=!s.ready?'可逐碼輸入查詢班級；確認安排前須儲存第一天日期及該班所屬部別日程。整日完整檢查須國中、高中日程都齊全。':d.source!==s.signature?'已儲存日程已變更。現有試排保留，請按「套用最新已儲存日程並重檢」。':`日程來源：${s.date}｜國中版次${s.junior.revision}／高中版次${s.senior.revision}｜${rooms.length}個一般班級，每節各須一位教師。`;
     $('inv-reviewed').checked=d.reviewed;
     $('inv-coverage').innerHTML=r.missing.map((codes,i)=>`<details class="${codes.length?'inv-incomplete':'inv-complete'}"><summary>第${i+1}節 ${rooms.length-codes.length}／${rooms.length} 班${codes.length?`・缺 ${codes.length}`:'・已齊'}</summary><p>${codes.map(c=>`${c} ${E(roomMap.get(c).name)}`).join('、')||'全部班級已安排'}</p></details>`).join('');
     for(const t of roster){const tr=$('inv-grid').querySelector(`[data-inv-row="${t.id}"]`);if(!tr)continue;
       tr.querySelector('[data-inv-minutes]').textContent=minutes(d,t.id);
       for(const input of tr.querySelectorAll('[data-inv-period]')){
         const p=Number(input.dataset.invPeriod),code=d.assignments[t.id][p],errors=reasons(d,s,t.id,p,code);
-        input.value=code;input.disabled=!s.ready;input.setAttribute('aria-invalid',String(!!errors.length));input.title=errors.join('；');
+        input.value=code;input.disabled=false;input.setAttribute('aria-invalid',String(!!errors.length));input.title=errors.join('；');
         const note=input.parentElement.querySelector('[data-inv-cell-note]');
         note.textContent=errors.length?errors.join('；'):code?`${roomMap.get(code).name}・${info(s,roomMap.get(code),p)?.subject||'未設定'}`:'';
         input.parentElement.classList.toggle('inv-invalid',!!errors.length);
@@ -105,17 +106,61 @@
     $('inv-check').disabled=!s.ready;$('inv-rebase').disabled=!s.ready;
     $('inv-minute-totals').innerHTML=`<table><caption>${E(window.EXAM_CONTEXT.get().label)}第一天試排分鐘（本機、未上傳）</caption><thead><tr><th>教師編號</th><th>教師姓名</th><th>第一天已排分鐘</th><th>正式監考係數</th></tr></thead><tbody>${roster.map(t=>`<tr><td>${t.id}</td><th>${E(t.name)}</th><td>${minutes(d,t.id)}</td><td>待規則確認</td></tr>`).join('')}</tbody></table>`;
   }
-  $('inv-grid').addEventListener('focusin',event=>{
+  let activeInput=null,choiceIndex=-1;
+  const picker=$('inv-suggestions');
+  function closePicker(){if(activeInput){activeInput.setAttribute('aria-expanded','false');activeInput.removeAttribute('aria-activedescendant');}picker.hidden=true;choiceIndex=-1;activeInput=null;}
+  function reject(input,message){input.dataset.rejected='true';input.setAttribute('aria-invalid','true');input.parentElement.querySelector('[data-inv-cell-note]').textContent=message;$('inv-message').textContent=`未安排：${message}`;}
+  function suggest(input){
+    if(!allowed())return closePicker();
+    activeInput=input;choiceIndex=-1;const prefix=input.value,id=input.dataset.invTeacher,p=Number(input.dataset.invPeriod),d=state(),s=source();
+    const matched=rooms.filter(c=>c.code.startsWith(prefix)),valid=matched.filter(c=>!reasons(d,s,id,p,c.code).length);
+    const pending=matched.filter(c=>{const r=reasons(d,s,id,p,c.code);return r.length&&r.every(x=>x.includes('請先儲存')||x.includes('考科尚未設定'));});
+    picker.innerHTML=`<p class="inv-picker-title">${prefix?`「${E(prefix)}」可選班級`:'輸入1查國中、2查高中'}<small>同節已排與違反規則的班級不列入可選名單</small></p><div class="inv-picker-options">${valid.map((c,i)=>`<button type="button" role="option" aria-selected="false" id="inv-option-${i}" data-inv-code="${c.code}"><strong>${c.code}</strong> ${E(c.name)}<small>${E(info(s,c,p)?.subject||'')}</small></button>`).join('')}${pending.map(c=>`<div class="inv-picker-pending"><strong>${c.code}</strong> ${E(c.name)}<small>待儲存日期／考科，暫不可確認</small></div>`).join('')}${!valid.length&&!pending.length?'<p>沒有符合條件的班級。請檢查是否已重複安排，或受到教師監考限制。</p>':''}</div>`;
+    const rect=input.getBoundingClientRect(),width=Math.min(350,window.innerWidth-24);picker.style.width=`${width}px`;picker.style.left=`${Math.max(12,Math.min(rect.left,window.innerWidth-width-12))}px`;
+    const below=window.innerHeight-rect.bottom;picker.style.maxHeight=`${Math.max(120,Math.min(330,below>=180?below-12:rect.top-12))}px`;
+    picker.style.top=below>=180?`${rect.bottom+4}px`:'auto';picker.style.bottom=below>=180?'auto':`${Math.max(12,window.innerHeight-rect.top+4)}px`;
+    picker.hidden=false;input.setAttribute('role','combobox');input.setAttribute('aria-autocomplete','list');input.setAttribute('aria-controls','inv-suggestions');input.setAttribute('aria-expanded','true');
+  }
+  function commit(input,code){
+    const id=input.dataset.invTeacher,p=Number(input.dataset.invPeriod),d=state(),errors=reasons(d,source(),id,p,code);
+    if(code&&!/^[12][123][1-8]$/.test(code))errors.unshift('請輸入有效的三碼班級');
+    if(errors.length){reject(input,errors.join('；'));return false;}
+    d.assignments[id][p]=code;delete input.dataset.rejected;input.dataset.prefix=code;closePicker();refresh();
+    $('inv-message').textContent=code?`已試排 ${id} ${teacherMap.get(id).name} 第${p+1}節 ${code}，累計${minutes(d,id)}分鐘（未上傳）。`:'已移除該格試排。';return true;
+  }
+  $('inv-grid').addEventListener('focusin',event=>{const input=event.target.closest('[data-inv-period]');if(!input||!allowed())return;input.removeAttribute('list');input.dataset.prefix=input.value;delete input.dataset.rejected;suggest(input);});
+  $('inv-grid').addEventListener('input',event=>{
     const input=event.target.closest('[data-inv-period]');if(!input||!allowed())return;
-    const id=input.dataset.invTeacher,p=Number(input.dataset.invPeriod),d=state(),s=source();
-    $('inv-class-options').innerHTML=rooms.filter(c=>!reasons(d,s,id,p,c.code).length).map(c=>`<option value="${c.code}">${E(c.name)}・${E(info(s,c,p)?.subject||'')}</option>`).join('');
+    const value=input.value.replace(/[０-９]/g,c=>String.fromCharCode(c.charCodeAt(0)-65248)),previous=input.dataset.prefix||'';
+    if(!/^\d{0,3}$/.test(value)||(value&&!rooms.some(c=>c.code.startsWith(value)))){input.value=previous;reject(input,'此編碼沒有對應班級，請依序輸入1或2、年級1～3、班序1～8。');suggest(input);return;}
+    input.value=value;delete input.dataset.rejected;
+    if(value.length===3){if(!commit(input,value)){input.value=previous;suggest(input);}return;}
+    input.dataset.prefix=value;input.setAttribute('aria-invalid','false');
+    if(!value){commit(input,'');suggest(input);return;}
+    input.parentElement.querySelector('[data-inv-cell-note]').textContent='請繼續輸入三碼，或點選下方班級。';suggest(input);
   });
   $('inv-grid').addEventListener('change',event=>{
-    const input=event.target.closest('[data-inv-period]');if(!input||!allowed())return;
-    const id=input.dataset.invTeacher,p=Number(input.dataset.invPeriod),code=input.value.trim(),d=state(),errors=reasons(d,source(),id,p,code);
-    if(errors.length){$('inv-message').textContent=`未安排：${errors.join('；')}。`;input.value=d.assignments[id][p];return;}
-    d.assignments[id][p]=code;$('inv-message').textContent=code?`已試排 ${id} ${teacherMap.get(id).name} 第${p+1}節 ${code}，累計${minutes(d,id)}分鐘（未上傳）。`:'已移除該格試排。';refresh();
+    const input=event.target.closest('[data-inv-period]');if(!input||!allowed()||input.dataset.rejected)return;
+    const code=input.value.trim(),old=state().assignments[input.dataset.invTeacher][Number(input.dataset.invPeriod)];
+    if(code===old)return;
+    if(code.length===3||!code){if(!commit(input,code))input.value=old;}
   });
+  picker.addEventListener('pointerdown',event=>{if(event.target.closest('[data-inv-code]'))event.preventDefault();});
+  picker.addEventListener('click',event=>{const button=event.target.closest('[data-inv-code]'),input=activeInput;if(!button||!input||!allowed())return;if(commit(input,button.dataset.invCode))input.focus();});
+  $('inv-grid').addEventListener('keydown',event=>{
+    const input=event.target.closest('[data-inv-period]');if(!input||!allowed())return;
+    if(event.key==='Escape'){closePicker();return;}
+    if(['ArrowDown','ArrowUp'].includes(event.key)){event.preventDefault();if(picker.hidden||activeInput!==input)suggest(input);const buttons=[...picker.querySelectorAll('[data-inv-code]')];if(!buttons.length)return;choiceIndex=(choiceIndex+(event.key==='ArrowDown'?1:-1)+buttons.length)%buttons.length;buttons.forEach((b,i)=>b.setAttribute('aria-selected',String(i===choiceIndex)));input.setAttribute('aria-activedescendant',buttons[choiceIndex].id);buttons[choiceIndex].scrollIntoView({block:'nearest'});}
+    if(event.key==='Enter'){event.preventDefault();const button=choiceIndex>=0?picker.querySelectorAll('[data-inv-code]')[choiceIndex]:null;if(button)commit(input,button.dataset.invCode);else if(input.value.length===3)commit(input,input.value);}
+  });
+  $('inv-grid').addEventListener('focusout',event=>{const input=event.target.closest('[data-inv-period]');if(!input)return;const d=allowed()?state():null;if(d){input.value=d.assignments[input.dataset.invTeacher][Number(input.dataset.invPeriod)];input.dataset.prefix=input.value;}if(activeInput===input)closePicker();});
+  function repositionPicker(event){
+    if(event?.type==='scroll'&&picker.contains(event.target))return;
+    if(!activeInput?.isConnected||document.activeElement!==activeInput)return closePicker();
+    const rect=activeInput.getBoundingClientRect();if(rect.bottom<0||rect.top>window.innerHeight)return closePicker();
+    suggest(activeInput);
+  }
+  window.addEventListener('resize',repositionPicker);window.addEventListener('scroll',repositionPicker,true);
   $('inv-constraints').addEventListener('change',event=>{
     const tr=event.target.closest('[data-inv-config]');if(!tr||!allowed())return;
     const d=state(),id=tr.dataset.invConfig,c=d.constraints[id],input=event.target;
@@ -146,7 +191,7 @@
   for(const name of ['exam-context-changed','cloud-exam-programs','exam-program-sync-error','exam-program-sync-loading','exam-sync-loading','exam-sync-error'])window.addEventListener(name,()=>{if(allowed())render();});
   window.addEventListener('exam-tab-changed',event=>{if(allowed()&&['day1','coefficient'].includes(event.detail))render();});
   window.addEventListener('authorization-changed',()=>{
-    if(!allowed()){drafts.clear();importGeneration++;for(const id of ['inv-grid','inv-constraints','inv-minute-totals','inv-coverage','inv-class-options'])$(id).replaceChildren();$('inv-message').textContent='';$('inv-source-status').textContent='';$('inv-import').value='';$('inv-reviewed').checked=false;}
+    if(!allowed()){closePicker();drafts.clear();importGeneration++;for(const id of ['inv-grid','inv-constraints','inv-minute-totals','inv-coverage','inv-class-options'])$(id).replaceChildren();$('inv-message').textContent='';$('inv-source-status').textContent='';$('inv-import').value='';$('inv-reviewed').checked=false;}
     else render();
   });
 })();

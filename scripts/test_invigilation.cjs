@@ -1,6 +1,6 @@
 // Pure model regression tests: no browser, Firebase connection or production writes.
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
-const root=path.resolve(__dirname,'..'),window={WEEKLY:{esc:String}},document={getElementById:()=>({})};
+const root=path.resolve(__dirname,'..'),window={WEEKLY:{esc:String,inTerm:d=>/^2026-10-\d\d$/.test(d)}},document={getElementById:()=>({})};
 const context=vm.createContext({window,document,console});
 vm.runInContext(fs.readFileSync(path.join(root,'data/schedules.js'),'utf8'),context);
 const program=fs.readFileSync(path.join(root,'js/exam-program.js'),'utf8').split("  $('exam-program-subject-options')")[0]+'})();';
@@ -11,7 +11,7 @@ assert.equal(m.roster.length,97);assert.equal(m.rooms.length,41);assert.equal(m.
 assert(!m.rooms.some(c=>['119','129','128'].includes(c.code)));
 const junior=window.EXAM_PROGRAM_MODEL.blank('first','junior',1),senior=window.EXAM_PROGRAM_MODEL.blank('first','senior',1);
 for(const p of [junior,senior])for(const c of p.cells){c.subject=c.period===1?(p.division==='junior'?'英文':'國文'):'自習';c.minutes=20;}
-const source={ready:true,signature:'saved-first-v1',junior,senior},d=m.blank(source);d.reviewed=true;
+const source={ready:true,date:'2026-10-13',signature:'saved-first-v1',junior,senior},d=m.blank(source);d.reviewed=true;
 assert.equal(m.reasons(d,source,'101',0,'111').length,0);
 d.assignments['101'][0]='111';assert.match(m.reasons(d,source,'102',0,'111').join(),/已安排其他教師/);
 d.assignments['101'][2]='112';assert.equal(m.minutes(d,'101'),140);
