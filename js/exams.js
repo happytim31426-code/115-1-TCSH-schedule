@@ -3,8 +3,8 @@
   const labels={first:'第一次定期考查',second:'第二次定期考查',third:'第三次定期考查'};
   const tabs={basic:'日程基本設定',coefficient:'監考係數計算',day1:'第一天監考試排',day2:'第二天監考試排',day3:'第三天監考試排'};
   const teachers=window.SCHEDULE_DATA.teachers.filter(t=>!['葉梅花','劉柔秀','薛靜儀'].includes(t.name));
-  const xue=window.SCHEDULE_DATA.teachers.find(t=>t.name==='薛靜儀');
-  teachers.push(xue?{...xue,id:'617'}:{id:'617',name:'薛靜儀',sessions:[],missingOriginal:true});
+  // Confirmed by the teaching office: no teaching assignment this semester.
+  teachers.push({id:'617',name:'薛靜儀',sessions:[]});
   teachers.sort((a,b)=>String(a.id).localeCompare(String(b.id),'en',{numeric:true}));
   let records=new Map(),loaded=false,pending=false,dirty=false,current='first',revision=0;
   const allowed=()=>['admin','exam'].includes(window.AUTH_MEMBER?.role);
