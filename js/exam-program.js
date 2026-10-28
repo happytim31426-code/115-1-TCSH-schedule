@@ -22,7 +22,7 @@
   }
   window.EXAM_PROGRAM_MODEL={subjects,divisions,times,blank,validate,key};
   $('exam-program-subject-options').innerHTML=subjects.map(s=>`<option value="${E(s)}"></option>`).join('');
-  let records=new Map(),drafts=new Map(),loaded=false,pending=false,current=null;
+  let records=new Map(),drafts=new Map(),loaded=false,pending=false,current=null,cloudError='';
   const context=()=>window.EXAM_CONTEXT.get();
   function payloadFor(r,category,division,day){
     const base=blank(category,division,day);
@@ -42,7 +42,7 @@
       const i=row*slots+col,c=p.cells[i],custom=!!c.subject&&!subjects.includes(c.subject),description=`${division.label}第${p.day}天${label}第${col+1}節`;
       return `<td><select data-program-index="${i}" data-program-field="subject" aria-label="${E(description)}科目"><option value="">未安排</option>${subjects.map(subject=>`<option value="${E(subject)}" ${c.subject===subject?'selected':''}>${E(subject)}</option>`).join('')}<option value="__custom__" ${custom?'selected':''}>自行輸入科目…</option></select><input type="text" data-program-index="${i}" data-program-field="custom" list="exam-program-subject-options" value="${custom?E(c.subject):''}" maxlength="80" placeholder="輸入科目，可選建議" aria-label="${E(description)}自訂科目" ${custom?'':'hidden'}><label class="exam-program-minutes">分鐘<input type="number" data-program-index="${i}" data-program-field="minutes" min="0" max="${times[col][2]}" step="1" value="${c.minutes??''}" aria-label="${E(description)}分鐘"></label><small>上限${times[col][2]}分鐘</small></td>`;
     }).join('')}</tr>`).join('');
-    return `<h4 data-program-heading="${p.day}">${E(heading(p.day))}</h4><div class="table-wrap"><table class="exam-program-table ${slots===3?'half-day':''}"><caption class="sr-only">${E(context().label)} ${division.label} 第${p.day}天</caption><thead><tr><th scope="col">考試節次</th>${Array.from({length:slots},(_,i)=>`<th scope="col">${i+1}</th>`).join('')}</tr><tr><th scope="row">時段</th>${times.slice(0,slots).map(t=>`<th scope="col">${t[0]}<br>～${t[1]}</th>`).join('')}</tr></thead><tbody>${body}</tbody></table></div><p data-program-audit>${E(s.conflict?'雲端已有較新版本，請先載入已儲存設定核對。':s.dirty?'尚未儲存':records.has(id)?W.auditText(records.get(id)):'此表尚未儲存，請設定科目與分鐘。')}</p><button type="button" class="action-button" data-program-save="${id}">儲存此表</button> <button type="button" class="person-button" data-program-reload="${id}">載入已儲存設定</button>`;
+    return `<h4 data-program-heading="${p.day}">${E(heading(p.day))}</h4><div class="table-wrap"><table class="exam-program-table ${slots===3?'half-day':''}"><caption class="sr-only">${E(context().label)} ${division.label} 第${p.day}天</caption><thead><tr><th scope="col">考試節次</th>${Array.from({length:slots},(_,i)=>`<th scope="col">${i+1}</th>`).join('')}</tr><tr><th scope="row">時段</th>${times.slice(0,slots).map(t=>`<th scope="col">${t[0]}<br>～${t[1]}</th>`).join('')}</tr></thead><tbody>${body}</tbody></table></div><p data-program-audit>${E(s.conflict?'雲端已有較新版本，請先載入已儲存設定核對。':s.dirty?'尚未儲存':records.has(id)?W.auditText(records.get(id)):'此表尚未儲存，請設定科目與分鐘。')}</p><button type="button" class="action-button" data-program-save="${id}">儲存此表</button> <button type="button" class="person-button" data-program-reload="${id}">載入已儲存設定</button><p data-program-save-gate role="status"></p><p data-program-save-status role="status" aria-live="polite" hidden></p>`;
   }
   function renderGroup(s){const box=document.querySelector(`[data-program-group="${key(s.payload)}"]`);if(box)box.innerHTML=groupHtml(s);}
   function render(){
@@ -57,11 +57,20 @@
     $('exam-program-copy-previous').textContent=previous?`帶入第${previous==='first'?'一':'二'}次考查日程`:'帶入前一次考查日程';
     $('exam-program-copy-note').textContent=!previous?'第一次考查沒有前一次資料可帶入。':`僅帶入前一次已儲存的科目與分鐘，不變更本次日期；帶入後可手動調整，再按儲存。前一次未設定的表格會維持本次原狀。`;
     $('exam-program-save-all').disabled=!allowed()||!loaded||pending||!list.some(s=>s.dirty&&!s.error);
+    $('exam-program-retry').disabled=!allowed()||pending;
     for(const box of $('exam-program-tables').querySelectorAll('[data-program-group]')){
       const s=drafts.get(box.dataset.programGroup);
-      for(const control of box.querySelectorAll('input,select,button'))control.disabled=!allowed()||pending||(control.matches('button')&&!loaded)||(control.hasAttribute('data-program-save')&&(!s?.dirty||!!s.error));
+      for(const control of box.querySelectorAll('input,select,button'))control.disabled=!allowed()||pending||(control.hasAttribute('data-program-reload')&&!loaded);
+      const note=box.querySelector('[data-program-save-gate]');if(note)note.textContent=!allowed()?'需要管理員或試務組長權限。':pending?'處理中，請稍候。':!loaded?`雲端尚未讀取成功，暫不能儲存。${cloudError||'請按上方「重新檢查雲端連線」。'}`:s?.error?`資料格式需核對：${s.error}`:s?.dirty?'有未儲存變更；按「儲存此表」後，結果會顯示在這裡。':'目前沒有新的變更。';
     }
   }
+  function localStatus(ids,message){for(const id of ids){const note=document.querySelector(`[data-program-group="${id}"] [data-program-save-status]`);if(note){note.hidden=false;note.textContent=message;}}}
+  function syncInputs(ids){
+    for(const id of ids){const s=drafts.get(id),box=document.querySelector(`[data-program-group="${id}"]`);if(!s||!box||s.error)continue;
+      for(let i=0;i<s.payload.cells.length;i++){const cell=s.payload.cells[i],select=box.querySelector(`[data-program-index="${i}"][data-program-field="subject"]`),input=box.querySelector(`[data-program-index="${i}"][data-program-field="minutes"]`);if(!select||!input)continue;const subject=select.value==='__custom__'?box.querySelector(`[data-program-index="${i}"][data-program-field="custom"]`).value.trim():select.value,minutes=input.value===''?null:Number(input.value);if(cell.subject!==subject||cell.minutes!==minutes){cell.subject=subject;cell.minutes=minutes;s.dirty=true;}}
+    }
+  }
+  const saveError=error=>error.code==='permission-denied'?'資料庫拒絕儲存：請確認帳號為管理員／試務組長，以及最新Firestore規則包含examPrograms。':error.code==='unavailable'?'目前無法連上資料庫，草稿保留；請檢查網路後重試。':error.message;
   function edit(event){
     const control=event.target.closest('[data-program-field]');if(!control||!allowed()||pending)return;
     const box=control.closest('[data-program-group]'),s=drafts.get(box.dataset.programGroup),index=Number(control.dataset.programIndex),cell=s.payload.cells[index],field=control.dataset.programField;
@@ -77,24 +86,30 @@
   $('exam-program-tables').addEventListener('change',event=>{if(event.target.matches('select'))edit(event);});
   $('exam-program-tables').addEventListener('input',event=>{if(event.target.matches('input'))edit(event);});
   async function save(ids){
-    if(!allowed()||!loaded||pending)return;const member=window.AUTH_MEMBER;
-    const work=ids.map(id=>drafts.get(id)).filter(s=>s?.dirty);if(!work.length)return;
-    let completed=0;try{
-      const packets=work.map(s=>{if(s.conflict)throw Error('雲端有較新版本，請先載入已儲存設定。');validate(s.payload);return {payload:clone(s.payload),revision:s.revision};});
+    if(pending)return;
+    if(!allowed()){localStatus(ids,'無法儲存：需要管理員或試務組長權限。');return;}
+    syncInputs(ids);
+    if(!loaded){const message=`尚未儲存：雲端尚未讀取成功。${cloudError||'請按上方「重新檢查雲端連線」。'}草稿仍保留。`;localStatus(ids,message);$('exam-program-status').textContent=message;gate();return;}
+    const member=window.AUTH_MEMBER,work=ids.map(id=>drafts.get(id)).filter(s=>s?.dirty);
+    if(!work.length){localStatus(ids,'此表沒有新的變更，無須重複儲存。');gate();return;}
+    const finished=new Set();let completed=0;try{
+      const packets=work.map(s=>{if(s.error)throw Error(s.error);if(s.conflict)throw Error('雲端有較新版本，請先載入已儲存設定。');validate(s.payload);return {payload:clone(s.payload),revision:s.revision};});
       if(!window.EXAM_API?.saveProgram)throw Error('雲端服務尚未就緒，請重新整理。');pending=true;gate();
       for(const packet of packets){
+        const packetId=key(packet.payload);localStatus([packetId],'儲存中，正在等待資料庫回覆…');
         if(!allowed()||window.AUTH_MEMBER!==member)throw Error('登入狀態已變更，未完成的表格未送出。');
         await window.EXAM_API.saveProgram(packet.payload,packet.revision);
         if(!allowed()||window.AUTH_MEMBER!==member)return;
         const id=key(packet.payload),latest=records.get(id);
         if(!latest||latest.revision<=packet.revision)records.set(id,{...packet.payload,revision:packet.revision+1,createdName:latest?.createdName||member.name,updatedName:member.name});
-        drafts.delete(id);state(packet.payload.category,packet.payload.division,packet.payload.day);renderGroup(drafts.get(id));completed++;
+        drafts.delete(id);state(packet.payload.category,packet.payload.division,packet.payload.day);renderGroup(drafts.get(id));completed++;finished.add(id);localStatus([id],'此表已儲存成功。');
       }
       $('exam-program-status').textContent=`已儲存${completed}張日程表，僅授權試務人員可查看；尚未執行監考排班。`;
-    }catch(error){if(allowed())$('exam-program-status').textContent=`已完成${completed}張；其餘未儲存，草稿保留：${error.message}`;}
+    }catch(error){if(allowed()){const reason=saveError(error);$('exam-program-status').textContent=`已完成${completed}張；其餘未儲存，草稿保留：${reason}`;localStatus(ids.filter(id=>!finished.has(id)),`尚未儲存，草稿保留：${reason}`);}}
     finally{pending=false;gate();}
   }
-  $('exam-program-save-all').addEventListener('click',()=>save([...drafts.entries()].filter(([,s])=>s.payload.category===current&&s.dirty).map(([id])=>id).sort()));
+  $('exam-program-save-all').addEventListener('click',()=>{const ids=[...drafts.entries()].filter(([,s])=>s.payload.category===current).map(([id])=>id).sort();syncInputs(ids);save(ids.filter(id=>drafts.get(id).dirty));});
+  $('exam-program-retry').addEventListener('click',async()=>{if(!allowed()||pending)return;pending=true;gate();try{if(!window.EXAM_API?.reloadPrograms)throw Error('登入服務尚未就緒，請先保留草稿，確認新版網頁與管理員登入。');await window.EXAM_API.reloadPrograms();if(allowed())$('exam-program-status').textContent='雲端連線已重新檢查，未儲存草稿保留。';}catch(error){loaded=false;cloudError=saveError(error);if(allowed())$('exam-program-status').textContent=`雲端讀取失敗：${cloudError}`;}finally{pending=false;gate();}});
   $('exam-program-copy-previous').addEventListener('click',()=>{
     if(!allowed()||!loaded||pending)return;
     const previous=categories[categories.indexOf(current)-1];if(!previous)return;
@@ -114,8 +129,9 @@
     }catch(error){$('exam-program-status').textContent=`未帶入：${error.message}`;}gate();
   });
   $('exam-program-tables').addEventListener('click',event=>{
-    const button=event.target.closest('[data-program-save],[data-program-reload]');if(!button||!allowed()||!loaded||pending)return;
+    const button=event.target.closest('[data-program-save],[data-program-reload]');if(!button||pending)return;
     if(button.dataset.programSave){save([button.dataset.programSave]);return;}
+    if(!allowed()||!loaded)return;
     const id=button.dataset.programReload,s=drafts.get(id);
     if(s?.dirty&&!confirm('重新載入會捨棄這張表未儲存的變更，確定繼續？'))return;
     drafts.delete(id);const next=state(s.payload.category,s.payload.division,s.payload.day);renderGroup(next);$('exam-program-status').textContent='已載入雲端目前版本；沒有儲存紀錄則顯示空白表格。';gate();
@@ -128,14 +144,14 @@
   window.addEventListener('exam-program-sync-loading',()=>{loaded=false;if(allowed())$('exam-program-status').textContent='正在讀取雲端日程表，尚不能儲存。';gate();});
   window.addEventListener('cloud-exam-programs',event=>{
     if(!allowed())return;
-    records=new Map(event.detail.map(r=>[r.id||key(r),r]));loaded=true;
+    records=new Map(event.detail.map(r=>[r.id||key(r),r]));loaded=true;cloudError='';
     for(const [id,s] of [...drafts]){if(!s.dirty){drafts.delete(id);const next=state(s.payload.category,s.payload.division,s.payload.day);renderGroup(next);}else{s.conflict=(records.get(id)?.revision||0)!==s.revision;const note=document.querySelector(`[data-program-group="${id}"] [data-program-audit]`);if(note&&s.conflict)note.textContent='雲端已有較新版本；本地草稿保留，請先載入已儲存設定核對。';}}
     if(current!==context().category||!$('exam-program-tables').children.length)render();else gate();
     if(!pending)$('exam-program-status').textContent='已同步雲端日程表。未儲存草稿不會自動上傳；資料僅供授權試務人員使用。';
   });
-  window.addEventListener('exam-program-sync-error',event=>{loaded=false;if(allowed())$('exam-program-status').textContent=`無法讀取日程表：${event.detail} 請完整發布新版Firestore規則後重新整理。`;gate();});
+  window.addEventListener('exam-program-sync-error',event=>{loaded=false;cloudError=event.detail;if(allowed())$('exam-program-status').textContent=`無法讀取日程表：${event.detail} 請確認新版Firestore規則，並按「重新檢查雲端連線」；未儲存草稿保留。`;gate();});
   window.addEventListener('authorization-changed',()=>{
-    if(!allowed()){records.clear();drafts.clear();loaded=false;pending=false;current=null;$('exam-program-tables').replaceChildren();$('exam-program-status').textContent='';$('exam-program').hidden=true;}else render();gate();
+    if(!allowed()){records.clear();drafts.clear();loaded=false;pending=false;current=null;cloudError='';$('exam-program-tables').replaceChildren();$('exam-program-status').textContent='';$('exam-program').hidden=true;}else render();gate();
   });
   gate();
 })();

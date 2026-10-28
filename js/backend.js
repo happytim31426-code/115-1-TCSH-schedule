@@ -32,12 +32,18 @@ function listenPatrol(member) {
     },error=>window.dispatchEvent(new CustomEvent('patrol-sync-error',{detail:errorMessage(error)})));
   }
 }
+function listenExamPrograms(){
+  stopExamPrograms();
+  if(api&&examMember())stopExamPrograms=api.onSnapshot(api.collection(api.db,'examPrograms'),{includeMetadataChanges:true},snapshot=>{
+    if(snapshot.metadata.fromCache||snapshot.metadata.hasPendingWrites||!examMember())return;
+    window.dispatchEvent(new CustomEvent('cloud-exam-programs',{detail:snapshot.docs.map(d=>({...d.data(),id:d.id}))}));
+  },error=>window.dispatchEvent(new CustomEvent('exam-program-sync-error',{detail:errorMessage(error)})));
+}
 function access(member) {
   window.AUTH_MEMBER = member;
   if(api)startPrivate(teachingMember()?member:null);
   listenPatrol(member);
   stopExam();
-  stopExamPrograms();
   window.dispatchEvent(new Event('exam-sync-loading'));
   window.dispatchEvent(new Event('exam-program-sync-loading'));
   if(api&&examMember())stopExam=api.onSnapshot(api.collection(api.db,'examSettings'),{includeMetadataChanges:true},snapshot=>{
@@ -45,10 +51,7 @@ function access(member) {
     if(!examMember())return;
     window.dispatchEvent(new CustomEvent('cloud-exam-settings',{detail:snapshot.docs.map(d=>({...d.data(),id:d.id}))}));
   },error=>window.dispatchEvent(new CustomEvent('exam-sync-error',{detail:errorMessage(error)})));
-  if(api&&examMember())stopExamPrograms=api.onSnapshot(api.collection(api.db,'examPrograms'),{includeMetadataChanges:true},snapshot=>{
-    if(snapshot.metadata.fromCache||snapshot.metadata.hasPendingWrites||!examMember())return;
-    window.dispatchEvent(new CustomEvent('cloud-exam-programs',{detail:snapshot.docs.map(d=>({...d.data(),id:d.id}))}));
-  },error=>window.dispatchEvent(new CustomEvent('exam-program-sync-error',{detail:errorMessage(error)})));
+  listenExamPrograms();
   window.renderWorkspace?.();
   for (const id of ['recruit-save','recruit-load']) el(id).disabled = !teachingMember();
   if (!member) { el('member-list').replaceChildren(); el('recruit-cloud-status').textContent = ''; }
@@ -109,6 +112,13 @@ async function initialize() {
       // Grade/period identities are fixed by position; only editable values are stored.
       tx.set(ref,{...value,cells:value.cells.map(c=>({subject:c.subject,minutes:c.minutes})),revision:revision+1,createdAt:existing?.createdAt||api.serverTimestamp(),createdBy:existing?.createdBy||uid,createdName:existing?.createdName||name,updatedAt:api.serverTimestamp(),updatedBy:uid,updatedName:name});
     });
+  };
+  window.EXAM_API.reloadPrograms=async()=>{
+    if(!user||!examMember())throw Error('需要管理員或試務組長權限。');
+    const uid=user.uid,snapshot=await api.getDocsFromServer(api.collection(api.db,'examPrograms'));
+    if(!user||user.uid!==uid||!examMember())throw Error('登入狀態已改變，請重新登入。');
+    listenExamPrograms();
+    window.dispatchEvent(new CustomEvent('cloud-exam-programs',{detail:snapshot.docs.map(d=>({...d.data(),id:d.id}))}));
   };
   window.PATROL_API={save:async (entries,onCommitted=()=>{})=>{
     if(!user||!['admin','patrol'].includes(window.AUTH_MEMBER?.role))throw Error('需要巡堂登錄權限。');
