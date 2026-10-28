@@ -79,14 +79,39 @@ service cloud.firestore {
         && versioned('examSettings', id);
       allow delete: if false;
     }
-    function examProgramCell(r, index) {
-      let cell = r.cells.size() > index ? r.cells[index] : null;
-      let maxMinutes = [60,60,80,70,80][index % (r.day == 3 ? 3 : 5)];
-      return r.cells.size() <= index || (cell is map
-        && cell.keys().hasOnly(['subject','minutes'])
-        && cell.subject is string && cell.subject.size() <= 80
-        && cell.minutes is int && cell.minutes >= 0 && cell.minutes <= maxMinutes
-        && (cell.subject == '' ? cell.minutes == 0 : cell.minutes >= 1));
+    // Validate five cells per row document to stay below the Rules expression limit.
+    function examProgramCell(cell, maxMinutes) {
+      let subject = cell.subject;
+      let minutes = cell.minutes;
+      return cell.keys().hasOnly(['subject','minutes'])
+        && subject is string && subject.size() <= 80
+        && minutes is int && minutes <= maxMinutes
+        && (subject == '' ? minutes == 0 : minutes >= 1);
+    }
+    function examProgramRowData(id, row) {
+      return getAfter(/databases/$(database)/documents/examPrograms/$(id)/rows/$(row)).data.cells;
+    }
+    function examProgramCells(r, id) {
+      let first = examProgramRowData(id,'0').concat(examProgramRowData(id,'1')).concat(examProgramRowData(id,'2'));
+      return r.cells == (r.division == 'junior' ? first :
+        first.concat(examProgramRowData(id,'3')).concat(examProgramRowData(id,'4')).concat(examProgramRowData(id,'5')));
+    }
+    match /examPrograms/{id}/rows/{row} {
+      allow read: if examMember();
+      allow create, update: if examMember() && validExamProgramRow(id, row);
+      allow delete: if false;
+    }
+    function validExamProgramRow(id, row) {
+      let parent = getAfter(/databases/$(database)/documents/examPrograms/$(id)).data;
+      let r = request.resource.data;
+      let c = r.cells;
+      return row in (parent.division == 'junior' ? ['0','1','2'] : ['0','1','2','3','4','5'])
+        && r.keys().hasOnly(['cells','updatedAt'])
+        && parent.updatedBy == request.auth.uid && parent.updatedAt == request.time
+        && r.updatedAt == request.time
+        && c is list && c.size() == (parent.day == 3 ? 3 : 5)
+        && examProgramCell(c[0],60) && examProgramCell(c[1],60) && examProgramCell(c[2],80)
+        && (parent.day == 3 || (examProgramCell(c[3],70) && examProgramCell(c[4],80)));
     }
     match /examPrograms/{id} {
       allow read: if examMember();
@@ -100,16 +125,7 @@ service cloud.firestore {
         && request.resource.data.cells is list
         && request.resource.data.cells.size() == (request.resource.data.division == 'junior' ? 3 : 6) * (request.resource.data.day == 3 ? 3 : 5)
         && versioned('examPrograms', id)
-        && examProgramCell(request.resource.data,0) && examProgramCell(request.resource.data,1) && examProgramCell(request.resource.data,2)
-        && examProgramCell(request.resource.data,3) && examProgramCell(request.resource.data,4) && examProgramCell(request.resource.data,5)
-        && examProgramCell(request.resource.data,6) && examProgramCell(request.resource.data,7) && examProgramCell(request.resource.data,8)
-        && examProgramCell(request.resource.data,9) && examProgramCell(request.resource.data,10) && examProgramCell(request.resource.data,11)
-        && examProgramCell(request.resource.data,12) && examProgramCell(request.resource.data,13) && examProgramCell(request.resource.data,14)
-        && examProgramCell(request.resource.data,15) && examProgramCell(request.resource.data,16) && examProgramCell(request.resource.data,17)
-        && examProgramCell(request.resource.data,18) && examProgramCell(request.resource.data,19) && examProgramCell(request.resource.data,20)
-        && examProgramCell(request.resource.data,21) && examProgramCell(request.resource.data,22) && examProgramCell(request.resource.data,23)
-        && examProgramCell(request.resource.data,24) && examProgramCell(request.resource.data,25) && examProgramCell(request.resource.data,26)
-        && examProgramCell(request.resource.data,27) && examProgramCell(request.resource.data,28) && examProgramCell(request.resource.data,29);
+        && examProgramCells(request.resource.data, id);
       allow delete: if false;
     }
     function slot(s) {

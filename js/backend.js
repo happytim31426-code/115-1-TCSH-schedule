@@ -110,7 +110,12 @@ async function initialize() {
       const old=await tx.get(ref),existing=old.exists()?old.data():null;
       if((existing?.revision||0)!==revision)throw Error('其他同仁已更新此表，請載入已儲存設定後再修正。');
       // Grade/period identities are fixed by position; only editable values are stored.
-      tx.set(ref,{...value,cells:value.cells.map(c=>({subject:c.subject,minutes:c.minutes})),revision:revision+1,createdAt:existing?.createdAt||api.serverTimestamp(),createdBy:existing?.createdBy||uid,createdName:existing?.createdName||name,updatedAt:api.serverTimestamp(),updatedBy:uid,updatedName:name});
+      const cells=value.cells.map(c=>({subject:c.subject,minutes:c.minutes})),periods=value.day===3?3:5;
+      // The whole table and its validated rows commit atomically; readers still use the table.
+      for(let offset=0;offset<cells.length;offset+=periods){
+        tx.set(api.doc(api.db,'examPrograms',id,'rows',String(offset/periods)),{cells:cells.slice(offset,offset+periods),updatedAt:api.serverTimestamp()});
+      }
+      tx.set(ref,{...value,cells,revision:revision+1,createdAt:existing?.createdAt||api.serverTimestamp(),createdBy:existing?.createdBy||uid,createdName:existing?.createdName||name,updatedAt:api.serverTimestamp(),updatedBy:uid,updatedName:name});
     });
   };
   window.EXAM_API.reloadPrograms=async()=>{
