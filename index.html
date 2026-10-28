@@ -7,6 +7,7 @@
     <title>115-1 課表查詢｜臺南慈濟高中</title>
     <link rel="stylesheet" href="css/style.css?v=20261028e" />
     <link rel="stylesheet" href="css/patrol.css?v=20261020p" />
+    <link rel="stylesheet" href="css/invigilation.css?v=20261029a" />
   </head>
   <body>
     <header class="hero">
@@ -83,7 +84,25 @@
           <datalist id="exam-program-subject-options"></datalist>
           <div id="exam-program-tables"></div>
         </section>
-        <section id="exam-next" hidden><h2 id="exam-next-title"></h2><p>此功能待後續確認計算與排班規則後建置，尚未執行監考試排。</p></section>
+        <section id="exam-invigilation" hidden>
+          <div class="inv-heading"><div><p class="eyebrow">第一天・人工試排</p><h2 id="inv-title">第一天監考編排表</h2></div><span class="inv-draft-badge">本機草稿／未上傳</span></div>
+          <p>上方帶入已儲存的第一天考試日程；下方依監考表原檔97位教師順序編排。每格可輸入或選擇三碼班級，例如111＝國一知足、236＝高三和氣。每次安排按完整節長累計60／60／80／70／80分鐘，不按考科施測分鐘。</p>
+          <p class="inv-notice">第一版僅供授權人員試排，不送到公開課表或雲端。關閉、重新整理或登出會清除草稿，請先下載備份。國一、國二數理班不列入一般試場；PDF中的128特殊需求試場待另行確認，不包含在本版一般班級完整性檢查。</p>
+          <p id="inv-source-status" role="status"></p>
+          <div class="inv-toolbar"><button type="button" class="person-button" id="inv-rebase">套用最新已儲存日程並重檢</button><button type="button" class="action-button" id="inv-check">檢查完整排班</button><button type="button" class="person-button" id="inv-export">下載試排備份</button><label class="inv-file-button">還原試排備份<input type="file" id="inv-import" accept=".json,application/json"></label></div>
+          <p id="inv-message" role="status" aria-live="polite"></p>
+          <details class="inv-rules"><summary>監考限制與人工確認（請先設定）</summary>
+            <p>考試期間自習優先由該班導師或任課教師督導；正式考試則避開導師班、該科任教班及子女班。試務工作人員不排監考。命題巡堂、請假、招生等不在校時段，請勾選本日不得監考節次。本表使用考試節次，並非平時第1～8節。</p>
+            <p>僅214、511依參考檔中的試務工作註記先勾選「試務」；其餘人員仍請核對。子女班級只記錄班級碼，不輸入學生姓名。特殊需求試場的輔導教師優先安排待下一版設計。</p>
+            <div class="table-wrap" id="inv-constraints"></div>
+          </details>
+          <label class="inv-review"><input type="checkbox" id="inv-reviewed">已核對試務人員、子女班級、命題巡堂／請假／招生時段，以及任教科目對照。</label>
+          <div id="inv-coverage" class="inv-coverage"></div>
+          <datalist id="inv-class-options"></datalist>
+          <div class="table-wrap inv-table-wrap" id="inv-grid"></div>
+        </section>
+        <section id="exam-coefficient-preview" hidden><h2>監考係數計算</h2><p>目前先連動第一天試排的實際監考分鐘。命題減免、試務工作、共同分攤及前次結餘的正式計算，待補充規則後建置；此表不是最終應監考時數。</p><div class="table-wrap" id="inv-minute-totals"></div></section>
+        <section id="exam-next" hidden><h2 id="exam-next-title"></h2><p>第二、三天待第一天試排規則確認後建置。</p></section>
       </section>
       <section class="tool-card" id="patrol-backfill" hidden>
         <h2>管理員：歷史巡堂紀錄補登</h2>
@@ -376,8 +395,9 @@
     <script src="data/schedules.js?v=20261028c"></script>
     <script src="js/weekly.js?v=20261020i"></script>
     <script src="js/app.js?v=20261028a"></script>
-    <script src="js/exams.js?v=20261028e"></script>
-    <script src="js/exam-program.js?v=20261028g"></script>
+    <script src="js/exams.js?v=20261029a"></script>
+    <script src="js/exam-program.js?v=20261029a"></script>
+    <script src="js/invigilation.js?v=20261029a"></script>
     <script src="js/weekly-comparison.js?v=20261020f"></script>
     <script src="js/record-pages.js?v=20261020g"></script>
     <script src="js/recruit.js?v=20261020s"></script>

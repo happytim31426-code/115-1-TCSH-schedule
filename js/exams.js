@@ -55,7 +55,8 @@
     const button=event.target.closest('[data-exam-tab]');if(!button||!allowed()||pending)return;
     const tab=button.dataset.examTab;if(!tabs[tab])return;
     for(const b of $('exam-navigation').querySelectorAll('[data-exam-tab]'))b.setAttribute('aria-pressed',String(b===button));
-    $('exam-basic').hidden=tab!=='basic';$('exam-program').hidden=tab!=='schedule';$('exam-next').hidden=['basic','schedule'].includes(tab);$('exam-next-title').textContent=tabs[tab];
+    $('exam-basic').hidden=tab!=='basic';$('exam-program').hidden=tab!=='schedule';$('exam-invigilation').hidden=tab!=='day1';$('exam-coefficient-preview').hidden=tab!=='coefficient';$('exam-next').hidden=['basic','schedule','day1','coefficient'].includes(tab);$('exam-next-title').textContent=tabs[tab];
+    window.dispatchEvent(new CustomEvent('exam-tab-changed',{detail:tab}));
   });
   for(const i of [1,3])$(`exam-date-${i}`).addEventListener('input',()=>{if(!allowed())return;dirty=true;calculate();});
   $('exam-category').addEventListener('change',()=>{
@@ -91,9 +92,9 @@
   });
   window.addEventListener('exam-sync-error',event=>{loaded=false;if(allowed())$('exam-sync-status').textContent=`無法讀取試務設定：${event.detail} 請先發布新版Firestore規則，再重新整理。`;gate();});
   window.addEventListener('authorization-changed',()=>{
-    if(!allowed()){records.clear();loaded=false;pending=false;dirty=false;current='first';revision=0;$('exam-category').value=current;for(let i=1;i<=3;i++)$(`exam-date-${i}`).value='';$('exam-sync-status').textContent='尚未讀取雲端日程設定。';$('exam-teacher-totals').replaceChildren();$('exam-calculation-status').textContent='';$('exam-basic').hidden=false;$('exam-next').hidden=true;for(const b of $('exam-navigation').querySelectorAll('[data-exam-tab]'))b.setAttribute('aria-pressed',String(b.dataset.examTab==='basic'));}
+    if(!allowed()){records.clear();loaded=false;pending=false;dirty=false;current='first';revision=0;$('exam-category').value=current;for(let i=1;i<=3;i++)$(`exam-date-${i}`).value='';$('exam-sync-status').textContent='尚未讀取雲端日程設定。';$('exam-teacher-totals').replaceChildren();$('exam-calculation-status').textContent='';$('exam-basic').hidden=false;$('exam-next').hidden=true;$('exam-invigilation').hidden=true;$('exam-coefficient-preview').hidden=true;for(const b of $('exam-navigation').querySelectorAll('[data-exam-tab]'))b.setAttribute('aria-pressed',String(b.dataset.examTab==='basic'));}
     gate();
   });
-  window.EXAM_CONTEXT={get:()=>({category:current,label:labels[current],dates:dates()})};
+  window.EXAM_CONTEXT={get:()=>({category:current,label:labels[current],dates:dates()}),saved:()=>loaded&&records.has(current)?JSON.parse(JSON.stringify(records.get(current))):null};
   window.EXAM_CALCULATOR={validate,totals};gate();
 })();

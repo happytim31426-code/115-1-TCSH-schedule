@@ -23,6 +23,11 @@
   window.EXAM_PROGRAM_MODEL={subjects,divisions,times,blank,validate,key};
   $('exam-program-subject-options').innerHTML=subjects.map(s=>`<option value="${E(s)}"></option>`).join('');
   let records=new Map(),drafts=new Map(),loaded=false,pending=false,current=null,cloudError='';
+  window.EXAM_PROGRAM_SAVED=(category,division,day)=>{
+    if(!allowed()||!loaded)return null;
+    const record=records.get(key({category,division,day}));if(!record)return null;
+    try{const payload=payloadFor(record,category,division,day);validate(payload);return {...clone(record),cells:payload.cells};}catch{return null;}
+  };
   const context=()=>window.EXAM_CONTEXT.get();
   function payloadFor(r,category,division,day){
     const base=blank(category,division,day);
