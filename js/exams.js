@@ -2,18 +2,29 @@
   const W=window.WEEKLY,$=id=>document.getElementById(id),E=W.esc;
   const labels={first:'第一次定期考查',second:'第二次定期考查',third:'第三次定期考查'};
   const tabs={basic:'日程基本設定',coefficient:'監考係數計算',day1:'第一天監考試排',day2:'第二天監考試排',day3:'第三天監考試排'};
-  const teachers=[...window.SCHEDULE_DATA.teachers].sort((a,b)=>String(a.id).localeCompare(String(b.id),'en',{numeric:true}));
+  const teachers=window.SCHEDULE_DATA.teachers.filter(t=>!['葉梅花','劉柔秀','薛靜儀'].includes(t.name));
+  const xue=window.SCHEDULE_DATA.teachers.find(t=>t.name==='薛靜儀');
+  teachers.push(xue?{...xue,id:'617'}:{id:'617',name:'薛靜儀',sessions:[],missingOriginal:true});
+  teachers.sort((a,b)=>String(a.id).localeCompare(String(b.id),'en',{numeric:true}));
   let records=new Map(),loaded=false,pending=false,dirty=false,current='first',revision=0;
   const allowed=()=>['admin','exam'].includes(window.AUTH_MEMBER?.role);
-  const dates=()=>[1,2,3].map(i=>$(`exam-date-${i}`).value);
+  function dates(){
+    const first=$('exam-date-1').value,last=$('exam-date-3').value,range=[];
+    if(W.inTerm(first)&&W.inTerm(last)&&first<=last)for(let date=first;date<=last;date=W.plus(date,1))if(W.inTerm(date))range.push(date);
+    const middle=range.length===3?range[1]:'';
+    $('exam-date-2').value=middle;
+    $('exam-derived-date').textContent=middle?`第二天自動帶入：${W.formatDate(middle)}（星期${'一二三四五'[W.dayOf(middle)]}）。`:'選擇第一天與第三天後，自動帶入第二天；起訖範圍須恰含3個平日（不自動判斷國定假日）。';
+    return [first,middle,last];
+  }
   function validate(values){
-    if(values.some(v=>!v))return '請完整選擇第一天、第二天與第三天日期。';
+    if(!values[0]||!values[2])return '請選擇第一天與第三天日期。';
+    if(!values[1])return '第一天至第三天的範圍須恰含3個平日，才能自動判定第二天。';
     if(!values.every(W.inTerm))return '考試日期須為本學期（115.08.31～116.01.20）週一至週五。';
-    if(!(values[0]<values[1]&&values[1]<values[2]))return '三天須依日期先後排列，不可重複；不限定連續日期。';
+    if(!(values[0]<values[1]&&values[1]<values[2]))return '第一天須早於第三天，且包含第二天。';
     return '';
   }
   function totals(values){
-    return teachers.map(t=>({id:t.id,name:t.name,minutes:values.reduce((sum,date,index)=>{
+    return teachers.map(t=>({id:t.id,name:t.name,minutes:t.missingOriginal?null:values.reduce((sum,date,index)=>{
       const day=W.dayOf(date),limit=index===2?4:7;
       const occupied=new Set((t.sessions||[]).filter(s=>s.day===day&&Number.isInteger(s.row)&&s.row>=1&&s.row<=limit).map(s=>s.row));
       return sum+occupied.size*50;
@@ -32,12 +43,12 @@
     if(error){$('exam-calculation-status').textContent=error;gate();return;}
     const list=totals(values);
     $('exam-calculation-status').textContent=`${labels[current]}｜${values.map(d=>`${W.formatDate(d)}（星期${'一二三四五'[W.dayOf(d)]}）`).join('、')}｜${list.length}位教師${dirty?'｜尚未儲存':''}`;
-    $('exam-teacher-totals').innerHTML=`<table class="exam-totals"><caption>${E(labels[current])}原始課表授課時長</caption><thead><tr><th scope="col">教師編號</th><th scope="col">教師姓名</th><th scope="col">${E(labels[current])}總授課時長（分鐘）</th></tr></thead><tbody>${list.map(t=>`<tr data-exam-teacher="${E(t.id)}"><td>${E(t.id)}</td><th scope="row">${E(t.name)}</th><td>${t.minutes}</td></tr>`).join('')}</tbody></table>`;gate();
+    $('exam-teacher-totals').innerHTML=`<table class="exam-totals"><caption>${E(labels[current])}原始課表授課時長</caption><thead><tr><th scope="col">教師編號</th><th scope="col">教師姓名</th><th scope="col">${E(labels[current])}總授課時長（分鐘）</th></tr></thead><tbody>${list.map(t=>`<tr data-exam-teacher="${E(t.id)}"><td>${E(t.id)}</td><th scope="row">${E(t.name)}</th><td>${t.minutes===null?'原始課表未提供，待確認':t.minutes}</td></tr>`).join('')}</tbody></table>`;gate();
   }
   function loadCurrent(){
     const record=records.get(current);revision=record?.revision||0;dirty=false;
     for(let i=1;i<=3;i++)$(`exam-date-${i}`).value=record?.dates?.[i-1]||'';
-    $('exam-sync-status').textContent=!loaded?'尚未讀取雲端設定；登入後請等待同步。':record?`已載入${labels[current]}設定｜${W.auditText(record)}`:'此類別尚無已儲存設定，請選擇三天日期後儲存。';calculate();
+    $('exam-sync-status').textContent=!loaded?'尚未讀取雲端設定；登入後請等待同步。':record?`已載入${labels[current]}設定｜${W.auditText(record)}`:'此類別尚無已儲存設定，請選擇第一天與第三天日期後儲存。';calculate();
   }
   $('exam-navigation').addEventListener('click',event=>{
     const button=event.target.closest('[data-exam-tab]');if(!button||!allowed()||pending)return;
@@ -45,7 +56,7 @@
     for(const b of $('exam-navigation').querySelectorAll('[data-exam-tab]'))b.setAttribute('aria-pressed',String(b===button));
     $('exam-basic').hidden=tab!=='basic';$('exam-next').hidden=tab==='basic';$('exam-next-title').textContent=tabs[tab];
   });
-  for(let i=1;i<=3;i++)$(`exam-date-${i}`).addEventListener('input',()=>{if(!allowed())return;dirty=true;calculate();});
+  for(const i of [1,3])$(`exam-date-${i}`).addEventListener('input',()=>{if(!allowed())return;dirty=true;calculate();});
   $('exam-category').addEventListener('change',()=>{
     if(!allowed()||pending)return;
     if(dirty&&!confirm('日期尚未儲存，切換類別會捨棄未儲存變更，確定切換？')){$('exam-category').value=current;return;}

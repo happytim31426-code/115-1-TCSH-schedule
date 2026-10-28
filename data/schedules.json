@@ -25865,6 +25865,13 @@
         {
           "classId": "class-42",
           "className": "高三合心",
+          "day": 1,
+          "row": 6,
+          "subject": "彈性學習B"
+        },
+        {
+          "classId": "class-42",
+          "className": "高三合心",
           "day": 2,
           "row": 8,
           "subject": "英語文(輔)"
@@ -26147,6 +26154,13 @@
           "day": 1,
           "row": 3,
           "subject": "英語文"
+        },
+        {
+          "classId": "class-43",
+          "className": "高三和氣",
+          "day": 3,
+          "row": 5,
+          "subject": "彈性學習B"
         },
         {
           "classId": "class-43",
@@ -27054,6 +27068,13 @@
           "day": 2,
           "row": 2,
           "subject": "英語文"
+        },
+        {
+          "classId": "class-41",
+          "className": "高三包容",
+          "day": 4,
+          "row": 5,
+          "subject": "彈性學習B"
         },
         {
           "classId": "class-41",
@@ -30294,6 +30315,13 @@
           "classId": "class-38",
           "className": "高三知足",
           "day": 4,
+          "row": 3,
+          "subject": "彈性學習B"
+        },
+        {
+          "classId": "class-38",
+          "className": "高三知足",
+          "day": 4,
           "row": 6,
           "subject": "族群、性別與國家的歷"
         },
@@ -31085,6 +31113,13 @@
         {
           "classId": "class-39",
           "className": "高三感恩",
+          "day": 2,
+          "row": 7,
+          "subject": "彈性學習B"
+        },
+        {
+          "classId": "class-39",
+          "className": "高三感恩",
           "day": 4,
           "row": 8,
           "subject": "歷史(輔)"
@@ -31102,6 +31137,13 @@
           "day": 4,
           "row": 3,
           "subject": "族群、性別與國家的歷"
+        },
+        {
+          "classId": "class-40",
+          "className": "高三善解",
+          "day": 4,
+          "row": 6,
+          "subject": "彈性學習B"
         },
         {
           "classId": "class-40",

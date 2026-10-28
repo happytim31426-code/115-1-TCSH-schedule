@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="臺南慈濟高中 115 學年度第 1 學期課表查詢" />
     <title>115-1 課表查詢｜臺南慈濟高中</title>
-    <link rel="stylesheet" href="css/style.css?v=20261028a" />
+    <link rel="stylesheet" href="css/style.css?v=20261028b" />
     <link rel="stylesheet" href="css/patrol.css?v=20261020p" />
   </head>
   <body>
@@ -56,12 +56,13 @@
           <h2>段考基本設定</h2>
           <p>依原始教師課表計算：第一、二天第1～7節，第三天第1～4節，每節50分鐘。同一教師同一時段有多筆跑班／合班資料僅計一次；不含晨光、第8節、週六及當週代調課異動。</p>
           <form id="exam-settings-form">
-            <div class="tool-grid">
+            <div class="tool-grid exam-date-grid">
               <label>類別<select id="exam-category"><option value="first">第一次定期考查</option><option value="second">第二次定期考查</option><option value="third">第三次定期考查</option></select></label>
               <label>第一天<input type="date" id="exam-date-1" min="2026-08-31" max="2027-01-20" required></label>
-              <label>第二天<input type="date" id="exam-date-2" min="2026-08-31" max="2027-01-20" required></label>
+              <input type="hidden" id="exam-date-2">
               <label>第三天<input type="date" id="exam-date-3" min="2026-08-31" max="2027-01-20" required></label>
             </div>
+            <p id="exam-derived-date">選擇第一天與第三天後，自動帶入第二天。</p>
             <button type="submit" class="action-button" id="exam-save" disabled>儲存日程設定</button>
             <button type="button" class="person-button" id="exam-reload" disabled>載入已儲存設定</button>
           </form>
@@ -359,10 +360,10 @@
 
     </main>
     <footer>資料來源：臺南慈濟高中 115 學年度第 1 學期課程表</footer>
-    <script src="data/schedules.js"></script>
+    <script src="data/schedules.js?v=20261028b"></script>
     <script src="js/weekly.js?v=20261020i"></script>
     <script src="js/app.js?v=20261028a"></script>
-    <script src="js/exams.js?v=20261028a"></script>
+    <script src="js/exams.js?v=20261028b"></script>
     <script src="js/weekly-comparison.js?v=20261020f"></script>
     <script src="js/record-pages.js?v=20261020g"></script>
     <script src="js/recruit.js?v=20261020s"></script>

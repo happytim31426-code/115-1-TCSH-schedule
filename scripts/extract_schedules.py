@@ -111,7 +111,9 @@ def main():
             row["cells"] = cells
     class_map = {item["name"]: item for item in classes}
     for sessions in index.values():
-        sessions[:] = [item for item in sessions if item["subject"] != "彈性學習B" and not (item["subject"] == "彈性學習A" and item["className"].startswith("高二"))]
+        # Only replace the centrally assigned 高二 flexible-learning slots.
+        # Other grades' 彈性學習B must retain their PDF-linked teacher lessons.
+        sessions[:] = [item for item in sessions if not (item["subject"] == "彈性學習B" and item["className"].startswith("高二")) and not (item["subject"] == "彈性學習A" and item["className"].startswith("高二"))]
     # These are centrally assigned, not links back to a classroom schedule.
     for teacher_name, room in FLEX_B_ASSIGNMENTS.items():
         index.setdefault(teacher_name, []).append({"className":room,"day":2,"row":3,"subject":"彈性學習B","note":f"上課地點：{room}","linkable":False})

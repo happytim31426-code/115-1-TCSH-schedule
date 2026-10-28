@@ -26,6 +26,7 @@ select { width:100%; padding:.65rem .75rem; border:1px solid var(--line); border
 .exam-totals tbody tr:nth-child(5) td { border-bottom:1px solid var(--line); }
 .is-hidden { display:none; }
 .tool-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1rem; margin:1rem 0; }
+.exam-date-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
 .tool-grid label { display:grid; gap:.4rem; }.tool-grid.compact { grid-template-columns:minmax(10rem,14rem); }
 .action-button { padding:.65rem 1rem; border:0; border-radius:8px; color:white; background:var(--teal); font:inherit; font-weight:700; cursor:pointer; }
 .tool-results { margin-top:1rem; }.result-list { margin:.5rem 0 0; padding-left:1.25rem; }.result-list li { margin:.45rem 0; }.result-note { color:#547168; font-size:.9rem; }.warning { color:#8a4c16; font-weight:700; }
