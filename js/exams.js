@@ -1,7 +1,7 @@
 (() => {
   const W=window.WEEKLY,$=id=>document.getElementById(id),E=W.esc;
   const labels={first:'第一次定期考查',second:'第二次定期考查',third:'第三次定期考查'};
-  const tabs={basic:'日程基本設定',coefficient:'監考係數計算',day1:'第一天監考試排',day2:'第二天監考試排',day3:'第三天監考試排'};
+  const tabs={basic:'日程基本設定',coefficient:'監考係數計算',schedule:'考試日程表設定',day1:'第一天監考試排',day2:'第二天監考試排',day3:'第三天監考試排'};
   const teachers=window.SCHEDULE_DATA.teachers.filter(t=>!['葉梅花','劉柔秀','薛靜儀'].includes(t.name));
   // Confirmed by the teaching office: no teaching assignment this semester.
   teachers.push({id:'617',name:'薛靜儀',sessions:[]});
@@ -37,6 +37,7 @@
     for(const b of $('exam-navigation').querySelectorAll('button'))b.disabled=!allowed()||pending;
   }
   function calculate(){
+    window.dispatchEvent(new Event('exam-context-changed'));
     $('exam-teacher-totals').replaceChildren();
     if(!allowed()){$('exam-calculation-status').textContent='';gate();return;}
     const values=dates(),error=validate(values);
@@ -54,7 +55,7 @@
     const button=event.target.closest('[data-exam-tab]');if(!button||!allowed()||pending)return;
     const tab=button.dataset.examTab;if(!tabs[tab])return;
     for(const b of $('exam-navigation').querySelectorAll('[data-exam-tab]'))b.setAttribute('aria-pressed',String(b===button));
-    $('exam-basic').hidden=tab!=='basic';$('exam-next').hidden=tab==='basic';$('exam-next-title').textContent=tabs[tab];
+    $('exam-basic').hidden=tab!=='basic';$('exam-program').hidden=tab!=='schedule';$('exam-next').hidden=['basic','schedule'].includes(tab);$('exam-next-title').textContent=tabs[tab];
   });
   for(const i of [1,3])$(`exam-date-${i}`).addEventListener('input',()=>{if(!allowed())return;dirty=true;calculate();});
   $('exam-category').addEventListener('change',()=>{
@@ -93,5 +94,6 @@
     if(!allowed()){records.clear();loaded=false;pending=false;dirty=false;current='first';revision=0;$('exam-category').value=current;for(let i=1;i<=3;i++)$(`exam-date-${i}`).value='';$('exam-sync-status').textContent='尚未讀取雲端日程設定。';$('exam-teacher-totals').replaceChildren();$('exam-calculation-status').textContent='';$('exam-basic').hidden=false;$('exam-next').hidden=true;for(const b of $('exam-navigation').querySelectorAll('[data-exam-tab]'))b.setAttribute('aria-pressed',String(b.dataset.examTab==='basic'));}
     gate();
   });
+  window.EXAM_CONTEXT={get:()=>({category:current,label:labels[current],dates:dates()})};
   window.EXAM_CALCULATOR={validate,totals};gate();
 })();

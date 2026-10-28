@@ -3,6 +3,7 @@ let api, user = null, stopMember = () => {}, stopList = () => {}, stopPrivate=()
 let privateActive=false;
 let stopPatrol=()=>{};
 let stopExam=()=>{};
+let stopExamPrograms=()=>{};
 const teachingMember=()=>['admin','teacher'].includes(window.AUTH_MEMBER?.role);
 const examMember=()=>['admin','exam'].includes(window.AUTH_MEMBER?.role);
 const roleLabel=role=>({admin:'管理員',teacher:'授權教師',patrol:'巡堂登錄人員',exam:'試務組長'})[role]||'未授權';
@@ -36,12 +37,18 @@ function access(member) {
   if(api)startPrivate(teachingMember()?member:null);
   listenPatrol(member);
   stopExam();
+  stopExamPrograms();
   window.dispatchEvent(new Event('exam-sync-loading'));
+  window.dispatchEvent(new Event('exam-program-sync-loading'));
   if(api&&examMember())stopExam=api.onSnapshot(api.collection(api.db,'examSettings'),{includeMetadataChanges:true},snapshot=>{
     if(snapshot.metadata.fromCache||snapshot.metadata.hasPendingWrites)return;
     if(!examMember())return;
     window.dispatchEvent(new CustomEvent('cloud-exam-settings',{detail:snapshot.docs.map(d=>({...d.data(),id:d.id}))}));
   },error=>window.dispatchEvent(new CustomEvent('exam-sync-error',{detail:errorMessage(error)})));
+  if(api&&examMember())stopExamPrograms=api.onSnapshot(api.collection(api.db,'examPrograms'),{includeMetadataChanges:true},snapshot=>{
+    if(snapshot.metadata.fromCache||snapshot.metadata.hasPendingWrites||!examMember())return;
+    window.dispatchEvent(new CustomEvent('cloud-exam-programs',{detail:snapshot.docs.map(d=>({...d.data(),id:d.id}))}));
+  },error=>window.dispatchEvent(new CustomEvent('exam-program-sync-error',{detail:errorMessage(error)})));
   window.renderWorkspace?.();
   for (const id of ['recruit-save','recruit-load']) el(id).disabled = !teachingMember();
   if (!member) { el('member-list').replaceChildren(); el('recruit-cloud-status').textContent = ''; }
@@ -91,6 +98,18 @@ async function initialize() {
       tx.set(ref,{category:payload.category,dates:[...payload.dates],revision:revision+1,updatedAt:api.serverTimestamp(),updatedBy:uid,updatedName:name,createdAt:existing?.createdAt||api.serverTimestamp(),createdBy:existing?.createdBy||uid,createdName:existing?.createdName||name});
     });
   }};
+  window.EXAM_API.saveProgram=async(payload,revision)=>{
+    if(!user||!examMember())throw Error('需要管理員或試務組長權限。');
+    const value=JSON.parse(JSON.stringify(payload));window.EXAM_PROGRAM_MODEL.validate(value);
+    const uid=user.uid,name=window.AUTH_MEMBER.name,id=window.EXAM_PROGRAM_MODEL.key(value),ref=api.doc(api.db,'examPrograms',id);
+    await api.runTransaction(api.db,async tx=>{
+      if(!user||user.uid!==uid||!examMember())throw Error('登入狀態已改變，請重新登入。');
+      const old=await tx.get(ref),existing=old.exists()?old.data():null;
+      if((existing?.revision||0)!==revision)throw Error('其他同仁已更新此表，請載入已儲存設定後再修正。');
+      // Grade/period identities are fixed by position; only editable values are stored.
+      tx.set(ref,{...value,cells:value.cells.map(c=>({subject:c.subject,minutes:c.minutes})),revision:revision+1,createdAt:existing?.createdAt||api.serverTimestamp(),createdBy:existing?.createdBy||uid,createdName:existing?.createdName||name,updatedAt:api.serverTimestamp(),updatedBy:uid,updatedName:name});
+    });
+  };
   window.PATROL_API={save:async (entries,onCommitted=()=>{})=>{
     if(!user||!['admin','patrol'].includes(window.AUTH_MEMBER?.role))throw Error('需要巡堂登錄權限。');
     if(!Array.isArray(entries)||!entries.length||entries.length>43)throw Error('巡堂資料筆數不正確。');

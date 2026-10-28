@@ -79,6 +79,39 @@ service cloud.firestore {
         && versioned('examSettings', id);
       allow delete: if false;
     }
+    function examProgramCell(r, index) {
+      let cell = r.cells.size() > index ? r.cells[index] : null;
+      let maxMinutes = [60,60,80,70,80][index % (r.day == 3 ? 3 : 5)];
+      return r.cells.size() <= index || (cell is map
+        && cell.keys().hasOnly(['subject','minutes'])
+        && cell.subject is string && cell.subject.size() <= 80
+        && cell.minutes is int && cell.minutes >= 0 && cell.minutes <= maxMinutes
+        && (cell.subject == '' ? cell.minutes == 0 : cell.minutes >= 1));
+    }
+    match /examPrograms/{id} {
+      allow read: if examMember();
+      allow create, update: if examMember()
+        && request.resource.data.keys().hasAll(['category','division','day','cells','revision','createdAt','createdBy','createdName','updatedAt','updatedBy','updatedName'])
+        && request.resource.data.keys().hasOnly(['category','division','day','cells','revision','createdAt','createdBy','createdName','updatedAt','updatedBy','updatedName'])
+        && request.resource.data.category in ['first','second','third']
+        && request.resource.data.division in ['junior','senior']
+        && request.resource.data.day is int && request.resource.data.day >= 1 && request.resource.data.day <= 3
+        && id == request.resource.data.category + '_' + request.resource.data.division + '_' + string(request.resource.data.day)
+        && request.resource.data.cells is list
+        && request.resource.data.cells.size() == (request.resource.data.division == 'junior' ? 3 : 6) * (request.resource.data.day == 3 ? 3 : 5)
+        && versioned('examPrograms', id)
+        && examProgramCell(request.resource.data,0) && examProgramCell(request.resource.data,1) && examProgramCell(request.resource.data,2)
+        && examProgramCell(request.resource.data,3) && examProgramCell(request.resource.data,4) && examProgramCell(request.resource.data,5)
+        && examProgramCell(request.resource.data,6) && examProgramCell(request.resource.data,7) && examProgramCell(request.resource.data,8)
+        && examProgramCell(request.resource.data,9) && examProgramCell(request.resource.data,10) && examProgramCell(request.resource.data,11)
+        && examProgramCell(request.resource.data,12) && examProgramCell(request.resource.data,13) && examProgramCell(request.resource.data,14)
+        && examProgramCell(request.resource.data,15) && examProgramCell(request.resource.data,16) && examProgramCell(request.resource.data,17)
+        && examProgramCell(request.resource.data,18) && examProgramCell(request.resource.data,19) && examProgramCell(request.resource.data,20)
+        && examProgramCell(request.resource.data,21) && examProgramCell(request.resource.data,22) && examProgramCell(request.resource.data,23)
+        && examProgramCell(request.resource.data,24) && examProgramCell(request.resource.data,25) && examProgramCell(request.resource.data,26)
+        && examProgramCell(request.resource.data,27) && examProgramCell(request.resource.data,28) && examProgramCell(request.resource.data,29);
+      allow delete: if false;
+    }
     function slot(s) {
       return s is map && s.keys().hasOnly(['teacher','date','row','classId','subject'])
         && s.teacher is string && s.teacher.size() > 0 && s.teacher.size() <= 80 && validDate(s.date)

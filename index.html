@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="臺南慈濟高中 115 學年度第 1 學期課表查詢" />
     <title>115-1 課表查詢｜臺南慈濟高中</title>
-    <link rel="stylesheet" href="css/style.css?v=20261028b" />
+    <link rel="stylesheet" href="css/style.css?v=20261028e" />
     <link rel="stylesheet" href="css/patrol.css?v=20261020p" />
   </head>
   <body>
@@ -48,6 +48,7 @@
         <nav id="exam-navigation" class="exam-navigation" aria-label="試務設定切換">
           <button type="button" class="person-button" data-exam-tab="basic" aria-pressed="true">日程基本設定</button>
           <button type="button" class="person-button" data-exam-tab="coefficient" aria-pressed="false">監考係數計算</button>
+          <button type="button" class="person-button" data-exam-tab="schedule" aria-pressed="false">考試日程表設定</button>
           <button type="button" class="person-button" data-exam-tab="day1" aria-pressed="false">第一天監考試排</button>
           <button type="button" class="person-button" data-exam-tab="day2" aria-pressed="false">第二天監考試排</button>
           <button type="button" class="person-button" data-exam-tab="day3" aria-pressed="false">第三天監考試排</button>
@@ -69,6 +70,15 @@
           <p id="exam-sync-status" role="status">尚未讀取雲端日程設定。</p>
           <p id="exam-calculation-status" role="status"></p>
           <div class="table-wrap" id="exam-teacher-totals"></div>
+        </section>
+        <section id="exam-program" hidden>
+          <h2 id="exam-program-heading">考試日程表設定</h2>
+          <p>考試節次、時段、年段／組別依提供的日程表固定。科目可選擇或自行輸入；施測分鐘數可調整，但不能超過本節時段。延後發卷時請填實際施測長度，自習也可設定安排長度。本表考試節次與平時課表節次不同，尚未套用監考係數。</p>
+          <p>考查次數與日期跟隨「日程基本設定」。各次考查分開儲存；科目先留空，不自動把參考PDF當作正式安排。空白科目為未安排，不代表自習。</p>
+          <button type="button" class="action-button" id="exam-program-save-all" disabled>儲存全部變更</button>
+          <p id="exam-program-status" role="status"></p>
+          <datalist id="exam-program-subject-options"></datalist>
+          <div id="exam-program-tables"></div>
         </section>
         <section id="exam-next" hidden><h2 id="exam-next-title"></h2><p>此功能待後續確認計算與排班規則後建置，尚未執行監考試排。</p></section>
       </section>
@@ -363,7 +373,8 @@
     <script src="data/schedules.js?v=20261028c"></script>
     <script src="js/weekly.js?v=20261020i"></script>
     <script src="js/app.js?v=20261028a"></script>
-    <script src="js/exams.js?v=20261028d"></script>
+    <script src="js/exams.js?v=20261028e"></script>
+    <script src="js/exam-program.js?v=20261028e"></script>
     <script src="js/weekly-comparison.js?v=20261020f"></script>
     <script src="js/record-pages.js?v=20261020g"></script>
     <script src="js/recruit.js?v=20261020s"></script>
@@ -376,6 +387,6 @@
     <script src="js/recruit-import.js?v=20261022b"></script>
     <script src="js/patrol.js?v=20261020o"></script>
     <script src="js/patrol-backfill.js?v=20261021a"></script>
-    <script type="module" src="js/backend.js?v=20261028a"></script>
+    <script type="module" src="js/backend.js?v=20261028e"></script>
   </body>
 </html>
