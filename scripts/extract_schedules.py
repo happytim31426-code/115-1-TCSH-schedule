@@ -104,6 +104,11 @@ def main():
                     subject, manual_teacher = manual
                     matches = [{"teacher":manual_teacher,"subject":subject,"page":0}]
                 subject = matches[0]["subject"] if matches else raw
+                # Confirmed school-wide override: the PDF reverses A/B in
+                # 高二感恩 and 高二包容. All 高二 use Wednesday B3 / A4.
+                if schedule["name"].startswith("高二") and day == 2 and row_no in (3, 4):
+                    subject = "彈性學習B" if row_no == 3 else "彈性學習A"
+                    matches = []
                 cell = {"subject":subject,"teachers":[{"name":x["teacher"],"sourcePage":x["page"]} for x in matches],"runningClass":running_class(schedule["name"],subject)}
                 if raw and not matches: unmatched.append({"class":schedule["name"],"day":DAYS[day],"period":row["period"]["name"],"text":raw})
                 for x in matches: index[x["teacher"]].append({"classId":schedule["id"],"className":schedule["name"],"day":day,"row":row_no,"subject":x["subject"]})

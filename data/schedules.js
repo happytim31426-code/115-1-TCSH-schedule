@@ -16785,9 +16785,9 @@ window.SCHEDULE_DATA = {
               "runningClass": false
             },
             {
-              "subject": "彈性學習A",
+              "subject": "彈性學習B",
               "teachers": [],
-              "runningClass": false
+              "runningClass": true
             },
             {
               "subject": "物理-探究A",
@@ -16842,9 +16842,9 @@ window.SCHEDULE_DATA = {
               "runningClass": false
             },
             {
-              "subject": "彈性學習B",
+              "subject": "彈性學習A",
               "teachers": [],
-              "runningClass": true
+              "runningClass": false
             },
             {
               "subject": "物理-探究A",
@@ -17845,9 +17845,9 @@ window.SCHEDULE_DATA = {
               "runningClass": false
             },
             {
-              "subject": "彈性學習A",
+              "subject": "彈性學習B",
               "teachers": [],
-              "runningClass": false
+              "runningClass": true
             },
             {
               "subject": "國語文",
@@ -17898,9 +17898,9 @@ window.SCHEDULE_DATA = {
               "runningClass": false
             },
             {
-              "subject": "彈性學習B",
+              "subject": "彈性學習A",
               "teachers": [],
-              "runningClass": true
+              "runningClass": false
             },
             {
               "subject": "美術",
