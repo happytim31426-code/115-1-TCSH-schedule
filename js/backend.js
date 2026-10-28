@@ -2,6 +2,10 @@ const el = id => document.getElementById(id);
 let api, user = null, stopMember = () => {}, stopList = () => {}, stopPrivate=()=>{};
 let privateActive=false;
 let stopPatrol=()=>{};
+let stopExam=()=>{};
+const teachingMember=()=>['admin','teacher'].includes(window.AUTH_MEMBER?.role);
+const examMember=()=>['admin','exam'].includes(window.AUTH_MEMBER?.role);
+const roleLabel=role=>({admin:'管理員',teacher:'授權教師',patrol:'巡堂登錄人員',exam:'試務組長'})[role]||'未授權';
 let repairLegacyLeaves=()=>{};
 const privateCollection=kind=>({recruit:'recruitmentRecords',course:'courseRecords',event:'schoolEvents'})[kind];
 const publicCollection=kind=>({recruit:'publicRecruitments',course:'publicCourseRecords',event:'publicSchoolEvents'})[kind];
@@ -10,6 +14,7 @@ function startPrivate(member){
   stopPrivate();privateActive=!!member;
   if(!member){for(const kind of ['recruit','course','event'])window.dispatchEvent(new CustomEvent(`cloud-${kind}-records`,{detail:[]}));return;}
   const stops=['recruit','course','event'].map(kind=>api.onSnapshot(api.collection(api.db,privateCollection(kind)),{includeMetadataChanges:true},snapshot=>{
+    if(!teachingMember())return;
     if(snapshot.metadata.fromCache||snapshot.metadata.hasPendingWrites)return;
     window.dispatchEvent(new CustomEvent(`cloud-${kind}-records`,{detail:snapshot.docs.map(d=>({...d.data(),id:d.id}))}));
   },error=>{el(kind==='recruit'?'recruit-message':kind==='event'?'event-status':'teaching-status').textContent=errorMessage(error);}));
@@ -28,13 +33,20 @@ function listenPatrol(member) {
 }
 function access(member) {
   window.AUTH_MEMBER = member;
-  if(api)startPrivate(member?.role==='patrol'?null:member);
+  if(api)startPrivate(teachingMember()?member:null);
   listenPatrol(member);
+  stopExam();
+  window.dispatchEvent(new Event('exam-sync-loading'));
+  if(api&&examMember())stopExam=api.onSnapshot(api.collection(api.db,'examSettings'),{includeMetadataChanges:true},snapshot=>{
+    if(snapshot.metadata.fromCache||snapshot.metadata.hasPendingWrites)return;
+    if(!examMember())return;
+    window.dispatchEvent(new CustomEvent('cloud-exam-settings',{detail:snapshot.docs.map(d=>({...d.data(),id:d.id}))}));
+  },error=>window.dispatchEvent(new CustomEvent('exam-sync-error',{detail:errorMessage(error)})));
   window.renderWorkspace?.();
-  for (const id of ['recruit-save','recruit-load']) el(id).disabled = !member;
+  for (const id of ['recruit-save','recruit-load']) el(id).disabled = !teachingMember();
   if (!member) { el('member-list').replaceChildren(); el('recruit-cloud-status').textContent = ''; }
   window.dispatchEvent(new Event('authorization-changed'));
-  if(member && member.role!=='patrol')repairLegacyLeaves();else{el('leave-privacy-status').hidden=true;el('leave-privacy-status').textContent='';}
+  if(teachingMember())repairLegacyLeaves();else{el('leave-privacy-status').hidden=true;el('leave-privacy-status').textContent='';}
 }
 function errorMessage(error) {
   return ({'auth/unauthorized-domain':'請在 Firebase 驗證設定加入 happytim31426-code.github.io 授權網域。',
@@ -49,7 +61,7 @@ function memberList(snapshot) {
   for (const record of snapshot.docs) {
     const item = record.data(), button = document.createElement('button');
     button.type = 'button'; button.className = 'person-button';
-    button.textContent = `${item.name}｜${record.id}｜${item.role === 'admin' ? '管理員' : item.role==='patrol'?'巡堂登錄人員':'授權教師'}｜${item.active ? '啟用' : '停用'}`;
+    button.textContent = `${item.name}｜${record.id}｜${roleLabel(item.role)}｜${item.active ? '啟用' : '停用'}`;
     button.disabled = record.id === user.email;
     button.addEventListener('click', () => {
       el('member-email').value = record.id; el('member-name').value = item.name;
@@ -67,6 +79,18 @@ async function initialize() {
   ]);
   const app = appSDK.initializeApp(window.FIREBASE_CONFIG);
   api = {...authSDK,...dbSDK,auth:authSDK.getAuth(app),db:dbSDK.getFirestore(app)};
+  window.EXAM_API={save:async(payload,revision)=>{
+    if(!user||!examMember())throw Error('需要管理員或試務組長權限。');
+    const uid=user.uid,name=window.AUTH_MEMBER.name;
+    if(!['first','second','third'].includes(payload.category)||!Array.isArray(payload.dates)||payload.dates.length!==3||!payload.dates.every(window.WEEKLY.inTerm)||!(payload.dates[0]<payload.dates[1]&&payload.dates[1]<payload.dates[2]))throw Error('請確認三天依日期先後排列，且為本學期週一至週五。');
+    const ref=api.doc(api.db,'examSettings',payload.category);
+    await api.runTransaction(api.db,async tx=>{
+      if(!user||user.uid!==uid||!examMember())throw Error('登入狀態已改變，請重新登入。');
+      const old=await tx.get(ref),existing=old.exists()?old.data():null;
+      if((existing?.revision||0)!==revision)throw Error('其他同仁已更新此設定，請重新載入後再修正。');
+      tx.set(ref,{category:payload.category,dates:[...payload.dates],revision:revision+1,updatedAt:api.serverTimestamp(),updatedBy:uid,updatedName:name,createdAt:existing?.createdAt||api.serverTimestamp(),createdBy:existing?.createdBy||uid,createdName:existing?.createdName||name});
+    });
+  }};
   window.PATROL_API={save:async (entries,onCommitted=()=>{})=>{
     if(!user||!['admin','patrol'].includes(window.AUTH_MEMBER?.role))throw Error('需要巡堂登錄權限。');
     if(!Array.isArray(entries)||!entries.length||entries.length>43)throw Error('巡堂資料筆數不正確。');
@@ -97,7 +121,7 @@ async function initialize() {
     window.dispatchEvent(new CustomEvent('cloud-patrol-records',{detail:snapshot.docs.map(d=>({...d.data(),id:d.id}))}));
   };
   window.CLOUD_RECORDS={save:async(kind,id,payload,projection,revision,createOnly=false)=>{
-    if(!user||!window.AUTH_MEMBER)throw Error('請先以授權帳號登入。');
+    if(!user||!teachingMember())throw Error('需要教學組行政業務權限。');
     if(!privateCollection(kind))throw Error('不支援的紀錄類型');
     const ref=api.doc(api.db,privateCollection(kind),id);
     const pub=api.doc(api.db,publicCollection(kind),id);
@@ -111,7 +135,7 @@ async function initialize() {
     });}catch(error){throw Error(error.code?errorMessage(error):error.message);}
   }};
   window.CLOUD_RECORDS.remove=async(kind,id,revision)=>{
-    if(!user||!window.AUTH_MEMBER)throw Error('請先以授權帳號登入。');
+    if(!user||!teachingMember())throw Error('需要教學組行政業務權限。');
     if(!privateCollection(kind))throw Error('不支援的紀錄類型');
     const ref=api.doc(api.db,privateCollection(kind),id),pub=api.doc(api.db,publicCollection(kind),id);
     try{await api.runTransaction(api.db,async transaction=>{
@@ -126,12 +150,12 @@ async function initialize() {
   let publicCourses=[],publicRecruitments=[],publicEvents=[],loaded=new Set();
   let repairing=false;
   repairLegacyLeaves=async()=>{
-    if(repairing||!user||!window.AUTH_MEMBER)return;
+    if(repairing||!user||!teachingMember())return;
     const legacy=publicCourses.filter(r=>['公','差'].includes(r.leaveCode));if(!legacy.length)return;
     repairing=true;const uid=user.uid,note=el('leave-privacy-status');note.hidden=false;note.textContent='正在將舊公開假別轉為「假」，不更動行政假別…';
     try{
       for(const record of legacy){
-        if(user?.uid!==uid||!window.AUTH_MEMBER)break;
+        if(user?.uid!==uid||!teachingMember())break;
         await api.runTransaction(api.db,async transaction=>{
           const ref=api.doc(api.db,'publicCourseRecords',record.id),privateRef=api.doc(api.db,'courseRecords',record.id);
           const [pub,priv]=await Promise.all([transaction.get(ref),transaction.get(privateRef)]);
@@ -161,9 +185,9 @@ async function initialize() {
     stopMember = api.onSnapshot(api.doc(api.db,'members',user.email),{includeMetadataChanges:true}, snapshot => {
       stopList();
       const item = snapshot.exists() && !snapshot.metadata.fromCache ? snapshot.data() : null;
-      const member = item?.active === true && ['admin','teacher','patrol'].includes(item.role) ? item : null;
+      const member = item?.active === true && ['admin','teacher','patrol','exam'].includes(item.role) ? item : null;
       access(member);
-      el('account-status').textContent = `${user.email}｜${member ? (member.role === 'admin' ? '管理員' : '授權教師') : '尚無有效授權，請聯絡管理員。'}`;
+      el('account-status').textContent = `${user.email}｜${member ? roleLabel(member.role) : '尚無有效授權，請聯絡管理員。'}`;
       if (member?.role === 'admin') stopList = api.onSnapshot(api.collection(api.db,'members'),memberList,error => { el('member-message').textContent = errorMessage(error); });
     }, error => { stopList(); access(null); el('account-status').textContent = errorMessage(error); });
   });
@@ -185,7 +209,7 @@ el('member-form').addEventListener('submit',async event => {
   } catch(error) { el('member-message').textContent = errorMessage(error); }
 });
 el('recruit-save').addEventListener('click',async () => {
-  if (!api || !window.AUTH_MEMBER || !window.RECRUIT_PLANNER) return;
+  if (!api || !teachingMember() || !window.RECRUIT_PLANNER) return;
   const state = window.RECRUIT_PLANNER.snapshot();
   try {
     await api.setDoc(api.doc(api.db,'recruitmentPlans',`${user.uid}_${state.week}_${state.day}`),{...state,updatedAt:api.serverTimestamp(),updatedBy:user.uid});
@@ -193,7 +217,7 @@ el('recruit-save').addEventListener('click',async () => {
   } catch(error) { el('recruit-cloud-status').textContent = errorMessage(error); }
 });
 el('recruit-load').addEventListener('click',async () => {
-  if (!api || !window.AUTH_MEMBER || !window.RECRUIT_PLANNER) return;
+  if (!api || !teachingMember() || !window.RECRUIT_PLANNER) return;
   try {
     const day = Number(el('recruit-day').value);
     const week=Number(el('recruit-week').value);

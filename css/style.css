@@ -18,6 +18,12 @@ select { width:100%; padding:.65rem .75rem; border:1px solid var(--line); border
 .schedule-card,.source-card { margin-top:1.25rem; padding:1.25rem; }
 .tool-card { margin-top:1.25rem; padding:1.25rem; background:var(--paper); border-radius:16px; box-shadow:0 10px 30px #17443812; }
 .tool-card p { color:#547168; }
+.exam-navigation { display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1.25rem; }
+.exam-navigation button[aria-pressed="true"] { border-color:var(--teal); background:var(--subtle); font-weight:700; }
+#exam-settings-form input[type="date"] { min-width:0; width:100%; padding:.65rem .75rem; border:1px solid var(--line); border-radius:8px; background:var(--paper); color:var(--ink); font:inherit; }
+.exam-totals { min-width:520px; }
+.exam-totals caption { text-align:left; margin-bottom:.75rem; font-weight:700; }
+.exam-totals tbody tr:nth-child(5) td { border-bottom:1px solid var(--line); }
 .is-hidden { display:none; }
 .tool-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1rem; margin:1rem 0; }
 .tool-grid label { display:grid; gap:.4rem; }.tool-grid.compact { grid-template-columns:minmax(10rem,14rem); }

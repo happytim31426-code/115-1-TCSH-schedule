@@ -194,7 +194,7 @@
     const index=courses(selection.teacher,selection.date).findIndex(s=>s.row===selection.row&&s.classId===$('swap-class').value);if(index>=0)$('entry-other-course').value=String(index);
   };
   window.TEACHING_IMPORT_PHOTO=entry=>{
-    if(!window.AUTH_MEMBER||workspace!=='office')throw Error('請先登入教務處行政業務。');
+    if(!window.AUTH_MEMBER||workspace!=='office')throw Error('請先登入教學組行政業務。');
     if(saving)throw Error('正在儲存，請稍後。');
     if(editingId)throw Error('請先完成或放棄目前的修正，再帶入照片課務。');
     if(!teacherBy(entry.teacher)||!teacherBy(entry.partner))throw Error('請人工確認原教師及調／代課教師的完整姓名，須與教師名單一致。');

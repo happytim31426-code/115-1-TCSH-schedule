@@ -25,7 +25,7 @@ service cloud.firestore {
         && request.resource.data.keys().hasOnly(['name', 'role', 'active', 'updatedAt', 'updatedBy'])
         && request.resource.data.name is string
         && request.resource.data.name.size() > 0 && request.resource.data.name.size() <= 80
-        && request.resource.data.role in ['admin', 'teacher', 'patrol']
+        && request.resource.data.role in ['admin', 'teacher', 'patrol', 'exam']
         && request.resource.data.active is bool
         && request.resource.data.updatedAt == request.time
         && request.resource.data.updatedBy == request.auth.uid;
@@ -59,6 +59,26 @@ service cloud.firestore {
             && (!resource.data.keys().hasAll(['createdName','createdBy','createdAt']) || (request.resource.data.createdName == resource.data.createdName && request.resource.data.createdBy == resource.data.createdBy && request.resource.data.createdAt == resource.data.createdAt))));
     }
     function validDate(date) { return date is string && date.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$') && date >= '2026-08-31' && date <= '2027-01-20'; }
+    function examMember() {
+      return signedIn()
+        && exists(/databases/$(database)/documents/members/$(selfEmail()))
+        && get(/databases/$(database)/documents/members/$(selfEmail())).data.active == true
+        && get(/databases/$(database)/documents/members/$(selfEmail())).data.role in ['admin', 'exam'];
+    }
+    match /examSettings/{id} {
+      allow read: if examMember();
+      allow create, update: if examMember()
+        && id in ['first','second','third']
+        && request.resource.data.keys().hasAll(['category','dates','revision','createdAt','createdBy','createdName','updatedAt','updatedBy','updatedName'])
+        && request.resource.data.keys().hasOnly(['category','dates','revision','createdAt','createdBy','createdName','updatedAt','updatedBy','updatedName'])
+        && request.resource.data.category == id
+        && request.resource.data.dates is list && request.resource.data.dates.size() == 3
+        && validDate(request.resource.data.dates[0]) && validDate(request.resource.data.dates[1]) && validDate(request.resource.data.dates[2])
+        && request.resource.data.dates[0] < request.resource.data.dates[1]
+        && request.resource.data.dates[1] < request.resource.data.dates[2]
+        && versioned('examSettings', id);
+      allow delete: if false;
+    }
     function slot(s) {
       return s is map && s.keys().hasOnly(['teacher','date','row','classId','subject'])
         && s.teacher is string && s.teacher.size() > 0 && s.teacher.size() <= 80 && validDate(s.date)

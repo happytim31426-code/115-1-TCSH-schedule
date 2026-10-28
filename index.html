@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="臺南慈濟高中 115 學年度第 1 學期課表查詢" />
     <title>115-1 課表查詢｜臺南慈濟高中</title>
-    <link rel="stylesheet" href="css/style.css?v=20261020s" />
+    <link rel="stylesheet" href="css/style.css?v=20261028a" />
     <link rel="stylesheet" href="css/patrol.css?v=20261020p" />
   </head>
   <body>
@@ -13,7 +13,8 @@
       <nav class="header-navigation" aria-label="網站功能">
         <button type="button" class="admin-header-button" id="public-open" aria-pressed="true">課表查詢</button>
         <button type="button" class="admin-header-button" id="patrol-open" aria-pressed="false">巡堂紀錄登錄</button>
-        <button type="button" class="admin-header-button" id="office-open" aria-pressed="false">教務處行政業務</button>
+        <button type="button" class="admin-header-button" id="exam-open" aria-pressed="false">試務組行政業務</button>
+        <button type="button" class="admin-header-button" id="office-open" aria-pressed="false">教學組行政業務</button>
         <button type="button" class="admin-header-button" id="admin-open" aria-pressed="false">管理者功能</button>
       </nav>
       <p class="eyebrow">臺南慈濟高中</p>
@@ -35,13 +36,40 @@
           <form id="member-form" class="tool-grid">
             <label>姓名<input id="member-name" maxlength="80" required></label>
             <label>Google Email<input id="member-email" type="email" required></label>
-            <label>角色<select id="member-role"><option value="teacher">授權教師</option><option value="patrol">巡堂登錄人員（僅自己的紀錄）</option><option value="admin">管理員</option></select></label>
+            <label>角色<select id="member-role"><option value="teacher">授權教師</option><option value="patrol">巡堂登錄人員（僅自己的紀錄）</option><option value="exam">試務組長</option><option value="admin">管理員</option></select></label>
             <label>狀態<select id="member-active"><option value="true">啟用</option><option value="false">停用</option></select></label>
             <button type="submit" class="action-button">儲存權限</button>
           </form>
           <p id="member-message" role="status"></p>
           <div id="member-list"></div>
         </section>
+      </section>
+      <section class="tool-card" id="exam-workspace" hidden aria-label="試務組行政業務">
+        <nav id="exam-navigation" class="exam-navigation" aria-label="試務設定切換">
+          <button type="button" class="person-button" data-exam-tab="basic" aria-pressed="true">日程基本設定</button>
+          <button type="button" class="person-button" data-exam-tab="coefficient" aria-pressed="false">監考係數計算</button>
+          <button type="button" class="person-button" data-exam-tab="day1" aria-pressed="false">第一天監考試排</button>
+          <button type="button" class="person-button" data-exam-tab="day2" aria-pressed="false">第二天監考試排</button>
+          <button type="button" class="person-button" data-exam-tab="day3" aria-pressed="false">第三天監考試排</button>
+        </nav>
+        <section id="exam-basic">
+          <h2>段考基本設定</h2>
+          <p>依原始教師課表計算：第一、二天第1～7節，第三天第1～4節，每節50分鐘。同一教師同一時段有多筆跑班／合班資料僅計一次；不含晨光、第8節、週六及當週代調課異動。</p>
+          <form id="exam-settings-form">
+            <div class="tool-grid">
+              <label>類別<select id="exam-category"><option value="first">第一次定期考查</option><option value="second">第二次定期考查</option><option value="third">第三次定期考查</option></select></label>
+              <label>第一天<input type="date" id="exam-date-1" min="2026-08-31" max="2027-01-20" required></label>
+              <label>第二天<input type="date" id="exam-date-2" min="2026-08-31" max="2027-01-20" required></label>
+              <label>第三天<input type="date" id="exam-date-3" min="2026-08-31" max="2027-01-20" required></label>
+            </div>
+            <button type="submit" class="action-button" id="exam-save" disabled>儲存日程設定</button>
+            <button type="button" class="person-button" id="exam-reload" disabled>載入已儲存設定</button>
+          </form>
+          <p id="exam-sync-status" role="status">尚未讀取雲端日程設定。</p>
+          <p id="exam-calculation-status" role="status"></p>
+          <div class="table-wrap" id="exam-teacher-totals"></div>
+        </section>
+        <section id="exam-next" hidden><h2 id="exam-next-title"></h2><p>此功能待後續確認計算與排班規則後建置，尚未執行監考試排。</p></section>
       </section>
       <section class="tool-card" id="patrol-backfill" hidden>
         <h2>管理員：歷史巡堂紀錄補登</h2>
@@ -106,7 +134,7 @@
           <p id="teacher-common-status" role="status"></p><div id="teacher-common-results"></div>
         </details>
       </section>
-      <section class="controls" id="office-controls" aria-label="教務處行政業務查詢" hidden>
+      <section class="controls" id="office-controls" aria-label="教學組行政業務查詢" hidden>
         <div class="control-group grow"><label for="office-type">行政業務查詢類型</label>
           <select id="office-type">
             <option value="events">學校重要活動登錄</option>
@@ -290,7 +318,7 @@
         </div>
       </section>
 
-      <section class="tool-card is-hidden" id="recruit-gate"><h2>教務處行政業務</h2><p>請先使用已授權的 Google 帳號登入。</p></section>
+      <section class="tool-card is-hidden" id="recruit-gate"><h2>教學組行政業務</h2><p>請先使用已授權的 Google 帳號登入。</p></section>
       <section class="tool-card is-hidden" id="recruit-tool" hidden>
         <h2>招生教師名單規劃</h2>
         <p>先選星期與學校，再點推薦人員加入該校；點已選姓名可移回推薦清單。需求人數包含一位帶隊老師。</p>
@@ -333,11 +361,12 @@
     <footer>資料來源：臺南慈濟高中 115 學年度第 1 學期課程表</footer>
     <script src="data/schedules.js"></script>
     <script src="js/weekly.js?v=20261020i"></script>
-    <script src="js/app.js?v=20261022d"></script>
+    <script src="js/app.js?v=20261028a"></script>
+    <script src="js/exams.js?v=20261028a"></script>
     <script src="js/weekly-comparison.js?v=20261020f"></script>
     <script src="js/record-pages.js?v=20261020g"></script>
     <script src="js/recruit.js?v=20261020s"></script>
-    <script src="js/teaching.js?v=20261020i"></script>
+    <script src="js/teaching.js?v=20261028a"></script>
     <script src="js/events.js?v=20261020i"></script>
     <script src="js/teachers.js?v=20261022c"></script>
     <script src="js/photo-import.js?v=20261020f"></script>
@@ -346,6 +375,6 @@
     <script src="js/recruit-import.js?v=20261022b"></script>
     <script src="js/patrol.js?v=20261020o"></script>
     <script src="js/patrol-backfill.js?v=20261021a"></script>
-    <script type="module" src="js/backend.js?v=20261022b"></script>
+    <script type="module" src="js/backend.js?v=20261028a"></script>
   </body>
 </html>

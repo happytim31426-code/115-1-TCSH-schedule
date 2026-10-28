@@ -93,13 +93,16 @@ function populateLookup(preferred) {
 function showMode() {
   const adminMode = workspace === 'admin';
   const officeMode = workspace === 'office';
-  const member = window.AUTH_MEMBER?.role === 'patrol' ? null : window.AUTH_MEMBER;
+  const examMode = workspace === 'exam';
+  const member = ['admin','teacher'].includes(window.AUTH_MEMBER?.role) ? window.AUTH_MEMBER : null;
   const feature = document.querySelector('#office-type').value;
   const patrolBackfill = document.querySelector('#patrol-backfill');
   patrolBackfill.hidden = !officeMode || feature !== 'patrol' || window.AUTH_MEMBER?.role !== 'admin';
   document.querySelector('#patrol-history').before(patrolBackfill);
   document.body.dataset.workspace = workspace;
-  document.querySelector('#page-heading').textContent = adminMode ? '管理者功能' : officeMode ? '教務處行政業務' : '115 學年度第 1 學期課表';
+  document.querySelector('#page-heading').textContent = adminMode ? '管理者功能' : examMode ? '試務組行政業務' : officeMode ? '教學組行政業務' : '115 學年度第 1 學期課表';
+  document.querySelector('#exam-workspace').hidden = !examMode || !['admin','exam'].includes(window.AUTH_MEMBER?.role);
+  document.querySelector('#exam-open').setAttribute('aria-pressed', String(examMode));
   document.querySelector('#term-dates').hidden = workspace !== 'public';
   document.querySelector('#public-controls').hidden = workspace !== 'public';
   document.querySelector('#office-controls').hidden = !officeMode || !member;
@@ -121,7 +124,13 @@ function showMode() {
   document.querySelector('#account-heading').textContent = adminMode ? '管理者功能' : '授權登入';
   document.querySelector('#member-admin').classList.toggle('is-hidden', !adminMode || window.AUTH_MEMBER?.role !== 'admin');
   document.querySelector('#admin-access-note').classList.toggle('is-hidden', !adminMode || window.AUTH_MEMBER?.role === 'admin');
-  if(workspace==='patrol' && !['admin','patrol'].includes(window.AUTH_MEMBER?.role)){
+  if(examMode && !['admin','exam'].includes(window.AUTH_MEMBER?.role)){
+    document.querySelector('#admin-access-note').textContent='請使用管理員或已授權的「試務組長」Google帳號登入。';
+    document.querySelector('#admin-access-note').classList.remove('is-hidden');
+  }else if(officeMode && !member){
+    document.querySelector('#admin-access-note').textContent='教學組行政業務需管理員或授權教師權限；試務組長與巡堂登錄權限不包含本區。';
+    document.querySelector('#admin-access-note').classList.remove('is-hidden');
+  }else if(workspace==='patrol' && !['admin','patrol'].includes(window.AUTH_MEMBER?.role)){
     document.querySelector('#admin-access-note').textContent='請使用管理員或巡堂登錄人員帳號登入；一般授權教師不自動取得巡堂資料權限。';
     document.querySelector('#admin-access-note').classList.remove('is-hidden');
   }else if(officeMode && feature==='patrol' && window.AUTH_MEMBER?.role!=='admin'){
@@ -219,6 +228,7 @@ document.querySelector('#admin-open').addEventListener('click', () => { workspac
 document.querySelector('#office-open').addEventListener('click', () => { workspace = 'office'; showMode(); });
 document.querySelector('#public-open').addEventListener('click', () => { workspace = 'public'; showMode(); });
 document.querySelector('#office-type').addEventListener('change', showMode);
+document.querySelector('#exam-open').addEventListener('click', () => { workspace = 'exam'; showMode(); });
 viewType.addEventListener("change", showMode); picker.addEventListener("change", () => populateLookup(picker.value));
 document.addEventListener("click", event => { const target = event.target.closest(".schedule-link"); if (!target) return; if (target.dataset.teacher) { viewType.value = "teacher"; showMode();populateLookup(target.dataset.teacher); } if (target.dataset.class) { viewType.value = "class"; showMode();populateLookup(target.dataset.class); } });
 document.querySelector("#theme-toggle").addEventListener("click", () => { const dark = document.documentElement.dataset.theme === "dark"; document.documentElement.dataset.theme = dark ? "" : "dark"; document.querySelector("#theme-toggle").textContent = dark ? "夜間閱讀" : "日間閱讀"; });
