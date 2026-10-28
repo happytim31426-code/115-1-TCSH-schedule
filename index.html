@@ -76,6 +76,8 @@
           <p>考試節次、時段、年段／組別依提供的日程表固定。科目可選擇或自行輸入；施測分鐘數可調整，但不能超過本節時段。延後發卷時請填實際施測長度，自習也可設定安排長度。本表考試節次與平時課表節次不同，尚未套用監考係數。</p>
           <p>考查次數與日期跟隨「日程基本設定」。各次考查分開儲存；科目先留空，不自動把參考PDF當作正式安排。空白科目為未安排，不代表自習。</p>
           <button type="button" class="action-button" id="exam-program-save-all" disabled>儲存全部變更</button>
+          <button type="button" class="person-button" id="exam-program-copy-previous" disabled>帶入前一次考查日程</button>
+          <p id="exam-program-copy-note">僅帶入前一次已儲存的科目與分鐘，不變更本次考試日期；帶入後可手動調整，再按儲存。</p>
           <p id="exam-program-status" role="status"></p>
           <datalist id="exam-program-subject-options"></datalist>
           <div id="exam-program-tables"></div>
@@ -374,7 +376,7 @@
     <script src="js/weekly.js?v=20261020i"></script>
     <script src="js/app.js?v=20261028a"></script>
     <script src="js/exams.js?v=20261028e"></script>
-    <script src="js/exam-program.js?v=20261028e"></script>
+    <script src="js/exam-program.js?v=20261028f"></script>
     <script src="js/weekly-comparison.js?v=20261020f"></script>
     <script src="js/record-pages.js?v=20261020g"></script>
     <script src="js/recruit.js?v=20261020s"></script>

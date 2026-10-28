@@ -24,10 +24,13 @@
   $('exam-program-subject-options').innerHTML=subjects.map(s=>`<option value="${E(s)}"></option>`).join('');
   let records=new Map(),drafts=new Map(),loaded=false,pending=false,current=null;
   const context=()=>window.EXAM_CONTEXT.get();
+  function payloadFor(r,category,division,day){
+    const base=blank(category,division,day);
+    return r?{category:r.category,division:r.division,day:r.day,cells:Array.isArray(r.cells)?r.cells.map((c,i)=>({...base.cells[i],...c})):null}:base;
+  }
   function state(category,division,day){
     const id=key({category,division,day});if(drafts.has(id))return drafts.get(id);
-    const r=records.get(id);let error='';const base=blank(category,division,day);
-    const payload=r?{category:r.category,division:r.division,day:r.day,cells:Array.isArray(r.cells)?r.cells.map((c,i)=>({...base.cells[i],...c})):null}:base;
+    const r=records.get(id);let error='';const payload=payloadFor(r,category,division,day);
     try{validate(payload);}catch(e){error=e.message;}
     const s={payload,revision:r?.revision||0,dirty:false,conflict:false,error};drafts.set(id,s);return s;
   }
@@ -49,6 +52,10 @@
   }
   function gate(){
     const list=[...drafts.values()].filter(s=>s.payload.category===current);
+    const previous=categories[categories.indexOf(current)-1];
+    $('exam-program-copy-previous').disabled=!allowed()||!loaded||pending||!previous||![...records.values()].some(r=>r.category===previous);
+    $('exam-program-copy-previous').textContent=previous?`帶入第${previous==='first'?'一':'二'}次考查日程`:'帶入前一次考查日程';
+    $('exam-program-copy-note').textContent=!previous?'第一次考查沒有前一次資料可帶入。':`僅帶入前一次已儲存的科目與分鐘，不變更本次日期；帶入後可手動調整，再按儲存。前一次未設定的表格會維持本次原狀。`;
     $('exam-program-save-all').disabled=!allowed()||!loaded||pending||!list.some(s=>s.dirty&&!s.error);
     for(const box of $('exam-program-tables').querySelectorAll('[data-program-group]')){
       const s=drafts.get(box.dataset.programGroup);
@@ -88,6 +95,24 @@
     finally{pending=false;gate();}
   }
   $('exam-program-save-all').addEventListener('click',()=>save([...drafts.entries()].filter(([,s])=>s.payload.category===current&&s.dirty).map(([id])=>id).sort()));
+  $('exam-program-copy-previous').addEventListener('click',()=>{
+    if(!allowed()||!loaded||pending)return;
+    const previous=categories[categories.indexOf(current)-1];if(!previous)return;
+    try{
+      const items=[];let missing=0;
+      for(const division of Object.keys(divisions))for(const day of [1,2,3]){
+        const source=records.get(key({category:previous,division,day}));if(!source){missing++;continue;}
+        const payload=payloadFor(source,previous,division,day);validate(payload);
+        const target=state(current,division,day);
+        if(target.error||target.conflict)throw Error('本次日程有格式或版本衝突，請先載入已儲存設定核對。');
+        items.push({target,cells:clone(payload.cells)});
+      }
+      if(!items.length)throw Error('前一次尚無已儲存日程表，請先儲存前一次資料。');
+      if(items.some(({target})=>target.dirty||records.has(key(target.payload)))&&!confirm(`將以前一次已儲存資料取代本次${items.length}張表的科目與分鐘（含未儲存草稿），確定帶入？本次日期不變，尚不會寫入雲端。`))return;
+      for(const {target,cells} of items){target.payload.cells=cells;target.dirty=true;}
+      render();$('exam-program-status').textContent=`已帶入前一次${items.length}張日程表${missing?`；前一次未設定${missing}張，維持本次原狀`:''}。這是未儲存草稿，可手動調整；本次日期不變，請核對後儲存。`;
+    }catch(error){$('exam-program-status').textContent=`未帶入：${error.message}`;}gate();
+  });
   $('exam-program-tables').addEventListener('click',event=>{
     const button=event.target.closest('[data-program-save],[data-program-reload]');if(!button||!allowed()||!loaded||pending)return;
     if(button.dataset.programSave){save([button.dataset.programSave]);return;}
