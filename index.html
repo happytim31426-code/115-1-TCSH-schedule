@@ -7,7 +7,7 @@
     <title>115-1 課表查詢｜臺南慈濟高中</title>
     <link rel="stylesheet" href="css/style.css?v=20261028e" />
     <link rel="stylesheet" href="css/patrol.css?v=20261020p" />
-    <link rel="stylesheet" href="css/invigilation.css?v=20261029b" />
+    <link rel="stylesheet" href="css/invigilation.css?v=20261029c" />
   </head>
   <body>
     <header class="hero">
@@ -92,8 +92,10 @@
           <div class="inv-toolbar"><button type="button" class="person-button" id="inv-rebase">套用最新已儲存日程並重檢</button><button type="button" class="action-button" id="inv-check">檢查完整排班</button><button type="button" class="person-button" id="inv-export">下載試排備份</button><label class="inv-file-button">還原試排備份<input type="file" id="inv-import" accept=".json,application/json"></label></div>
           <p id="inv-message" role="status" aria-live="polite"></p>
           <details class="inv-rules"><summary>監考限制與人工確認（請先設定）</summary>
-            <p>考試期間自習優先由該班導師或任課教師督導；正式考試則避開導師班、該科任教班及子女班。試務工作人員不排監考。命題巡堂、請假、招生等不在校時段，請勾選本日不得監考節次。本表使用考試節次，並非平時第1～8節。</p>
-            <p>僅214、511依參考檔中的試務工作註記先勾選「試務」；其餘人員仍請核對。子女班級只記錄班級碼，不輸入學生姓名。特殊需求試場的輔導教師優先安排待下一版設計。</p>
+            <p>每節可填不同不排原因，留白即可安排；大表會顯示原因並鎖格。新增原因若碰到原監考班級，會先確認再移除該格安排。下方可逐節修改，上方可一次套用同原因到多節。本表使用考試節次，非平時課表節次。</p>
+            <p>214、511先帶入全天「試務工作」，其他人員請核對。子女欄僅填班碼，不輸入學生姓名。自習優先導師／任課教師；正式考試避開導師班、該科任教班、子女班。</p>
+            <div class="inv-bulk-controls"><label>教師<select id="inv-bulk-teacher"></select></label><fieldset><legend>套用節次（可複選）</legend><label><input type="checkbox" data-inv-bulk-period="0">1</label><label><input type="checkbox" data-inv-bulk-period="1">2</label><label><input type="checkbox" data-inv-bulk-period="2">3</label><label><input type="checkbox" data-inv-bulk-period="3">4</label><label><input type="checkbox" data-inv-bulk-period="4">5</label></fieldset><label>不排原因<input type="text" id="inv-bulk-reason" list="inv-reason-options" maxlength="60" placeholder="例如招生、國三命題巡堂"></label><button type="button" class="action-button" id="inv-bulk-apply">套用勾選節次</button><button type="button" class="person-button" id="inv-bulk-clear">清除勾選節次原因</button></div>
+            <datalist id="inv-reason-options"><option value="試務工作"></option><option value="全校秩序巡堂"></option><option value="招生"></option><option value="招生帶隊"></option><option value="命題巡堂"></option><option value="公假"></option><option value="不在校"></option></datalist>
             <div class="table-wrap" id="inv-constraints"></div>
           </details>
           <label class="inv-review"><input type="checkbox" id="inv-reviewed">已核對試務人員、子女班級、命題巡堂／請假／招生時段，以及任教科目對照。</label>
@@ -102,7 +104,7 @@
           <div id="inv-suggestions" class="inv-suggestions" role="listbox" aria-label="可安排班級" hidden></div>
           <div class="table-wrap inv-table-wrap" id="inv-grid"></div>
         </section>
-        <section id="exam-coefficient-preview" hidden><h2>監考係數計算</h2><p>目前先連動第一天試排的實際監考分鐘。命題減免、試務工作、共同分攤及前次結餘的正式計算，待補充規則後建置；此表不是最終應監考時數。</p><div class="table-wrap" id="inv-minute-totals"></div></section>
+        <section id="exam-coefficient-preview" hidden><h2>監考係數計算</h2><p>全表以分鐘計算，支援小數。結餘＝應監考－實際監考，正數代表尚欠、負數代表超排。目前只建置第一天，第二／三天尚未編排，不視為已完成；試排與係數皆為本機草稿，請下載備份。</p><section class="coefficient-pool"><h3>共同分攤時數計算</h3><p>（總監考＋總命題＋試務工作－總授課）÷ 無試務工作之正式與代理老師總人數</p><div class="coefficient-pool-grid"><label>總監考分鐘<input id="coef-totalInvig" type="text" inputmode="decimal" placeholder="手動輸入數字"></label><label>總命題分鐘<input id="coef-totalPaper" type="text" inputmode="decimal" placeholder="手動輸入數字"></label><label>試務工作分鐘<input id="coef-dutyWork" type="text" inputmode="decimal" placeholder="手動輸入數字"></label><label>總授課分鐘<input id="coef-teaching" type="text" inputmode="decimal" placeholder="手動輸入數字"></label><label>分攤老師人數<input id="coef-count" type="text" inputmode="numeric" placeholder="正整數"></label></div><p id="coef-pool-result" role="status"></p></section><p>本次分攤與上次結餘：留白為自動帶入，填入數字則為手動覆寫（可填負數），清空恢復自動。本次命題預設0。上次尚無已確認結餘時會標示待確認，不冒充已確認0。</p><button type="button" class="person-button" id="coef-export">下載係數與試排備份</button><button type="button" class="person-button" id="coef-import">還原備份</button><button type="button" class="action-button" id="coef-finalize">確認本次結餘供下次帶入</button><p id="coef-status" role="status"></p><div class="table-wrap" id="inv-minute-totals"></div></section>
         <section id="exam-next" hidden><h2 id="exam-next-title"></h2><p>第二、三天待第一天試排規則確認後建置。</p></section>
       </section>
       <section class="tool-card" id="patrol-backfill" hidden>
@@ -396,9 +398,10 @@
     <script src="data/schedules.js?v=20261028c"></script>
     <script src="js/weekly.js?v=20261020i"></script>
     <script src="js/app.js?v=20261028a"></script>
-    <script src="js/exams.js?v=20261029a"></script>
+    <script src="js/exams.js?v=20261029b"></script>
     <script src="js/exam-program.js?v=20261029a"></script>
-    <script src="js/invigilation.js?v=20261029b"></script>
+    <script src="js/invigilation.js?v=20261029c"></script>
+    <script src="js/coefficient.js?v=20261029a"></script>
     <script src="js/weekly-comparison.js?v=20261020f"></script>
     <script src="js/record-pages.js?v=20261020g"></script>
     <script src="js/recruit.js?v=20261020s"></script>

@@ -16,7 +16,8 @@
     return {category:cat,date,junior,senior,ready:W.inTerm(date)&&!!junior&&!!senior,
       signature:JSON.stringify([cat,date,settings?.revision||0,junior?.revision||0,senior?.revision||0])};
   }
-  function blank(s){return {source:s.signature,assignments:Object.fromEntries(roster.map(t=>[t.id,Array(5).fill('')])),constraints:Object.fromEntries(roster.map(t=>[t.id,{duty:['214','511'].includes(t.id),blocked:Array(5).fill(false),children:[]}])),reviewed:false};}
+  function blank(s){return {source:s.signature,assignments:Object.fromEntries(roster.map(t=>[t.id,Array(5).fill('')])),constraints:Object.fromEntries(roster.map(t=>[t.id,{reasons:Array(5).fill(['214','511'].includes(t.id)?'試務工作':''),children:[]}])),reviewed:false};}
+  const blockedReason=(c,p)=>c.reasons?.[p]||(c.duty?'試務工作':c.blocked?.[p]?'不得監考':'');
   const state=()=>{const cat=category();if(!drafts.has(cat))drafts.set(cat,blank(source()));return drafts.get(cat);};
   function info(s,room,period){
     if(!room)return null;
@@ -34,8 +35,7 @@
     const room=roomMap.get(code),teacher=teacherMap.get(id),config=d.constraints[id],errors=[];
     if(!room||!teacher||!config)return ['班級碼或教師不存在'];
     if(!W.inTerm(s.date)||!(room.publicCode[0]==='J'?s.junior:s.senior))errors.push('請先儲存第一天日期與對應部別的考試日程');
-    if(config.duty)errors.push('試務工作人員不排監考');
-    if(config.blocked[period])errors.push('該教師此節不得監考（命題巡堂／請假／招生等）');
+    if(blockedReason(config,period))errors.push(`此節不排監考：${blockedReason(config,period)}`);
     if(config.children.includes(code))errors.push('不可監考子女就讀班級');
     const exam=info(s,room,period),homeroom=room.homeroomTeacher===teacher.original?.name||room.homeroomTeacher===teacher.name;
     if(!exam?.subject)errors.push('該班此節考科尚未設定');
@@ -46,7 +46,7 @@
     if(duplicate&&roster.some(t=>t.id!==id&&d.assignments[t.id][period]===code))errors.push('此班此節已安排其他教師');
     return errors;
   }
-  const minutes=(d,id)=>d.assignments[id].reduce((sum,code,i)=>sum+(code?times[i][2]:0),0);
+  const minutes=(d,id)=>d.assignments[id].reduce((sum,code,i)=>sum+(code&&!blockedReason(d.constraints[id],i)?times[i][2]:0),0);
   function report(d,s){
     const missing=Array.from({length:5},()=>[]),errors=[],warnings=[];
     if(!s.ready)errors.push('第一天日期及國高中日程須先儲存完成。');
@@ -62,16 +62,22 @@
     return {missing,errors,warnings,complete:s.ready&&d.source===s.signature&&!missing.some(x=>x.length)&&!errors.length};
   }
   function validateBackup(p){
-    if(!p||p.format!=='tcsh-invigilation-day1-v1'||p.category!==category()||typeof p.source!=='string'||!p.assignments||!p.constraints)throw Error('不是目前考查類別的第一天試排備份。');
+    if(!p||!['tcsh-invigilation-day1-v1','tcsh-invigilation-day1-v2'].includes(p.format)||p.category!==category()||typeof p.source!=='string'||!p.assignments||!p.constraints)throw Error('不是目前考查類別的第一天試排備份。');
+    const constraints={};
     for(const obj of [p.assignments,p.constraints])if(Object.keys(obj).length!==roster.length||Object.keys(obj).some(id=>!teacherMap.has(id)))throw Error('備份的教師名單與原檔不一致。');
     for(const t of roster){const a=p.assignments[t.id],c=p.constraints[t.id];
       if(!Array.isArray(a)||a.length!==5||a.some(code=>typeof code!=='string'||(code&&!roomMap.has(code))))throw Error('班級碼或節次格式不符。');
-      if(!c||Object.keys(c).sort().join(',')!=='blocked,children,duty'||typeof c.duty!=='boolean'||!Array.isArray(c.blocked)||c.blocked.length!==5||c.blocked.some(x=>typeof x!=='boolean')||!Array.isArray(c.children)||c.children.length>rooms.length||c.children.some(code=>!roomMap.has(code)))throw Error('教師限制格式不符。');
+      if(!c||!Array.isArray(c.children)||c.children.length>rooms.length||c.children.some(code=>!roomMap.has(code)))throw Error('教師限制格式不符。');
+      const legacy=p.format==='tcsh-invigilation-day1-v1';
+      if(legacy?(Object.keys(c).sort().join(',')!=='blocked,children,duty'||typeof c.duty!=='boolean'||!Array.isArray(c.blocked)||c.blocked.length!==5||c.blocked.some(x=>typeof x!=='boolean')):(Object.keys(c).sort().join(',')!=='children,reasons'||!Array.isArray(c.reasons)||c.reasons.length!==5||c.reasons.some(x=>typeof x!=='string'||x.length>60||x!==x.trim())))throw Error('教師限制格式不符。');
+      constraints[t.id]={reasons:Array.from({length:5},(_,i)=>blockedReason(c,i)),children:[...c.children]};
+      if(a.some((code,i)=>code&&constraints[t.id].reasons[i]))throw Error(`${t.name}備份同一節同時有班級與不排原因，請先修正。`);
     }
     for(let i=0;i<5;i++){const codes=roster.map(t=>p.assignments[t.id][i]).filter(Boolean);if(new Set(codes).size!==codes.length)throw Error('備份中有同節重複班級，請先修正來源。');}
-    return {source:p.source,assignments:clone(p.assignments),constraints:clone(p.constraints),reviewed:false};
+    return {source:p.source,assignments:clone(p.assignments),constraints,reviewed:false};
   }
-  window.INVIGILATION_MODEL={roster,rooms,info,family,taught,reasons,minutes,report,blank,validateBackup};
+  window.INVIGILATION_MODEL={roster,rooms,info,family,taught,reasons,minutes,report,blank,validateBackup,blockedReason};
+  window.INVIGILATION_STATE={actual:cat=>({minutes:Object.fromEntries(roster.map(t=>[t.id,drafts.has(cat)?minutes(drafts.get(cat),t.id):0])),days:[true,false,false]})};
   function headerHtml(s){
     const labels={S3S:'高三（知～善）',S3N:'高三（包～和）',S2S:'高二（知～善）',S2N:'高二（包～和）',S1A:'高一（知～善）',S1B:'高一（包～和）'};
     const grades=[...window.EXAM_PROGRAM_MODEL.divisions.senior.grades.map(([id,label])=>['senior',[id,labels[id]||label]]),...window.EXAM_PROGRAM_MODEL.divisions.junior.grades.map(g=>['junior',g])];
@@ -84,7 +90,8 @@
     if(s.ready&&d.source!==s.signature&&!roster.some(t=>d.assignments[t.id].some(Boolean))){d.source=s.signature;d.reviewed=false;}
     $('inv-title').textContent=`${window.EXAM_CONTEXT.get().label}｜第一天${s.date?` ${W.formatDate(s.date)}`:''}監考編排表`;
     $('inv-grid').innerHTML=`<table class="inv-table"><caption class="sr-only">第一天考試日程與教師監考編排</caption><colgroup><col class="inv-col-id"><col class="inv-col-name">${'<col>'.repeat(5)}<col class="inv-col-minutes"></colgroup>${headerHtml(s)}<tbody>${roster.map(t=>`<tr data-inv-row="${t.id}"><th scope="row">${t.id}</th><th scope="row">${E(t.name)}</th>${Array.from({length:5},(_,i)=>`<td><input type="text" inputmode="numeric" maxlength="3" list="inv-class-options" autocomplete="off" data-inv-teacher="${t.id}" data-inv-period="${i}" aria-label="${E(t.name)}第一天第${i+1}節班級"><small data-inv-cell-note></small></td>`).join('')}<td data-inv-minutes></td></tr>`).join('')}</tbody></table>`;
-    $('inv-constraints').innerHTML=`<table class="inv-config-table"><thead><tr><th>編號／教師</th><th>試務<br>不排監考</th><th>本日不得監考節次</th><th>子女班級碼（多班用逗號）</th></tr></thead><tbody>${roster.map(t=>`<tr data-inv-config="${t.id}"><th>${t.id} ${E(t.name)}</th><td><input type="checkbox" data-inv-duty aria-label="${E(t.name)}為試務人員" ${d.constraints[t.id].duty?'checked':''}></td><td>${Array.from({length:5},(_,i)=>`<label><input type="checkbox" data-inv-block="${i}" aria-label="${E(t.name)}第${i+1}節不得監考" ${d.constraints[t.id].blocked[i]?'checked':''}>${i+1}</label>`).join('')}</td><td><input type="text" data-inv-children aria-label="${E(t.name)}子女班級碼" value="${E(d.constraints[t.id].children.join(','))}" placeholder="例如111,236"></td></tr>`).join('')}</tbody></table>`;
+    $('inv-constraints').innerHTML=`<table class="inv-config-table"><thead><tr><th>編號／教師</th>${times.map((_,i)=>`<th>第${i+1}節原因</th>`).join('')}<th>子女班級碼</th></tr></thead><tbody>${roster.map(t=>`<tr data-inv-config="${t.id}"><th>${t.id} ${E(t.name)}</th>${times.map((_,i)=>`<td><input type="text" list="inv-reason-options" maxlength="60" data-inv-reason-edit="${i}" aria-label="${E(t.name)}第${i+1}節不排原因" value="${E(blockedReason(d.constraints[t.id],i))}" placeholder="留白可排"></td>`).join('')}<td><input type="text" data-inv-children aria-label="${E(t.name)}子女班級碼" value="${E(d.constraints[t.id].children.join(','))}" placeholder="例如111,236"></td></tr>`).join('')}</tbody></table>`;
+    if(!$('inv-bulk-teacher').options.length)$('inv-bulk-teacher').innerHTML=roster.map(t=>`<option value="${t.id}">${t.id} ${E(t.name)}</option>`).join('');
     refresh();
   }
   function refresh(){
@@ -97,14 +104,16 @@
       tr.querySelector('[data-inv-minutes]').textContent=minutes(d,t.id);
       for(const input of tr.querySelectorAll('[data-inv-period]')){
         const p=Number(input.dataset.invPeriod),code=d.assignments[t.id][p],errors=reasons(d,s,t.id,p,code);
-        input.value=code;input.disabled=false;input.setAttribute('aria-invalid',String(!!errors.length));input.title=errors.join('；');
+        const reason=blockedReason(d.constraints[t.id],p);
+        input.value=code;input.disabled=!!reason;input.hidden=!!reason;input.setAttribute('aria-invalid',String(!!errors.length));input.title=errors.join('；');
+        let label=input.parentElement.querySelector('[data-inv-reason-label]');if(!label){label=document.createElement('span');label.setAttribute('data-inv-reason-label','');input.after(label);}label.hidden=!reason;label.textContent=reason;input.parentElement.classList.toggle('inv-unavailable',!!reason);
         const note=input.parentElement.querySelector('[data-inv-cell-note]');
-        note.textContent=errors.length?errors.join('；'):code?`${roomMap.get(code).name}・${info(s,roomMap.get(code),p)?.subject||'未設定'}`:'';
+        note.textContent=reason?'不排監考':errors.length?errors.join('；'):code?`${roomMap.get(code).name}・${info(s,roomMap.get(code),p)?.subject||'未設定'}`:'';
         input.parentElement.classList.toggle('inv-invalid',!!errors.length);
       }
     }
     $('inv-check').disabled=!s.ready;$('inv-rebase').disabled=!s.ready;
-    $('inv-minute-totals').innerHTML=`<table><caption>${E(window.EXAM_CONTEXT.get().label)}第一天試排分鐘（本機、未上傳）</caption><thead><tr><th>教師編號</th><th>教師姓名</th><th>第一天已排分鐘</th><th>正式監考係數</th></tr></thead><tbody>${roster.map(t=>`<tr><td>${t.id}</td><th>${E(t.name)}</th><td>${minutes(d,t.id)}</td><td>待規則確認</td></tr>`).join('')}</tbody></table>`;
+    window.dispatchEvent(new Event('invigilation-changed'));
   }
   let activeInput=null,choiceIndex=-1;
   const picker=$('inv-suggestions');
@@ -164,28 +173,40 @@
   $('inv-constraints').addEventListener('change',event=>{
     const tr=event.target.closest('[data-inv-config]');if(!tr||!allowed())return;
     const d=state(),id=tr.dataset.invConfig,c=d.constraints[id],input=event.target;
-    if(input.hasAttribute('data-inv-duty'))c.duty=input.checked;
-    if(input.hasAttribute('data-inv-block'))c.blocked[Number(input.dataset.invBlock)]=input.checked;
+    if(input.hasAttribute('data-inv-reason-edit')){
+      const p=Number(input.dataset.invReasonEdit),reason=input.value.trim();
+      if(reason.length>60){input.value=blockedReason(c,p);return;}
+      if(reason&&d.assignments[id][p]&&!confirm(`第${p+1}節已有${d.assignments[id][p]}班，設定「${reason}」將移除該格監考，確定？`)){input.value=blockedReason(c,p);return;}
+      c.reasons[p]=reason;if(reason)d.assignments[id][p]='';
+    }
     if(input.hasAttribute('data-inv-children')){
       const codes=[...new Set(input.value.trim().split(/[,，\s]+/).filter(Boolean))];
       if(codes.some(code=>!roomMap.has(code))){$('inv-message').textContent='子女班級碼無效，請填本校一般班級三碼，例如111。';input.value=c.children.join(',');return;}
       c.children=codes;
     }
-    d.reviewed=false;$('inv-message').textContent='限制已更新；已排內容保留，衝突以框線提示，請修正後重新檢查。';refresh();
+    d.reviewed=false;$('inv-message').textContent='限制已更新；有原因的節次顯示文字且鎖住。清除原因即可重新安排。';refresh();
   });
+  function bulkReason(clear=false){
+    if(!allowed())return;const d=state(),id=$('inv-bulk-teacher').value,reason=clear?'':$('inv-bulk-reason').value.trim(),periods=[...document.querySelectorAll('[data-inv-bulk-period]:checked')].map(input=>Number(input.dataset.invBulkPeriod));
+    if(!periods.length||(!clear&&!reason)){ $('inv-message').textContent='請先勾選節次並填寫原因。';return; }
+    if(reason.length>60){$('inv-message').textContent='原因最多60字。';return;}
+    if(periods.some(p=>d.assignments[id][p]||blockedReason(d.constraints[id],p))&&!confirm(`將取代${teacherMap.get(id).name}第${periods.map(p=>p+1).join('、')}節的原原因${reason?'並移除這些節次的監考安排':''}，確定？`))return;
+    for(const p of periods){d.constraints[id].reasons[p]=reason;if(reason)d.assignments[id][p]='';}d.reviewed=false;render();$('inv-message').textContent='已套用所選節次；未勾選的節次保持不變。';
+  }
+  $('inv-bulk-apply').addEventListener('click',()=>bulkReason());$('inv-bulk-clear').addEventListener('click',()=>bulkReason(true));
   $('inv-reviewed').addEventListener('change',()=>{if(allowed()){state().reviewed=$('inv-reviewed').checked;refresh();}});
   $('inv-rebase').addEventListener('click',()=>{if(!allowed()||!source().ready)return;state().source=source().signature;state().reviewed=false;render();$('inv-message').textContent='已套用已儲存日程；現有排班保留，請檢查衝突並重新人工核對。';});
   $('inv-check').addEventListener('click',()=>{if(!allowed())return;const r=report(state(),source()),missing=r.missing.reduce((n,a)=>n+a.length,0);$('inv-message').textContent=r.complete?`一般班級排班檢查通過。${r.warnings.length?`另有${r.warnings.length}筆自習優先安排提示：${r.warnings.slice(0,5).join('；')}`:''} 此為本機試排，尚未上傳或發布。`:`尚未完成：缺${missing}個班級節次；${r.errors.slice(0,6).join('；')}${r.errors.length>6?`（共${r.errors.length}項）`:''}`;});
   $('inv-export').addEventListener('click',()=>{
-    if(!allowed())return;const s=source(),d=state(),r=report(d,s),value={format:'tcsh-invigilation-day1-v1',category:category(),day:1,date:s.date,...clone(d),complete:r.complete,exportedAt:new Date().toISOString()};
+    if(!allowed())return;const s=source(),d=state(),r=report(d,s),value={format:'tcsh-invigilation-day1-v2',category:category(),day:1,date:s.date,...clone(d),coefficients:window.EXAM_COEFFICIENT?.backup(),complete:r.complete,exportedAt:new Date().toISOString()};
     const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download=`${category()}-第一天監考試排.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),10000);
     $('inv-message').textContent='已產生本機備份（含教師限制與子女班級碼，請妥善保管）。未上傳雲端。';
   });
   $('inv-import').addEventListener('change',async event=>{
     const file=event.target.files[0],generation=++importGeneration,cat=category();if(!file||!allowed())return;
     try{if(file.size>300000)throw Error('備份檔過大。');const raw=JSON.parse(await file.text());if(!allowed()||generation!==importGeneration||category()!==cat)return;
-      const next=validateBackup(raw);if(!confirm('還原會取代目前這次考查的第一天本機試排，確定？'))return;
-      drafts.set(cat,next);render();$('inv-message').textContent='已還原備份；請核對日程來源及教師限制，再檢查完整排班。';
+      const next=validateBackup(raw),coefficients=raw.coefficients?window.EXAM_COEFFICIENT.validateBackup(raw.coefficients):null;if(!confirm('還原會取代目前這次考查的第一天本機試排及備份中的係數資料，確定？'))return;
+      drafts.set(cat,next);if(coefficients)window.EXAM_COEFFICIENT.restore(coefficients);render();$('inv-message').textContent='已還原備份；請核對日程來源及教師限制，再檢查完整排班。';
     }catch(e){if(allowed())$('inv-message').textContent=`未還原：${e.message}`;}finally{event.target.value='';}
   });
   for(const name of ['exam-context-changed','cloud-exam-programs','exam-program-sync-error','exam-program-sync-loading','exam-sync-loading','exam-sync-error'])window.addEventListener(name,()=>{if(allowed())render();});

@@ -20,7 +20,7 @@ assert.match(m.reasons(d,source,'101',0,'216').join(),/該科任課/);
 assert.equal(m.reasons(d,source,'101',1,'213').length,0,'self-study may use homeroom teacher');
 assert.match(m.reasons(d,source,'214',0,'112').join(),/試務/);
 d.constraints['101'].children=['113'];assert.match(m.reasons(d,source,'101',1,'113').join(),/子女/);
-d.constraints['101'].blocked[4]=true;assert.match(m.reasons(d,source,'101',4,'114').join(),/不得監考/);
+d.constraints['101'].reasons[4]='招生';assert.match(m.reasons(d,source,'101',4,'114').join(),/不排監考/);
 assert.equal(m.report(d,source).complete,false);
 const full=m.blank(source);full.reviewed=true;
 for(let p=0;p<5;p++){
@@ -32,8 +32,9 @@ for(let p=0;p<5;p++){
 assert.equal(m.report(full,source).complete,true);
 assert.equal(m.report(full,{...source,signature:'changed'}).complete,false);
 full.reviewed=false;assert.equal(m.report(full,source).complete,false);full.reviewed=true;
-const backup={format:'tcsh-invigilation-day1-v1',category:'first',source:full.source,assignments:full.assignments,constraints:full.constraints};
+const backup={format:'tcsh-invigilation-day1-v2',category:'first',source:full.source,assignments:full.assignments,constraints:full.constraints};
 assert.equal(m.validateBackup(backup).reviewed,false);
+const legacy=JSON.parse(JSON.stringify(backup));legacy.format='tcsh-invigilation-day1-v1';legacy.constraints=Object.fromEntries(Object.entries(legacy.constraints).map(([id,c])=>[id,{duty:c.reasons.every(x=>x==='試務工作'),blocked:c.reasons.map(Boolean),children:c.children}]));assert.equal(m.validateBackup(legacy).constraints['214'].reasons[0],'試務工作');
 for(const mutate of [b=>b.category='second',b=>b.assignments['101'][0]='999',b=>b.constraints['101'].duty='false',b=>b.constraints['101'].blocked=[true],b=>b.constraints['101'].children=['128'],b=>{b.assignments['101'][0]='111';b.assignments['102'][0]='111';},b=>b.assignments['000']=Array(5).fill('')]){
  const bad=JSON.parse(JSON.stringify(backup));mutate(bad);assert.throws(()=>m.validateBackup(bad));
 }

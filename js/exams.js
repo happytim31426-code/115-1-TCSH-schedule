@@ -95,6 +95,6 @@
     if(!allowed()){records.clear();loaded=false;pending=false;dirty=false;current='first';revision=0;$('exam-category').value=current;for(let i=1;i<=3;i++)$(`exam-date-${i}`).value='';$('exam-sync-status').textContent='尚未讀取雲端日程設定。';$('exam-teacher-totals').replaceChildren();$('exam-calculation-status').textContent='';$('exam-basic').hidden=false;$('exam-next').hidden=true;$('exam-invigilation').hidden=true;$('exam-coefficient-preview').hidden=true;for(const b of $('exam-navigation').querySelectorAll('[data-exam-tab]'))b.setAttribute('aria-pressed',String(b.dataset.examTab==='basic'));}
     gate();
   });
-  window.EXAM_CONTEXT={get:()=>({category:current,label:labels[current],dates:dates()}),saved:()=>loaded&&records.has(current)?JSON.parse(JSON.stringify(records.get(current))):null};
+  window.EXAM_CONTEXT={get:()=>({category:current,label:labels[current],dates:dates()}),saved:(cat=current)=>loaded&&records.has(cat)?JSON.parse(JSON.stringify(records.get(cat))):null};
   window.EXAM_CALCULATOR={validate,totals};gate();
 })();
