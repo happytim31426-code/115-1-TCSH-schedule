@@ -1,3 +1,4 @@
+import {attachPayrollStats,clearPayrollStats} from './payroll-stats.js?v=20261101a';
 // No upload endpoints, storage APIs, analytics or public timetable mutations.
 const $=id=>document.getElementById(id);
 const allowed=()=>window.AUTH_MEMBER?.role==='admin';
@@ -17,6 +18,7 @@ function controls(){
 }
 function dispose(doc){try{const task=doc?.loadingTask||doc;if(task?.destroy)Promise.resolve(task.destroy()).catch(()=>{});}catch{/* Cleanup must never prevent the private UI from being cleared. */}}
 function clear(message='尚未選擇檔案。檔案只會在本頁本機預覽，不會上傳。'){
+  clearPayrollStats();
   sequence++;renderSequence++;renderTask?.cancel();renderTask=null;
   const task=loading;loading=null;dispose(task);const old=pdf;pdf=null;dispose(old);
   busy=false;pageNumber=1;$('payroll-pdf').value='';$('payroll-page').value='1';
@@ -64,10 +66,11 @@ $('payroll-pdf').addEventListener('change',async event=>{
     if(candidate.numPages<1||candidate.numPages>300)throw Error('只接受1～300頁的PDF。');
     renderSequence++;renderTask?.cancel();if(renderTask)await renderTask.promise.catch(()=>{});renderTask=null;
     if(!active()||token!==sequence){dispose(candidate);return;}
-    dispose(pdf);pdf=candidate;candidate=null;loading=null;pageNumber=1;
+    clearPayrollStats();dispose(pdf);pdf=candidate;candidate=null;loading=null;pageNumber=1;
     metadata(file,pdf.numPages,hash);$('payroll-page').max=String(pdf.numPages);$('payroll-page-count').textContent=`／${pdf.numPages}頁`;$('payroll-preview').hidden=false;
     $('payroll-upload-status').textContent='已載入本機預覽。尚未辨識黑點／實／基，也沒有儲存或更新核發鐘點。';
     busy=false;controls();await showPage(1);
+    if(active()&&token===sequence)attachPayrollStats(pdf,async number=>{await showPage(number);$('payroll-preview').scrollIntoView({block:'start'});});
   }catch(error){dispose(candidate);if(task&&task!==pdf)dispose(task);if(active()&&token===sequence)$('payroll-upload-status').textContent=`新檔未採用：${error.name==='PasswordException'?'PDF需要密碼。':error.message||'PDF無法讀取。'}${pdf?' 原先載入的檔案保留。':''}沒有上傳檔案。`;}
   finally{if(token===sequence){loading=null;busy=false;event.target.value='';controls();}}
 });

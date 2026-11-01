@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css?v=20261028e" />
     <link rel="stylesheet" href="css/patrol.css?v=20261020p" />
     <link rel="stylesheet" href="css/invigilation.css?v=20261029c" />
-    <link rel="stylesheet" href="css/payroll.css?v=20261101a" />
+    <link rel="stylesheet" href="css/payroll.css?v=20261101b" />
   </head>
   <body>
     <header class="hero">
@@ -186,12 +186,13 @@
         <h2>每週鐘點節數計算</h2>
         <h3>超鐘點課表上傳（僅本機選檔）</h3>
         <p>僅管理員可操作。超鐘課表只供行政作業，不加入任何公開課表查詢、不提供公開下載，不上傳 GitHub、Firebase 或外部辨識服務。</p>
-        <p>本次先提供選檔與私有預覽，尚未辨識黑點／實／基、計算核發節數或產生 Excel。離開此功能、重新整理或登出即清除檔案；下次需重新選取。</p>
+        <p>選檔後可按「開始辨識並統計」，產出待核對的課表節數。離開此功能、重新整理或登出即清除檔案與統計；請先下載統計備份。每週停課扣除、分群及Excel輸出仍待建置。</p>
         <label for="payroll-pdf">選擇超鐘點教師課表 PDF（含週六，最多30MB／300頁）</label>
         <input id="payroll-pdf" type="file" accept=".pdf,application/pdf" disabled>
         <button id="payroll-clear" type="button" class="person-button" disabled>清除此頁檔案</button>
         <p id="payroll-upload-status" role="status" aria-live="polite">尚未選擇檔案。此功能只供管理員使用。</p>
         <dl id="payroll-file-meta" hidden></dl>
+        <details id="payroll-statistics" hidden open><summary>學期課表鐘點彙整（待人工核對）</summary><p>同時讀取文字層與註記層。平日1～7節依「基／實／●／無記號」分類；第八節另列，帶「基」者歸基本鐘點；週六另計。週三第六節的「實」獨立，不重複加到一般「實」欄。特殊或多重記號會提醒核對。</p><button id="payroll-analyze" type="button" class="action-button" disabled>開始辨識並統計</button><button id="payroll-stats-backup" type="button" class="person-button" disabled>下載統計JSON備份</button><p id="payroll-stats-status" role="status" aria-live="polite"></p><div id="payroll-stats-table" class="table-wrap"></div></details>
         <section id="payroll-preview" hidden aria-label="超鐘點課表本機預覽">
           <h3>原檔預覽（不等於已辨識或已登錄）</h3>
           <div class="payroll-preview-controls"><button id="payroll-prev" type="button" class="person-button">上一頁</button><label>頁碼<input id="payroll-page" type="number" min="1" step="1" value="1"></label><span id="payroll-page-count"></span><button id="payroll-next" type="button" class="person-button">下一頁</button></div>
@@ -420,7 +421,7 @@
     <script src="js/exam-program.js?v=20261029a"></script>
     <script src="js/invigilation.js?v=20261029c"></script>
     <script src="js/coefficient.js?v=20261029a"></script>
-    <script type="module" src="js/payroll-upload.js?v=20261101a"></script>
+    <script type="module" src="js/payroll-upload.js?v=20261101b"></script>
     <script src="js/weekly-comparison.js?v=20261020f"></script>
     <script src="js/record-pages.js?v=20261020g"></script>
     <script src="js/recruit.js?v=20261020s"></script>
