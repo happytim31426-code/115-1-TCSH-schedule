@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css?v=20261028e" />
     <link rel="stylesheet" href="css/patrol.css?v=20261020p" />
     <link rel="stylesheet" href="css/invigilation.css?v=20261029c" />
+    <link rel="stylesheet" href="css/payroll.css?v=20261101a" />
   </head>
   <body>
     <header class="hero">
@@ -177,8 +178,25 @@
             <option value="recruit" selected>招生教師名單規劃</option>
             <option value="teaching-plan">教學組代調課規劃</option>
             <option value="patrol">巡堂紀錄分析</option>
+            <option value="payroll">每週鐘點節數計算（管理員）</option>
           </select>
         </div>
+      </section>
+      <section class="tool-card" id="payroll-tool" hidden aria-label="每週鐘點節數計算">
+        <h2>每週鐘點節數計算</h2>
+        <h3>超鐘點課表上傳（僅本機選檔）</h3>
+        <p>僅管理員可操作。超鐘課表只供行政作業，不加入任何公開課表查詢、不提供公開下載，不上傳 GitHub、Firebase 或外部辨識服務。</p>
+        <p>本次先提供選檔與私有預覽，尚未辨識黑點／實／基、計算核發節數或產生 Excel。離開此功能、重新整理或登出即清除檔案；下次需重新選取。</p>
+        <label for="payroll-pdf">選擇超鐘點教師課表 PDF（含週六，最多30MB／300頁）</label>
+        <input id="payroll-pdf" type="file" accept=".pdf,application/pdf" disabled>
+        <button id="payroll-clear" type="button" class="person-button" disabled>清除此頁檔案</button>
+        <p id="payroll-upload-status" role="status" aria-live="polite">尚未選擇檔案。此功能只供管理員使用。</p>
+        <dl id="payroll-file-meta" hidden></dl>
+        <section id="payroll-preview" hidden aria-label="超鐘點課表本機預覽">
+          <h3>原檔預覽（不等於已辨識或已登錄）</h3>
+          <div class="payroll-preview-controls"><button id="payroll-prev" type="button" class="person-button">上一頁</button><label>頁碼<input id="payroll-page" type="number" min="1" step="1" value="1"></label><span id="payroll-page-count"></span><button id="payroll-next" type="button" class="person-button">下一頁</button></div>
+          <p id="payroll-render-status" role="status"></p><div class="payroll-canvas-wrap"><canvas id="payroll-canvas" aria-label="PDF課表頁面"></canvas></div>
+        </section>
       </section>
       <section class="tool-card" id="patrol-entry" hidden>
         <h2>巡堂紀錄登錄</h2>
@@ -397,11 +415,12 @@
     <footer>資料來源：臺南慈濟高中 115 學年度第 1 學期課程表</footer>
     <script src="data/schedules.js?v=20261028c"></script>
     <script src="js/weekly.js?v=20261020i"></script>
-    <script src="js/app.js?v=20261028a"></script>
+    <script src="js/app.js?v=20261101a"></script>
     <script src="js/exams.js?v=20261029b"></script>
     <script src="js/exam-program.js?v=20261029a"></script>
     <script src="js/invigilation.js?v=20261029c"></script>
     <script src="js/coefficient.js?v=20261029a"></script>
+    <script type="module" src="js/payroll-upload.js?v=20261101a"></script>
     <script src="js/weekly-comparison.js?v=20261020f"></script>
     <script src="js/record-pages.js?v=20261020g"></script>
     <script src="js/recruit.js?v=20261020s"></script>

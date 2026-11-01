@@ -107,6 +107,8 @@ function showMode() {
   document.querySelector('#public-controls').hidden = workspace !== 'public';
   document.querySelector('#office-controls').hidden = !officeMode || !member;
   document.querySelector('#office-placeholder').hidden = true;
+  document.querySelector('#payroll-tool').hidden = !officeMode || feature !== 'payroll' || window.AUTH_MEMBER?.role !== 'admin';
+  document.querySelector('#office-type option[value="payroll"]').disabled = window.AUTH_MEMBER?.role !== 'admin';
   document.querySelector('#patrol-entry').hidden = workspace !== 'patrol' || !['admin','patrol'].includes(window.AUTH_MEMBER?.role);
   document.querySelector('#patrol-analysis').hidden = !officeMode || window.AUTH_MEMBER?.role !== 'admin' || feature !== 'patrol';
   document.querySelector('#patrol-history').hidden = document.querySelector('#patrol-analysis').hidden;
@@ -133,6 +135,9 @@ function showMode() {
   }else if(workspace==='patrol' && !['admin','patrol'].includes(window.AUTH_MEMBER?.role)){
     document.querySelector('#admin-access-note').textContent='請使用管理員或巡堂登錄人員帳號登入；一般授權教師不自動取得巡堂資料權限。';
     document.querySelector('#admin-access-note').classList.remove('is-hidden');
+  }else if(officeMode && feature==='payroll' && window.AUTH_MEMBER?.role!=='admin'){
+    document.querySelector('#admin-access-note').textContent='超鐘點課表與鐘點作業目前僅限管理員，不包含一般授權教師、試務組長或巡堂人員。';
+    document.querySelector('#admin-access-note').classList.remove('is-hidden');
   }else if(officeMode && feature==='patrol' && window.AUTH_MEMBER?.role!=='admin'){
     document.querySelector('#admin-access-note').textContent='全校巡堂紀錄分析僅供管理員使用。';
     document.querySelector('#admin-access-note').classList.remove('is-hidden');
@@ -149,6 +154,7 @@ function showMode() {
   recruitTool.hidden = !officeMode || !member || feature !== 'recruit';
   if (lookup) populateLookup();
   if (officeComparison || (workspace==='public' && viewType.value==='swap')) { refreshSwapOptions(); updateComparison(); }
+  window.dispatchEvent(new Event('workspace-changed'));
 }
 function setupTools() {
   document.querySelector('#swap-week').innerHTML = window.WEEKLY.weekOptions();
