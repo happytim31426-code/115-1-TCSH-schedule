@@ -195,6 +195,7 @@
         <details id="payroll-statistics" hidden open><summary>學期課表鐘點彙整（待人工核對）</summary><p>同時讀取文字層與註記層。平日1～7節依「基／實／●／無記號」分類；第八節另列，帶「基」者歸基本鐘點；週六另計。週三第六節的「實」獨立，不重複加到一般「實」欄。特殊或多重記號會提醒核對。</p><button id="payroll-analyze" type="button" class="action-button" disabled>開始辨識並統計</button><button id="payroll-stats-backup" type="button" class="person-button" disabled>下載統計JSON備份</button><p id="payroll-stats-status" role="status" aria-live="polite"></p><div id="payroll-stats-table" class="table-wrap"></div></details>
         <section id="payroll-preview" hidden aria-label="超鐘點課表本機預覽">
           <h3>原檔預覽（不等於已辨識或已登錄）</h3>
+          <button id="payroll-back-stats" type="button" class="person-button">返回此頁教師的統計列</button>
           <div class="payroll-preview-controls"><button id="payroll-prev" type="button" class="person-button">上一頁</button><label>頁碼<input id="payroll-page" type="number" min="1" step="1" value="1"></label><span id="payroll-page-count"></span><button id="payroll-next" type="button" class="person-button">下一頁</button></div>
           <p id="payroll-render-status" role="status"></p><div class="payroll-canvas-wrap"><canvas id="payroll-canvas" aria-label="PDF課表頁面"></canvas></div>
         </section>
@@ -421,7 +422,7 @@
     <script src="js/exam-program.js?v=20261029a"></script>
     <script src="js/invigilation.js?v=20261029c"></script>
     <script src="js/coefficient.js?v=20261029a"></script>
-    <script type="module" src="js/payroll-upload.js?v=20261101b"></script>
+    <script type="module" src="js/payroll-upload.js?v=20261101c"></script>
     <script src="js/weekly-comparison.js?v=20261020f"></script>
     <script src="js/record-pages.js?v=20261020g"></script>
     <script src="js/recruit.js?v=20261020s"></script>

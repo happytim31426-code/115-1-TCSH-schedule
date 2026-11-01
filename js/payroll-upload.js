@@ -1,4 +1,4 @@
-import {attachPayrollStats,clearPayrollStats} from './payroll-stats.js?v=20261101a';
+import {attachPayrollStats,clearPayrollStats} from './payroll-stats.js?v=20261101b';
 // No upload endpoints, storage APIs, analytics or public timetable mutations.
 const $=id=>document.getElementById(id);
 const allowed=()=>window.AUTH_MEMBER?.role==='admin';
@@ -77,6 +77,8 @@ $('payroll-pdf').addEventListener('change',async event=>{
 $('payroll-clear').addEventListener('click',()=>{if(allowed())clear();});
 $('payroll-prev').addEventListener('click',()=>showPage(pageNumber-1));$('payroll-next').addEventListener('click',()=>showPage(pageNumber+1));
 $('payroll-page').addEventListener('change',()=>showPage(Number($('payroll-page').value)));
+$('payroll-back-stats').addEventListener('click',()=>{if(active())($('payroll-stats-table').querySelector(`[data-payroll-row="${pageNumber}"]`)||$('payroll-statistics')).scrollIntoView({block:'center'});});
+window.addEventListener('payroll-statistics-ready',()=>{if(active()&&pdf){$('payroll-upload-status').textContent='已完成本機初始辨識，請於統計表核對；尚未核發或儲存雲端。';const value=$('payroll-file-meta').lastElementChild;if(value)value.textContent='已產生待核對統計；非核發定案';}});
 window.addEventListener('authorization-changed',()=>clear(allowed()?'尚未選擇檔案。僅供管理員於本機行政作業。':'檔案與預覽已清除，僅管理員可使用。'));
 window.addEventListener('workspace-changed',()=>{if(!active())clear();else controls();});
 window.addEventListener('pagehide',()=>clear());

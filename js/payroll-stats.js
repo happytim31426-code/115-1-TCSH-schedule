@@ -55,7 +55,7 @@ $('payroll-analyze').addEventListener('click',async()=>{
     const row=parse(text.items,annotations,pdfPage.getViewport({scale:1}),page);if(rows.some(r=>r.id&&r.id===row.id))row.warnings.push('教師編號重複，請核對');rows.push(row);
     if(page%10===0)await new Promise(resolve=>setTimeout(resolve,0));
   }
-  if(token===generation&&allowed()){processingComplete=true;$('payroll-stats-status').textContent=`已產生${rows.length}列待核對統計。數字可修正；請逐列對照原頁後勾選已核對。此表不是核發定案。`;}
+  if(token===generation&&allowed()){processingComplete=true;$('payroll-stats-status').textContent=`已產生${rows.length}列待核對統計。數字可修正；請逐列對照原頁後勾選已核對。此表不是核發定案。`;window.dispatchEvent(new Event('payroll-statistics-ready'));}
   }catch(error){if(token===generation&&allowed())$('payroll-stats-status').textContent=`辨識中止，僅完成${rows.length}頁，不能作為完整統計。可重新辨識。`;}
   finally{if(token===generation&&allowed()){running=false;$('payroll-analyze').disabled=false;render();}}
 });
