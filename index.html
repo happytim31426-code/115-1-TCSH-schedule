@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css?v=20261028e" />
     <link rel="stylesheet" href="css/patrol.css?v=20261020p" />
     <link rel="stylesheet" href="css/invigilation.css?v=20261029c" />
-    <link rel="stylesheet" href="css/payroll.css?v=20261101b" />
+    <link rel="stylesheet" href="css/payroll.css?v=20261101d" />
   </head>
   <body>
     <header class="hero">
@@ -184,12 +184,12 @@
       </section>
       <section class="tool-card" id="payroll-tool" hidden aria-label="每週鐘點節數計算">
         <h2>每週鐘點節數計算</h2>
-        <h3>超鐘點課表上傳（僅本機選檔）</h3>
+        <h3>超鐘點課表（本機留存最新版）</h3>
         <p>僅管理員可操作。超鐘課表只供行政作業，不加入任何公開課表查詢、不提供公開下載，不上傳 GitHub、Firebase 或外部辨識服務。</p>
-        <p>選檔後可按「開始辨識並統計」，產出待核對的課表節數。離開此功能、重新整理或登出即清除檔案與統計；請先下載統計備份。每週停課扣除、分群及Excel輸出仍待建置。</p>
+        <p>首次選檔會辨識並留存在同一瀏覽器，下次自動載入；更新時重新選檔。原檔、人工修正與停課範圍不會上傳。清除瀏覽資料或換電腦需重傳；請使用行政專用瀏覽器設定檔，本機留存不等同加密保管。</p>
         <label for="payroll-pdf">選擇超鐘點教師課表 PDF（含週六，最多30MB／300頁）</label>
         <input id="payroll-pdf" type="file" accept=".pdf,application/pdf" disabled>
-        <button id="payroll-clear" type="button" class="person-button" disabled>清除此頁檔案</button>
+        <button id="payroll-clear" type="button" class="person-button" disabled>刪除本機留存資料</button>
         <p id="payroll-upload-status" role="status" aria-live="polite">尚未選擇檔案。此功能只供管理員使用。</p>
         <dl id="payroll-file-meta" hidden></dl>
         <details id="payroll-statistics" hidden open><summary>學期課表鐘點彙整（待人工核對）</summary><p>同時讀取文字層與註記層。平日1～7節依「基／實／●／無記號」分類；第八節另列，帶「基」者歸基本鐘點；週六另計。週三第六節的「實」獨立，不重複加到一般「實」欄。特殊或多重記號會提醒核對。</p><button id="payroll-analyze" type="button" class="action-button" disabled>開始辨識並統計</button><button id="payroll-stats-backup" type="button" class="person-button" disabled>下載統計JSON備份</button><p id="payroll-stats-status" role="status" aria-live="polite"></p><div id="payroll-stats-table" class="table-wrap"></div></details>
@@ -422,7 +422,8 @@
     <script src="js/exam-program.js?v=20261029a"></script>
     <script src="js/invigilation.js?v=20261029c"></script>
     <script src="js/coefficient.js?v=20261029a"></script>
-    <script type="module" src="js/payroll-upload.js?v=20261101c"></script>
+    <script type="module" src="js/payroll-local.js?v=20261101d"></script>
+    <script type="module" src="js/payroll-weekly.js?v=20261101d"></script>
     <script src="js/weekly-comparison.js?v=20261020f"></script>
     <script src="js/record-pages.js?v=20261020g"></script>
     <script src="js/recruit.js?v=20261020s"></script>

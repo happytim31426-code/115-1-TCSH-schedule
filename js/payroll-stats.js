@@ -4,14 +4,15 @@ const fields=[['basic','基本鐘點'],['over','超鐘點●'],['actual','實上
 const limits={basic:40,over:35,actual:35,wednesdayActual:1,eighth:5,saturday:8,lunch:1};
 let source=null,preview=null,rows=[],generation=0,running=false,painting=false,processingComplete=false;
 const normalize=s=>String(s||'').replace(/[０-９]/g,c=>String.fromCharCode(c.charCodeAt(0)-65248));
-export function clearPayrollStats(){generation++;source=null;preview=null;rows=[];running=false;processingComplete=false;$('payroll-statistics').hidden=true;$('payroll-stats-table').replaceChildren();$('payroll-stats-status').textContent='';$('payroll-analyze').disabled=true;$('payroll-stats-backup').disabled=true;}
+export function clearPayrollStats(){generation++;source=null;preview=null;rows=[];running=false;processingComplete=false;$('payroll-statistics').hidden=true;$('payroll-stats-table').replaceChildren();$('payroll-stats-status').textContent='';$('payroll-analyze').disabled=true;$('payroll-stats-backup').disabled=true;window.dispatchEvent(new Event('payroll-cleared'));}
+export function restorePayrollStats(snapshot){if(!allowed()||!snapshot?.processingComplete||!Array.isArray(snapshot.rows))return;rows=structuredClone(snapshot.rows);processingComplete=true;render();$('payroll-stats-status').textContent='已載入此瀏覽器留存的最新版統計及修正。';}
 export function attachPayrollStats(doc,show){clearPayrollStats();if(!allowed())return;source=doc;preview=show;$('payroll-statistics').hidden=false;$('payroll-analyze').disabled=false;$('payroll-stats-status').textContent='請按「開始辨識並統計」。結果須人工核對，不直接作為核發依據。';}
 function parse(items,annotations,viewport,page){
   const pieces=items.filter(i=>typeof i.str==='string').map(i=>({text:normalize(i.str),x:(i.transform[4]+i.width/2)*595.2/viewport.width,y:(viewport.height-i.transform[5]-i.height/2)*841.92/viewport.height}));
   const text=pieces.map(p=>p.text).join(' '),id=normalize(text).match(/編\s*號\s*[:：]?\s*(\d{3})/)?.[1]||'';
   const heading=pieces.filter(p=>p.y>55&&p.y<86).sort((a,b)=>a.x-b.x).map(p=>p.text).join('').replace(/\s/g,'');
   const name=heading.match(/教師[:：](.+)/)?.[1]||window.SCHEDULE_DATA.teachers.find(t=>t.id===id)?.name||'待核對';
-  const r={id,name,page,reviewed:false,warnings:[],...Object.fromEntries(fields.map(([k])=>[k,0]))};
+  const r={id,name,page,reviewed:false,warnings:[],lessons:[],...Object.fromEntries(fields.map(([k])=>[k,0]))};
   const anchors=['08:00','09:05','10:05','11:05','13:10','14:10','15:15','16:10'];
   if(viewport.rotation!==0||anchors.filter(t=>text.replace(/\s/g,'').includes(t)).length<6||pieces.filter(p=>p.y>90&&p.y<140&&/^[一二三四五六]$/.test(p.text.trim())).length<5){r.warnings.push('版型無法確認，不能自動計數');r.unsupported=true;for(const [k]of fields)r[k]=null;return r;}
   const xs=[153,215,273,330,387,445,509],ys=[201,258,317,374,431,491,547,606,664];
@@ -25,6 +26,8 @@ function parse(items,annotations,viewport,page){
     const occupied=label.replace(/[●⬤]|[（(]\s*[實实基]\s*[)）]/g,'').trim();
     if(!occupied){if(cell.marks.size)r.warnings.push(`${'一二三四五六'[day]}第${p+1}節有記號但無課程文字`);continue;}
     if(cell.marks.size>1)r.warnings.push(`${'一二三四五六'[day]}第${p+1}節有多種記號，請人工核對`);
+    const grade=occupied.replace(/\s/g,'').match(/(國[一二三]|高[一二三])/)?.[1]||'';
+    r.lessons.push({day,period:p+1,text:occupied,grade,marks:[...cell.marks]});
     if(day===5){r.saturday++;if(p===3)r.lunch=1;continue;}
     if(cell.marks.has('基'))r.basic++;
     else if(p===7){r.eighth++;if(cell.marks.size)r.warnings.push(`${'一二三四五'[day]}第八節有其他記號，目前先列第八節，請核對`);}
@@ -42,6 +45,7 @@ function render(){
   for(const control of $('payroll-stats-table').querySelectorAll('input'))control.disabled=running;
   $('payroll-stats-backup').disabled=!rows.length||running;
   painting=false;
+  if(processingComplete)window.dispatchEvent(new CustomEvent('payroll-data',{detail:{rows:structuredClone(rows),processingComplete}}));
 }
 $('payroll-analyze').addEventListener('click',async()=>{
   if(!allowed()||!source||running)return;
@@ -70,3 +74,4 @@ $('payroll-stats-table').addEventListener('change',event=>{
 });
 $('payroll-stats-table').addEventListener('click',event=>{const button=event.target.closest('[data-payroll-page]');if(button&&allowed()&&preview)preview(Number(button.dataset.payrollPage));});
 $('payroll-stats-backup').addEventListener('click',()=>{if(!allowed()||!rows.length||running)return;const url=URL.createObjectURL(new Blob([JSON.stringify({format:'tcsh-payroll-summary-draft-v1',status:'待核對，非核發定案',expectedPages:source?.numPages,parsedPages:rows.length,processingComplete,rows},null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='鐘點節數待核對統計.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),10000);});
+window.addEventListener('payroll-grade-edit',event=>{if(!allowed()||!processingComplete)return;const {page,index,grade}=event.detail;const row=rows.find(r=>r.page===page);if(!row?.lessons?.[index]||!['','國一','國二','國三','高一','高二','高三'].includes(grade))return;row.lessons[index].grade=grade;row.reviewed=false;render();});
