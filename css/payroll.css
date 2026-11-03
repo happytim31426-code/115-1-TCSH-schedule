@@ -32,3 +32,15 @@
 #payroll-weekly tbody tr:nth-child(5) td{border-bottom:1px solid var(--line)}
 #payroll-deductions,#payroll-lesson-review,#payroll-stats-table{max-height:560px;overflow:auto}
 #payroll-ranges button{font:inherit;padding:.35rem .5rem;border:1px solid var(--line);background:var(--paper);color:var(--teal);border-radius:6px;cursor:pointer}
+.payroll-grouping{display:block;max-width:360px;margin:1rem 0}
+.payroll-grouping select{margin-top:.4rem}
+#payroll-deductions .payroll-week-report{width:max-content;min-width:100%;font-size:.88rem}
+.payroll-week-report th,.payroll-week-report td{min-width:100px;max-width:160px;white-space:normal}
+.payroll-week-report thead th{position:sticky;top:0;z-index:2;background:var(--subtle);vertical-align:top}
+.payroll-week-report th:first-child,.payroll-week-report td:first-child{position:sticky;left:0;width:70px;min-width:70px;max-width:70px;background:var(--subtle);z-index:1}
+.payroll-week-report th:nth-child(2),.payroll-week-report td:nth-child(2){position:sticky;left:70px;width:105px;min-width:105px;max-width:105px;background:var(--paper);z-index:1}
+.payroll-week-report thead th:nth-child(-n+2){z-index:3;background:var(--subtle)}
+.payroll-week-report .payroll-negative{color:#a43f32;font-weight:700}
+.payroll-week-report tfoot th,.payroll-week-report tfoot td{font-weight:700;background:var(--subtle)}
+.payroll-week-report tfoot td:nth-child(2){position:static;width:auto;max-width:none}
+:root[data-theme="dark"] .payroll-week-report .payroll-negative{color:#ffafa2}

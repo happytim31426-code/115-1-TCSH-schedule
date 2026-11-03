@@ -1,5 +1,5 @@
 const fs=require('fs'),assert=require('assert/strict'),path=require('path');
-(async()=>{const {calculate,weekDate}=await import('data:text/javascript;base64,'+Buffer.from(fs.readFileSync(path.join(__dirname,'../js/payroll-model.js'),'utf8')).toString('base64'));
+(async()=>{const {calculate,weekDate,payrollReport}=await import('data:text/javascript;base64,'+Buffer.from(fs.readFileSync(path.join(__dirname,'../js/payroll-model.js'),'utf8')).toString('base64'));
 const l=(day,period,grade,marks=[])=>({day,period,grade,marks});
 const rows=[{id:'101',name:'正式',lessons:[l(0,8,'高一'),l(1,8,'國二'),l(2,8,'高一',['基']),l(5,4,'國一')]},{id:'102',name:'特聘',lessons:[l(0,1,'高一'),l(0,2,'國一'),l(0,8,'高一'),l(5,5,'高二')]},{id:'103',name:'外籍',lessons:[l(0,8,'國一'),l(5,1,'高一')]},{id:'104',name:'未知',lessons:[l(0,8,'')]}];
 assert.equal(weekDate(8),'2026-10-19');let r=calculate(rows,8,[],['特聘'],['特聘'],['外籍']);assert.equal(r.totals.find(t=>t.group==='一般教師'&&t.division==='高中部').eighth,1);assert.equal(r.unresolved.length,1);
@@ -7,4 +7,9 @@ const range={start:'2026-10-19',end:'2026-10-24',grade:'高一'};
 r=calculate(rows,8,[range,range],['特聘'],['特聘'],['外籍']);assert.equal(r.teachers[0].eighth,1);assert.equal(r.teachers[1].partTime,1);assert.equal(r.totals.find(t=>t.group==='特聘教師'&&t.division==='高中部').saturday,1);assert.equal(r.totals.find(t=>t.group==='外籍教師'&&t.division==='高中部').saturdayMissed,1);
 r=calculate(rows,8,[{...range,grade:'all'}],['特聘'],['特聘'],['外籍']);assert.equal(r.teachers[0].eighth,2);assert.equal(r.teachers[1].partTime,2);assert.equal(r.teachers[3].eighth,1);assert(r.totals.every(t=>t.eighth===0&&t.saturday===0));
 r=calculate([{id:'001',name:'期末',lessons:[l(4,8,'國一'),l(5,1,'國一')]}],21,[],[],[],[]);assert.equal(r.totals.reduce((n,t)=>n+t.eighth+t.saturday,0),0);
-console.log('PASS payroll: six cohorts, grade-filtered holidays, deduplication, 基 excluded, part-time 1–7, Saturday no lunch, unknown grades, term boundary');})().catch(e=>{console.error(e);process.exitCode=1;});
+const holidays=[{start:'2026-10-19',end:'2026-10-20',grade:'all',reason:'戶外教育'},{start:'2026-10-20',end:'2026-10-20',grade:'all',reason:'放假'}];
+r=calculate(rows,8,holidays,['特聘'],['特聘'],['外籍']);assert.equal(r.columns.length,2);assert.equal(r.teachers[0].cuts['2026-10-19'].eighth,1);assert.equal(r.teachers[0].cuts['2026-10-20'].eighth,1);assert.equal(r.teachers[1].cuts['2026-10-19'].partTime,2);assert.equal(Object.values(r.teachers[0].cuts).reduce((n,c)=>n+c.eighth,0),r.teachers[0].eighth);
+const report=payrollReport(rows,r,['特聘']);assert.equal(report.headers.length,15);assert(report.values.every(row=>row.length===report.headers.length));assert.equal(report.values[0][10],-1);assert.equal(report.values[0][11],-1);assert.equal(report.values[0][12],-2);assert.equal(report.values[0][2],null,'missing baseline is not zero');assert(report.headers.some(h=>h.includes('10/20')&&h.includes('放假')));
+const grouped=calculate(rows,8,holidays,['特聘'],['特聘'],['外籍'],'event');assert.equal(grouped.columns.length,2);assert.equal(grouped.teachers[0].cuts['event-0'].eighth,2);assert.equal(grouped.teachers[0].cuts['event-1'].eighth,0,'overlap assigned once');assert.equal(grouped.teachers[0].eighth,r.teachers[0].eighth);
+assert.equal(calculate(rows,9,holidays,[],[],[]).columns.length,0,'other weeks omitted');
+console.log('PASS payroll: cohort totals, grade filters, multi-holiday daily/event columns, negative report values, missing versus zero, overlap deduplication, term boundary');})().catch(e=>{console.error(e);process.exitCode=1;});
